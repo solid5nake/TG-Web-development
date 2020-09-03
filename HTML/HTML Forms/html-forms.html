@@ -35,18 +35,18 @@
    </div>
 
   <!-- 
-  2. Naast input text fields zijn er ook nog andere input fields. Zoals:
-    ● radiobutton
-    ● checkbox
-    ● password
-    ● reset
-    ● submit
-    ● date
-    ● search
-    ● time
-    ● hidden
-    ● email
-    Maak voor elk input field een voorbeeld. 
+    2. Naast input text fields zijn er ook nog andere input fields. Zoals:
+      ● radiobutton
+      ● checkbox
+      ● password
+      ● reset
+      ● submit
+      ● date
+      ● search
+      ● time
+      ● hidden
+      ● email
+      Maak voor elk input field een voorbeeld. 
   -->
   <hr>
   <div>
@@ -109,7 +109,7 @@
         </div>
         <div>
           <label for="bdate">Geboortedatum:</label>
-          <input type="date" name="bday" placeholder="mm/dd/yyyy" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+          <input type="date" name="bday">
         </div>
         <div class="input">
           <label for="rb-male">M</label>
@@ -249,6 +249,131 @@
       </div>
     </form>
   </div>
+  
+  <!-- 
+    8. Maak een reserverings formulier om een boek te reserveren. In dit formulier
+    willen we graag het volgende weten:
+    ● Naam van dat persoon
+    ● Telefoonnummer
+    ● E-mail van dat persoon
+    ● Naam van dat boek
+    ● Aantal boeken om te reserveren. Het aantal moet minimaal 1 en maximaal 5
+    zijn.
+    ● Een submit knop 
+  -->
+  
+  <div class="grp-form">
+    <form>
+      <fieldset>
+        <legend>Reserveringsformulier</legend>
+        <div class="input">
+          <label for="f-name">Naam:</label>
+          <input type="text" value="Naam">
+        </div>
+        <div class="input">
+          <label for="phone">Telefoonnummer</label>
+          <input type="tel" value="Telefoonnummer">
+        </div>
+        <div class="input">
+          <label for="email">Emailadres:</label>
+          <input type="email" value="Emailadres">
+        </div>
+        <div class="input">
+          <label for="book">Naam van het boek:</label>
+          <input type="text" value="Boeknaam">
+        </div>
+        <div class="input">
+          <label for="book-select">Aantal boeken om te reserveren:</label>
+          <input type="number" min="1" max="5">
+        </div>
+      </fieldset>
+      <div class="button">
+        <span>
+          <input type="submit">
+        </span>
+      </div>
+    </form>
+  </div>
+  
+  <!-- 
+    9. Bouw nu zelf een formulier met wat je hiervoor hebt geleerd.
+  -->
+  
 
+  <div class="grp-form">
+    <form>
+      <fieldset>
+        <legend>Registratieformulier</legend>
+        <div class="input">
+          <label for="lname">Achternaam:</label>
+          <input type="text" value="achternaam">
+        </div>
+        <div class="input">
+          <label for="fname">Voornaam:</label>
+          <input type="text" value="voornaam">
+        </div>
+        <div class="input">
+          <label for="city">Plaatsnaam:</label>
+          <input type="text" value="Stad">
+        </div>
+        <div class="input">
+          <label for="rb-male">M</label>
+          <input type="radio">
+          <label for="rb-female">V</label>
+          <input type="radio">
+        </div>
+        <div>
+          <label for="bdate">Geboortedatum:</label>
+          <input type="date" name="bday">
+        </div>
+        <div class="input">
+          <label for="phone">Telefoonnummer</label>
+          <input type="tel" value="06">
+        </div>
+        <div class="input">
+          <label for="email">Email:</label>
+          <input type="email" value="Emailadres">
+        </div>
+        <div class="input">
+          <label for="zipcode">Postcode:</label>
+          <input type="text" value="postcode">
+        </div>
+        <div class="input">
+          <label for="gym-select">Kies uw sportschool:</label>
+          <select name="pets" id="pet-select">
+            <option value="">--Kies een sportchool--</option>
+            <option value="table-tennnis">AMSTERDAM AMSTELVEENSEWEG</option>
+            <option value="badminton">AMSTERDAM DE PIJP</option>
+            <option value="squash">ROTTERDAM COOLSINGEL</option>
+            <option value="squash">UTRECHT JANSKERKHOF</option>
+            <option value="squash">ROTTERDAM COOLSINGEL</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="book-select">Aantal dagen dat u wilt trainen per week</label>
+          <input type="number" min="1" max="6">
+        </div>
+        <div class="input">
+          <p>Ik ontvang graag €15,- korting op mijn kickstartpakket door na het afsluiten van mijn membership 5 vrienden per mail uit te nodigen om kennis te komen maken de sportschool.</p>
+          <label for="discount"><strong>Family Package</strong></label>
+          <input type="checkbox" name="discount" id="cb-discount">
+        </div>
+        <br>
+        <div class="input">
+          <label for="agreement">Ik ga akkoord met de algemene voorwaarden en de huisregels van de sportschool</label>
+          <input type="checkbox" name="agreement" id="cb-agree">
+        </div>
+      </fieldset>
+      <div class="button">
+        <span>
+          <input type="submit">
+        </span>
+        <span>
+          <input type="reset">
+        </span>
+      </div>
+    </form>
+  </div>
+  
 </body>
 </html>

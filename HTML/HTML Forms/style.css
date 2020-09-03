@@ -1,0 +1,24 @@
+body {
+  font-style: italic;
+}
+
+div.grp-form {
+  background: rgb(128,128,128,0.2);
+  padding: 5px;
+  margin: 20px;
+  width: 750px;
+  text-align: left;
+  font-style: normal;
+}
+
+div.grp-form input {
+  opacity: 0.5;
+}
+
+div.button input{
+  opacity: 1;
+}
+
+div.input {
+  margin: 15px;
+}

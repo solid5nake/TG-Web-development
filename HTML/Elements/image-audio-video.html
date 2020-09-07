@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image, audio & video</title>
+</head>
+<body>
+  <h1>Image, audio & video</h1>
+
+  <!-- 
+    Het plaatsen van foto's op een website is een belangrijke toevoeging voor velen. Zo
+    bestaan de meeste websites uit een grote collectie van foto's. Vaak kun je logo's,
+    teamfoto's of andere soorten afbeeldingen terugvinden op een website. Het stylen
+    van de afbeeldingen komt later in het onderdeel CSS aanbod.
+
+    1. Bij het inladen van een bestand is het noodzakelijk om de locatie van het bestand aan te geven. Dit kan op 2 manieren:
+   -->
+  <div>
+    <i>Absolute file path</i>
+    <p>Een absolute path is de full URL naar een bestand</p>
+    <img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png" alt="techgrounds logo">
+  </div>   
+
+  <div>
+    <i>Relative file path</i>
+    <p>Een relative file path verwijst naar een bestand relatief van de huidige pagina</p>
+    <img src="../Media/TG_Logo.d5934b2d.png" alt="relatief techgrounds logo">
+  </div>
+  
+  <!-- 
+    Een image element is voor het inladen van een afbeelding. Afbeeldingen kunnen van
+    verschillende formaat zijn. Bijvoorbeeld, een afbeelding kan een JPG formaat zijn.
+    
+    2. Zoek uit welke formaat afbeeldingen er nog meer kan zijn.
+  -->
+  <div>
+    <i>Naast JPG kan een afbeelding het volgende formaat hebben</i>
+    <ul>
+      <li>APNG, Animated Portable Network Graphics,	.apng </li>
+      <li>GIF,	Graphics Interchange Format,	.gif</li>
+      <li>ICO, Microsoft Icon	.ico, .cur</li>
+      <li>PNG, Portable Network Graphics, .png</li>
+      <li>SVG, Scalable Vector Graphics,	.svg</li>
+    </ul>
+  </div>
+  
+  <!-- 3. Zoek uit welke browsers er zijn en maak een lijst van je antwoord. -->
+  <div>
+    <i>Verschillende browsers</i>
+    <ul>
+      <li>Google chrome</li>
+      <li>Safari</li>
+      <li>Mozilla firefox</li>
+      <li>Internet explorer</li>
+      <li>Opera</li>
+    </ul>
+  </div>
+  
+  <!-- 
+    4. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven
+    en onderaan je website door zowel gebruik te maken van de absolute path en
+    relative path.
+  -->
+  <div>
+    <i>Voorbeeld van geplaatste foto's met een absolute en relative path in een site</i>
+
+    <img src="https://techgrounds.nl/static/media/TG_Logo.d5934b2d.png" alt="techgrounds logo">
+
+    <h1>Mijn eerste website</h1>
+    <h3>Mijn eerste sub-kop</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa mollitia accusamus facilis sed eligendi atque vel ipsa dignissimos. Impedit voluptates minus facere sit vitae explicabo quam natus nostrum perferendis.</p>
+    <h3>Mijn tweede sub-kop</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ad nesciunt animi soluta at labore voluptate libero ducimus autem excepturi atque corporis, earum aliquid corrupti eius inventore illo maxime dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae dignissimos commodi, tenetur explicabo beatae necessitatibus provident ad! Praesentium reiciendis adipisci voluptates ducimus eius odio architecto minus consequuntur. Consectetur, dignissimos doloribus?</p>
+    
+    <hr>
+
+    <footer>
+      <h4>Footer</h4>
+      <span>Deze website is gebouwd vanuit de <a href="https://techgrounds.nl/">TechGrounds Academy</a></span>
+    </footer>
+
+    <img src="../Media/TG_Logo.d5934b2d.png" alt="relatief techgrounds logo">
+  </div>
+ 
+  <!-- 
+    Aan de img element kan je ook de alt attribute gebruiken.
+    5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te gebruiken?
+   -->
+  <div>
+    <i>Alt attribute in de HTML image tag</i>
+    <p>
+     De alt attribute geeft de image een beschrijving, het is niet verplicht om te gebruiken maar wel <strong>heel handig</strong> voor de toegangklijkheid
+     Screenreaders lezen deze beschrijving voor aan de (blinde) lezer, zodat deze weet om wat voor afbeelding het gaat
+     De alt text wordt ook weergegeven op het scherm als de image niet geladen kan worden.
+   </p>
+  </div>
+
+  <!-- 
+    In de sound folder staat een explosion.mp3 bestand.
+    6. Laadt dit bestand in als een audio op het scherm.
+      Extra: Maak het leuker door de audio op repeat te zetten.
+      Tip: gebruik controls attribute om audio af te spelen.
+  -->
+  <div>
+    <i>Ingeladen audio bestand en op repeat stand gezet dmv het attribuut loop mee te geven</i>
+    <div>
+      <audio controls loop src="../Media/explosie.mp3"></audio>
+    </div>
+  </div>
+
+  <!-- 
+    Een audio bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor.
+    7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+  -->
+  <div>
+    <i>
+      Audio bestand afgespeeld met een source tag, dmv source tags toe te voegen zal de browser de meest geschikte uitkiezen.
+      De tekst tussen de audio tags wordt alleen weergegeven als de browser het audio element niet ondersteund. 
+    </i>
+    <div>
+      <audio controls>
+        <source src="../Media/explosie.mp3" type="audio/mp3">
+          Sorry, the audio format isn't supported by the browser
+      </audio>
+    </div>
+  </div>
+
+  <!--  
+    8. Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in als een video op het scherm.
+        Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de video element kan gebruiken om de grootte van de video aan te passen.
+        Een video bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor.
+        Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+  -->
+  <div>
+    <i>
+      Video bestand afspelen, verschillende attributes kunnen toegevoegd worden in het voorbeeld zijn de width en loop gebruikt
+      dmv verschillende source tags toe te voegen zal de browser de meest geschikte uitkiezen.
+      De tekst wordt pas weergegeven als de browser geen enkele video formaat ondersteund
+    </i>
+    <div>
+      <video controls loop width="300">
+        <source src="../Media/video.mp4" type="video/mp4">
+          Sorry, the video format isn't supported by the browser
+      </video>
+    </div>
+  </div>
+
+
+</body>
+</html>

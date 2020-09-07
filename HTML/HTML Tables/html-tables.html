@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tables</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1>HTML tables</h1>
+
+  <!-- 
+    10.Om een tabel te maken heb je volgende elementen nodig:
+    ● <table>
+    ● <thead>
+    ● <tbody>
+    ● <tfoot>
+    ● <th>
+    ● <tr>
+    ● <td> 
+  -->
+  <ul>
+    <li>table tag, definieert een html tabel</li>
+    <li>thead tag, wordt gebruikt om een headers content te groeperen van een tabel</li>
+    <li>tbody tag, wordt gebruikt om de body content te groeperen in een html tabel</li>
+    <li>tfoot tag, groepeert footer content in een HTML tabel</li>
+    <li>th tag, definieert een header cel in een HTML tabel</li>
+    <li>tr tag, definieert een regel in een HTML tabel</li>
+    <li>td tag, definieert een standaard data cel in HTML tabel</li>
+  </ul>
+
+  <!--
+    11.Maak een tabel met <table> element. Zie hieronder:
+  -->
+
+  <div>
+    <table style="background-color: #D3D3D3">
+      <thead>
+        <th>
+          <strong>Voornaam</strong>
+        </th>
+        <th>
+          <strong>Achternaam</strong>
+        </th>
+        <th>
+          <strong>Leeftijd</strong>
+        </th>
+        <th>
+          <strong>Telefoonnr</strong>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>41</td>
+          <td>+31 12345678</td>
+        </tr>
+        <tr>
+          <td>Steven</td>
+          <td>Smith</td>
+          <td>32</td>
+          <td>+31 12345678</td>
+        </tr>
+        <tr>
+          <td>Alexander</td>
+          <td>Beave</td>
+          <td>16</td>
+          <td>+31 12345678</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+
+  <!--
+    12. Maak een agenda tabel met <table> element. Zie hieronder: 
+  -->
+
+  <div>
+    <table style="background-color: #D3D3D3">
+      <thead>
+        <th>
+          <strong>MA</strong>
+        </th>
+        <th>
+          <strong>DI</strong>
+        </th>
+        <th>
+          <strong>WO</strong>
+        </th>
+        <th>
+          <strong>DO</strong>
+        </th>
+        <th>
+          <strong>VR</strong>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Afspraak met tandarts</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Sporten</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Huiswerk maken</td>
+          <td>Werken</td>
+          <td>Werken</td>
+          <td>Werken</td>
+        </tr>
+        <tr>
+          <td>Afspraak met tandarts</td>
+          <td></td>
+          <td></td>
+          <td>Werken</td>
+          <td>Bij vrienden</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <br>
+
+  <!--
+    13. Voor het maken van een tabel kan je ook gebruik maken van colspan en
+      rowspan attributen. Zoek uit wat colspan en rowspan attribuut doet en maak
+      het volgende: 
+  -->
+
+  <h4 style="font-style: italic;">colspan</h4>
+  <p>De colspan definieert het aantal colums dat een table cell inneemt, toepasbaar bij td en th</p>
+  <br>
+  <h4 style="font-style: italic;">rowspan</h4>
+  <p>De rowspan definieert het aantal regels dat een table cell inneemt, toepasbaar op td en th elementen</p>
+
+  <table>
+    <thead>
+      <th colspan="2">Sport</th>
+      <th colspan="2">Aantal recreanten</th>
+      <th colspan="2">Aantal competitie spelers</th>
+      <th colspan="2">Totale deelnemers</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>Badminton</td>
+        <td>10</td>
+        <td></td>
+        <td>30</td>
+        <td></td>
+        <td>40</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Racket Sport</td>
+        <td>Tafeltennis</td>
+        <td>59</td>
+        <td></td>
+        <td>30</td>
+        <td></td>
+        <td>89</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Tennis</td>
+        <td>159</td>
+        <td></td>
+        <td>130</td>
+        <td></td>
+        <td>189</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Tennis</td>
+        <td>159</td>
+        <td></td>
+        <td>130</td>
+        <td></td>
+        <td>189</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Voetbal</td>
+        <td>88</td>
+        <td></td>
+        <td>40</td>
+        <td></td>
+        <td>128</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Ball sport</td>
+        <td>Basketbal</td>
+        <td>60</td>
+        <td></td>
+        <td>40</td>
+        <td></td>
+        <td>100</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Volleybal</td>
+        <td>35</td>
+        <td></td>
+        <td>20</td>
+        <td></td>
+        <td>55</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+
+<!-- 
+  14.Maak nu zelf een tabel met de elementen die je hiervoor hebt geleerd.
+-->
+
+  
+  <div>
+    <table style="background-color: lightskyblue;  padding: 15px;">
+      <thead>
+        <th colspan="3">Club</th>
+        <th>MP</th>
+        <th>W</th>
+        <th>D</th>
+        <th>L</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>GD</th>
+        <th>Pts</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="../Media/afc-ajax.png" alt="ajax-logo" width="50%"></td>
+          <td>Ajax</td>
+          <td>25</td>
+          <td>18</td>
+          <td>2</td>
+          <td>5</td>
+          <td>68</td>
+          <td>23</td>
+          <td>45</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="../Media/az-alkmaar.png" alt="az-logo" width="50%"></td>
+          <td>AZ  Alkmaar</td>
+          <td>25</td>
+          <td>18</td>
+          <td>2</td>
+          <td>5</td>
+          <td>54</td>
+          <td>17</td>
+          <td>37</td>
+          <td>56</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="../Media/feyenoord.png" alt="feyenoord-logo" width="50%"></td>
+          <td>Feyenoord</td>
+          <td>25</td>
+          <td>14</td>
+          <td>8</td>
+          <td>3</td>
+          <td>50</td>
+          <td>35</td>
+          <td>15</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><img src="../Media/psv.png" alt="psv-logo" width="50%"></td>
+          <td>PSV</td>
+          <td>26</td>
+          <td>14</td>
+          <td>7</td>
+          <td>5</td>
+          <td>54</td>
+          <td>28</td>
+          <td>26</td>
+          <td>49</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><img src="../Media/willem2.png" alt="willem2-logo" width="50%"></td>
+          <td>Willem II</td>
+          <td>26</td>
+          <td>13</td>
+          <td>5</td>
+          <td>8</td>
+          <td>37</td>
+          <td>34</td>
+          <td>3</td>
+          <td>44</td>
+        </tr>
+        <tr></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</body>
+</html>

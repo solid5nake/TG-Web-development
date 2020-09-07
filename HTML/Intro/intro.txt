@@ -1,20 +1,52 @@
-1. Wat is het verschil tussen het internet en het world wide web?
-    Internet is een massieve netwerk bestaande uit netwerken, het is een informatie infrastructuur 
-    De World Wide Web is een manier om toegang te krijgen tot informatie en gebruikt het internet als medium.
-2. Wat is het verschil tussen HTML, CSS en JavaScript?
-    HTML is een markup language, het is de structuur van een website
-    CSS is bedoeld voor het stylen van een website.
-    Javascript is een gescripte programmeertaal die voor websites gebruikt worden. 
-    Door het gebruik van JavaScript aan HTML pagina's toe te voegen is het mogelijk om pagina's meer interactie mee te geven die anders met alleen HTML niet mogelijk is.
-3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.
-    Het is een onderdeel van een HTML structuur die een openings tag bevat en een sluitings tag.
-    Openen van de tag gebeurd met "<" en het sluiten met "/>"
-4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>. Geef voor elke element aan waarvoor het dient.
-    De html tag geeft aan welke versie van HTML wordt ingeladen in de browser
-    De head tag is het onderdeel van een HTML document dat metadata bevat aan, zoals de "author" "description", en links die verwijzen naar CSS bestanden
-    of JavaScript bestanden die toegepast dienen te worden op het HTML document.
-5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
-    De attributen zijn modifiers van HTML elementen met andere woorden veranderd het gedrag van het element
-6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit.
-7. Wat is het verschil tussen inline en block elementen?
-8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+Intro
+
+    1. Wat is het verschil tussen het internet en het world wide web?
+        Internet is een massieve netwerk bestaande uit netwerken, het is een informatie infrastructuur 
+        De World Wide Web is een manier om toegang te krijgen tot informatie en gebruikt het internet als medium.
+    2. Wat is het verschil tussen HTML, CSS en JavaScript?
+        HTML is een markup (opmaak) language, het is de structuur van een website
+        CSS is bedoeld voor het stylen van een website.
+        Javascript is een gescripte programmeertaal die voor websites gebruikt worden. 
+        Door het gebruik van JavaScript aan HTML pagina's toe te voegen is het mogelijk om pagina's meer interactie mee te geven die anders met alleen HTML niet mogelijk is.
+    3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+        Het is een onderdeel van een HTML structuur die een openings tag bevat en een sluitings tag.
+        Openen van de tag gebeurd met "<" en het sluiten met "/>"
+    4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>. Geef voor elke element aan waarvoor het dient.
+        De html tag geeft aan welke versie van HTML wordt ingeladen in de browser
+        De head tag is het onderdeel van een HTML document dat metadata bevat aan, zoals de "author" "description", en links die verwijzen naar CSS bestanden
+        of JavaScript bestanden die toegepast dienen te worden op het HTML document.
+    5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+        De attributen zijn modifiers van HTML elementen met andere woorden veranderd het gedrag van het element
+        1. "width" en "height" kun je bijvoorbeeld toepassen op een <img> om de breedte en hoogte te specificeren van de image
+            <img src="img_girl.jpg" width="500" height="600">
+        2. "alt" de alt attribute gebruik je om de image een alternatieve tekst/naam toe te wijzen
+            <img src="img_girl.jpg" alt="Girl with a jacket">
+        3. "src" attribute definieert de URL die naar het medium (image) verwijst
+            <img src="img_typo.jpg" alt="Girl with a jacket">
+        4. "style" attribute wordt gebruikt om bepaalde styles toe te voegen aan een element, zoals kleur, font, size, etc
+            <p style="color:red;">This is a red paragraph.</p>
+        5. "title" attribute definieert extra informatie over een element
+        <p title="I'm a tooltip">This is a paragraph.</p> 
+    6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit.
+        Je hebt een goede structuur nodig zodat je website ordelijk en overzichtelijk is ingedeeld, het is bijvoorbeeld makkelijker te lezen voor een andere collaborator van je website
+        en je werkyt effectiever.
+
+        De opmaak is slordig, niet overal is de indention gelijk (2 spaces of 4)
+        Het mist een heleboel elementen, zoals headers (h1, h2, h3), paragraphs (p)
+        etc. Zo wordt alles in de browser ingeladen als tekst en kan je het niet makkelijk stylen met een stylesheet
+        Het mist ook metadata, er is geen verwijzing (link) gemaakt naar een stylesheet
+        Er wordt niet verwezen naar de laatste versie van html, op deze manier gebruik je niet de features die html5 met zich meebrengt
+    7. Wat is het verschil tussen inline en block elementen?
+        Een inline element begint niet op een nieuwe regel en zal alleen de width bezetten die het nodig heeft
+        De block element daarentegen start op een nieuwe regel en maakt gebruik van de gehele breedte (width)
+    8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+        Het plaatsen van een element binnen een andere element, het is bijvoorbeeld gebruikelijk om meerdere <div> in een andere <div> element
+        <div class="outer-div">
+            <div class="inner-div">
+                <p>This is a paragraph</p>
+            </div>
+            <div class="inner-div">
+                <p>This is another paragraph</p>
+            </div>
+        </div>
+

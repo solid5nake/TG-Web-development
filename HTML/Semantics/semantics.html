@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantics</title>
+</head>
+<body>
+  <h1>Semantics</h1>
+
+  <h3>
+    9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat
+    wordt er bedoeld met HTML semantics? Waarom is het gebruik van
+    semantics belangrijk?
+  </h3>
+
+  <p>
+    Om een woord semantisch te gebruiken betekend dat je een woord in de juiste context wordt gebruikt, in de juiste betekenis van het woord.
+    Wanneer je een woord verkeerd wordt gebruikt in een zin dan is het niet meer semantisch.
+  
+    Een HTML element brengt informatie over om welke type het inhoud tussen
+    de opening en closings tags het gaat.
+  
+    Semantische opmaak gebruik je om web content leesbaar te maken voor zowel mensen als computers.
+    Het maakt het toegangklijker voor gebruikers en computers. 
+    De content is makkelijker te analyseren voor computers en developers kunnen makkelijker
+    verschillende bronnen samenvoegen in nieuwe web services 
+  </p>
+
+  <h3>
+    10. Wat voor content zou je in de volgende elementen gebruiken?
+        Geef in je antwoord voor elk element een toelichting.
+  </h3>
+    <header>Een titel</header>
+    <!-- header: bijv voor een titel of kopstuk-->
+
+    <footer>  <p>Author: Hege Refsnes</p>
+      <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+    <!-- footer: auteur gegevens, copyright, contact informatie, sitemap, back to top links, gerelateerde documenten -->
+
+    <main>
+      <h1>Most Popular Browsers</h1>
+      <p>Chrome, Firefox, and Edge are the most used browsers today.</p>
+    
+      <article>
+        <h2>Google Chrome</h2>
+        <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+      </article>
+    
+      <article>
+        <h2>Mozilla Firefox</h2>
+        <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+      </article>
+    
+      <article>
+        <h2>Microsoft Edge</h2>
+        <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+      </article>
+    </main>
+    <!-- main: deze tag specificeerd de main content van een document, het inhoud hoort uniek te zijn binnen het document, het hoort niet content te bevatten dat elders op het html document wordt herhaald, zoals sidebars, navigatie links etc
+    Overigens hoort de main tag alleen eenmaal gebruikt te worden, het mag ook niet nested zijn in een <article>, <aside>, <footer>, <header>, or <nav> element.-->
+
+    <nav>
+      <a href="/html/">HTML</a> |
+      <a href="/css/">CSS</a> |
+      <a href="/js/">JavaScript</a> |
+      <a href="/python/">Python</a>
+    </nav>
+    <!-- nav: De nav tag definieert een set navigatie links, niet alle links behoren in je navigatie, het is bedoeld om te navigeren naar een bepaald gedeelte van je website -->
+
+    <section>
+      <h2>WWF History</h2>
+      <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+    </section>
+    <!--  section element definieert een sectie oftewel een gedeelte van een HTML document -->
+
+    <aside>
+      <h4>Epcot Center</h4>
+      <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+    </aside>
+    <!-- definieert content aan naast de content waar het is geplaatst, het wordt meestal gebruikt als een sidebar in een document -->
+
+    <article>
+      <h2>Microsoft Edge</h2>
+      <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+    </article>
+    <!-- article wordt gebruikt voor een artikel en hoort een opzichzelf staand onafhankelijk object te zijn-->
+</body>
+</html>
+
+

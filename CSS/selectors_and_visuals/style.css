@@ -3,10 +3,10 @@
 }
 
 article p {
-  background: moccasin;
+  background: aliceblue;
   padding: 40px;
   width: fit-content;
-  border-left: 5px solid orange;
+  border-left: 5px solid thistle;
 }
 
 .code {

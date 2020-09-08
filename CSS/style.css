@@ -21,9 +21,13 @@ article p {
   font-size: 18px;
 }
 
+span {
+  float: right;
+  font-size: small;
+}
+
 .code > span{
   color: deeppink;
-  float: right;
 }
 
 .browser {
@@ -34,6 +38,5 @@ article p {
 
 .browser > span{
   color: #2F4F4F;
-  float: right;
 }
 

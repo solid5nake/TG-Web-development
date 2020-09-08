@@ -2,6 +2,11 @@
   font-family: Helvetica;
 }
 
+ul {
+  background: #F8F8FF;
+  border-left: 5px solid teal;
+}
+
 article p {
   background: aliceblue;
   padding: 40px;
@@ -21,12 +26,10 @@ article p {
   font-size: 18px;
 }
 
-span {
+
+.code > span {
   float: right;
   font-size: small;
-}
-
-.code > span{
   color: deeppink;
 }
 
@@ -37,6 +40,8 @@ span {
 }
 
 .browser > span{
+  float: right;
   color: #2F4F4F;
+  font-size: small;
 }
 

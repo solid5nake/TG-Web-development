@@ -1,0 +1,28 @@
+* {
+  font-family: Helvetica;
+}
+
+article p {
+  background: aliceblue;
+  padding: 40px;
+  width: fit-content;
+  border-left: 5px solid thistle;
+}
+
+.code {
+  background: #001933;
+  padding: 25px 30px;
+  border-left: 5px solid mediumseagreen	;
+  margin-bottom: 50px;
+  color: mediumspringgreen;
+  width: 500px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.code > span{
+  color: deeppink;
+  float: right;
+}
+

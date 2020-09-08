@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+
+  <title>General selectors</title>
+</head>
+
+<body>
+  <header>
+    <style>
+      img ~ p {
+        background-color: #FEF086;
+        padding: 5px;
+      }
+    </style>
+  </header>
+
+  <h1>General sibling combinator</h1>
+
+  <p>
+    Een general sibling combinator (~) kan er als volgt uitzien in CSS;
+  </p>
+
+  <img src="../images/GeneralSelector.png" alt="CSS General Selector">
+
+  <p>
+    Vanwege de bovenstaande <i>declaration</i> worden alle <i>paragraphs</i> geselecteerd die na <i>image</i> tag (bovenstaande img) volgen en
+    geeft de properties; <strong>background-color</strong> met value <strong>#FEF0B6</strong> en <strong>padding</strong> met value <strong>5 px</strong> mee
+  </p>
+
+  <p>
+    Ook deze paragraaf krijgt dezelfde achtergrondkleur en padding mee!
+  </p>
+
+  <p>
+    En deze ook!
+  </p>
+
+  <a href="../assignments/Asgmt-6.html">Terug naar Opdracht 6</a>
+</body>
+
+</html>

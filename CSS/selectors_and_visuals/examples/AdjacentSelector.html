@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+
+  <title>Adjacent Selector</title>
+</head>
+
+<body>
+
+  <header>
+    <style>
+      p+p {
+        margin: 0;
+      }
+
+      div {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </header>
+
+  <h1>Adjacent selector</h1>
+
+  <p>
+    Onderstaand voobeeld weergeeft een <i>adjacent selector</i><br>
+    De adjacent sibling selector in CSS is opzichzelf niet een selector, maar een manier
+    om twee selectors te combineren.
+  </p>
+
+  <img src="../images/AdjacentSelector.png" alt="CSS Adjacent Selector">
+
+  <p>
+    De plus teken (+) is de adjacent sibling combinator, tussen de twee paragraaf tag (elementen) selectors.
+    Dit houdt het volgende in; "selecteer elke paragraaf tag dat direct daarna komt zonder dat er iets tussen zit.
+    Enkele voorbeelden hoe het eruit komt te zien"
+  </p>
+
+  <i>HTML structuur met de bovenstaande style</i>
+  <img src="../images/AdjacentSelectorHTMLStructure.png" alt="HTML example Adjacent Selector">
+  <br>
+
+  <i>Resulteerd als het volgende:</i>
+  <div>
+    <p>Dit is een paragraaf</p>
+    <p>Ik word geselecteerd</p>
+  </div>
+
+  <div>
+    <p>Ik ben een paragraaf</p>
+    <h2>Monkey Hair</h2>
+    <p>Ik word niet geselecteerd</p>
+  </div>
+
+  <p>
+    Dit is erg handig wanneer je gebruik maakt van semantische markup (HTML) en
+    en in bepaalde scenarios kleine aanpassingen wilt aanbrengen op elementen die
+    direct naast elkaar staan.
+  </p>
+
+  <a href="../assignments/Asgmt-6.html">Terug naar Opdracht 6</a>
+
+</body>
+
+</html>

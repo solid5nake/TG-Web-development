@@ -14,12 +14,20 @@ article p {
   border-left: 5px solid thistle;
 }
 
-.answer {
+.q {
+  padding: 40px;
+  width: fit-content;
+  background: aliceblue;
+  border-left: 5px solid thistle;
+}
+
+.a {
   padding: 40px;
   width: fit-content;
   background: moccasin;
   border-left: 5px solid orange;
 }
+
 
 .code {
   background: #001933;
@@ -38,6 +46,26 @@ article p {
 .code > span {
   float: right;
   font-size: small;
+  color: deeppink;
+}
+
+pre {
+  background: #001933;
+  border-left: 5px solid mediumseagreen;
+  margin: 50px 0;
+  color: mediumspringgreen;
+  width: 500px;
+  height: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+pre > span {
+  position: relative;
+  top: 10px;
+  left: 400px;
+  font-size: medium;
   color: deeppink;
 }
 

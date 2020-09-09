@@ -11,6 +11,39 @@
     <nav>
       <a href="Index.html">Main</a>
     </nav>
+    <style>
+      div {
+        margin: 10px;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+        border: 5px solid black;
+        box-sizing:border-box;
+      }
+      .container {
+        margin: 60px 0;
+        background: initial;
+        border: initial;
+        width: fit-content;
+        display: flex;
+      }
+
+      .static {
+        position: static;
+      }
+
+      .container .relative {
+        position: relative;
+        bottom: 40px;
+        left: 40px;
+      }
+      
+      .absolute {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+      }
+    </style>
   </header>
   <h1>Display & Positioning 1-4</h1>
   <h2>Opdracht 1</h2>
@@ -20,5 +53,61 @@
       Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
     </p>
   </article>
+  <p class="answer">
+    De <strong>position</strong> property stelt in hoe een element gepositioneerd wordt in een document. <br>
+    Je hebt de volgende <strong>position properties</strong>; 
+    <i>static</i>,
+    <i>relative</i>,
+    <i>absolute</i>,
+    <i>fixed</i> en
+    <i>sticky</i><br>
+  </p>
+  <hr>
+
+  <h3>static</h3>
+  <div class="container">
+    <div></div>
+    <div class=".static">.static</div>
+    <div></div>
+  </div>
+  <p class="answer">
+    Het element is gepositioneerd volgens zijn <i>normal flow</i> van het document. <br>
+    <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, <strong>left</strong> en <strong>z-index</strong> properties <i>hebben geen effect</i>
+  </p>
+  <hr>
+
+  <h3>relative</h3>
+  <div class="container">
+    <div></div>
+    <div class="relative">.relative</div>
+    <div></div>
+  </div>
+  <div class="code">
+    <span>CSS</span>
+    .relative &#123;<br>
+    &nbsp;&nbsp;position: relative;<br>
+    &nbsp;&nbsp;bottom: 40px;<br>
+    &nbsp;&nbsp;left: 40px;<br>
+    &#125;
+  </div>
+  <p class="answer">
+    Het element is verwijderd van de <i>normal flow</i> van het document, en dan <i>offset</i><br>
+    <i>relatief tot zichzelf</i> gebasseerd op <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> en <strong>left</strong><br>
+    De <i>offset</i> heeft geen invloed op de positioneering van andere elementen, netals <br>
+    in een statische positioneering blijft de ruimte hetzelfde.
+  </p>
+  <hr>
+
+  <h3>absolute</h3>
+  <div class="container">
+    <div></div>
+    <div class="absolute">.absolute</div>
+    <div></div>
+  </div>
+  <p class="answer">
+
+  </p>
+  <hr>
+
 </body>
 </html>

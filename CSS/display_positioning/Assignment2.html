@@ -13,6 +13,14 @@
     <nav>
       <a href="Index.html">Main</a>
     </nav>
+    <style>
+      h1 ~ .example {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        color: rgb(255, 0, 0);
+      }
+    </style>
   </header>
 
   <h1>Display & Positioning</h1>
@@ -29,6 +37,33 @@
     &#60;p&#62;Dit is een paragraaf.&#60;/p&#62;
     &#60;p&#62;Dit is nog een paragraaf.&#60;/p&#62;
   </pre>
+
+  <h1 class="example">Dit is een titel</h1>
+  <p>Dit is een paragraaf.</p>
+  <p>Dit is een paragraaf.</p>
+  <p>Dit is nog een paragraaf.</p>
+
+  <p class="ans">
+    Door een <strong>position property fixed</strong> te declareren wordt de h1 rechtboven in de viewport positioneerd.
+  </p>
+
+  <pre>
+    <span>HTML</span>
+    &#60;h1 class="example"&#62;Dit is een titel&#60;/h1&#62;
+    &#60;p&#62;Dit is een paragraaf.&#60;/p&#62;
+    &#60;p&#62;Dit is nog een paragraaf.&#60;/p&#62;
+  </pre>
+
+  <pre>
+    <span>CSS</span>
+    h1 ~ .example {
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      color: rgb(255, 0, 0);
+    }
+  </pre>
+
 
 </body>
 

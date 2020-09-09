@@ -20,21 +20,22 @@
         width: 100px;
         height: 100px;
         border: 5px solid black;
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
       }
 
       .container {
-        margin: 60px 0;
+        margin: 50px 0;
         background: initial;
         border: initial;
         width: fit-content;
         display: flex;
       }
-      
+
       .fixed-container {
-        margin: 60px 0;
+        margin: 50px 0;
         background: initial;
         border: initial;
+        border: 1 solid grey;
         width: fit-content;
         display: flex;
         perspective: 10px;
@@ -52,7 +53,7 @@
 
       .absolute {
         position: absolute;
-        top: 1500px;
+        top: 1480px;
         left: 40px;
       }
 
@@ -64,21 +65,19 @@
 
       .sticky {
         position: -webkit-sticky;
-        /* position: sticky; */
+        position: sticky;
         top: 0;
       }
-
     </style>
   </header>
+  
   <h1>Display & Positioning 1-4</h1>
   <h2>Opdracht 1</h2>
-  <article>
-    <p>
-      Welke position properties zijn er? Leg voor elke position property uit wat het doet. <br>
-      Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
-    </p>
-  </article>
-  <p class="answer">
+  <p class="q">
+    Welke position properties zijn er? Leg voor elke position property uit wat het doet. <br>
+    Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
+  </p>
+  <p class="a">
     De <strong>position</strong> property stelt in hoe een element gepositioneerd wordt in een document. <br>
     Je hebt de volgende <strong>position properties</strong>;
     <i>static</i>,
@@ -95,7 +94,7 @@
     <div class=".static">.static</div>
     <div>div</div>
   </div>
-  <p class="answer">
+  <p class="a">
     Het element is gepositioneerd volgens zijn <i>normal flow</i> van het document. <br>
     <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong>, <strong>left</strong> en
     <strong>z-index</strong> properties <i>hebben geen effect</i>
@@ -108,15 +107,17 @@
     <div class="relative">.relative</div>
     <div>div</div>
   </div>
-  <div class="code">
+
+  <pre>
     <span>CSS</span>
-    .relative &#123;<br>
-    &nbsp;&nbsp;position: relative;<br>
-    &nbsp;&nbsp;bottom: 40px;<br>
-    &nbsp;&nbsp;left: 40px;<br>
-    &#125;
-  </div>
-  <p class="answer">
+    .relative {
+      position: relative;
+      bottom: 40px;
+      left: 40px;
+    }
+  </pre>
+
+  <p class="a">
     Het element is verwijderd van de <i>normal flow</i> van het document, en dan <i>offset</i><br>
     <i>relatief tot zichzelf</i> gebasseerd op <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> en
     <strong>left</strong><br>
@@ -131,7 +132,7 @@
     <div class="absolute">.absolute</div>
     <div>div</div>
   </div>
-  <p class="answer">
+  <p class="a">
     Het element is verwijderd van de normal document flow en geen ruimte is gereserveerd voor het element. <br>
     Het wordt gepositioneerd relatief van de dichtsbijzijnde positioned ancestor.
     Netals bij de <strong>position property relative</strong> wordt het gepositioneerd aan de hand van de waarde van
@@ -141,17 +142,20 @@
     <i>left</i>
   </p>
   <hr>
-  
+
   <h3>Sticky</h3>
   <div class="container">
     <div>div</div>
     <div class="sticky">.sticky</div>
     <div>div</div>
   </div>
-  <p class="answer">
-    Een element met een <strong>position:sticky</strong> is gepositioneerd op basis van de gebruikers scroll positie. <br>
-    Een sticky element schakelt tussen <strong>relative</strong> en <strong>fixed</strong>, afhankelijk van de scroll positie. <br>
-    Het wordt relatief gepositioneerd todat een bepaalde <i>offset</i> is gehaald in de viewport - dan "sticked" het op zijn plaats zoals bij <strong>position:fixed</strong>.
+  <p class="a">
+    Een element met een <strong>position:sticky</strong> is gepositioneerd op basis van de gebruikers scroll positie.
+    <br>
+    Een sticky element schakelt tussen <strong>relative</strong> en <strong>fixed</strong>, afhankelijk van de scroll
+    positie. <br>
+    Het wordt relatief gepositioneerd todat een bepaalde <i>offset</i> is gehaald in de viewport - dan "sticked" het op
+    zijn plaats zoals bij <strong>position:fixed</strong>.
   </p>
 
   <h3>fixed</h3>
@@ -160,9 +164,39 @@
     <div class="fixed">.fixed</div>
     <div>div</div>
   </div>
-  <p class="answer">
+
+  <pre>
+    <span>HTML</span>
+    &#60;div class="fixed-container"&#62;
+      &#60;div&#62;div&#60;/div&#62;
+      &#60;div class="fixed">.fixed&#60;/div&#62;
+      &#60;div&#62;div&#60;/div&#62;
+    &#60;/div&#62;
+  </pre>
+  <article>
+    <p>
+      In het deze voorbeeld heeft <strong>.fixed-container (ancestor)</strong> een property <strong>perspective</strong>
+      hierdoor is .fixed niet gefixeerd rechtsonder van de viewport.
+    </p>
+  </article>
+  <pre>
+    <span>CSS</span>
+    .fixed-container {
+      width: fit-content;
+      display: flex;
+      perspective: 10px;
+    }
+
+    .fixed {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+    }
+  </pre>
+
+  <p class="a">
     Een element met <i>position: fixed;</i> wordt verwijderd van de <i>normal flow</i> van het document.
-    Het is relatief gepositioneerd van de viewport. <br> 
+    Het is relatief gepositioneerd van de viewport. <br>
     Dit houdt in dat het altijd op dezelfde plek begeeft zelfs als je aan het scrollen bent. <br>
     <br>
     Behalve wanneer 1 van zijn <i>ancestors</i> een
@@ -186,6 +220,8 @@
     </p>
   </article>
   <hr>
+
+  <h3>Opdracht 2</h3>
 
 
 </body>

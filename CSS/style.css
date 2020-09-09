@@ -66,12 +66,12 @@ pre > span {
   background:whitesmoke;
   padding: 10px;
   height: fit-content;
-  width: 700px;
+  width: 550px;
 }
 
 .browser > span{
   float: right;
   color: #2F4F4F;
-  font-size: small;
+  font-size: medium;
 }
 

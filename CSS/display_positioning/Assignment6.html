@@ -13,12 +13,70 @@
     <nav>
       <a href="Index.html">Main</a>
     </nav>
+    <style>
+      .outer {
+        position: relative;
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+      }
+      .inner {
+        background-color: springgreen;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+      }
+    </style>
   </header>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 6</h2>
   <p class="qn">
+    Maak het onderstaande na door gebruik te maken van relative position. De outer div block is
+    100px breed en 100px hoog. De inner div block is 50px breed en 50px hoog.
+  </p>
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
 
+  <pre>
+    <span>CSS</span>
+    .outer {
+      position: relative;
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+    }
+    .inner {
+      background-color: springgreen;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  </pre>
+
+  <div class="browser">
+    <span>BROWSER</span>
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
+  </div>
+
+  <pre>
+    <span>HTML</span>
+    &#60; class="outer"&#62;
+      &#60; class="inner"&#62;
+    &#60;/div&#62;
+  </pre>
+
+  <p class="ans">
+    Hierbij heeft de outer div block position relative en de inner div block position absolute. <br>
+    De inner div block zal zich relatief positioneren van zijn containing block.
   </p>
 </body>
+
 
 </html>

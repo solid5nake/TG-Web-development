@@ -8,10 +8,17 @@ ul {
 }
 
 article p {
-  background: aliceblue;
   padding: 40px;
   width: fit-content;
+  background: aliceblue;
   border-left: 5px solid thistle;
+}
+
+.answer {
+  padding: 40px;
+  width: fit-content;
+  background: moccasin;
+  border-left: 3px solid orange;
 }
 
 .code {

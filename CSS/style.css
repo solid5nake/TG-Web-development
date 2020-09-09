@@ -18,7 +18,7 @@ article p {
   padding: 40px;
   width: fit-content;
   background: moccasin;
-  border-left: 3px solid orange;
+  border-left: 5px solid orange;
 }
 
 .code {

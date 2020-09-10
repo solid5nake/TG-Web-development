@@ -15,35 +15,52 @@
     </nav>
     <style>
 
-      .box {
+      .card {
         position: relative;
         font-family: initial;
-        text-align: justify;
+        margin-left: 70px;
+        width: 1000px;
+        height: 500px;
+        background-image: url(images/SnowyAlpines.jpg);
       }
 
       .txt {
+        display: flex;
+        align-items: center;
         position: absolute;
         top: 30%;
         left: 0;
-        padding-left: 3%;
+        padding-left: 110px;
+        margin-left: -70px;
         background: yellow;
         font-family: 'Times New Roman', Times, serif;
         font-weight: 900;
         font-size: 60px;
-        max-width: 80%;
-        min-width: 80%;
+        width: 850px;
+        height: 90px;
         }
 
       .txt-sm {
         position: absolute;
-        top: 45%;
-        left: 2%;
-        width: 30%;
-        padding-left: 2%;
+        display: flex;
+        align-items: center;
+        top: 253px;
+        left: 30px;
+        width: 600px;
+        padding-left: 20px;
         background: rgba(255, 255, 255, 0.8);
         font-family: 'Times New Roman', Times, serif;
         font-weight: 300;
-        font-size: 40px;
+        font-size: 30px;
+      }
+
+      .box {
+        position: absolute;
+        background: yellow;
+        top: 30%;
+        right: -90px;
+        width: 90px;
+        height: 90px;
       }
     </style>
   </header>
@@ -59,10 +76,10 @@
     De twee nested div zijn absolute gepositioneerd ten opzichte van de container met ieder een gedefinieerde top en
     left
   </p>
-  <div class="box">
-    <img src="images/SnowyAlpines.jpg" alt="Snow on Alpines">
+  <div class="card">
     <div class="txt">Bbbrrrrr...</div>
     <div class="txt-sm">Super koud hier zeg!</div>
+    <div class="box"></div>
   </div>
 
 </body>

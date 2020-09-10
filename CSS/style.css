@@ -62,6 +62,7 @@ pre > span {
 }
 
 .browser {
+  padding: 20px;
   position: relative;
   background:whitesmoke;
   width: fit-content;
@@ -70,7 +71,7 @@ pre > span {
 .browser > span{
   position: absolute;
   top: 5%;
-  right: 5%;
+  right: 2%;
   color: #2F4F4F;
   font-size: medium;
 }

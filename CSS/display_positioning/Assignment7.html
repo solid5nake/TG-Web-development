@@ -11,11 +11,81 @@
     <nav>
       <a href="Index.html">Main</a>
     </nav>
+    <style>
+      h3 {
+        font-family:'Times New Roman', Times, serif;
+        font-weight: lighter;
+        color: yellow;
+      }
+
+      .box {
+        position: relative;
+      }
+
+      .text {
+        position: absolute;
+        top: 30px;
+        left: 530px;
+        font-family: initial;
+        text-align: center;
+      }
+      
+      .greet { 
+        font-family:'Times New Roman', Times, serif;
+        font-weight: lighter;
+      }
+
+      .greet > span {
+        font-weight: lighter;
+        font-family:'Times New Roman', Times, serif;
+        color: white;
+      }
+    </style>
   </header>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 7</h2>
   <p class="qn">
-    
+    Zie de onderstaande image met tekst. Kun jij dit namaken? Gebruik zelf een foto van een
+    zonnige bestemming. Gebruik position, maar je mag geen z-index toepassen.
   </p>
+  <img src="images/Greece.png" alt="Greece">
+
+  <p class="ans">
+    De teksten zijn ingedeeld in div.text en de img in div.box <br>
+    div.text is <strong>absolute</strong> gepositioneerd van de ancestor div.box (position:relative)
+  </p>
+
+  <div class="code">
+    <span>HTML</span>
+    &#60;div class="box"&#62;
+      &#60;img src="images/Bali.jpg" alt="Bali"&#62;
+      &#60;div class="text"&#62;
+        &#60;h1 class="greet"&#62;Groeten uit &#60;span&#62;Indonesie!&#60;/span&#62;&#60;/h1&#62;
+        &#60;h3&#62;Kom je ook hier vakantie vieren?&#60;/h3>
+      &#60;/div&#62;
+    &#60;/div&#62;
+  </div>
+
+  <pre>
+    <span>CSS</span>
+    .box {
+      position: relative;
+    }
+
+    .text {
+      position: absolute;
+      top: 30px;
+      left: 530px;
+      font-family: initial;
+      text-align: center;
+    }
+  </pre>
+  <div class="box">
+    <img src="images/Bali.jpg" alt="Bali">
+    <div class="text">
+      <h1 class="greet">Groeten uit <span>Indonesie!</span></h1>
+      <h3>Kom je ook hier vakantie vieren?</h3>
+    </div>
+  </div>
 </body>
 </html>

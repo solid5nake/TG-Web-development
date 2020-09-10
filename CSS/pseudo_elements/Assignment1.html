@@ -18,6 +18,37 @@
     Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen <br>
     woorden wat deze pseudo-elementen inhouden.
   </p>
+  <h2>Syntax</h2>
+  <pre class="info">
+    <span>CSS</span>
+    selector::pseudo-element {
+      property: value;
+    }
+  </pre>
+  <br>
+  <br>
+  <hr>
+  <h2>Index van standaard pseudo-elements</h2>
+  <table>
+    <tr>
+      <td>
+        <a href="#::first-line">::first-line</a>
+      </td>
+      <td>
+        <a href="#::after">::after</a>
+      </td>
+      <td>
+        <a href="#::before">::before</a>
+      </td>
+      <td>
+        <a href="#::backdrop">::backdrop</a>
+      </td>
+      <td>
+        <a href="#::cue">::cue</a>
+      </td>
+    </tr>
+  </table>
+  <h3 id="::first-line">::first-line</h3>
   <p class="ans">
     Een CSS <strong>pseudo-element</strong> is een toegevoegde <i>keyword</i> aan een <strong>selector</strong>. <br>
     Het laat toe om een specifiek gedeelte te stylen van het geselecteerde element(en). <br>
@@ -35,32 +66,8 @@
     }
   </pre>
   <br>
-  <h2>Syntax</h2>
-  <pre class="info">
-    <span>CSS</span>
-    selector::pseudo-element {
-      property: value;
-    }
-  </pre>
   <p>Alleen 1 pseudo-element kan gebruikt worden in een selector. Het moet achter de simple selectors aanwezig zijn in een declaratie</p>
   <p class="ans"><strong>Note</strong>: Als regel worden dubbele colons <strong>::</strong> gebruikt om onderscheidt te maken van <i>pseudo-classes</i></p>
-  <h2>Index van standaard pseudo-elements</h2>
-  <table>
-    <tr>
-      <td>
-        <a href="#::after">::after</a>
-      </td>
-      <td>
-        <a href="#::before">::before</a>
-      </td>
-      <td>
-        <a href="#::backdrop">::backdrop</a>
-      </td>
-      <td>
-        <a href="#::cue">::cue</a>
-      </td>
-    </tr>
-  </table>
   <h3 id="::after">::after</h3>
   <p class="ans">
     <strong>::after</strong> creeert een pseudo-element dat de <i>last child</i> is van een <i>selected element</i><br>

@@ -5,7 +5,11 @@
 ul {
   background: #F8F8FF;
   border-left: 5px solid teal;
-  padding: 2% 2%;
+  padding: 1em 2em;
+}
+
+li {
+  margin: 3px;
 }
 
 .qn {

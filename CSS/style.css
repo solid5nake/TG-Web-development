@@ -23,14 +23,13 @@ ul {
 
 
 .code {
-  background: #001933;
+  margin: 50px 0;
   padding: 20px 30px;
+  width: 500px;
   border: initial;
   border-left: 5px solid mediumseagreen;
-  margin: 50px 0;
+  background: #001933;
   color: mediumspringgreen;
-  width: 500px;
-  height: fit-content;
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
   font-size: 18px;
@@ -38,26 +37,26 @@ ul {
 
 .code > span {
   float: right;
-  font-size: small;
+  font-size: medium;
   color: deeppink;
 }
 
 pre {
   margin: 50px 0;
-  background: #001933;
+  width: 550px;
   border-left: 5px solid mediumseagreen;
   color: mediumspringgreen;
-  width: 550px;
-  height: fit-content;
+  background: #001933;
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
   font-size: 18px;
+  position: relative;
 }
 
 pre > span {
-  position: relative;
+  position: absolute;
   top: 10px;
-  left: 450px;
+  right: 10px;
   font-size: medium;
   color: deeppink;
 }
@@ -66,7 +65,7 @@ pre > span {
   background:whitesmoke;
   padding: 10px;
   height: fit-content;
-  width: 550px;
+  width: 535px;
 }
 
 .browser > span{

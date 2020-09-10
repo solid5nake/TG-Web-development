@@ -53,14 +53,19 @@
       <td>
         <a href="#::before">::before</a>
       </td>
-      <td></td>
+      <td>
+        <a href="#::backdrop">::backdrop</a>
+      </td>
+      <td>
+        <a href="#::cue">::cue</a>
+      </td>
     </tr>
   </table>
   <h3 id="::after">::after</h3>
   <p class="ans">
     <strong>::after</strong> creeert een pseudo-element dat de <i>last child</i> is van een <i>selected element</i><br>
     Het wordt meestal gebruikt om cosmetische content toe te voegen aan een element met een  <strong>content</strong> property. <br>
-    Per default is het inline
+    Per default is het inline.
   </p>
   <pre class="info">
     <span>CSS</span>
@@ -69,9 +74,52 @@
     }
   </pre>
   <i>*Voeg een pijl toe achter elke link</i>
+  <hr>
   <h3 id="::before">::before</h3>
   <p class="ans">
-    <strong>::before</strong>
+    <strong>::before</strong> creeert een pseudo-element dat dat de <i>last child</i> is van een <i>selected element</i><br>
+    Het wordt meestal gebruikt om cosmetische content toe te voegen aan een element met een  <strong>content</strong> property. <br>
+    Per default is het inline.
   </p>
+  <pre class="info">
+    <span>CSS</span>
+    a::before {
+      content: "♥";
+    }
+  </pre>
+  <i>*Voeg een hart toe achter elke link</i>
+  <p class="ans">
+    <strong>Note</strong>: pseudo-elementen gegenereerd met <strong>::before</strong> en <strong>::after</strong> worden <i>contained door de elements formatting box</i><br>
+    om die reden wordt het niet toegepast door <i>replaced elements</i> zoals &#60;img&#62; en &#60;br&#62; elementen.
+  </p>
+  <hr>
+  <h3 id="::backdrop">::backdrop</h3>
+  <p class="ans">
+    De <strong>::backdrop</strong> pseudo-element is een box ter grootte van de viewport die onmiddellijk wordt weergegeven onder elk element dat in <i>fullscreen mode</i> wordt weergegeven, tegelijketijd zit het boven alle andre elementen. <br>
+    Dit omvat beide elementen die in volledig scherm zijn geplaatst met behulp van de <strong>Fullscreen API</strong> en &#60;dialog&#62; elementen. <br>
+    <br>
+    Wanneer meerdere elementen in de modus voor volledig scherm zijn geplaatst, wordt de achtergrond onmiddellijk onder het voorste element getekend, en bovenop de oudere elementen op volledig scherm. br
+  </p>
+  <pre class="info">
+    <span>CSS</span>
+    dialog::backdrop {
+      background: rgba(255,0,0,.25);
+    }
+  </pre>
+  <i>*Backdrop wordt alleen weergegeven als het dialoogvenster wordt geopend met dialog.showModal ()</i>
+  <hr>
+  <h3 id="::cue">::cue</h3>
+  <p class="ans">
+    Het :: cue CSS pseudo-element komt overeen met WebVTT-cues binnen een geselecteerd element. Dit kan worden gebruikt om bijschriften en andere aanwijzingen in media te stylen met VTT-tracks. <br>
+    Het primaire doel van WebVTT-bestanden is om tekstoverlays toe te voegen aan een &#60;video&#62;.
+    <strong>Note:</strong><strong>Web Video Text Tracks Format</strong> is een formaat voor het weergeven van getimede teksttracks (zoals ondertitels of bijschriften) met behulp van het element <track>
+  </p>
+  <pre class="info">
+    <span>CSS</span>
+    ::cue {
+      color: yellow;
+      font-weight: bold;
+    }
+  </pre>
 </body>
 </html>

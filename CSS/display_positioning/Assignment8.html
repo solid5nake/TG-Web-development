@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
   <title>Display & Positioning - Opdracht 8</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="Index.html">Main</a>
     </nav>
+    <style>
+      /* .ex {
+        width: 50%;
+      } */
+      .box {
+        position: relative;
+        font-family: initial;
+        text-align: justify;
+      }
+
+      .txt {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: -webkit-fill-available;
+        padding-left: 3%;
+        background: yellow;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        font-size: 60px;
+      }
+
+      .txt-sm {
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        width: 30%;
+        padding-left: 2%;
+        background: rgba(255, 255, 255, 0.8);
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 300;
+        font-size: 40px;
+      }
+    </style>
   </header>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 8</h2>
   <p class="qn">
-
+    Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
   </p>
+  <img src="images/Alpines.png" alt="Alpines" class="ex">
+
+  <p class="ans">
+    Er is 1 container div gebruikt (.box), deze heeft de position property relative <br>
+    De twee nested div zijn absolute gepositioneerd ten opzichte van de container met ieder een gedefinieerde top en
+    left
+  </p>
+  <div class="box">
+    <img src="images/SnowyAlpines.jpg" alt="Snow on Alpines">
+    <div class="txt">Bbbrrrrr...</div>
+    <div class="txt-sm">Super koud hier zeg!</div>
+  </div>
+
+
 </body>
+
 </html>

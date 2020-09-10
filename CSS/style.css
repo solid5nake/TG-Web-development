@@ -43,7 +43,7 @@ ul {
 }
 
 pre {
-  margin: 50px 0;
+  margin: 20px 0;
   width: 550px;
   border-left: 5px solid mediumseagreen;
   color: mediumspringgreen;
@@ -51,6 +51,13 @@ pre {
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
   font-size: 18px;
+  position: relative;
+}
+
+pre ~ .info{
+  border-left: 5px solid cadetblue;
+  color: deeppink;
+  background: lavender;
   position: relative;
 }
 

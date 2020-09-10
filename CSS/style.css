@@ -62,14 +62,15 @@ pre > span {
 }
 
 .browser {
+  position: relative;
   background:whitesmoke;
-  padding: 10px;
-  height: fit-content;
-  width: 535px;
+  width: fit-content;
 }
 
 .browser > span{
-  float: right;
+  position: absolute;
+  top: 5%;
+  right: 5%;
   color: #2F4F4F;
   font-size: medium;
 }

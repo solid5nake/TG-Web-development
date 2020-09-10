@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
   <title>Pseudo elements - Opdracht 1</title>
 </head>
 <body>
@@ -14,7 +15,63 @@
   <h1>Pseudo elements</h1>
   <h3>Opdracht 1</h3>
   <p class="qn">
-
+    Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen <br>
+    woorden wat deze pseudo-elementen inhouden.
+  </p>
+  <p class="ans">
+    Een CSS <strong>pseudo-element</strong> is een toegevoegde <i>keyword</i> aan een <strong>selector</strong>. <br>
+    Het laat toe om een specifiek gedeelte te stylen van het geselecteerde element(en). <br>
+    Bijvoorbeeld, ::first-line kan gebruikt worden om de font van de eerste regel van een paragraaf <i>first line</i> <br>
+    te veranderen.
+  </p>
+  <i>
+    <strong>Geldt alleen voor de eerste regel van elke &#60;p&#62;</strong>
+  </i>
+  <pre>
+    <span>CSS</span>
+    p::first-line {
+      color: blue;
+      text-transform: uppercase;
+    }
+  </pre>
+  <br>
+  <h2>Syntax</h2>
+  <pre class="info">
+    <span>CSS</span>
+    selector::pseudo-element {
+      property: value;
+    }
+  </pre>
+  <p>Alleen 1 pseudo-element kan gebruikt worden in een selector. Het moet achter de simple selectors aanwezig zijn in een declaratie</p>
+  <p class="ans"><strong>Note</strong>: Als regel worden dubbele colons <strong>::</strong> gebruikt om onderscheidt te maken van <i>pseudo-classes</i></p>
+  <h2>Index van standaard pseudo-elements</h2>
+  <table>
+    <tr>
+      <td>
+        <a href="#::after">::after</a>
+      </td>
+      <td>
+        <a href="#::before">::before</a>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+  <h3 id="::after">::after</h3>
+  <p class="ans">
+    <strong>::after</strong> creeert een pseudo-element dat de <i>last child</i> is van een <i>selected element</i><br>
+    Het wordt meestal gebruikt om cosmetische content toe te voegen aan een element met een  <strong>content</strong> property. <br>
+    Per default is het inline
+  </p>
+  <pre class="info">
+    <span>CSS</span>
+    a::after {
+      content: "→";
+    }
+  </pre>
+  <i>*Voeg een pijl toe achter elke link</i>
+  <h3 id="::before">::before</h3>
+  <p class="ans">
+    <strong>::before</strong>
   </p>
 </body>
 </html>

@@ -2,14 +2,24 @@
   font-family: Helvetica;
 }
 
+hr {
+  margin: 50px 50px;
+  border: 1px solid whitesmoke;
+}
+
 ul {
+  width: fit-content;
+  padding: 2em 2em;
   background: #F8F8FF;
   border-left: 5px solid teal;
-  padding: 1em 2em;
 }
 
 li {
   margin: 3px;
+}
+
+td {
+  padding: 20px;
 }
 
 .qn {
@@ -26,11 +36,17 @@ li {
   border-left: 5px solid orange;
 }
 
+.note {
+  padding: 20px;
+  width: fit-content;
+  background: gold;
+  font-size: 15px;
+}
 
 .code {
   margin: 50px 0;
-  padding: 20px 30px;
-  width: 500px;
+  padding: 30px 30px;
+  width: 600px;
   border: initial;
   border-left: 5px solid mediumseagreen;
   background: #001933;
@@ -58,9 +74,9 @@ pre {
   position: relative;
 }
 
-pre ~ .info{
+.info{
   border-left: 5px solid cadetblue;
-  color: deeppink;
+  color: lightseagreen;
   background: lavender;
   position: relative;
 }

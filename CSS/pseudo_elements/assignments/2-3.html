@@ -26,6 +26,126 @@
     reeds opgezocht en uitgezocht wat ze doen. Kun je van al deze pseudo-elementen een <br>
     voorbeeld maken?
   </p>
+  <br>
+  <br>
+  <hr>
+  <h2>Index van standaard pseudo-elements</h2>
+  <table>
+    <tr>
+      <td>
+        <a href="#::first-letter">::first-letter</a>
+      </td>
+      <td>
+        <a href="#::grammer-error">::grammer-error</a>
+      </td>
+      <td>
+        <a href="#::marker">::marker</a>
+      </td>
+      <td>
+        <a href="#::part()">::part()</a>
+      </td>
+      <td>
+        <a href="#::placeholder">::placeholder</a>
+      </td>
+    </tr>
+    <td>
+      <a href="#::first-letter">::first-letter</a>
+    </td>
+    <td>
+      <a href="#::grammer-error">::grammer-error</a>
+    </td>
+    <td>
+      <a href="#::marker">::marker</a>
+    </td>
+    <td>
+      <a href="#::part()">::part()</a>
+    </td>
+    <td>
+      <a href="#::placeholder">::placeholder</a>
+    </td>
+  </tr>
+  </table>
+  <hr>
+
+  <h3 id="::first-letter">::first-letter</h3>
+  <p class="ans">
+    Een CSS-pseudo-element die stijlen toe past op de eerste letter van de eerste regel van een <strong>block-level</strong> element, maar alleen als deze niet wordt voorafgegaan door andere inhoud (zoals afbeeldingen of inline-tabellen).
+  </p>
+  <p class="note">
+    <strong>Note:</strong> 
+    Een user-agent is een computerprogramma dat een persoon vertegenwoordigt, bijvoorbeeld een browser in een webcontext.
+  </p>
+  <hr>
+
+  <h3 id="::grammer-error">::grammer-error</h3>
+  <p class="ans">
+    Een CSS-pseudo-element representeerd een tekst segment dat een <strong>user agent</strong> ziet als een grammatische fout. <br>
+    Slechts een kleine subset van CSS-eigenschappen kan worden gebruikt in een regel met :: grammar-error in zijn selector: <br>
+  </p>
+  <ul>
+    <li>color</li>
+    <li>background-color</li>
+    <li>cursor</li>
+    <li>caret-color</li>
+    <li>outline</li>
+    <li>text-decoration</li>
+    <li>text-emphasis-color</li>
+    <li>text-shadow</li>
+  </ul>
+
+  <div class="code">
+    <span>HTML</span>
+    &#60;p&#62;My friends is coming to the party tonight.&#60;/p&#62;
+  </div>
+
+  <pre class="info">
+    <span>CSS</span>
+    ::grammar-error  {
+      text-decoration: underline red;
+      color: red;
+    }
+  </pre>
+  <hr>
+
+  <h3 id="::marker">::marker</h3>
+  <p class="ans">
+    De <strong>::marker</strong> CSS pseudo-element selecteerd de marker box van een list item dat<br>
+    <i>bullets</i>  <i>nummers</i> of bevat. Het werkt op elke element of pseudo-element dat gesteld is op <strong>display:list-item</strong><br>
+    zoals de &#60;li&#62; en &#60;summary&#62; elementen.
+  </p>
+  <pre class="info">
+    <span>CSS</span>
+    ::marker {
+      color: blue;
+      font-size: 1.2em;
+    }
+  </pre>
+  <h4>Toegestaande properties</h4>
+  <ul>
+    <li>Alle <strong>font properties</strong> </li>
+    <li><strong>white space properties</strong></li>
+    <li><strong>color</strong></li>
+    <li><strong>text-combine-upright</strong>, <strong>unicode-bidi</strong> en<strong>direction</strong></li>
+    <li><strong>content</strong> property</li>
+    <li>Alle <strong>animation</strong> en <strong>transition</strong><properties/li>
+  </ul>
+  <hr>
+
+  
+  <h3 id="::part()">::part()</h3>
+  <p class="ans">
+    De <strong>::part()</strong> CSS pseudo-element selecteerd de marker box van een list item dat<br>
+    <i>bullets</i>  <i>nummers</i> of bevat. Het werkt op elke element of pseudo-element dat gesteld is op <strong>display:list-item</strong><br>
+    zoals de &#60;li&#62; en &#60;summary&#62; elementen.
+  </p>
+  <pre class="info">
+    <span>CSS</span>
+    ::part() {
+      color: blue;
+      font-size: 1.2em;
+    }
+  </pre>
 </body>
+
 
 </html>

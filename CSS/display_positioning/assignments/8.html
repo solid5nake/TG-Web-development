@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Display & Positioning - Opdracht 8</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Main</a>
+    </nav>
+    <style>
+
+      .card {
+        position: relative;
+        font-family: initial;
+        margin-left: 70px;
+        width: 1000px;
+        height: 500px;
+        background-image: url(images/SnowyAlpines.jpg);
+      }
+
+      .txt {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 30%;
+        left: 0;
+        padding-left: 130px;
+        margin-left: -80px;
+        background: yellow;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        font-size: 60px;
+        width: 860px;
+        height: 90px;
+        }
+
+      .txt-sm {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 253px;
+        left: 30px;
+        width: 600px;
+        padding-left: 35px;
+        background: rgba(255, 255, 255, 0.8);
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 300;
+        font-size: 30px;
+      }
+
+      .box {
+        position: absolute;
+        background: yellow;
+        top: 30%;
+        right: -80px;
+        width: 80px;
+        height: 90px;
+      }
+    </style>
+  </header>
+  <h1>Display & Positioning</h1>
+  <h2>Opdracht 8</h2>
+  <p class="qn">
+    Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
+  </p>
+  <img src="images/Alpines.png" alt="Alpines" class="ex">
+
+  <p class="ans">
+    Er is 1 container div gebruikt (.box), deze heeft de position property relative <br>
+    De twee nested div zijn absolute gepositioneerd ten opzichte van de container met ieder een gedefinieerde top en
+    left
+  </p>
+  <div class="card">
+    <div class="txt">Bbbrrrrr...</div>
+    <div class="txt-sm">Super koud hier zeg!</div>
+    <div class="box"></div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Display & Positioning - Opdracht 2</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html">Main</a>
+    </nav>
+    <style>
+      h1 ~ .example {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        color: rgb(255, 0, 0);
+      }
+    </style>
+  </header>
+
+  <h1>Display & Positioning</h1>
+  <h2>Opdracht 2</h2>
+  <p class="qn">
+    Zie de onderstaande HTML code. <br>
+    Hoe zorg je er voor dat het &lt;h1&gt; element altijd 50px van de top en 50px van de rechterkant
+    van het scherm zichtbaar is. Maak het &lt;h1&gt; element rood door een RGB kleurcodering toe te
+    passen.
+  </p>
+  <pre>
+    <span>HTML</span>
+    &#60;h1&#62;Dit is een titel&#60;/h1&#62;
+    &#60;p&#62;Dit is een paragraaf.&#60;/p&#62;
+    &#60;p&#62;Dit is nog een paragraaf.&#60;/p&#62;
+  </pre>
+
+  <h1 class="example">Dit is een titel</h1>
+  <p>Dit is een paragraaf.</p>
+  <p>Dit is een paragraaf.</p>
+  <p>Dit is nog een paragraaf.</p>
+
+  <p class="ans">
+    Door een <strong>position property fixed</strong> te declareren wordt de h1 rechtboven in de viewport positioneerd.
+  </p>
+
+  <pre>
+    <span>HTML</span>
+    &#60;h1 class="example"&#62;Dit is een titel&#60;/h1&#62;
+    &#60;p&#62;Dit is een paragraaf.&#60;/p&#62;
+    &#60;p&#62;Dit is nog een paragraaf.&#60;/p&#62;
+  </pre>
+
+  <pre>
+    <span>CSS</span>
+    h1 ~ .example {
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      color: rgb(255, 0, 0);
+    }
+  </pre>
+
+
+</body>
+
+</html>

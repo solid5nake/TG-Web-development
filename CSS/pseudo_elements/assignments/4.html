@@ -4,18 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Pseudo elements - Opdracht </title>
+  <title>Pseudo elements - Opdracht 4</title>
 </head>
 <body>
   <header>
     <nav>
       <a href="../index.html">Main</a>
     </nav>
+    <style>
+      button {
+        position: relative;
+        border: initial;
+        background: rgb(85, 175, 170);
+        width: 910px;
+        height: 60px;
+        font-size: 30px;
+        color: white;
+        margin: 0;
+      }
+
+      button::before {
+        width: 60px;
+        height: 50px;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        content:"div" ;
+        color:rgb(85, 175, 170);
+        border-top: 10px solid rgb(237, 109, 82);
+        border-left: 10px solid rgb(237, 109, 82);
+      }
+
+      button::after {
+        width: 60px;
+        height: 50px;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        content:"div" ;
+        color:rgb(85, 175, 170);
+        border-bottom: 10px solid rgb(237, 109, 82);
+        border-right: 10px solid rgb(237, 109, 82);
+      }
+
+    </style>
   </header>
   <h1>Pseudo elements</h1>
-  <h3>Opdracht </h3>
+  <h3>Opdracht 4</h3>
   <p class="qn">
-
+    Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit
+    namaken?
   </p>
+  <div></div>
+  <button>Button</button>
+  <div></div>
+  <hr>
+
+  <p class="ans">
+    Hiervoor zijn 2 div elementen aangemaakt naast de button element, de button heeft de pseudo-elementen ::before (voor de button) en ::after (achter de button) meegekregen <br>
+    Een "div" wordt als waarde ingesteld voor de content property.
+  </p>
+
+  <p class="note">
+    <strong>Note:</strong> De ::before en ::after pseudo-elementen hebben de property content nodig om iets weer te geven.
+  </p>
+  <pre class="code">
+    <span>CSS</span>
+    button {
+      position: relative;
+      border: initial;
+      background: rgb(85, 175, 170);
+      width: 910px;
+      height: 55px;
+      font-size: 30px;
+      color: white;
+      margin: 0;
+    }
+
+    button::before {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      content:"div" ;
+      color:rgb(85, 175, 170);
+      border-top: 5px solid orange;
+      border-left: 5px solid orange;
+    }
+
+    button::after {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      content:"div" ;
+      color:rgb(85, 175, 170);
+      border-bottom: 5px solid orange;
+      border-right: 5px solid orange;
+    }
+  </pre>
+  <h4>Resultaat</h4>
+  <div></div>
+  <button>Button</button>
+  <div></div>
+  <hr>
+
 </body>
 </html>

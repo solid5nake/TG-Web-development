@@ -4,18 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Pseudo elements - Opdracht </title>
+  <title>Pseudo elements - Opdracht 5</title>
 </head>
 <body>
   <header>
     <nav>
       <a href="../index.html">Main</a>
     </nav>
+    <style>
+      img {
+        width: auto;
+        height: 280px;
+      }
+
+      .text {
+        padding: 20px;
+        width: 700px;
+        height: 350px;
+        contain: content;
+        border: 1px solid black;
+      }
+      .text::before {
+        position: absolute;
+        padding: 20px;
+        width: 700px;
+        height: 350px;
+        content: "";
+        background: url(../images/american-bulldog.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+      }
+    </style>
   </header>
   <h1>Pseudo elements</h1>
-  <h3>Opdracht </h3>
+  <h3>Opdracht 5</h3>
   <p class="qn">
-
+    Hieronder vind je nog eens een voorbeeld van het gebruik van een pseudo-element ::before. Kun jij dit namaken? <br>
+    Zoek een afbeelding op internet.
+  </p>
+  <div></div>
+  <img src="../images/bulldog.png" alt="bulldog">
+  <p class="ans">
+    <strong>p::before</strong> pseudo-element, de content property blijft leeg "" en een background property is toegepast zodat er volledige controle is.
+  </p>
+  <p class="text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempore modi aperiam nihil consectetur odio maxime aut eaque cupiditate, obcaecati quaerat rem non, nostrum accusantium debitis voluptatum ipsum quidem adipisci?<br>
+    Facilis ut numquam repudiandae voluptatibus tempora consectetur dolorum voluptate magnam. Delectus nam rerum sint possimus nobis veniam itaque non perspiciatis, quia, quos, modi velit omnis molestiae! Sapiente natus molestias officiis?<br>
+    Dicta maxime voluptas dolores magnam autem libero aut laboriosam officia, vitae rem facere repellat fugiat. Praesentium inventore nostrum possimus reiciendis eveniet harum. Saepe, mollitia ea? Architecto voluptatibus dolorem ad quo.<br>
+    Rerum blanditiis suscipit nostrum adipisci nulla, laudantium consectetur, velit, hic laborum pariatur architecto eligendi odit deserunt? At assumenda cum officia esse, totam adipisci possimus soluta et veritatis maiores, error molestiae.<br>
+    Cupiditate rerum vero quo, repellat quaerat aliquid eligendi perferendis totam enim ullam quos veritatis assumenda praesentium laborum non iure deserunt repudiandae et perspiciatis minima aliquam eveniet dicta exercitationem! Delectus, voluptatum.<br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet beatae harum in sapiente nemo amet molestias, ab illo quas alias modi! Ad molestias adipisci commodi qui corporis. Magni, placeat atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
   </p>
 </body>
 </html>

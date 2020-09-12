@@ -3,13 +3,20 @@
 }
 
 hr {
-  margin: 50px 50px;
+  margin: 50px 0 50px 0;
   border: 1px solid whitesmoke;
 }
 
-ul {
+p {
+  margin: 50px 0 50px 0;
+  padding: 40px;
   width: fit-content;
+}
+
+ul {
+  margin: 50px 0 50px 0;
   padding: 2em 2em;
+  width: fit-content;
   background: #F8F8FF;
   border-left: 5px solid teal;
 }
@@ -22,31 +29,46 @@ td {
   padding: 20px;
 }
 
+pre {
+  margin: 50px 0 50px 0;
+  width: 550px;
+  border-left: 5px solid mediumseagreen;
+  color: mediumspringgreen;
+  background: #001933;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: lighter;
+  font-size: 18px;
+  position: relative;
+}
+
+pre > span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: medium;
+  color: deeppink;
+}
+
 .qn {
-  padding: 40px;
-  width: fit-content;
   background: aliceblue;
   border-left: 5px solid thistle;
 }
 
 .ans {
-  padding: 40px;
-  width: fit-content;
   background: moccasin;
   border-left: 5px solid orange;
 }
 
 .note {
   padding: 20px;
-  width: fit-content;
   background: gold;
   font-size: 15px;
 }
 
 .code {
+  position: relative;
   margin: 50px 0;
-  padding-top: 10px;
-  padding-right: 40px;
+  padding: 40px;
   width: fit-content;
   border: initial;
   border-left: 5px solid mediumseagreen;
@@ -58,39 +80,21 @@ td {
 }
 
 .code > span {
-  float: right;
-  font-size: medium;
-  color: deeppink;
-}
-
-pre {
-  margin: 20px 0;
-  width: 550px;
-  border-left: 5px solid mediumseagreen;
-  color: mediumspringgreen;
-  background: #001933;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: lighter;
-  font-size: 18px;
-  position: relative;
-}
-
-.info{
-  width: fit-content;
-  padding-top: 10px;
-  padding-right: 30px;
-  border-left: 5px solid lightseagreen;
-  color: cadetblue;
-  background: lavender;
-  position: relative;
-}
-
-pre > span {
   position: absolute;
   top: 5px;
   right: 5px;
   font-size: medium;
   color: deeppink;
+}
+
+.info{
+  position: relative;
+  padding-top: 10px;
+  padding-right: 30px;
+  width: fit-content;
+  border-left: 5px solid lightseagreen;
+  color: cadetblue;
+  background: lavender;
 }
 
 .browser {

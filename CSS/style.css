@@ -45,7 +45,8 @@ td {
 
 .code {
   margin: 50px 0;
-  padding: 30px 30px;
+  padding-top: 10px;
+  padding-right: 40px;
   width: fit-content;
   border: initial;
   border-left: 5px solid mediumseagreen;
@@ -76,7 +77,8 @@ pre {
 
 .info{
   width: fit-content;
-  padding: 30px;
+  padding-top: 10px;
+  padding-right: 30px;
   border-left: 5px solid lightseagreen;
   color: cadetblue;
   background: lavender;

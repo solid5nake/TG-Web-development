@@ -1,21 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Pseudo elements - Opdracht </title>
+  <title>Pseudo elements - Opdracht 1</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html">Main</a>
     </nav>
-  </header>
-  <h1>Pseudo elements</h1>
-  <h3>Opdracht </h3>
-  <p class="qn">
+    <style>
+      .box {
+        position: relative;
+        margin: 50px;
+        width: 235px;
+        height: 235px;
+        background: red;
+        transform: rotate(20deg);
+      }
 
+      .box::before {
+        position: absolute;
+        content: "";
+        width: 235px;
+        height: 235px;
+        background: red;
+        transform: rotate(-50deg);
+      }
+
+      .box::after {
+        position: absolute;
+        content: "";
+        width: 235px;
+        height: 235px;
+        background: red;
+        transform: rotate(68deg);
+      }
+    </style>
+  </header>
+  <h1 id="pseudo-elements">Pseudo elements</h1>
+  <h2>Opdracht 1</h2>
+  <p class="qn">
+    De laatste opdracht vergt wat creativiteit. Zie het onderstaande voorbeeld en maak het na.
   </p>
+  <div class="box"></div>
+  <hr>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="box"&#62;&#60;/div&#62;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .box {
+      position: relative;
+      margin: 50px;
+      width: 235px;
+      height: 235px;
+      background: red;
+      transform: rotate(20deg);
+    }
+    
+    .box::before {
+      position: absolute;
+      content: "";
+      width: 235px;
+      height: 235px;
+      background: red;
+      transform: rotate(-50deg);
+    }
+
+    .box::after {
+      position: absolute;
+      content: "";
+      width: 235px;
+      height: 235px;
+      background: red;
+      transform: rotate(68deg);
+    }
+  </pre>
+
+  <h3>Resultaat</h3>
+  <div class="box"></div>
+  <p class="ans">
+    Op de .box div zijn de <i>b::before en ::after</i> pseudo-elementen toegepast deze zijn ten opzichte van de nearest
+    ancestor <i>absolutely positioned</i>.
+  </p>
+  <p class="note">
+    <strong>Note:</strong> Bij zowel de div- en pseudo elementen is de <strong>transform</strong> CSS property toegepast
+    om de elementen te roteren.
+  </p>
+  <hr>
+  <h3>transform</h3>
+  <p class="qn">
+    De <strong>transform</strong> CSS property laat het volgende toe; <i>rotate, scale, skew of translate</i> een
+    element. <br>
+    Het modificeerd de coordinatie ruimte van de CSS <i>visual formatting model</i>. <br>
+    <br>
+    Als de transform property een andere <i>value</i> heeft dan <strong>none</strong>, dan wordt er een stack context
+    gemaakt. In dat geval zal het element fungeren als <i>containing block</i> voor elke <i>position: fixed of
+      position:absolute; </i> elementen die het bevat (<i>contains</i>).
+  </p>
+  <p class="note">
+    De <strong>stacking context</strong> is een drie-dimensionale conceptualisering van HTML elementen langs een
+    denkbeeldige z-as ten op zichte van de gebruiker, van wie wordt aangenomen dat deze naar de viewport of de webpagina kijkt. <br>
+    HTML-elementen nemen deze ruimte in op volgorde van prioriteit in op basis van elementattributes.
+  </p>
+  <h3>Syntax</h3>
+  <pre class="info">
+    <span>CSS</span>
+    /* Keyword values */
+    transform: none;
+
+    /* Function values */
+    transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: perspective(17px);
+    transform: rotate(0.5turn);
+    transform: rotate3d(1, 2.0, 3.0, 10deg);
+    transform: rotateX(10deg);
+    transform: rotateY(10deg);
+    transform: rotateZ(10deg);
+    transform: translate(12px, 50%);
+    transform: translate3d(12px, 50%, 3em);
+    transform: translateX(2em);
+    transform: translateY(3in);
+    transform: translateZ(2px);
+    transform: scale(2, 0.5);
+    transform: scale3d(2.5, 1.2, 0.3);
+    transform: scaleX(2);
+    transform: scaleY(0.5);
+    transform: scaleZ(0.3);
+    transform: skew(30deg, 20deg);
+    transform: skewX(30deg);
+    transform: skewY(1.07rad);
+
+    /* Multiple function values */
+    transform: translateX(10px) rotate(10deg) translateY(5px);
+    transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+
+    /* Global values */
+    transform: inherit;
+    transform: initial;
+    transform: unset;
+  </pre>
+  <hr>
+
+  <footer>
+    <a href="#pseudo-elements">▲ boven</a>
+  </footer>
 </body>
+
 </html>

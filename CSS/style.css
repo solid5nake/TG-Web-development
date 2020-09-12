@@ -76,9 +76,9 @@ pre {
 
 .info{
   width: fit-content;
-  padding: 20px 20px 20px 0;
-  border-left: 5px solid cadetblue;
-  color: lightseagreen;
+  padding: 30px;
+  border-left: 5px solid lightseagreen;
+  color: cadetblue;
   background: lavender;
   position: relative;
 }

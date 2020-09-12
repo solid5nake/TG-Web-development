@@ -31,7 +31,7 @@ td {
 
 pre {
   margin: 50px 0 50px 0;
-  width: 550px;
+  width: fit-content;
   border-left: 5px solid mediumseagreen;
   color: mediumspringgreen;
   background: #001933;
@@ -68,7 +68,7 @@ pre > span {
 .code {
   position: relative;
   margin: 50px 0;
-  padding: 15px 50px 10px 0;
+  padding: 15px 70px 10px 0;
   width: fit-content;
   border: initial;
   border-left: 5px solid mediumseagreen;

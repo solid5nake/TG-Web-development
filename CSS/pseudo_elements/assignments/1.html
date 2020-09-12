@@ -11,7 +11,7 @@
 <body>
   <header>
     <nav>
-      <a href="../index.html">Main</a>
+      <a href="../index.html" id="main">Main</a>
     </nav>
   </header>
   <h1>Pseudo elements</h1>
@@ -23,7 +23,7 @@
   <p class="ans">
     Een CSS <strong>pseudo-element</strong> is een toegevoegde <i>keyword</i> aan een <strong>selector</strong>. <br>
     Het laat toe om een specifiek gedeelte te stylen van het geselecteerde element(en). <br>
-    Alleen 1 pseudo-element kan gebruikt worden in een selector. Het moet achter de simple selectors aanwezig zijn binneneen declaratie.
+    Alleen 1 pseudo-element kan gebruikt worden in een selector. Het moet achter de simple selectors aanwezig zijn binnen een declaratie.
   </p>
   <h2>Syntax</h2>
   <pre class="info">
@@ -60,8 +60,10 @@
   <p class="ans">
     De ::first-line is een CSS pseudo-element dat gebruikt kan worden om de font van de eerste regel van een paragraaf <i>first line</i> te veranderen.
   </p>
-  <pre>
+  <pre class="code">
     <span>CSS</span>
+    /* Geldt alleen voor de eerste regel van elke &#60;p&#62; */
+
     p::first-line {
       color: blue;
       text-transform: uppercase;
@@ -83,11 +85,13 @@
   </p>
   <pre class="info">
     <span>CSS</span>
+    / * Voeg een pijl toe achter elke link * /
+
     a::after {
-      content: "→";
+      content: "➞";
     }
   </pre>
-  <i>*Voeg een pijl toe achter elke link</i>
+  <i>*Voeg een "➞" toe achter elke link</i>
   <hr>
 
   <h3 id="::before">::before</h3>
@@ -100,11 +104,12 @@
   </p>
   <pre class="info">
     <span>CSS</span>
+    / * Voeg een hart toe achter elke link * /
     a::before {
       content: "♥";
     }
   </pre>
-  <i>*Voeg een hart toe achter elke link</i>
+  <i>*Voeg een "♥" toe achter elke link</i>
   <p class="note">
     <strong>Note</strong>: pseudo-elementen gegenereerd met <strong>::before</strong> en <strong>::after</strong> worden
     <i>contained door de elements formatting box</i><br>
@@ -120,8 +125,7 @@
     Dit omvat beide elementen die in volledig scherm zijn geplaatst met behulp van de <strong>Fullscreen API</strong> en
     &#60;dialog&#62; elementen. <br>
     <br>
-    Wanneer meerdere elementen in de modus voor volledig scherm zijn geplaatst, wordt de achtergrond onmiddellijk onder
-    het voorste element getekend, en bovenop de oudere elementen op volledig scherm. br
+    Wanneer meerdere elementen in de modus voor volledig scherm zijn geplaatst, wordt de achtergrond onmiddellijk onder het voorste element getekend, en bovenop de oudere elementen op volledig scherm.
   </p>
   <pre class="info">
     <span>CSS</span>
@@ -151,6 +155,9 @@
   </pre>
   <hr>
 
+  <footer>
+    <a href="#main">▲ boven</a>
+  </footer>
 </body>
 
 </html>

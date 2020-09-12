@@ -1,21 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Pseudo elements - Opdracht </title>
+  <title>Pseudo elements - Opdracht 6</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html">Main</a>
     </nav>
-  </header>
-  <h1>Pseudo elements</h1>
-  <h3>Opdracht </h3>
-  <p class="qn">
+    <style>
+      .container {
+        display: flex;
+      }
 
+      .example {
+        position: relative;
+        border-radius: 50%;
+        margin: 70px;
+        width: 185px;
+        height: 185px;
+        background: black;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 185px;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .example::before {
+        position: absolute;
+        border-radius: 50%;
+        top: 50px;
+        left: -35px;
+        line-height: 60px;
+        content: "●";
+        background: black;
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
+      }
+
+      .example::after {
+        position: absolute;
+        border-radius: 50%;
+        top: 50px;
+        right: -35px;
+        content: "●";
+        line-height: 100px;
+        background: black;
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
+      }
+
+      .sphere {
+        position: relative;
+        border-radius: 50%;
+        margin: 70px;
+        width: 185px;
+        height: 185px;
+        background: black;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 185px;
+        font-size: 50px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .sphere::before {
+        position: absolute;
+        border-radius: 50%;
+        top: 50px;
+        left: -35px;
+        line-height: 60px;
+        content: "✪";
+        background: black;
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
+      }
+
+      .sphere::after {
+        position: absolute;
+        border-radius: 50%;
+        top: 50px;
+        right: -35px;
+        content: "❖";
+        line-height: 100px;
+        background: black;
+        width: 80px;
+        height: 80px;
+        font-size: 15px;
+      }
+    </style>
+  </header>
+  <h1 id="pseudo-elements">Pseudo elementen</h1>
+  <h2>Opdracht 6</h2>
+  <p class="qn">
+    Hieronder vind je wederom een voorbeeld van het gebruik van een pseudo-element. Kun jij dit namaken?
   </p>
+  <div class="container">
+    <div class="example">1</div>
+    <div class="example">2</div>
+    <div class="example">3</div>
+  </div>
+  <hr>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container"&#62;
+      &#60;div class="sphere"&#62;1&#60;/div&#62;
+      &#60;div class="sphere"&#62;2&#60;/div&#62;
+      &#60;div class="sphere"&#62;3&#60;/div&#62;
+    &#60;/div&#62;
+  </pre>
+
+  <pre class="code">
+    <span>CSS</span>
+    .sphere::before {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      left: -35px;
+      line-height: 60px;
+      content: "✪";
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+
+    .sphere::after {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      right: -35px;
+      content: "❖";
+      line-height: 100px;
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+  </pre>
+
+  <h3>Resultaat</h3>
+  <div class="container">
+    <div class="sphere">1</div>
+    <div class="sphere">2</div>
+    <div class="sphere">3</div>
+  </div>
+
+  <p class="ans">
+    De pseudo elementen zijn <i>absolutely positioned relatively from it's nearest ancestor</i> <strong>(.container)</strong>.<br>
+    Voor de value van de <i>content property</i> in de pseudo-elementen <strong>.sphere::before</strong> en
+    <strong>.sphere::after</strong> zijn speciale karakters gebruikt.
+  </p>
+
+  <p class="note"><strong>Note:</strong> Om de speciale karakters in de pseudo-elementen te positioneren is de CSS
+    property <strong>line-height</strong> ervoor gebruikt
+  </p>
+  <hr>
+
+  <h4>line-height</h4>
+  <p class="qn">
+    De CSS-eigenschap line-height stelt de hoogte van een line box in. Het wordt vaak gebruikt om de afstand tussen
+    regels tekst in te stellen. Op bloklevel-elementen specificeert het de minimale hoogte van line boxes binnen het
+    element. Op niet-vervangen inline-elementen specificeert het de hoogte die wordt gebruikt om de hoogte van het line
+    box te berekenen.
+  </p>
+  
+  <footer>
+    <hr>
+    <a href="#pseudo-elements">▲ boven</a>
+  </footer>
 </body>
+
 </html>

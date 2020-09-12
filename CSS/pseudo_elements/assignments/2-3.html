@@ -15,12 +15,12 @@
     </nav>
   </header>
   <h1 id="pseudo-elements">Pseudo elements</h1>
-  <h3>Opdracht 2</h3>
+  <h2>Opdracht 2</h2>
   <p class="qn">
     Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 <br>
     kunnen benoemen. Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?
   </p>
-  <h3>Opdracht 3</h3>
+  <h2>Opdracht 3</h2>
   <p class="qn">
     Er zijn aldus 14 verschillende pseudo elementen. Je hebt ze in de voorgaande opdracht <br>
     reeds opgezocht en uitgezocht wat ze doen. Kun je van al deze pseudo-elementen een <br>
@@ -98,10 +98,10 @@
     <li>text-shadow</li>
   </ul>
 
-  <div class="code">
+  <pre class="code">
     <span>HTML</span>
     &#60;p&#62;My friends is coming to the party tonight.&#60;/p&#62;
-  </div>
+  </pre>
 
   <pre class="info">
     <span>CSS</span>
@@ -151,6 +151,7 @@
   </p>
   <h3>Syntax</h3>
   <pre class="info">
+    <span>CSS</span>
     ::part( &#60;ident&#62;+ )
   </pre>
 
@@ -233,6 +234,7 @@
     Ze zijn handig om te gebruiken bij een user input, placeholders in formfields is niet aan te raden.
   </p>
   <pre class="info">
+    <span>HTML</span>
     &#60;label for="user-email"&#62;Your email address&#60;/label&#62;
     &#60;span id="user-email-hint" class="input-hint"&#62;Example: jane@sample.com&#60;/span&#62;
     &#60;input id="user-email" aria-describedby="user-email-hint" name="email" type="email"&#62;
@@ -250,7 +252,7 @@
       background-color: green;
     }
   </pre>
-  <h4>Toegestaande properties</h4>
+  <h3>Toegestaande properties</h3>
   <p>
     Alleen bepaalde CSS-eigenschappen kunnen worden gebruikt met :: selection:
   </p>
@@ -275,6 +277,7 @@
   </p>
 
   <pre class="info">
+    <span>CSS</span>
     /* Selects any element placed inside a slot */
     ::slotted(*) {
       font-weight: bold;
@@ -321,14 +324,14 @@
     Het <strong>::cue-region</strong> CSS pseudo-element komt overeen met WebVTT-cues binnen een geselecteerd element.
     Dit kan worden gebruikt om bijschriften en andere aanwijzingen in media te stylen met VTT-tracks.
   </p>
-  <p class="code">
+  <pre class="code">
     <span>CSS</span>
     ::cue-region {
-    color: yellow;
-    font-weight: bold;
+      color: yellow;
+      font-weight: bold;
     }
-  </p>
-  <h4>Syntax</h4>
+  </pre>
+  <h3>Syntax</h3>
   <pre class="info">
     ::cue-region | ::cue-region( <selector> )
   </pre>

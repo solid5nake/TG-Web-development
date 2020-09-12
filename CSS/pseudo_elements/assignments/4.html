@@ -14,37 +14,33 @@
     <style>
       button {
         position: relative;
+        margin: 0;
         border: initial;
-        background: rgb(85, 175, 170);
         width: 910px;
         height: 60px;
+        background: rgb(85, 175, 170);
         font-size: 30px;
         color: white;
-        margin: 0;
       }
 
       button::before {
-        width: 60px;
-        height: 50px;
         position: absolute;
-        display: block;
         top: 0;
         left: 0;
-        content:"div" ;
-        color:rgb(85, 175, 170);
+        width: 60px;
+        height: 50px;
+        content:"" ;
         border-top: 10px solid rgb(237, 109, 82);
         border-left: 10px solid rgb(237, 109, 82);
       }
 
       button::after {
-        width: 60px;
-        height: 50px;
         position: absolute;
-        display: block;
         bottom: 0;
         right: 0;
-        content:"div" ;
-        color:rgb(85, 175, 170);
+        width: 60px;
+        height: 50px;
+        content: "";
         border-bottom: 10px solid rgb(237, 109, 82);
         border-right: 10px solid rgb(237, 109, 82);
       }
@@ -52,7 +48,7 @@
     </style>
   </header>
   <h1 id="pseudo-elements">Pseudo elements</h1>
-  <h3>Opdracht 4</h3>
+  <h2>Opdracht 4</h2>
   <p class="qn">
     Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit
     namaken?
@@ -63,12 +59,11 @@
   <hr>
 
   <p class="ans">
-    Hiervoor zijn 2 div elementen aangemaakt naast de button element, de button heeft de pseudo-elementen ::before (voor de button) en ::after (achter de button) meegekregen <br>
-    Een "div" wordt als waarde ingesteld voor de content property.
+    Het button element heeft de pseudo-elementen ::before (voor de button) en ::after (achter de button) meegekregen <br>
   </p>
 
   <p class="note">
-    <strong>Note:</strong> De ::before en ::after pseudo-elementen hebben de property content nodig om iets weer te geven.
+    <strong>Note:</strong> de <i>::before en ::after</i> pseudo-elementen hebben de <i>content</i> property nodig om zichtbaar te worden.
   </p>
   <pre class="code">
     <span>CSS</span>
@@ -90,7 +85,7 @@
       display: block;
       top: 0;
       left: 0;
-      content:"div" ;
+      content:"" ;
       color:rgb(85, 175, 170);
       border-top: 5px solid orange;
       border-left: 5px solid orange;
@@ -103,16 +98,14 @@
       display: block;
       bottom: 0;
       right: 0;
-      content:"div" ;
+      content:"" ;
       color:rgb(85, 175, 170);
       border-bottom: 5px solid orange;
       border-right: 5px solid orange;
     }
   </pre>
-  <h4>Resultaat</h4>
-  <div></div>
+  <h3>Resultaat</h3>
   <button>Button</button>
-  <div></div>
   <hr>
 
   <footer>

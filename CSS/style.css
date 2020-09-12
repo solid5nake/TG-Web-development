@@ -60,7 +60,7 @@ pre > span {
 }
 
 .note {
-  padding: 20px;
+  padding: 35px;
   background: gold;
   font-size: 15px;
 }
@@ -68,7 +68,7 @@ pre > span {
 .code {
   position: relative;
   margin: 50px 0;
-  padding: 40px;
+  padding: 15px 50px 10px 0;
   width: fit-content;
   border: initial;
   border-left: 5px solid mediumseagreen;
@@ -81,16 +81,15 @@ pre > span {
 
 .code > span {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 9px;
+  right: 9px;
   font-size: medium;
   color: deeppink;
 }
 
 .info{
   position: relative;
-  padding-top: 10px;
-  padding-right: 30px;
+  padding: 15px 50px 10px 0;
   width: fit-content;
   border-left: 5px solid lightseagreen;
   color: cadetblue;

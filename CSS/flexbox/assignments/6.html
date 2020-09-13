@@ -12,17 +12,16 @@
       <a href="../index.html" id="main">Main</a>
     </nav>
     <style>
-      div {
+      .container > div {
         flex-basis: 3.6em;
         background: rgb(170, 176, 248);
       }
 
       .container {
         display: flex;
-        flex-basis: initial;
         flex-direction: column;
         justify-content: space-between;
-        padding: 100px 0 100px 0;
+        padding: 6.250em 0 6.250em 0;
         width: 114em;
         height: 25em;
         background: rgb(254, 250, 210) ;
@@ -66,6 +65,49 @@
     </li>
   </ul>
   <hr>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>CSS</span>
+    .container > div {
+      flex-basis: 3.6em;
+      background: rgb(170, 176, 248);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6.250em 0 6.250em 0;
+      width: 114em;
+      height: 25em;
+      background: rgb(254, 250, 210);
+    }
+
+    .row1{
+      width: auto;
+    }
+    .row2{
+      width: 49.13em;
+    }
+    .row3{
+      width: 60.63em;
+    }
+    .row4{
+      width: 72em;
+    }
+    .row5{
+      width: 26.38em;
+    }
+    .row6{
+      width: 37.81em;
+    }
+  </pre>
+  <p class="ans">
+    <strong>div.container</strong> heeft de properties (<strong>display:flex;</strong> <strong>flex-direction:column;</strong> <strong>justify-content:space-between;</strong>)<br>
+    <strong>div</strong> heeft een <strong>flex-basis</strong> declaratie.
+  </p>
+  <h3>Resultaat</h3>
   <div class="container">
     <div class="row1"></div>
     <div class="row2"></div>
@@ -74,6 +116,7 @@
     <div class="row5"></div>
     <div class="row6"></div>
   </div>
+  <hr>
   
   <footer>
     <a href="#main">▲ boven</a>

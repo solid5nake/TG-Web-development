@@ -1,29 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Flexbox</title>
+  <title>Flexbox - Opdracht 8</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">Main</a>
     </nav>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 68.250em;
+      }
+
+      .container > div {
+        display: flex;
+        flex: 0 0 calc(33.3% - 4px);
+        block-size: 3.6em;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 6em;
+        border: 2px solid black;
+      }
+
+      .block-1 {
+        background: rgb(255, 255, 228);
+      }
+
+      .block-2 {
+        background: rgb(153, 206, 244);
+      }
+
+      .block-3 {
+        background: rgb(205, 245, 205);
+      }
+
+      .block-4 {
+        background: white;
+      }
+
+      .block-5 {
+        background: black;
+        color: white;
+      }
+
+      .block-6 {
+        background: linear-gradient(to right, royalblue, lightcyan);
+      }
+    </style>
   </header>
   <h1>Flexbox</h1>
-  <h2>Opdracht</h2>
+  <h2>Opdracht 8</h2>
   <p class="qn">
-
+    Zie het onderstaande voorbeeld en maak het na met flexbox.
   </p>
+  <img src="../images/flexbox-assignment-8.png">
   <hr>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container"&#62;
+      &#60;div class="block-1"&#62;&#60;/div&#62;
+      &#60;div class="block-2"&#62;&#60;/div&#62;
+      &#60;div class="block-3"&#62;&#60;/div&#62;
+      &#60;div class="block-4"&#62;&#60;/div&#62;
+      &#60;div class="block-5"&#62;&#60;/div&#62;
+      &#60;div class="block-6"&#62;&#60;/div&#62;
+    &#60;/div&#60;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 68.250em;
+    }
+
+    .container > div {
+      display: flex;
+      flex: 0 0 calc(33.3% - 4px);
+      block-size: 3.6em;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 6em;
+      border: 2px solid black;
+    }
+
+    .block-1 {
+      background: rgb(255, 255, 228);
+    }
+
+    .block-2 {
+      background: rgb(153, 206, 244);
+    }
+
+    .block-3 {
+      background: rgb(205, 245, 205);
+    }
+
+    .block-4 {
+      background: white;
+    }
+
+    .block-5 {
+      background: black;
+      color: white;
+    }
+
+    .block-6 {
+      background: linear-gradient(to right, royalblue, lightcyan);
+    }
+  </pre>
   <p class="ans">
-    
+    De width van elke flex item wordt berekend dmv percentages <strong>(flex: 0 0 calc(33.3% - 4px);)</strong> minus de rechter en linker border van een flexitem;
   </p>
-  
+
+  <h3>Resultaat</h3>
+  <div class="container">
+    <div class="block-1">1</div>
+    <div class="block-2">2</div>
+    <div class="block-3">3</div>
+    <div class="block-4">4</div>
+    <div class="block-5">5</div>
+    <div class="block-6">6</div>
+  </div>
+  <hr>
+
   <footer>
     <a href="#main">▲ boven</a>
   </footer>
 </body>
+
 </html>

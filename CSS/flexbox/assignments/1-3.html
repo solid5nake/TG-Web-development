@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Flexbox - Opdrachten 1-3</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="../index.html" id="main">Main</a>
+    </nav>
+    <style>
+      div {
+        display: flex;
+        margin: 15px;
+        flex-basis: 90px;
+        block-size: 90px;
+        justify-content: center;
+        align-items: center;
+        background: rgb(201, 251, 182);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+      }
+
+      .container {
+        display: flex;
+        height: initial;
+        justify-content: flex-start;
+        margin: 50px 0 50px 0;
+        background: rgb(251, 254, 183);
+      }
+
+      .container-assignment-2 {
+        display: flex;
+        height: initial;
+        justify-content: flex-end;
+        margin: 50px 0 50px 0;
+        background: rgb(251, 254, 183);
+      }
+
+      .flexgrow {
+        flex-grow: 3;
+      }
+    </style>
+  </header>
+  <h1>Flexbox</h1>
+  <h2>Opdracht 1</h2>
+  <p class="qn">
+    Zie het onderstaande voorbeeld en maak het na met flex. Gebruik geen width, height of line-height.
+  </p>
+  <div class="container">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <div class="div">4</div>
+    <div class="div">5</div>
+    <div class="div">6</div>
+  </div>
+  <hr>
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container"&#62;
+      &#60;div class="div"&#62;1&#60;/div&#62;
+      &#60;div class="div"&#62;2&#60;/div&#62;
+      &#60;div class="div"&#62;3&#60;/div&#62;
+      &#60;div class="div"&#62;4&#60;/div&#62;
+      &#60;div class="div"&#62;5&#60;/div&#62;
+      &#60;div class="div"&#62;6&#60;/div&#62;
+    &#60;/div&#62;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .container {
+      display: flex;
+      height: initial;
+      justify-content: flex-start;
+      margin: 50px 0 50px 0;
+      background: rgb(251, 254, 183);
+    }
+    
+    .div {
+      display: flex;
+      margin: 15px;
+      flex-basis: 90px;
+      block-size: 90px;
+      justify-content: center;
+      align-items: center;
+      background: rgb(201, 251, 182);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+    }
+  </pre>
+
+  <h3>Resultaat</h3>
+  <div class="container">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <div class="div">4</div>
+    <div class="div">5</div>
+    <div class="div">6</div>
+  </div>
+  <p class="ans">
+    De parent heeft een <strong>display:flex</strong> property om het een flexbox van te maken. De child heeft een
+    <strong>display:flex</strong> property om de tekst in het midden te centreren zonder gebruik te hoeven maken van
+    line-height, de properties justify-content (horizontale as) en align-items (verticale as) worden ingesteld op
+    <i>center</i>.
+    De <strong>flex-basis</strong> property set de initial main size van een flex item (width).
+    <br>
+    <strong>justify-content: flex-start;</strong> is de (default): items worden richting de start van de flex-direction ingepakt.
+  </p>
+  <p class="note">
+    <strong>Note:</strong> de block-size property is toegepast om de height in te stellen.
+    </pre>
+    <hr>
+
+  <h2>Opdracht 2</h2>
+  <p class="qn">
+    Zie het onderstaande voorbeeld, de items staan nu anders uitgelijnd. Maak het na met flex. <br>
+    Gebruik geen width, height of line-height.
+  </p>
+  <div class="container-assignment-2">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <div class="div">4</div>
+    <div class="div">5</div>
+    <div class="div">6</div>
+  </div>
+  <hr>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container-assignment-2"&#62;
+      &#60;div class="div"&#62;1&#60;/div&#62;
+      &#60;div class="div"&#62;2&#60;/div&#62;
+      &#60;div class="div"&#62;3&#60;/div&#62;
+      &#60;div class="div"&#62;4&#60;/div&#62;
+      &#60;div class="div"&#62;5&#60;/div&#62;
+      &#60;div class="div"&#62;6&#60;/div&#62;
+    &#60;/div&#62;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .container-assignment-2 {
+      display: flex;
+      justify-content: flex-end;
+      height: initial;
+      margin: 50px;
+      background: rgb(251, 254, 183);
+    }
+  </pre>
+
+
+  <h3>Resultaat</h3>
+  <div class="container-assignment-2">
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <div class="div">4</div>
+    <div class="div">5</div>
+    <div class="div">6</div>
+  </div>
+  <p class="note"><strong>Note: <i>justify-content: flex-end;</i></strong> packs de items aan het einde van de
+    flex-direction</p>
+  <hr>
+
+  <h2>Opdracht 3</h2>
+  <p class="qn">
+    Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width,
+    height of line-height.
+  </p>
+  <div class="container">
+    <div>1</div>
+    <div class="flexgrow">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container"&#62;
+      &#60;div class="div"&#62;1&#60;/div&#62;
+      &#60;div class="flexgrow"&#62;2&#60;/div&#62;
+      &#60;div class="div"&#62;3&#60;/div&#62;
+      &#60;div class="div"&#62;4&#60;/div&#62;
+      &#60;div class="div"&#62;5&#60;/div&#62;
+      &#60;div class="div"&#62;6&#60;/div&#62;
+    &#60;/div&#62;
+  </pre>
+
+  <pre class="code">
+    <span>CSS</span>
+    .flexgrow {
+      flex-grow: 3;
+    }
+
+    div {
+      display: flex;
+      margin: 15px;
+      flex-basis: 90px;
+      block-size: 90px;
+      justify-content: center;
+      align-items: center;
+      background: rgb(201, 251, 182);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+    }
+  </pre>
+
+  <h3>Resultaat</h3>
+  <div class="container">
+    <div>1</div>
+    <div class="flexgrow">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+
+  <p class="ans">
+    The flex-grow CSS property sets de flex grow factor van een flex item grootte. <strong>.flexgrow</strong> neemt de
+    remaining space over <br>
+    binnen de flexbox, gezien zijn grow factor 3 staat ten opzichte van de andere flex items die inngesteld staan op 1.
+  </p>
+  <hr>
+
+  <footer>
+    <a href="#main">▲ boven</a>
+  </footer>
+</body>
+
+</html>

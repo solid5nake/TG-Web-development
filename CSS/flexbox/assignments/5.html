@@ -1,29 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Flexbox</title>
+  <title>Flexbox - Opdracht 5</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">Main</a>
+      <style>
+        .box {
+          display: flex;
+          background: rgb(251, 182, 251);
+          margin: 5px;
+          justify-content: center;
+          align-items: center;
+          flex-basis: 50px;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 25px;
+        }
+
+        .stretch {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: stretch;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .center {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: center;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .start {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: start;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .flex-end {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: flex-end;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .self-start {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: self-start;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .space-between {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: space-between;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+      </style>
     </nav>
   </header>
   <h1>Flexbox</h1>
-  <h2>Opdracht</h2>
+  <h2>Opdracht 5</h2>
   <p class="qn">
-
+    De property ‘align-items’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door gebruik
+    te maken van de align-items property.
   </p>
   <hr>
-  <p class="ans">
-    
-  </p>
+
+  <h3>align-items: stretch;</h3>
+  <div class="stretch">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <hr>
+
+  <h3>align-items: center;</h3>
+  <div class="center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <hr>
+
+  <h3>align-items: start;</h3>
+  <div class="start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <hr>
+
+  <h3>align-items: flex-end;</h3>
+  <div class="flex-end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <hr>
+
+  <h3>align-items: self-start;</h3>
+  <div class="self-start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+  <hr>
+
+  <h3>align-items: space-between;</h3>
+  <div class="space-between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+  <hr>
   
   <footer>
     <a href="#main">▲ boven</a>
   </footer>
 </body>
+
 </html>

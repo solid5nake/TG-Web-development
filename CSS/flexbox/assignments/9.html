@@ -1,29 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Flexbox</title>
+  <link rel="stylesheet" href="../fizzy-button.css">
+  <title>Flexbox - Opdracht 9</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">Main</a>
     </nav>
+    <style>
+      .example {
+        width: 1100px;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px;
+        background: rgb(235, 235, 235);
+      }
+
+      .flex-item {
+        flex: 0 0 24%;
+        flex-basis: 400px;
+        margin: 20px;
+        background: white;
+        font-family: 'Arial Narrow', Arial, sans-serif;
+      }
+
+      .flex-item>img {
+        height: 400px;
+        width: 400px;
+        object-fit: fill;
+      }
+
+      .flex-item-description {
+        padding-top: 20px;
+        text-align: center;
+        background: white;
+      }
+
+      .flex-item-description > strong {
+        color: blue;
+        font-size: 20px;
+      }
+
+      .flex-item-description > p {
+        margin: initial;
+      }
+
+      .flex-item > button {
+        padding: 30px;
+        width: 400px;
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        background: blue;
+      }
+
+      button {
+        position: relative;
+      }
+
+      button:hover::before {
+        position: absolute;
+        top: -150px;
+        content: url(../images/super-mario-smash.gif);
+      }
+
+      button:hover::after {
+        position: absolute;
+        right: 0px;
+        top: -150px;
+        content: url(../images/yoshi-bounce.gif);
+      }
+    </style>
   </header>
   <h1>Flexbox</h1>
-  <h2>Opdracht</h2>
+  <h2>Opdracht 9</h2>
   <p class="qn">
+    Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de
+    ‘play’ knop heen gaat. <br>
+    Optioneel: gebruik .gif bestanden als images vooreen levendig effect.
+  </p>
+  <img src="../images/super-mario-flexbox.png" class="example">
+  <hr>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <img src="../images/super-mario-run.gif" alt="super mario run">
+      <div class="flex-item-description">
+        <strong>Super Mario Run</strong>
+        <p>Een nieuw soort Super Mario-game, die je met één hand kunt spelen! Je bestuurt Mario door het scherm aan te
+          raken terwijl hij automatisch door het level rent.</p>
+      </div>
+      <button>Play Super Mario Run</button>
+    </div>
+    <div class="flex-item">
+      <img src="../images/mario-maker.gif" alt="mario maker" class="mario-maker">
+      <div class="flex-item-description">
+        <strong>Mario Maker</strong>
+        <p>Steek de handen uit de mouwen en bouw de Super Mario-levels waar je altijd al van hebt gedroomd in Super
+          Mario Maker 2, exclusief voor de Nintendo Switch!</p>
+      </div>
+      <button>Play Mario Maker</button>
+    </div>
+    <div class="flex-item">
+      <img src="../images/super-mario-3.gif" alt="super mario 3">
+      <div class="flex-item-description">
+        <strong>Super Mario 3</strong>
+        <p>Super Mario Bros. 3 introduceert een tal van vooruitgangen t.o.v. het originele Super Mario Bros., zoals de
+          toevoeging van een wereldmap, meer vijanden en level-types.</p>
+      </div>
+      <button>Play Super Mario 3</button>
+    </div>
+    <div class="flex-item">
+      <img src="../images/yoshis-island.gif" alt="Yoshi's Island">
+      <div class="flex-item-description">
+        <strong>Yoshi's Island</strong>
+        <p>Yoshi's island is een spel waar elk level weer iets nieuws biedt van vijanden tot uitdagingen. Dit houdt het
+          spel door de hele speeltijd interessant en uitdagend. </p>
+      </div>
+      <button>Play Yoshi's Island</button>
+    </div>
+  </div>
+  <p class="ans">
 
   </p>
-  <hr>
-  <p class="ans">
-    
-  </p>
-  
+
   <footer>
     <a href="#main">▲ boven</a>
   </footer>
 </body>
+
 </html>

@@ -83,6 +83,58 @@
   </div>
   <hr>
 
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;div class="container"&#62;
+      &#60;div class="column1"&#62;&#60;/div&#62;
+      &#60;div class="column2"&#62;&#60;/div&#62;
+      &#60;div class="column3"&#62;&#60;/div&#62;
+      &#60;div class="column4"&#62;&#60;/div&#62;
+      &#60;div class="column5"&#62;&#60;/div&#62;
+      &#60;div class="column6"&#62;&#60;/div&#62;
+    &#60;/div&#60;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .container {
+      display: flex;
+      flex-basis: initial;
+      flex-direction: row;
+      padding: 0.35em;
+      align-items: center;
+      justify-content: flex-start;
+      height: 60em;
+      width: 47em;
+      background: rgb(254, 250, 210);
+    }
+
+    .column1{
+      height: 100%;
+    }
+    .column2{
+      height: 28.125em;
+    }
+    .column3{
+      height: 33.875em;
+    }
+    .column4{
+      height: 39.688em;
+    }
+    .column5{
+      height: 16.438em;
+    }
+    .column6{
+      height: 22.188em;
+    }
+  </pre>
+
+  <p class="ans">
+    div.container properties (<strong>flex-direction: row;</strong>, <strong>align-items: center;</strong>, <strong>justify-content: flex-start;</strong> ) <br>
+    div.column properties hebben ieder een eigen <strong>height</strong> meegekregen.
+  </p>
+  <hr>
+
 
   <footer>
     <a href="#main">▲ boven</a>

@@ -1,29 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexbox</title>
+  <title>Flexbox - Opdracht 4</title>
   <link rel="stylesheet" href="../../style.css">
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">Main</a>
+      <style>
+        .box {
+          display: flex;
+          margin: 15px;
+          flex-basis: 90px;
+          block-size: 90px;
+          justify-content: center;
+          align-items: center;
+          background: rgb(201, 251, 182);
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 25px;
+        }
+
+        .end {
+          display: flex;
+          height: initial;
+          justify-content: end;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .center {
+          display: flex;
+          height: initial;
+          justify-content: center;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .start {
+          display: flex;
+          height: initial;
+          justify-content: start;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+        .left {
+          display: flex;
+          height: initial;
+          justify-content: left;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .baseline {
+          display: flex;
+          height: initial;
+          justify-content: baseline;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .space-between {
+          display: flex;
+          height: initial;
+          justify-content: space-between;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .space-around {
+          display: flex;
+          height: initial;
+          justify-content: space-around;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .space-evenly {
+          display: flex;
+          height: initial;
+          justify-content: space-evenly;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+
+        .stretch {
+          display: flex;
+          height: initial;
+          justify-content: stretch;
+          margin: 50px 0 50px 0;
+          background: rgb(251, 254, 183);
+        }
+        
+      </style>
     </nav>
   </header>
   <h1>Flexbox</h1>
-  <h2>Opdracht</h2>
+  <h2>Opdracht 4</h2>
   <p class="qn">
-
+    De property ‘justify-content’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door
+    gebruik te maken van de justify-content property.
   </p>
   <hr>
-  <p class="ans">
-    
-  </p>
-  
+
+  <h3>justify-content: end;</h3>
+  <div class="end">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: start;</h3>
+  <div class="start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: center;</h3>
+  <div class="center">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: start;</h3>
+  <div class="start">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: left;</h3>
+  <div class="left">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: baseline;</h3>
+  <div class="baseline">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: space-between;</h3>
+  <div class="space-between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: space-around;</h3>
+  <div class="space-around">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: space-evenly;</h3>
+  <div class="space-evenly">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3>justify-content: stretch;</h3>
+  <div class="stretch">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+   <hr>
+
   <footer>
     <a href="#main">▲ boven</a>
   </footer>
 </body>
+
 </html>

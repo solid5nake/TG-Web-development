@@ -15,12 +15,13 @@
       <style>
         .box {
           display: flex;
+          border: 5px solid hotpink;
           background: rgb(251, 182, 251);
           margin: 5px;
           justify-content: center;
           align-items: center;
           flex-basis: 50px;
-          font-family: 'Times New Roman', Times, serif;
+          font-weight: lighter;
           font-size: 25px;
         }
 
@@ -84,6 +85,26 @@
           background: rgb(2, 33, 41);
         }
 
+        .baseline {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: baseline;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
+        .last-baseline {
+          display: flex;
+          width: 300px;
+          height: 300px;
+          align-items: last baseline;
+          margin: 50px 0 50px 0;
+          padding: 20px;
+          background: rgb(2, 33, 41);
+        }
+
       </style>
     </nav>
   </header>
@@ -95,7 +116,32 @@
   </p>
   <hr>
 
-  <h3>align-items: stretch;</h3>
+  <p class="ans">
+    Onderstaand zijn enkele voorbeelden van align-items values, er zijn meerdere om op te noemen.
+    <i>normal</i>, <i>flex-start</i>, <i>end</i>, <i>self-start</i> etc.
+  </p>
+
+  <h3>Index align-items values</h3>
+  <ul>
+    <li>
+      <a href="#stretch">stretch</a>
+    </li>
+    <li>
+      <a href="#center">center</a>
+    </li>
+    <li>
+      <a href="#start">start</a>
+    </li>
+    <li>
+      <a href="#flex-end">flex-end</a>
+    </li>
+    <li>
+      <a href="#baseline">baseline</a>
+    </li>
+  </ul>
+  <hr>
+
+  <h3 id="stretch">align-items: stretch;</h3>
   <div class="stretch">
     <div class="box">1</div>
     <div class="box">2</div>
@@ -103,7 +149,7 @@
   </div>
   <hr>
 
-  <h3>align-items: center;</h3>
+  <h3 id="center">align-items: center;</h3>
   <div class="center">
     <div class="box">1</div>
     <div class="box">2</div>
@@ -111,7 +157,7 @@
   </div>
   <hr>
 
-  <h3>align-items: start;</h3>
+  <h3 id="start">align-items: start;</h3>
   <div class="start">
     <div class="box">1</div>
     <div class="box">2</div>
@@ -119,7 +165,7 @@
   </div>
   <hr>
 
-  <h3>align-items: flex-end;</h3>
+  <h3 id="flex-end">align-items: flex-end;</h3>
   <div class="flex-end">
     <div class="box">1</div>
     <div class="box">2</div>
@@ -127,7 +173,7 @@
   </div>
   <hr>
 
-  <h3>align-items: self-start;</h3>
+  <h3 id="self-start">align-items: self-start;</h3>
   <div class="self-start">
     <div class="box">1</div>
     <div class="box">2</div>
@@ -135,8 +181,28 @@
   </div>
   <hr>
 
-  <h3>align-items: space-between;</h3>
+  <h3 id="space-between">align-items: space-between;</h3>
   <div class="space-between">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3 id="baseline">align-items: baseline;</h3>
+  <div class="baseline">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+
+  <h3 id="last-baseline">align-items: last-baseline;</h3>
+  <div class="last-baseline">
     <div class="box">1</div>
     <div class="box">2</div>
     <div class="box">3</div>

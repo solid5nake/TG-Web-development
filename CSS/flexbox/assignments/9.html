@@ -71,10 +71,15 @@
         position: relative;
       }
 
+      button:hover {
+        cursor: pointer;
+      }
+
       button:hover::before {
         position: absolute;
+        left: -150px;
         top: -150px;
-        content: url(../images/super-mario-smash.gif);
+        content: url(../images/mario-luigi-spin.gif);
       }
 
       button:hover::after {
@@ -83,6 +88,7 @@
         top: -150px;
         content: url(../images/yoshi-bounce.gif);
       }
+      
     </style>
   </header>
   <h1>Flexbox</h1>

@@ -4,23 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Flexbox</title>
+  <title>Flexbox - Opdracht 6</title>
 </head>
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">Main</a>
     </nav>
+    <style>
+      div {
+        flex-basis: 3.6em;
+        background: rgb(170, 176, 248);
+      }
+
+      .container {
+        display: flex;
+        flex-basis: initial;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 100px 0 100px 0;
+        width: 114em;
+        height: 25em;
+        background: rgb(254, 250, 210) ;
+      }
+
+      .row1{
+        width: auto;
+      }
+      .row2{
+        width: 49.13em;
+      }
+      .row3{
+        width: 60.63em;
+      }
+      .row4{
+        width: 72em;
+      }
+      .row5{
+        width: 26.38em;
+      }
+      .row6{
+        width: 37.81em;
+      }
+    </style>
   </header>
   <h1>Flexbox</h1>
-  <h2>Opdracht</h2>
+  <h2>Opdracht 6</h2>
   <p class="qn">
-
+    Maak het onderstaande na met flexbox. Properties die je o.a dient te gebruiken zijn:
   </p>
+  <img src="../images/flexbox-assignment-6.png">
+  <ul>
+    <li>
+      display
+    </li>
+    <li>
+      justify-content
+    </li>
+    <li>
+      flex-direction
+    </li>
+  </ul>
   <hr>
-  <p class="ans">
-    
-  </p>
+  <div class="container">
+    <div class="row1"></div>
+    <div class="row2"></div>
+    <div class="row3"></div>
+    <div class="row4"></div>
+    <div class="row5"></div>
+    <div class="row6"></div>
+  </div>
   
   <footer>
     <a href="#main">▲ boven</a>

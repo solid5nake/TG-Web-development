@@ -1,26 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Transitions - Opdracht</title>
+  <title>Transitions - Opdracht 3</title>
 </head>
+
 <body>
   <header>
     <nav>
       <a href="../index.html" id="main">main</a>
     </nav>
     <style>
-      
+      .transition-timing-container {
+        position: relative;
+        width: 1200px;
+        height: calc(((5em + 10px) * 5) + 5px);
+        border: 3px solid black;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.6em;
+      }
+
+      .transition-timing-container>div {
+        display: flex;
+        position: absolute;
+        margin: 5px;
+        border: 3px solid black;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 5em;
+        block-size: 5em;
+        transition-duration: 2s;
+      }
+
+      .transition-timing-container:hover>div {
+        background: crimson;
+        left: calc(100% - 5em - 16px);
+        transition-duration: 2s;
+      }
+
+      .box-1 {
+        top: 0;
+        transition-timing-function: ease;
+      }
+
+      .box-2 {
+        top: calc(5em + 10px);
+        transition-timing-function: cubic-bezier(.34, .45, 1, -0.21);
+      }
+
+      .box-3 {
+        top: calc((5em + 10px) * 2);
+        transition-timing-function: linear;
+      }
+
+      .box-4 {
+        top: calc((5em + 10px) * 3);
+        transition-timing-function: ease-out;
+      }
+
+      .box-5 {
+        top: calc((5em + 10px) * 4);
+        transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+
+      .transition-timing-container:hover .box-1 {
+        border-radius: 50%;
+      }
+
+      .transition-timing-container:hover .box-2 {
+        border-radius: 30px;
+      }
+
     </style>
   </header>
   <h1>Transitions</h1>
-  <h2>Opdracht </h2>
-  <p class="qn"></p>
+  <h2>Opdracht 3</h2>
+  <p class="qn">
+    Transitions kent verschillende transition-timing. Zie hieronder een voorbeeld. Maak het na.
+  </p>
+  <img src="../images/transitions-assignment-3.png">
   <hr>
+  <h3>transition-timing</h3>
+  <div class="transition-timing-container">
+    <div class="box-1">1</div>
+    <div class="box-2">2</div>
+    <div class="box-3">3</div>
+    <div class="box-4">4</div>
+    <div class="box-5">5</div>
+  </div>
+
   <footer>
     <a href="#main">▲ boven</a>
   </footer>
 </body>
+
 </html>

@@ -12,12 +12,48 @@
       <a href="../index.html" id="main">main</a>
     </nav>
     <style>
-      
+      .transition {
+        transition-property: color;
+        transition-duration: 3s;
+      }
+
+      .transition:hover {
+        color: crimson;
+      }
     </style>
   </header>
   <h1>Transitions</h1>
   <h2>Opdracht </h2>
-  <p class="qn"></p>
+  <p class="qn">
+    Maak een simpele transition wat de kleur van een tekst aanpast.
+  </p>
+  <hr>
+  <h3>Code</h3>
+  <pre class="code">
+    <span>HTML</span>
+    &#60;p class="transition"&#62;
+      Ga met de muis over mij heen om de kleur van de tekst te veranderen.
+    &#60;/p&#62;
+  </pre>
+  <pre class="code">
+    <span>CSS</span>
+    .transition {
+      transition-property: color;
+      transition-duration: 3s;
+    }
+
+    .transition:hover {
+      color: crimson;
+    }
+  </pre>
+  <h3>Resultaat</h3>
+  <p class="transition">
+    Dit is een voorbeeld van een transition waarbij de kleur van de tekst veranderd. <br>
+    Ga met de muis over mij heen om de kleur van de tekst te veranderen.
+  </p>
+  <p class="ans">
+     <strong>:hover</strong> state op de paragraaf element toegepast hierdoor wordt de <i>color</i> veranderd van default naar de kleur <i>crimson</i>. <br>
+  </p>
   <hr>
   <footer>
     <a href="#main">▲ boven</a>

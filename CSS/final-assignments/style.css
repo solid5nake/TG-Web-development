@@ -1,0 +1,35 @@
+body * {
+  font-family: 'Lobster', cursive;
+  width: 1200px;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.navbar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  block-size: 50px;
+  flex-basis: 60px;
+  text-transform: uppercase;
+}
+
+.navbar-btn a:hover, a:visited,
+a:link, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  background-image: url(images/cooking.jpg);
+  height: 500px;
+}
+

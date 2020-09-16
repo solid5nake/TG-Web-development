@@ -1,24 +1,24 @@
 body * {
   font-family: 'Lobster', cursive;
-  width: 1200px;
+  font-size: 1.1em;
 }
 
 nav {
   display: flex;
   position: fixed;
   justify-content: flex-end;
+  width: 100%;
   top: 0;
-  right: 0;
   background-color: rgb(255, 255, 255, 0.5);
-}
+  }
 
 .navbar-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  block-size: 50px;
-  flex-basis: 60px;
+  padding-right: 2em;
+  block-size: 3.125em;
+  flex-basis: 3.750em;
   text-transform: uppercase;
 }
 
@@ -28,8 +28,108 @@ a:link, a:active {
   color: black;
 }
 
-.main {
+.cooking-main {
+  display: flex;
+  justify-content: flex-end;
+  height: 50em;
+  background-size: cover;
   background-image: url(images/cooking.jpg);
-  height: 500px;
+  background-repeat: no-repeat;
 }
 
+.cooking-main-box {
+  margin-top: 3em;
+  color: rgb(92, 128, 203);
+  margin-right: 17em;
+}
+
+.cooking-main-box h1 {
+  font-size: 3.750em;
+}
+
+.cooking-btn-container {
+  display: inline-flex;
+}
+
+.cooking-btn {
+  width: 6em;
+  height: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+  transition: 2s background-color ease;
+}
+
+#cooking-btn-buy, 
+#cooking-btn-show {
+  transition: 2s background-color ease, 2s color ease;
+}
+
+#cooking-btn-buy:hover,
+#cooking-btn-show:hover {
+  color: 	rgb(255,255,255);
+}
+
+#cooking-btn-buy:hover {
+  background-color: rgb(100,149,237);
+}
+
+#cooking-btn-show:hover {
+  background-color: rgb(0,250,154);
+}
+
+#cooking-btn-buy {
+  margin-right: 0.5em;
+  border: 2px solid rgb(100,149,237);
+}
+
+#cooking-btn-show {
+  margin-left: 0.5em;
+  border: 2px solid rgb(0,250,154);
+  color: rgb(0,250,154);
+}
+
+.cooking-popular-dishes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20em;
+}
+
+.cooking-popular-dishes-container h2 {
+  text-align: center;
+  font-size: 3.2em;
+}
+
+.cooking-popular-dish {
+  width: 22em;
+}
+
+.cooking-popular-dish img {
+  object-fit: contain;
+  border-radius: 50%;
+  width: 15em;
+}
+
+.cooking-popular-dish p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.cooking-popular-dish-price {
+  position: relative;
+}
+
+.cooking-popular-dish-price strong, 
+span {
+  position: absolute;
+  top: 0;
+}
+
+.cooking-popular-dish-price span {
+  right: 0;
+}
+
+.cooking-popular-dish a {
+float: right;
+}

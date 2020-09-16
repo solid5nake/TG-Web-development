@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../style.css">
-  <title>Transitions - Opdracht</title>
+  <title>Transitions - Opdracht 5</title>
 </head>
 <body>
   <header>
@@ -12,12 +12,86 @@
       <a href="../index.html" id="main">main</a>
     </nav>
     <style>
-      
+      .joker-card-container {
+        position: relative;
+        width: 600px;
+        height: 500px;
+        border: 5px solid black;
+        background: rgba(29,221,51);
+      }
+      .joker-card-container > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .joker {
+        background: url(../images/joker-card.svg), rgb(190,128,255);
+        background-size: 50%;
+        transition: 5s transform ease 2s;
+      }
+
+      .crimson {
+        transition: 1s background-color linear;
+      }
+
+      .haha-left {
+        transform: translateX(-430px) rotate(40deg) translateY(46px);
+      }
+
+      .haha-right {
+        transform: translateX(300px) rotate(-17deg) translateY(-300px);
+      }
+
+      .joker-haha {
+        background-image: url(../images/joker-haha.jpg);
+        background-size: cover;
+      }
+
+      .joker:hover {
+        transform: translateX(230px) rotate(20deg) translateY(200px);
+        transition: 3s transform ease 200ms;
+      }
+
+      .crimson > img {
+        pointer-events: none;
+        opacity: 0;
+        transition: 2s opacity ease-in;
+      }
+
+      .crimson:hover {
+        background-color: rgba(220, 20, 60, 0.4);
+        transition: 1s background-color linear;
+      }
+      .crimson:hover .haha-left, 
+      .crimson:hover .haha-right {
+        opacity: 1;
+        transition: 2s opacity linear;
+      }
     </style>
   </header>
   <h1>Transitions</h1>
-  <h2>Opdracht </h2>
-  <p class="qn"></p>
+  <h2>Opdracht 5</h2>
+  <p class="qn">
+    Hieronder zie je wederom een voorbeeld van een transition. Je kunt op verschillende properties transitions aangeven. Zoek uit op welke properties de transitions zitten en maak het na. Je eigen creativiteit gebruiken is uiteraard toegestaan.
+  </p>
+  <hr>
+  <p class="note"><strong>Note:</strong> Ga met je muis over de joker kaart.</p>
+  <div class="joker-card-container">
+    <div class="joker-haha">
+    </div>
+    <div class="crimson">
+      <img src="../images/hahahahaha.svg" class="haha-left">
+      <img src="../images/hahahahaha.svg" class="haha-right">
+    </div>
+    <div class="joker">
+    </div>
+  </div>
   <hr>
   <footer>
     <a href="#main">▲ boven</a>

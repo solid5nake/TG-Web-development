@@ -1,185 +1,221 @@
 body * {
-  font-family: 'Lobster', cursive;
-  font-size: 1.05em;
+	font-family: 'Lobster', cursive;
+	font-size: 1.05em;
 }
 
 nav {
-  display: flex;
-  position: fixed;
-  justify-content: flex-end;
-  width: 100%;
-  top: 0;
-  background-color: rgb(255, 255, 255, 0.5);
-  }
-
-.navbar-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 2em;
-  block-size: 3.125em;
-  flex-basis: 3.750em;
-  text-transform: uppercase;
+	display: flex;
+	position: fixed;
+	justify-content: flex-end;
+	width: 100%;
+	top: 0;
+	background-color: rgb(255, 255, 255, 0.5);
 }
 
-.navbar-btn a:hover, a:visited,
-a:link, a:active {
-  text-decoration: none;
-  color: black;
+.navbar-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 2em;
+	block-size: 3.125em;
+	flex-basis: 3.750em;
+	text-transform: uppercase;
+}
+
+.navbar-btn a:hover,
+a:visited,
+a:link,
+a:active {
+	text-decoration: none;
+	color: black;
 }
 
 .cooking-main {
-  display: flex;
-  justify-content: flex-end;
-  height: 50em;
-  background-size: cover;
-  background-image: url(images/cooking.jpg);
-  background-repeat: no-repeat;
+	display: flex;
+	justify-content: flex-end;
+	height: 50em;
+	background-size: cover;
+	background-image: url(images/cooking.jpg);
+	background-repeat: no-repeat;
 }
 
 .cooking-main-box {
-  margin-top: 3em;
-  color: rgb(92, 128, 203);
-  margin-right: 17em;
+	margin-top: 3em;
+	color: rgb(92, 128, 203);
+	margin-right: 17em;
 }
 
 .cooking-main-box h1 {
-  font-size: 3.750em;
+	font-size: 3.750em;
 }
 
 .cooking-btn-container {
-  display: inline-flex;
+	display: inline-flex;
 }
 
 .cooking-btn {
-  width: 8em;
-  height: 2em;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 2em;
-  transition: 2s background-color ease;
+	width: 8em;
+	height: 2em;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 2em;
+	transition: 2s background-color ease;
 }
 
-#cooking-btn-buy, 
+#cooking-btn-buy,
 #cooking-btn-show {
-  transition: 2s background-color ease, 2s color ease;
+	transition: 2s background-color ease, 2s color ease;
 }
 
 #cooking-btn-buy:hover,
 #cooking-btn-show:hover {
-  color: 	rgb(255,255,255);
+	color: rgb(255, 255, 255);
 }
 
 #cooking-btn-buy:hover {
-  background-color: rgb(100,149,237);
+	background-color: rgb(100, 149, 237);
 }
 
 #cooking-btn-show:hover {
-  background-color: rgb(0,250,154);
+	background-color: rgb(0, 250, 154);
 }
 
 #cooking-btn-buy {
-  margin-right: 0.5em;
-  border: 2px solid rgb(100,149,237);
+	margin-right: 0.5em;
+	border: 0.125em solid rgb(100, 149, 237);
 }
 
 #cooking-btn-show {
-  margin-left: 0.5em;
-  border: 2px solid rgb(0,250,154);
-  color: rgb(0,250,154);
+	margin-left: 0.5em;
+	border: 0.125em solid rgb(0, 250, 154);
+	color: rgb(0, 250, 154);
 }
 
 #cooking-header {
-  text-align: center;
-  font-size: 3.2em;
+	text-align: center;
+	font-size: 3.2em;
 }
 
 .popular-dishes-flex-container,
 .menu-dishes-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 5em 0 5em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 5em 0 5em;
 }
 
-
 .popular-dish {
-  width: 18em;
+	position: relative;
+	width: 18em;
 }
 
 .popular-dish img {
-  margin-left: 2em;
-  object-fit: contain;
-  border-radius: 50%;
-  width: 13em;
+	margin-left: 2em;
+	object-fit: contain;
+	border-radius: 50%;
+	width: 13em;
 }
 
 .menu-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	position: relative;
+	justify-content: center;
 }
 
-.menu-dishes-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80em;
+.menu-chef {
+	position: relative;
+	width: 50em;
 }
 
 #menu-chef-image {
-  block-size: 50em;
-  object-fit: contain;
-  margin-right: 5em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	block-size: 40em;
+	object-fit: cover;
+}
+
+.menu-dishes-flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 80em;
 }
 
 .menu-dish-flex-item {
-  width: 20em;
+	position: relative;
+	width: 22em;
 }
 
 #dish-description {
-  margin-top: 2.5em;
-  margin-bottom: 2em;
+	margin-top: 2.5em;
+	margin-bottom: 2em;
 }
 
 .popular-dish-price {
-  margin: 0.5em 0 0.5em;
+	position: relative;
+	margin: 0.5em 0 0.5em;
 }
 
 .popular-dish a {
-float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#dish-name,
+#dish-price {
+	position: absolute;
+	top: 0;
 }
 
 #dish-name {
-  float: left;
+	left: 0;
 }
 
 #dish-price {
-  float: right;
+	right: 0;
 }
 
 footer {
-  background-color: rgb(0,250,154);
-  color:  rgb(100,149,237);
+	height: 20em;
+	background-color: rgb(0, 250, 154);
 }
 
-.footer-flex-container,
+.footer-flex-container {
+	display: flex;
+	justify-content: space-around;
+}
+
 .footer-contact,
 .footer-navigation {
-  display: flex;
-  justify-content: left;
+	padding: 2em;
 }
 
-.footer-contact,
-.footer-navigation {
+.footer-social-media {
+	margin-top: 2em;
 }
-
-
 
 .footer-navigation ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
-.footer-navigation a {
-  color: rgb(100,149,237);
+.footer-navigation strong{
+	margin-bottom: 2em;
+}
+
+footer, 
+#footer-link {
+	color: rgb(100, 149, 237);
+	font-size: 0.9em;
+}
+
+#footer-link {
+	text-transform: uppercase;
+}
+
+#footer-header {
+	display: block;
+	font-size: 1.2em;
+	margin-bottom: 1em;
 }

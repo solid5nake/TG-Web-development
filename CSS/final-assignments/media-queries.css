@@ -1,17 +1,15 @@
-@media only screen
-  and (max-device-width: 667px) 
-  and (max-width: 1200px) 
-  and (orientation: landscape){
+@media (min-width: 1025px) 
+and (max-width: 1280px) {
   body * {
     font-size: 0.9rem;
   }
 
   .main {
-    height: 25em;
+    height: 26em;
   }
 
   .main-box {
-    margin-right: 10em;
+    margin: 5em 8em 0 0;
     width: 20em;
   }
 
@@ -31,6 +29,26 @@
   .popular-dish img {
     margin-left: 2.9em;
     width: 13em;
+  }
+  
+  .menu-container {
+    padding: 0 1em;
+  }
+
+  .menu-chef {
+    width: 23%;
+  }
+
+  #menu-chef-image {
+    block-size: 30em;
+  }
+
+  .menu-flex-container {
+    margin: 0 0 1em;
+  }
+
+  .menu-flex-item {
+    width: 15em;
   }
   
 }
@@ -53,30 +71,6 @@
     margin: 1em 0;
   }
 
-  .popular-dishes-flex-container {
-    justify-content: center;
-  }
-
-  .popular-flex-dish img {
-    width: 15em;
-  }
-
-  #dish-name {
-    left: 2em;
-  }
-
-  #dish-price {
-    right: 2em;
-  }
-
-  #popular-dish-link {
-    right: 2em;
-  }
-
-  .popular-dish-discription {
-    padding: 2em;
-  }
-  
   .main {
     justify-content: center;
     align-items: center;
@@ -106,6 +100,52 @@
   #main-btn-buy,
   #main-btn-show {
     margin: 0.5em;
+  }
+
+  .menu-chef {
+    display: none;
+    width: 0;
+  }
+
+  .popular-flex-dish img {
+    width: 15em;
+  }
+
+  #dish-name {
+    left: 2em;
+  }
+
+  #dish-price {
+    right: 2em;
+  }
+
+  #popular-dish-link {
+    right: 2em;
+  }
+
+  .popular-dish-discription {
+    padding: 2em;
+  }
+
+  
+  .popular-dish-price #dish-name {
+    left: 2em;
+  }
+  
+  .popular-dish-price #dish-price {
+    right: 2em;
+  }
+
+  #dish-name {
+    left: 0em;
+  }
+
+  #dish-price {
+    right: 0;
+  }
+
+  .dish-description {
+    width: 16em;
   }
 
   #menu-chef-image {
@@ -155,7 +195,28 @@
     align-items: center;
   }
 
+  .popular-dishes-flex-container, .menu-flex-container {
+    margin: 1em 0 3em;
+  }
+
   .popular-flex-dish {
     margin: 1.5em 0;
+  }
+
+  .menu-container {
+    padding: 0 5em;
+  }
+
+  .menu-chef {
+    display: none;
+    width: 0%;
+  }
+
+  .menu-flex-container {
+    width: 100%;
+  }
+
+  .menu-flex-item {
+    width: 13em;
   }
 }

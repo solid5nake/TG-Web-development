@@ -30,8 +30,8 @@ a:active {
   color: black;
 }
 
-.#header-1 {
-  margin: 0;
+#header-1 {
+  margin: 0 10em 0 0;
   font-size: 3.750em;
 }
 
@@ -43,7 +43,7 @@ a:active {
 .main {
   display: flex;
   justify-content: flex-end;
-  height: 50em;
+  height: 35em;
   background-size: cover;
   background-image: url(images/cooking.jpg);
   background-repeat: no-repeat;
@@ -99,11 +99,11 @@ a:active {
 }
 
 .popular-dishes-flex-container,
-.menu-dishes-flex-container {
+.menu-flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 5em 0 5em;
+  margin: 3em 0 5em;
 }
 
 .popular-dish {
@@ -122,29 +122,27 @@ a:active {
   display: flex;
   position: relative;
   justify-content: center;
+  padding-left: 10em;
+  padding-right: 10em;
 }
 
 .menu-chef {
   position: relative;
-  width: 50em;
+  width: 19%;
+}
+
+.menu-flex-container {
+  width: 70%;
 }
 
 #menu-chef-image {
   position: absolute;
   bottom: 0;
-  left: 0;
-  block-size: 40em;
+  block-size: 35em;
   object-fit: cover;
 }
 
-.menu-dishes-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80em;
-}
-
-.menu-dish-flex-item {
+.menu-flex-item {
   position: relative;
   width: 22em;
 }
@@ -180,7 +178,6 @@ a:active {
 }
 
 footer {
-  height: 20em;
   background-color: rgb(0, 250, 154);
 }
 

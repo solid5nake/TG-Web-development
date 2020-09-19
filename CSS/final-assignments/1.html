@@ -8,6 +8,7 @@
 	<link href="your-project-dir/font-css/LineIcons.css" rel="stylesheet">
 	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="media-queries.css">
 	<title>Eindopdracht - opdracht 1</title>
 </head>
 <header>
@@ -25,20 +26,19 @@
 </header>
 
 <body>
-	<div class="cooking-main" id="main">
-		<div class="cooking-main-box">
-			<h1>Cooking</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Lorem ipsum dolor sit amet consectetur
-				adipisicing elit.
+	<div class="main" id="main">
+		<div class="main-box">
+			<h1 id="header-1">Cooking</h1>
+			<p id="main-box-description">
+				Lorem ipsum is simply dummy text of the printing and typeselling company.
 			</p>
-			<div class="cooking-btn-container">
-				<div class="cooking-btn" id="cooking-btn-buy">Buy</div>
-				<div class="cooking-btn" id="cooking-btn-show">Show more</div>
+			<div class="main-btn-container">
+				<div class="main-btn" id="main-btn-buy">Buy</div>
+				<div class="main-btn" id="main-btn-show">Show more</div>
 			</div>
 		</div>
 	</div>
-	<h2 id="cooking-header">Populaire gerechten</h2>
+	<h2 id="header-2">Populaire gerechten</h2>
 	<div class="popular-dishes-container">
 		<div class="popular-dishes-flex-container">
 			<div class="popular-dish" id="dish-1">
@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<h2 id="cooking-header">Menu</h2>
+	<h2 id="header-2">Menu</h2>
 	<div class="menu-container">
 		<div class="menu-chef">
 			<img src="images/chef1.webp" alt="Chef pointing to the menu" id="menu-chef-image">
@@ -88,130 +88,114 @@
 			<div class="menu-dish-flex-item">
 				<strong id="dish-name">Pasta</strong>
 				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
+				<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
 			</div>
 			<div class="menu-dish-flex-item">
 				<strong id="dish-name">Pasta</strong>
 				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-			<div class="menu-dish-flex-item">
-				<strong id="dish-name">Pasta</strong>
-				<span id="dish-price">€ 8,99</span>
-				<p id="dish-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor
-					sit amet consectetur adipisicing elit.</p>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<div class="footer-flex-container">
-			<div class="footer-contact">
-				<strong id="footer-header">Contact</strong>
-				<table id="footer-table">
-					<tr>
-						<td>
-							<span>Osdorpplein 16, 1234ab, Amsterdam</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Tel nr: 12345678</span>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<span>Openingstijden: ma t/m vr 10:00 - 22:00</span>
-						</td>
-					</tr>
-				</table>
-				<div class="footer-social-media">
-					<i class="lni lni-instagram"></i>
-					<i class="lni lni-twitter-original"></i>
-					<i class="lni lni-facebook-original"></i>
-				</div>
-			</div>
-			<div class="footer-navigation">
-				<table id="footer-table">
-					<tr>
-						<td>
-							<strong id="footer-header">Navigation</strong>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="" id="footer-link">home</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="" id="footer-link">menu</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="" id="footer-link">contact</a>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</footer>
+				<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+				<div class="menu-dish-flex-item">
+					<strong id="dish-name">Pasta</strong>
+					<span id="dish-price">€ 8,99</span>
+					<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+					<div class="menu-dish-flex-item">
+						<strong id="dish-name">Pasta</strong>
+						<span id="dish-price">€ 8,99</span>
+						<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+						<div class="menu-dish-flex-item">
+							<strong id="dish-name">Pasta</strong>
+							<span id="dish-price">€ 8,99</span>
+							<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+							<div class="menu-dish-flex-item">
+								<strong id="dish-name">Pasta</strong>
+								<span id="dish-price">€ 8,99</span>
+								<p id="dish-description">Lorem ipsum is simply dummy text of the printing and typeselling company.</p>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<div class="footer-flex-container">
+							<div class="footer-contact">
+								<strong id="footer-header">Contact</strong>
+								<table id="footer-table">
+									<tr>
+										<td>
+											<span>Osdorpplein 16, 1234ab, Amsterdam</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>Tel nr: 12345678</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<span>Openingstijden: ma t/m vr 10:00 - 22:00</span>
+										</td>
+									</tr>
+								</table>
+								<div class="footer-social-media">
+									<i class="lni lni-instagram"></i>
+									<i class="lni lni-twitter-original"></i>
+									<i class="lni lni-facebook-original"></i>
+								</div>
+							</div>
+							<div class="footer-navigation">
+								<table id="footer-table">
+									<tr>
+										<td>
+											<strong id="footer-header">Navigation</strong>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#main" id="footer-link">home</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#menu" id="footer-link">menu</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="#contact" id="footer-link">contact</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</footer>
 </body>
 
 </html>

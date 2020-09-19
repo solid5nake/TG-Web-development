@@ -106,12 +106,12 @@ a:active {
   margin: 3em 0 5em;
 }
 
-.popular-dish {
+.popular-flex-dish {
   position: relative;
   width: 18em;
 }
 
-.popular-dish img {
+.popular-flex-dish img {
   margin-left: 2em;
   object-fit: contain;
   border-radius: 50%;
@@ -157,7 +157,7 @@ a:active {
   margin: 0.5em 0 0.5em;
 }
 
-.popular-dish a {
+#popular-dish-link {
   position: absolute;
   bottom: 0;
   right: 0;

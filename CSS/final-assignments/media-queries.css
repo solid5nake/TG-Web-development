@@ -1,4 +1,7 @@
-@media only screen and (max-width: 1200px) {
+@media only screen
+  and (max-device-width: 667px) 
+  and (max-width: 1200px) 
+  and (orientation: landscape){
   body * {
     font-size: 0.9rem;
   }
@@ -44,6 +47,34 @@
   nav, 
   .navbar-btn-container {
     justify-content: center;
+  }
+
+  #header-2 {
+    margin: 1em 0;
+  }
+
+  .popular-dishes-flex-container {
+    justify-content: center;
+  }
+
+  .popular-flex-dish img {
+    width: 15em;
+  }
+
+  #dish-name {
+    left: 2em;
+  }
+
+  #dish-price {
+    right: 2em;
+  }
+
+  #popular-dish-link {
+    right: 2em;
+  }
+
+  .popular-dish-discription {
+    padding: 2em;
   }
   
   .main {
@@ -115,5 +146,16 @@
   #main-btn-buy,
   #main-btn-show {
     margin: 0.5em;
+  }
+
+  .popular-dishes-flex-container {
+    flex-wrap: initial;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popular-flex-dish {
+    margin: 1.5em 0;
   }
 }

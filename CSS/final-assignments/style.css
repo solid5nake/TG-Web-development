@@ -31,7 +31,7 @@ a:active {
 }
 
 #header-1 {
-  margin: 0 10em 0 0;
+  margin: 0;
   font-size: 3.750em;
 }
 
@@ -50,7 +50,7 @@ a:active {
 }
 
 .main-box {
-  margin-top: 5em;
+  margin: 5em 20em 0 0;
   display: flex;
   flex-direction: column;
   color: rgb(92, 128, 203);

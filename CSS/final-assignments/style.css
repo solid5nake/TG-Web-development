@@ -103,7 +103,7 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 3em 0 5em;
+  margin: 3em 0 0em;
 }
 
 .popular-flex-dish {
@@ -184,11 +184,19 @@ footer {
 
 .footer-flex-container {
   display: flex;
+  justify-content: space-around;
 }
 
 .footer-contact,
 .footer-navigation {
+  display: flex;
+  flex-direction: column;
   padding: 2em;
+}
+
+.footer-contact p,
+.footer-navigation p {
+  margin: 0;
 }
 
 .footer-social-media {
@@ -202,7 +210,6 @@ footer {
 footer,
 #footer-link {
   color: rgb(100, 149, 237);
-  font-size: 0.9em;
 }
 
 #footer-link {
@@ -212,5 +219,5 @@ footer,
 .footer-header {
   display: block;
   font-size: 1.2em;
-  margin: 1em;
+  margin: 1em 0;
 }

@@ -50,7 +50,7 @@ and (max-width: 1280px) {
   .menu-flex-item {
     width: 15em;
   }
-  
+
 }
 
 @media only screen 
@@ -67,8 +67,14 @@ and (max-width: 1280px) {
     justify-content: center;
   }
 
+  #header-1,
   #header-2 {
-    margin: 1em 0;
+    font-size: 5em;
+  }
+
+
+  #header-2 {
+    margin: 0.5em 0;
   }
 
   .main {
@@ -107,6 +113,14 @@ and (max-width: 1280px) {
     width: 0;
   }
 
+  .popular-dishes-flex-container {
+    margin: 3em 0 0em;
+  }
+
+  .popular-flex-dish {
+    margin-bottom: 1.5em;
+  }
+
   .popular-flex-dish img {
     width: 15em;
   }
@@ -126,7 +140,6 @@ and (max-width: 1280px) {
   .popular-dish-discription {
     padding: 2em;
   }
-
   
   .popular-dish-price #dish-name {
     left: 2em;
@@ -148,10 +161,45 @@ and (max-width: 1280px) {
     width: 16em;
   }
 
+  .menu-container {
+    margin-bottom: -5em;
+  }
+
   #menu-chef-image {
     display: none;
   }
-}
+
+  .footer-contact ~ a {
+    display: block;
+  }
+
+  .footer-flex-container {
+    flex-direction: column;
+  }
+
+  #footer-header {
+    margin-bottom: initial;
+  }
+
+  #footer-link {
+    margin: 0.5em 0;
+  }
+
+  .footer-contact,
+  .footer-navigation {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .footer-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footer-navigation {
+    padding-bottom: 5em;
+  }
 
 @media only screen 
   and (min-device-width: 375px) 
@@ -204,7 +252,7 @@ and (max-width: 1280px) {
   }
 
   .menu-container {
-    padding: 0 5em;
+    padding: 0 3em;
   }
 
   .menu-chef {
@@ -217,6 +265,6 @@ and (max-width: 1280px) {
   }
 
   .menu-flex-item {
-    width: 13em;
+    width: 10em;
   }
 }

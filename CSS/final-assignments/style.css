@@ -184,7 +184,6 @@ footer {
 
 .footer-flex-container {
   display: flex;
-  justify-content: space-around;
 }
 
 .footer-contact,
@@ -200,10 +199,6 @@ footer {
   list-style-type: none;
 }
 
-.footer-navigation strong {
-  margin-bottom: 2em;
-}
-
 footer,
 #footer-link {
   color: rgb(100, 149, 237);
@@ -214,8 +209,8 @@ footer,
   text-transform: uppercase;
 }
 
-#footer-header {
+.footer-header {
   display: block;
   font-size: 1.2em;
-  margin-bottom: 1em;
+  margin: 1em;
 }

@@ -184,14 +184,14 @@ footer {
 
 .footer-flex-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .footer-contact,
 .footer-navigation {
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 0 0 4em;
 }
 
 .footer-contact p,

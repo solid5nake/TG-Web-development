@@ -147,7 +147,8 @@ a:active {
   width: 22em;
 }
 
-#dish-description {
+.popular-dish-discription,
+.dish-description {
   margin-top: 2.5em;
   margin-bottom: 2em;
 }

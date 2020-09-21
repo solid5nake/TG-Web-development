@@ -1,0 +1,20 @@
+.button {
+  block-size: 3rem;
+  width: 6rem;
+  border: none;
+  color: white;
+  background-color: #3CB371;
+}
+
+.button:hover {
+  background-color: #00FA9A;
+}
+
+.button {
+  background-color: #FFB6C1;
+}
+
+.button:hover {
+  background-color: hotpink;
+}
+/*# sourceMappingURL=style.css.map */

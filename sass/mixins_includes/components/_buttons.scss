@@ -1,0 +1,7 @@
+@import './abstracts/mixins';
+
+.button {
+  width: 6rem;
+  block-size: 10rem;
+  @include style-button(#2F4F4F, deeppink, palevioletred);
+}

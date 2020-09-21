@@ -1,0 +1,14 @@
+@import './components/buttons';
+@import './abstracts/mixins';
+
+.colorChangingSquare {
+  width: 5em;
+  height: 5em;
+  @include transition-div(deeppink, seagreen, 1s);
+}
+
+.button {
+  width: 6rem;
+  block-size: 10rem;
+  @include style-button(#2F4F4F, deeppink, palevioletred);
+}

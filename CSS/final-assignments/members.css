@@ -1,11 +1,10 @@
+/* de opdracht was gemaakt op een 27 inch scherm */
+
 body {
-  margin-left: 21.03rem;
   background-color: #FBF8F3;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .side-nav {
-  position: fixed;
-  width: 21rem;
   text-transform: uppercase;
   top: 0;
   left: 0;
@@ -29,10 +28,6 @@ body {
   margin: 0.5rem 0;
 }
 
-.nav-links {
-  padding-top: 1.5rem;
-}
-
 .navlinks i {                                                                                                                                                                                                                                                                                
   margin-right: 0.5rem; 
 }
@@ -50,7 +45,9 @@ body {
 }
 
 .nav-drop-box i {
-  line-height: 1.5rem;
+  font-weight: 900;
+  margin: 0.5rem;
+  font-size: 2rem;
 }
 
 .nav-links a:hover,
@@ -100,6 +97,12 @@ section.members .even-row {
   border: 0.125rem solid #e2e8f0;
 }
 
+section.members .oneven-row:hover,
+section.members .even-row:hover {
+  background-color: #4b86cb;
+  transition: 500ms background-color ease;
+}
+
 section.members .even-row {
   background-color: #a0aec0;
 }
@@ -107,11 +110,24 @@ section.members .even-row {
 section.ad-info form{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ad-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ad-info h2 {
   font-size: 2.25rem;
 }
+
+.ad-info label {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 
 .ad-info input[type=email],
 .ad-info input[type=number],
@@ -119,4 +135,11 @@ section.ad-info form{
   background-color: #C5DEEA;
   border: none;
   border-radius: 0.5rem;
+  block-size: 2rem;
+  margin-right: 1rem;
+}
+
+.ad-info div {
+  display: flex;
+  flex-direction: column;
 }

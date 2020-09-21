@@ -1,11 +1,16 @@
 @media screen and (min-width: 375px) and (max-width: 667px) {
   body {
-    margin-left: initial;
+    margin: 0;
   }
 
   .side-nav {
+    position: sticky;
     width: 100%;
     height: auto;
+  }
+
+  .nav-links {
+    padding-top: 0;
   }
 
   .nav-drop {
@@ -19,17 +24,66 @@
   }
 
   .main {
-    margin-top: 3.125em;
+    margin-top: 5.125em;
+  }
+
+  .ad-info form {
+    width: 100%;
+  }
+
+
+  .ad-info input[type=email],
+  .ad-info input[type=number],
+  .ad-info input[type=text] {
+    margin-right: 0;
+    width: 21rem;
   }
 }
 
-@media screen and (min-width: 667px) and (max-width: 3200px) {
+@media screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) {
   body {
-    margin-left: 18.250rem;
+    margin: 0;
   }
-  
+
   .side-nav {
+    position: sticky;
+    width: 100%;
+    height: auto;
+  }
+
+  .ad-info input[type=email],
+  .ad-info input[type=number],
+  .ad-info input[type=text] {
+    margin-right: 0;
+    width: 38rem;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 1280px) {
+  .side-nav {
+    position: fixed;
     display: block;
+    width: 21rem;
+    height: 100%;
+  }
+
+  body {
+    margin-top: 0;
+    margin-left: 21.03rem;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
+  }
+
+  .side-nav {
+    position: fixed;
+    display: block;
+    width: 21rem;
     height: 100%;
   }
 
@@ -40,5 +94,121 @@
   .nav-drop-box i {
     display: none;
   }
- 
+
+  .ad-info form {
+    width: 50%;
+  }
+
+  .ad-info form #first-name {
+    width: 35.5rem;
+  }
+
+  .ad-info form #surname {
+    width: 17rem;
+  }
+
+  .ad-info form #age {
+    width: 8.125rem;
+  }
+
+  .ad-info form #company {
+    width: 24rem;
+  }
+
+  .ad-info form #username {
+    width: 15.5rem;
+  }
+
+  .ad-info form #email {
+    width: 21.250rem;
+  }
+
+  .ad-info form #address {
+    width: 63.5rem;
+  }
+
+  .ad-info form #city {
+    width: 20.375rem;
+  }
+
+  .ad-info form #country {
+    width: 20.375rem;
+  }
+
+  .ad-info form #postalcode {
+    width: 20.375rem;
+  }
 }
+
+@media screen and (min-width: 1281px) and (max-width: 3200px) {
+  body {
+    margin-top: 0;
+    margin-left: 21.03rem;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
+  }
+
+  .side-nav {
+    position: fixed;
+    display: block;
+    width: 21rem;
+    height: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .nav-drop-box i {
+    display: none;
+  }
+
+  .ad-info form {
+    width: 50%;
+  }
+
+  .ad-info form #first-name {
+    width: 35.5rem;
+  }
+
+  .ad-info form #surname {
+    width: 17rem;
+  }
+
+  .ad-info form #age {
+    width: 8.125rem;
+  }
+
+  .ad-info form #company {
+    width: 24rem;
+  }
+
+  .ad-info form #username {
+    width: 15.5rem;
+  }
+
+  .ad-info form #email {
+    width: 21.250rem;
+  }
+
+  .ad-info form #address {
+    width: 63.5rem;
+  }
+
+  .ad-info form #city {
+    width: 20.375rem;
+  }
+
+  .ad-info form #country {
+    width: 20.375rem;
+  }
+
+  .ad-info form #postalcode {
+    width: 20.375rem;
+  }

@@ -7,10 +7,11 @@
 }
 
 @mixin transition-div($initial-color, $final-color, $duration) {
-  color: $initial-color;
-  transition-property: color;
+  background-color: $initial-color;
+  transition-property: background-color;
+  transition-duration: $duration;
   &:hover {
-    color: $final-color;
+    background-color: $final-color;
     transition-duration: $duration;
   }
 }

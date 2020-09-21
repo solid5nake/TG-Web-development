@@ -1,6 +1,32 @@
 .button {
+  margin: 5em 0 0 5em;
   width: 6rem;
   block-size: 3rem;
   border: none;
+  font-family: 'Raleway', sans-serif;
+  color: #2F4F4F;
+  background-color: deeppink;
+}
+
+.button:hover {
+  background-color: palevioletred;
+}
+
+.colorChangingSquare {
+  margin: 5em 0 0 5em;
+  width: 6rem;
+  height: 6rem;
+  border: 0.25rem solid #fe938b;
+  background-color: #ffb6a3;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+.colorChangingSquare:hover {
+  background-color: #ef253c;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
 }
 /*# sourceMappingURL=main.css.map */

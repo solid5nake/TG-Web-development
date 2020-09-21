@@ -1,7 +1,18 @@
-@import './abstracts/mixins';
+@import '../abstracts/mixins';
 
 .button {
+  margin: 5em 0 0 5em;
   width: 6rem;
-  block-size: 10rem;
+  block-size: 3rem;
+  border: none;
+  font-family: 'Raleway', sans-serif;
   @include style-button(#2F4F4F, deeppink, palevioletred);
+}
+
+.colorChangingSquare {
+  margin: 5em 0 0 5em;
+  width: 6rem;
+  height: 6rem;
+  border: 0.250rem solid hsl(4, 98%, 77%);
+  @include transition-div(hsl(12, 100%, 82%), hsl(353, 86%, 54%), 3s);
 }

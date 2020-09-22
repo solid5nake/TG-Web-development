@@ -1,0 +1,49 @@
+.profile-pic {
+  float: left;
+  width: 250px;
+}
+
+@media screen and (max-width: 320px) {
+  .profile-pic {
+    width: 100px;
+    float: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profile-pic {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  background: red;
+}
+
+@media screen and (max-device-width: 320px) {
+  background: red;
+}
+
+.profile-pic {
+  float: left;
+  width: 250px;
+}
+
+@media only screen and (max-width: 320px) {
+  .profile-pic {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1023px) {
+  .profile-pic {
+    width: 125px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profile-pic {
+    float: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,17 @@
+
+
+$mobile-device: "screen and (min-device-width: 375px) and (max-device-width: 667px)";
+%justify-center: { justify-content: center; }
+
+@media #{$mobile-device} and (orientation: portrait) {
+  nav ,
+  .navbar-btn-container {
+    @extend %justify-center;
+  }
+}
+
+@media #{$mobile-device} and (orientation: landscape) {
+  nav {
+    @extend %justify-center;
+  }
+}

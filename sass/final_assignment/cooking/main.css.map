@@ -2,7 +2,12 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "main.scss"
+        "main.scss",
+        "_base.scss",
+        "_button.scss",
+        "_colors.scss",
+        "_components.scss",
+        "_layout.scss"
     ],
     "names": [],
     "file": "main.css"

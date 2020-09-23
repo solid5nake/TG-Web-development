@@ -1,11 +1,16 @@
 @import "./base";
 $mobile-device: "screen and (min-device-width: 375px) and (max-device-width: 667px)";
-$desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
+$desktop: "(min-width: 668px) and (max-width: 1280px)";
 
-@media #{$mobile-device} {
+@media #{$mobile-device} and (orientation: portrait) {
   body * {
     margin: 0;
     font-size: 1.2rem;
+  }
+
+  nav,
+  .navbar-btn-container {
+    @include justify-center;
   }
 
   #header-1,
@@ -18,7 +23,7 @@ $desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
   }
 
   .main {
-    align-items: center;
+    @include flex-yx-center;
     background-size: cover;
     height: 35em;
   }
@@ -43,8 +48,84 @@ $desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
     margin: 0.5em;
   }
 
-  nav {
-    @include justify-center;
+  .menu-chef {
+    display: none;
+    width: 0;
+  }
+
+  .popular-dishes-flex-container {
+    margin: 3em 0 0em;
+  }
+
+  .popular-flex-dish {
+    margin-bottom: 1.5em;
+    & img {
+      width: 15em;
+    }
+  }
+
+  #dish-name {
+    left: 2em;
+  }
+
+  #dish-price {
+    right: 2em;
+  }
+
+  #popular-dish-link {
+    right: 2em;
+  }
+
+  .popular-dish-discription {
+    padding: 2em;
+  }
+
+  .popular-dish-price #dish-name {
+    left: 2em;
+  }
+
+  .popular-dish-price #dish-price {
+    right: 2em;
+  }
+
+  .dish-description {
+    width: 16em;
+  }
+
+  #menu-chef-image {
+    display: none;
+  }
+
+  .footer-contact~a {
+    display: block;
+  }
+
+  .footer-flex-container {
+    flex-direction: column;
+  }
+
+  #footer-header {
+    margin-bottom: initial;
+  }
+
+  #footer-link {
+    margin: 0.5em 0;
+  }
+
+  .footer-contact,
+  .footer-navigation {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .footer-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .footer-navigation {
+    padding-bottom: 5em;
   }
 }
 
@@ -82,9 +163,42 @@ $desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
   #main-btn-show {
     margin: 0.5em;
   }
+
+  .popular-dishes-flex-container {
+    flex-wrap: initial;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popular-dishes-flex-container, .menu-flex-container {
+    margin: 1em 0 3em;
+  }
+
+  .popular-flex-dish {
+    margin: 1.5em 0;
+  }
+
+  .menu-container {
+    padding: 0 3em;
+  }
+
+  .menu-chef {
+    display: none;
+    width: 0%;
+  }
+
+  .menu-flex-container {
+    margin: 1em 0 2em;
+    width: 100%;
+  }
+
+  .menu-flex-item {
+    width: 10em;
+  }
 }
 
-@media #{desktop} {
+@media #{$desktop} {
   body * {
     font-size: 0.9rem;
   }
@@ -109,13 +223,12 @@ $desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
 
   .populair-dish {
     width: 10em;
+    & img {
+      margin-left: 2.9em;
+      width: 13em;
+    }
   }
 
-  .popular-dish img {
-    margin-left: 2.9em;
-    width: 13em;
-  }
-  
   .menu-container {
     padding: 0 1em;
   }

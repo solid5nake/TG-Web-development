@@ -1,5 +1,5 @@
-@import "./button";
 @import "./base";
+@import "./colors";
 
 %flex {
   display: flex;
@@ -31,4 +31,48 @@ nav {
       color: black;
     }
   }
+}
+
+footer {
+  background-color: $secondary-color;
+}
+
+.footer-flex-container {
+  @extend %flex;
+  justify-content: space-evenly;
+}
+
+.footer-contact,
+.footer-navigation {
+  @extend %flex;
+  flex-direction: column;
+  padding: 0 0 4em;
+}
+
+.footer-contact p,
+.footer-navigation p {
+  margin: 0;
+}
+
+.footer-social-media {
+  margin-top: 2em;
+}
+
+.footer-navigation ul {
+  list-style-type: none;
+}
+
+footer,
+#footer-link {
+  color: $primary-color;
+}
+
+#footer-link {
+  text-transform: uppercase;
+}
+
+.footer-header {
+  display: block;
+  font-size: 1.2em;
+  margin: 1em 0;
 }

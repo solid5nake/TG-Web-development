@@ -1,3 +1,7 @@
+$secondary-color: rgb(0, 250, 154);
+$primary-color:  rgb(100, 149, 237);
+$hover-color: #FFF;
+
 @mixin primary-color {
   color: rgb(100, 149, 237);
 }
@@ -5,4 +9,5 @@
 @mixin secondary-color {
   color: rgb(0, 250, 154);
 }
+
 

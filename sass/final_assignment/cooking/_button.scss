@@ -1,8 +1,5 @@
 @import "./colors";
 @import "./base";
-$secondary-color: rgb(0, 250, 154);
-$primary-color: rgb(100, 149, 237);
-$hover-color: #FFF;
 
 %transition-ease {
   transition: 2s background-color, ease;

@@ -1,58 +1,3 @@
-@media (min-width: 1025px) 
-and (max-width: 1280px) {
-  body * {
-    font-size: 0.9rem;
-  }
-
-  .main {
-    height: 26em;
-  }
-
-  .main-box {
-    margin: 5em 8em 0 0;
-    width: 20em;
-  }
-
-  #header-1 {
-    margin: 0;
-    font-size: 2.7em;
-  }
-
-  #header-2 {
-    font-size: 2.5em;
-  }
-
-  .populair-dish {
-    width: 10em;
-  }
-
-  .popular-dish img {
-    margin-left: 2.9em;
-    width: 13em;
-  }
-  
-  .menu-container {
-    padding: 0 1em;
-  }
-
-  .menu-chef {
-    width: 23%;
-  }
-
-  #menu-chef-image {
-    block-size: 30em;
-  }
-
-  .menu-flex-container {
-    margin: 0 0 1em;
-  }
-
-  .menu-flex-item {
-    width: 15em;
-  }
-
-}
-
 @media screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
@@ -271,3 +216,59 @@ and (max-width: 1280px) {
     width: 10em;
   }
 }
+
+@media (min-width: 1025px) 
+and (max-width: 1280px) {
+  body * {
+    font-size: 0.9rem;
+  }
+
+  .main {
+    height: 26em;
+  }
+
+  .main-box {
+    margin: 5em 8em 0 0;
+    width: 20em;
+  }
+
+  #header-1 {
+    margin: 0;
+    font-size: 2.7em;
+  }
+
+  #header-2 {
+    font-size: 2.5em;
+  }
+
+  .populair-dish {
+    width: 10em;
+  }
+
+  .popular-dish img {
+    margin-left: 2.9em;
+    width: 13em;
+  }
+  
+  .menu-container {
+    padding: 0 1em;
+  }
+
+  .menu-chef {
+    width: 23%;
+  }
+
+  #menu-chef-image {
+    block-size: 30em;
+  }
+
+  .menu-flex-container {
+    margin: 0 0 1em;
+  }
+
+  .menu-flex-item {
+    width: 15em;
+  }
+
+}
+

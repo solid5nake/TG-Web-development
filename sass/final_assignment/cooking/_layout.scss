@@ -42,3 +42,82 @@ body * {
   flex-direction: column;
   @include primary-color;
 }
+
+.popular-dishes-flex-container,
+.menu-flex-container {
+  @extend %flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 3em 0 0em;
+}
+
+.popular-flex-dish {
+  position: relative;
+  width: 18em;
+  & img {
+    margin-left: 2em;
+    object-fit: contain;
+    border-radius: 50%;
+    width: 15em;
+  }
+}
+
+.popular-dish-discription,
+.dish-description {
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+}
+
+.popular-dish-price {
+  position: relative;
+  margin: 0.5em 0 0.5em;
+}
+
+#popular-dish-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#dish-name,
+#dish-price {
+  position: absolute;
+  top: 0;
+}
+
+#dish-name {
+  left: 0;
+}
+
+#dish-price {
+  right: 0;
+}
+
+.menu-container {
+  @extend %flex;
+  position: relative;
+  @include justify-center;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+.menu-chef {
+  position: relative;
+  width: 19%;
+}
+
+.menu-flex-container {
+  width: 70%;
+}
+
+#menu-chef-image {
+  position: absolute;
+  bottom: 0;
+  block-size: 35em;
+  object-fit: cover;
+}
+
+.menu-flex-item {
+  position: relative;
+  width: 22em;
+}

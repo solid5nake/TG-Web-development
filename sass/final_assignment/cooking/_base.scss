@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+@mixin align-center {
+  align-items: center;
+}
+
 
 @mixin transition-ease {
   transition: 2s background-color ease;

@@ -1,0 +1,82 @@
+@import "./colors";
+@import "./base";
+
+body {
+  background-color: $body-background;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main h1,
+section.ad-info h2 {
+  text-align: center;
+  font-weight: 800;
+  color: $primary-blue;
+}
+
+main h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.members-header {
+  border-bottom: $border;
+}
+
+.members-header,
+section.members {
+  padding: 1rem;
+}
+
+section.members {
+  & table {
+    width: 100%;
+  }
+}
+
+section.members th,
+section.members td {
+  padding: 0.3rem;
+  text-align: justify;
+}
+
+section.members table,
+section.members .oneven-row,
+section.members .even-row {
+  border: $border;
+}
+
+section.members .oneven-row:hover,
+section.members .even-row:hover {
+  background-color: $primary-blue;
+  transition: 500ms background-color ease;
+}
+
+section.ad-info {
+  form {
+    @extend %flex-wrap-center;
+  }
+}
+
+.ad-info {
+  @extend %flex-column-center;
+
+  & h2 {
+    font-size: 2.25rem;
+  }
+
+  & label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & div {
+    @extend %flex-column;
+  }
+
+  & input[type=email],
+  & input[type=number],
+  & input[type=text] {
+    @include input-styling;
+  }
+}
+

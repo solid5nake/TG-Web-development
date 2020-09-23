@@ -1,14 +1,6 @@
 @import "./base";
 $mobile-device: "screen and (min-device-width: 375px) and (max-device-width: 667px)";
-%justify-center {
-  justify-content: center;
-}
-%align-center {
-  align-items: center;
-}
-%flex {
-  display: flex;
-}
+$desktop: "screen and (min-width: 1025px) and (max-width: 1280px)";
 
 @media #{$mobile-device} {
   body * {
@@ -26,23 +18,122 @@ $mobile-device: "screen and (min-device-width: 375px) and (max-device-width: 667
   }
 
   .main {
-    @extend %justify-center;
     align-items: center;
     background-size: cover;
     height: 35em;
   }
 
   .main-box {
+    margin: -10em;
+    width: 10em;
     @include flex-yx-center;
   }
 
+  #main-box-description {
+    margin: 0.3em;
+  }
+
+  .main-btn-container {
+    @include flex-yx-center;
+    flex-direction: column;
+  }
+
+  #main-btn-buy,
+  #main-btn-show {
+    margin: 0.5em;
+  }
+
   nav {
-    @extend %justify-center;
+    @include justify-center;
   }
 }
 
 @media #{$mobile-device} and (orientation: landscape) {
   nav {
-    @extend %justify-center;
+    @include justify-center;
   }
+
+  #header-1 {
+    margin-left: 0.3em;
+  }
+
+  .main {
+    @include flex-yx-center;
+    background-size: cover;
+    height: 25em;
+  }
+
+  .main-box {
+    display: flex;
+    margin: 0;
+    text-align: center;
+  }
+
+  #main-box-description {
+    margin: 0.9em;
+  }
+
+  .main-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #main-btn-buy,
+  #main-btn-show {
+    margin: 0.5em;
+  }
+}
+
+@media #{desktop} {
+  body * {
+    font-size: 0.9rem;
+  }
+
+  .main {
+    height: 26em;
+  }
+
+  .main-box {
+    margin: 5em 8em 0 0;
+    width: 20em;
+  }
+
+  #header-1 {
+    margin: 0;
+    font-size: 2.7em;
+  }
+
+  #header-2 {
+    font-size: 2.5em;
+  }
+
+  .populair-dish {
+    width: 10em;
+  }
+
+  .popular-dish img {
+    margin-left: 2.9em;
+    width: 13em;
+  }
+  
+  .menu-container {
+    padding: 0 1em;
+  }
+
+  .menu-chef {
+    width: 23%;
+  }
+
+  #menu-chef-image {
+    block-size: 30em;
+  }
+
+  .menu-flex-container {
+    margin: 0 0 1em;
+  }
+
+  .menu-flex-item {
+    width: 15em;
+  }
+
 }

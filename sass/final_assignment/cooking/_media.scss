@@ -1,11 +1,42 @@
-
-
+@import "./base";
 $mobile-device: "screen and (min-device-width: 375px) and (max-device-width: 667px)";
-%justify-center: { justify-content: center; }
+%justify-center {
+  justify-content: center;
+}
+%align-center {
+  align-items: center;
+}
+%flex {
+  display: flex;
+}
 
-@media #{$mobile-device} and (orientation: portrait) {
-  nav ,
-  .navbar-btn-container {
+@media #{$mobile-device} {
+  body * {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  #header-1,
+  #header-2 {
+    font-size: 5em;
+  }
+
+  #header-2 {
+    margin: 0.5em 0;
+  }
+
+  .main {
+    @extend %justify-center;
+    align-items: center;
+    background-size: cover;
+    height: 35em;
+  }
+
+  .main-box {
+    @include flex-yx-center;
+  }
+
+  nav {
     @extend %justify-center;
   }
 }

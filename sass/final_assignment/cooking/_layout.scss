@@ -1,5 +1,44 @@
+@import "./colors";
+
+%flex {
+  display: flex;
+}
+
+%background-properties {
+  background-size: cover;
+  background-image: url(assets/cooking.jpg);
+  background-repeat: no-repeat;
+}
+
 body * {
   font-family: 'Lobster', cursive;
   font-size: 1.05em;
 }
 
+#header-1 {
+  margin: 0;
+  font-size: 3.750em;
+}
+
+#header-2 {
+  text-align: center;
+  font-size: 3.2em;
+}
+
+.main,
+.main-box,
+.main-btn-container {
+  @extend %flex;
+}
+
+.main {
+  justify-content: flex-end;
+  height: 35em;
+  @extend %background-properties;
+}
+
+.main-box {
+  margin: 5em 20em 0 0;
+  flex-direction: column;
+  @include primary-color;
+}

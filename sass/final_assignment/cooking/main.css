@@ -1,4 +1,47 @@
-nav, nav .navbar-btn {
+.main-btn {
+  -webkit-transition: 2s background-color, ease;
+  transition: 2s background-color, ease;
+}
+
+#main-btn-buy,
+#main-btn-show {
+  -webkit-transition: 2s background-color, ease, 2s color ease;
+  transition: 2s background-color, ease, 2s color ease;
+}
+
+.main-btn {
+  width: 8em;
+  height: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+}
+
+#main-btn-buy {
+  margin-right: 0.5em;
+  border: 0.125em solid cornflowerblue;
+  color: cornflowerblue;
+}
+
+#main-btn-buy:hover {
+  background-color: cornflowerblue;
+  color: #FFF;
+}
+
+#main-btn-show {
+  margin-left: 0.5em;
+  border: 0.125em solid mediumspringgreen;
+  color: mediumspringgreen;
+}
+
+#main-btn-show:hover {
+  background-color: mediumspringgreen;
+  color: #FFF;
+}
+
+nav, nav .navbar-btn, .main,
+.main-box,
+.main-btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,17 +82,116 @@ nav .navbar-btn a:active {
   color: black;
 }
 
+nav, nav .navbar-btn, .main,
+.main-box,
+.main-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main {
+  background-size: cover;
+  background-image: url(assets/cooking.jpg);
+  background-repeat: no-repeat;
+}
+
 body * {
   font-family: 'Lobster', cursive;
   font-size: 1.05em;
 }
 
-@media screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
-  nav,
-  .navbar-btn-container {
+#header-1 {
+  margin: 0;
+  font-size: 3.750em;
+}
+
+#header-2 {
+  text-align: center;
+  font-size: 3.2em;
+}
+
+.main {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 35em;
+}
+
+.main-box {
+  margin: 5em 20em 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: cornflowerblue;
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  body * {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  #header-1,
+  #header-2 {
+    font-size: 5em;
+  }
+  #header-2 {
+    margin: 0.5em 0;
+  }
+  nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main-btn {
+  -webkit-transition: 2s background-color, ease;
+  transition: 2s background-color, ease;
+}
+
+#main-btn-buy,
+#main-btn-show {
+  -webkit-transition: 2s background-color, ease, 2s color ease;
+  transition: 2s background-color, ease, 2s color ease;
+}
+
+.main-btn {
+  width: 8em;
+  height: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+}
+
+#main-btn-buy {
+  margin-right: 0.5em;
+  border: 0.125em solid cornflowerblue;
+  color: cornflowerblue;
+}
+
+#main-btn-buy:hover {
+  background-color: cornflowerblue;
+  color: #FFF;
+}
+
+#main-btn-show {
+  margin-left: 0.5em;
+  border: 0.125em solid mediumspringgreen;
+  color: mediumspringgreen;
+}
+
+#main-btn-show:hover {
+  background-color: mediumspringgreen;
+  color: #FFF;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+@import "./colors";
+@import "./base";
+$secondary-color: rgb(0, 250, 154);
+$primary-color: rgb(100, 149, 237);
+$hover-color: #FFF;
+
+%transition-ease {
+  transition: 2s background-color, ease;
+}
+
+%transition-bg-color {
+  transition: 2s background-color, ease, 2s color ease
+}
+
+.main-btn {
+  width: 8em;
+  height: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2em;
+  @extend %transition-ease;
+}
+
+#main-btn-buy,
+#main-btn-show {
+  @extend %transition-bg-color;
+}
+
+#main-btn-buy {
+  margin-right: 0.5em;
+  border: 0.125em solid $primary-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    color: $hover-color;
+  }
+}
+
+#main-btn-show {
+  margin-left: 0.5em;
+  border: 0.125em solid $secondary-color;
+  color: $secondary-color;
+  &:hover {
+    background-color: $secondary-color;
+    color: $hover-color;
+  }
+}

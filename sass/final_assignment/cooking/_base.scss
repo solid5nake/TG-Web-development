@@ -2,3 +2,18 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+
+@mixin transition-ease {
+  transition: 2s background-color ease;
+}
+
+@mixin flex-yx-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

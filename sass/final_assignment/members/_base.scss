@@ -1,0 +1,8 @@
+@import "./colors";
+@mixin input-styling {
+  background-color: $input-bg;
+  border: none;
+  border-radius: 0.5rem;
+  block-size: 2rem;
+  margin-right: 1rem;
+}

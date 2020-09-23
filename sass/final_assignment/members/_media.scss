@@ -1,0 +1,62 @@
+$mobile-device-portrait: "screen and (min-width: 375px) and (max-width: 667px)";
+$mobile-device-landscape: "screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape)";
+@media #{$mobile-device-portrait}{
+  body {
+    margin: 0;
+  }
+
+  .side-nav {
+    position: sticky;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-links {
+    padding-top: 0;
+  }
+
+  .nav-drop {
+    block-size: 3rem;
+  }
+
+  .nav-wthead,
+  .nav-header-box,
+  .nav-links a {
+    display: none;
+  }
+
+  .main {
+    margin-top: 5.125em;
+  }
+
+  .ad-info {
+    & form {
+      width: 100%;
+    }
+    & input[type=email],
+    & input[type=number],
+    & input[type=text] {
+      margin-right: 0;
+      width: 21rem;
+    }
+  } 
+}
+
+@media #{$mobile-device-landscape}{
+  body {
+    margin: 0;
+  }
+
+  .side-nav {
+    position: sticky;
+    width: 100%;
+    height: auto;
+  }
+
+  .ad-info input[type=email],
+  .ad-info input[type=number],
+  .ad-info input[type=text] {
+    margin-right: 0;
+    width: 38rem;
+  }
+}

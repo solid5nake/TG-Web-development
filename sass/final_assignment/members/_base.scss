@@ -6,3 +6,85 @@
   block-size: 2rem;
   margin-right: 1rem;
 }
+
+@mixin side-nav-desktop {
+  position: fixed;
+  display: block;
+  width: 21rem;
+  height: 100%;
+}
+
+@mixin side-nav-large-screen {
+  position: fixed;
+  display: block;
+  width: 21rem;
+  height: 100%;
+}
+
+@mixin ad-info-desktop {
+  width: 50%;
+  & #first-name {
+    width: 35.5rem;
+  }
+  & #surname {
+    width: 17rem;
+  }
+  & #age {
+    width: 8.125rem;
+  }
+  & #company {
+    width: 24rem;
+  }
+  & #username {
+    width: 15.5rem;
+  }
+  & #email {
+    width: 21.250rem;
+  }
+  & #address {
+    width: 63.5rem;
+  }
+  & #city {
+    width: 20.375rem;
+  }
+  & #country {
+    width: 20.375rem;
+  }
+  & #postalcode {
+    width: 20.375rem;
+  }
+}
+
+@mixin ad-info-large-screen {
+  width: 50%;
+  & #first-name {
+    width: 35.5rem;
+  }
+  & #surname {
+    width: 17rem;
+  }
+  & #age {
+    width: 8.125rem;
+  }
+  & #company {
+    width: 24rem;
+  }
+  & #username {
+    width: 15.5rem;
+  }
+  & #email {
+    width: 21.250rem;
+  }
+  & #address {
+    width: 63.5rem;
+  }
+  & #city {
+    width: 20.375rem;
+  }
+  & #country {
+    width: 20.375rem;
+  }
+  & #postalcode {
+    width: 20.375rem;
+  }
+}

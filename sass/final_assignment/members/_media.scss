@@ -1,5 +1,9 @@
+@import "./base";
 $mobile-device-portrait: "screen and (min-width: 375px) and (max-width: 667px)";
 $mobile-device-landscape: "screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape)";
+$desktop: "screen and (min-width: 668px) and (max-width: 1280px)";
+$large-screen: "screen and (min-width: 1281px) and (max-width: 3200px)";
+
 @media #{$mobile-device-portrait}{
   body {
     margin: 0;
@@ -58,5 +62,74 @@ $mobile-device-landscape: "screen and (min-width: 375px) and (max-width: 667px) 
   .ad-info input[type=text] {
     margin-right: 0;
     width: 38rem;
+  }
+}
+
+@media #{$desktop} {
+  .side-nav {
+    position: fixed;
+    display: block;
+    width: 21rem;
+    height: 100%;
+  }
+
+  body {
+    margin-top: 0;
+    margin-left: 21.03rem;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
+  }
+
+  .side-nav {
+    @include side-nav-desktop;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .nav-drop-box i {
+    display: none;
+  }
+
+  .ad-info form {
+    @include ad-info-desktop;
+  }
+}
+
+@media #{$large-screen} {
+  body {
+    margin-top: 0;
+    margin-left: 21.03rem;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
+  }
+
+  .side-nav {
+    @include side-nav-large-screen;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .nav-drop-box i {
+    display: none;
+  }
+
+  .ad-info form {
+    @include ad-info-large-screen;
   }
 }

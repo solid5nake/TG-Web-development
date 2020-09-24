@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <!-- <link rel="stylesheet" href="../../style.css"> -->
   <title>Transitions - Opdracht</title>
 </head>
 <body>
@@ -12,13 +12,50 @@
       <a href="../index.html" id="main">main</a>
     </nav>
     <style>
+      @font-face {
+        font-family: GothicJoker;
+        src: url(./assets/gothic-joker-font/GothicJoker-gxxGP.ttf);
+      } 
+
+      * {
+        font-family: GothicJoker;
+      }
+
+      .card p {
+        bottom: 1rem;
+        font-size: 3.5rem;
+        font-weight: 900;
+        transform: translateY(21rem);
+        text-transform: uppercase;
+        color: aliceblue;
+      }
       
+      .card {
+        text-align: center;
+        width: 20rem;
+        block-size: 26rem;
+        color: crimson;
+        border-radius: 20px;
+        background: url(../images/catwoman-licking.png) no-repeat;
+        background-size: cover;
+      }
     </style>
   </header>
   <h1>Transitions</h1>
-  <h2>Opdracht </h2>
-  <p class="qn"></p>
+  <h2>Opdracht 7</h2>
+  <p class="qn">
+    Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen creativiteit erop los laten.
+  </p>
   <hr>
+  <div class="card-deck">
+    <div class="card">
+      <div class="sym-top">
+        <span>Q</span>
+        <i class="hearts" id="top-left-sym"><img src="./assets/hearts.svg"></i>
+      </div>
+      <p>catwoman</p>
+    </div>
+  </div>
   <footer>
     <a href="#main">▲ boven</a>
   </footer>

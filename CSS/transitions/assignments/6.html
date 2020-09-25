@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://i.icomoon.io/public/temp/a3c221d3ff/UntitledProject/style.css">
+  <link rel="stylesheet" href="./assets/icomoon/style.css">
   <link rel="stylesheet" href="./card-deck-transition.css">
   <link rel="stylesheet" href="./card-deck-main.css">
-  <title>Transitions - Opdracht</title>
+  <title>Transitions - Opdracht 6</title>
 </head>
 
 <body>
@@ -50,14 +50,14 @@
         background: #001933;
         padding-right: 1.5rem;
       }
-      
+
       pre,
       span.code {
         font-family: 'Courier New', Courier, monospace;
         font-weight: lighter;
         font-size: 1.1rem;
       }
-      
+
       span.code {
         position: absolute;
         top: 2%;
@@ -67,7 +67,7 @@
     </style>
   </header>
   <h1>Transitions</h1>
-  <h2>Opdracht 7</h2>
+  <h2>Opdracht 6</h2>
   <p class="qn">
     Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen creativiteit erop los
     laten.
@@ -119,10 +119,10 @@
       </div>
     </div>
     <div class="card joker">
-      <div class="sym-top gold" >
+      <div class="sym-top gold">
         <span>Joker</span>
       </div>
-      <div class="sym-top-right gold" >
+      <div class="sym-top-right gold">
         <i><img src="./assets/joker-hat.svg"></i>
       </div>
       <div class="sym-bottom purple">
@@ -132,7 +132,8 @@
   </div>
   <hr>
   <p class="qn">
-    Onderstaand is een voorbeeld van de CSS code die is toegepast, enkel het gedeelte voor de transitions zijn hier getoond.
+    Onderstaand is een voorbeeld van de CSS code die is toegepast, enkel het gedeelte voor de transitions zijn hier
+    getoond.
   </p>
 
   <pre class="code">
@@ -191,6 +192,11 @@
     .batman:hover ~ .card .sym-top,
     .batgirl:hover ~ .card .sym-top,
     .joker:hover ~ .card .sym-top,
+    .nightwing:hover ~ .card .sym-top-right,
+    .catwoman:hover ~ .card .sym-top-right,
+    .batman:hover ~ .card .sym-top-right,
+    .batgirl:hover ~ .card .sym-top-right,
+    .joker:hover ~ .card .sym-top-right,
     .nightwing:hover ~ .card .sym-bottom,
     .catwoman:hover ~ .card .sym-bottom,
     .batman:hover ~ .card .sym-bottom,

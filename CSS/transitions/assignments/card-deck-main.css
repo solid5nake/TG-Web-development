@@ -15,8 +15,8 @@
 }
 
 .card-deck {
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   margin: 6rem 0;
   height: 26rem;
   padding: 1.5rem 10rem;

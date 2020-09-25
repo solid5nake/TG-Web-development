@@ -1,0 +1,67 @@
+.card {
+  margin-left: -5rem;
+  margin-right: -5rem;
+  bottom: 0rem;
+  transition: 1s ease;
+}
+
+.nightwing,
+.catwoman,
+.batman,
+.batgirl,
+.joker {
+  position: relative;
+}
+
+.nightwing:hover {
+  margin-right: 5rem;
+  bottom: 1rem;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.nightwing:hover,
+.catwoman:hover,
+.batman:hover,
+.batgirl:hover,
+.joker:hover{
+  margin-right: 5rem;
+  bottom: 1rem;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.nightwing:hover ~ .card,
+.catwoman:hover ~ .card,
+.batman:hover ~ .card,
+.batgirl:hover ~ .card,
+.joker:hover ~ .card {
+  background: url(./assets/batman-logo-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s ease;
+}
+
+.nightwing:hover ~ .card p,
+.catwoman:hover ~ .card p,
+.batman:hover ~ .card p,
+.batgirl:hover ~ .card p,
+.joker:hover ~ .card p,
+.nightwing:hover ~ .card .sym-top,
+.catwoman:hover ~ .card .sym-top,
+.batman:hover ~ .card .sym-top,
+.batgirl:hover ~ .card .sym-top,
+.joker:hover ~ .card .sym-top,
+.nightwing:hover ~ .card .sym-top-right,
+.catwoman:hover ~ .card .sym-top-right,
+.batman:hover ~ .card .sym-top-right,
+.batgirl:hover ~ .card .sym-top-right,
+.joker:hover ~ .card .sym-top-right,
+.nightwing:hover ~ .card .sym-bottom,
+.catwoman:hover ~ .card .sym-bottom,
+.batman:hover ~ .card .sym-bottom,
+.batgirl:hover ~ .card .sym-bottom,
+.joker:hover ~ .card .sym-bottom {
+  display: none;
+}
+

@@ -30,6 +30,7 @@
   font-weight: 900;
   transform: translateY(7rem);
   text-transform: uppercase;
+  transition: 1s ease;
 }
 
 .card {

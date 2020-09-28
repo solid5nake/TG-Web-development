@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Datatypes - opdracht 1</title>
+</head>
+
+<body>
+  <h1>Datatypes</h1>
+  <h2>Opdrachten over undefined en getallen aan variable toekennen.</h2>
+
+  <pre>
+    Opdracht 1:
+      1. Maak een variable aan met let en noem het “getal1”.
+      2. Ken geen waarde toe aan de variable.
+      3. Print vervolgens de variable met console.log(“getal1 ” + getal1);.
+    Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan?
+  </pre>
+
+  <p class="ans">
+    getal1 + undefined
+  </p>
+
+  <hr>
+
+  <pre>
+    Opdracht 2:
+    1. Maak een variable aan met const en noem het getal2.
+    2. Ken geen waarde toe aan de variable.
+    3. Print vervolgens de variable met console.log(“getal2 ” + getal2);.
+    Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan?
+  </pre>
+
+  <p class="ans">
+    getal2 undefined
+  </p>
+
+  <hr>
+
+  <pre>
+    Opdracht​ 3:
+    1. Maak een let variable en noem het getal3. Ken gelijk een Number 3 aan toe. Hoe
+    programmeer je dat ?
+    2. Print vervolgens de variable met console.log(“getal3 ” + getal3);.
+    Open dit html bestand in jouw browser en kijk in je console. Je zult “getal3 3” in console zien.
+  </pre>
+
+  <p class="ans">
+    getal3 3
+  </p>
+  <hr>
+  <pre>
+    Opdracht 4:
+      1. Hergebruik de variable "getal3 en wijzig de waarde van de variable getal3 naar 5.
+      2. Print vervolgens de variable met console.log(“getal3 ” + getal3);
+    Open dit html bestand in jouw browser en kijk in je console. Je zult “getal3 5” in console zien
+  </pre>
+  <hr>
+
+  <h2>Verschillende data types herkennen</h2>
+
+  <pre>
+    Opdracht 5:
+      1. Maak een let variable en noem het datatype.
+      2. Ken de waarde true aan de variable.
+      3. Print vervolgens de variable met console.log(“datatype ” + typeof datatype);
+    Open dit html bestand in jouw browser en kijk in je console. Je zult “datatype boolean” in
+    console zien.
+      4. Wat voor type is de waarde false?
+  </pre>
+
+  <p class="ans">
+    Zowel de <strong>true</strong> als de <strong>false</strong> zijn boolean Datatypes.
+  </p>
+  <hr>
+  <pre>
+    Hoe herken je dat een waarde String is? Geef ook een voorbeeld.
+      2. Hoe herken je dat een waarde Number is? Geef ook een voorbeeld.
+      3. Hoe herken je dat een waarde BigInt is? Geef ook een voorbeeld.
+      4. Hoe herken je dat een waarde Symbol is? Geef ook een voorbeeld.
+  </pre>
+  <p class="ans">
+    Een string herken je aan de aanhalingstekens <strong>""</strong>, zoals in de voorgaande opdrachten werd de uitkomst van ("getal1 " + getal1) uitgeprint in de console als
+    <strong>getal1 undefined</strong>.
+    Als je een nummer terug terugkrijgt.
+    Een BigInt eindigt altijd met een <strong>n</strong>.
+    Een symbol wordt altijd opgeroepen met de ingebouwde functie <i>Symbol</i>, ze horen altijd uniek te zijn binnen een code.
+  </p>
+  <hr>
+  <h1>Numbers</h1>
+  <pre>
+    Opdracht 7:
+    1. Maak twee variables aan met twee verschillende Numbers. Geeft de variables een
+    logische naam waaraan je kunt afleiden wat het inhoudt.
+    2. Eerste variable heeft de waarde 6.
+    3. Tweede variable heeft de waarde 8.
+    Tel de twee waardes bij elkaar op. Print het antwoord in jouw browser console. Het
+    antwoordt zal 14 moeten zijn.
+    Trek de tweede waarde af van de eerste waarde. Print het antwoord in jouw browser
+    console. Het antwoordt zal 2 moeten zijn.
+    Vermenigvuldig de twee waardes. Print het antwoord in jouw browser console. Het
+    antwoordt zal 48 moeten zijn.
+    Deel de twee waarde met de eerste waarde. Print het antwoord in jouw browser console. Het
+    antwoordt zal 1.33 moeten zijn.
+  </pre>
+  <hr>
+  <pre>
+    Opdracht 8:
+      1. Wat is het antwoord van de volgende som: 3 + 5 * 10 / 2?
+      2. Print het antwoord in jouw browser console.
+    Open dit html bestand in jouw browser en kijk in je console.
+  </pre>
+  <p class="ans">
+    Vermenigvuldigen en delen hebben voorrang boven optellen en aftrekken.
+    <strong>5*10</strong> dat wordt gedeeld door twee en vervolgen opgeteld met 3.
+    Kom je op 28 uit.
+  </p>
+  <hr>
+  <pre>
+    Opdracht 9:
+    Voor deze opdracht is het handig om je in te lezen over increment en decrement.
+      1. Copy de volgende code in jouw VSCode:
+
+      2. Print uitkomst in jouw browser console.
+    Wat gebeurt met de uitkomst?
+      3. Wijzig number++ naar number--.
+      4. Wat is de uitkomst van de som ?
+  </pre>
+
+  <p class="ans">
+    De uitkomst is het getal 4, wanneer het decremental is wordt het 2, na het vervangen van de operators met --.
+    <strong>++</strong> is increment wordt dan opgeteld met <strong>1</strong> <br>
+    <strong>--</strong> is decremental er wordt dan afgetrokken met <strong>1</strong>.
+  </p>
+  <hr>
+  <pre>
+    Wat gebeurt is de uitkomst?
+    5. Copy de volgende code in jouw VSCode:
+      ​let​ ​number​ = ​3​;
+      ​const​ ​sum​ = ​number​++ + ​2​;
+      ​console​.​log​(​sum​);
+    6. Wat is de uitkomst van van de som ?
+    Leg jouw antwoord uit.
+  </pre>
+
+  <p class="ans">
+    Het antwoord is <i>5</i>, binnen een <strong>constance</strong> is increment <i>++</i> van een variable niet mogelijk. <br>
+    <strong>const</strong> zijn <i>immutable</i> zou je het buiten de const variable incrementeren dan was de uitkomst <strong>6</strong> geworden.
+  </p>
+
+  <pre>
+    7. Copy de volgende code in jouw VSCode:
+    let number = 3;
+    const sum = ++number +2;
+    console.log(number);
+    8. Wat is de uitkomst van de som?
+  </pre>
+
+  <p class="ans">
+    <strong>4</strong> de prefix increment geeft 1 en de value returns after incrementing, na een return value stopt de script.
+  </p>
+
+  <pre>
+    Opdracht 10:
+      1. Copy de volgende code in jouw VSCode:
+      let​ ​number​ = ​3​;
+      ​number​ += ​4​;
+      ​console​.​log​(​number​);
+      2. Wat is de uitkomst van van de som ?
+      3. Hoe zou je het anders kunnen schrijven en dezelfde uitkomst hebben ?
+  </pre>
+
+  <p class="ans">
+    De uitkomst wordt een <strong>7</strong>, er is gebruikt gemaakt van een <i>addition assignment(+=)</i> het <br>
+    telt op van de rechter operandus naar een variable en kent toe het resultaat van de variable.
+    Je zou het anders kunnen schrijven als <strong>4 + 3</strong>.
+  </p>
+  <hr>
+
+  <pre>
+    Opdracht 11:
+      1. Copy de volgende code in jouw VSCode:
+
+      2. Wat is de uitkomst ?
+  </pre>
+
+  <p class="ans">
+    De uitkomst is <strong>4</strong>.
+  </p>
+
+
+  <script>
+    let getal1;
+    console.log("getal1 " + getal1);
+
+    const getal2 = undefined;
+    console.log("getal2 " + getal2);
+
+    let getal3 = 3;
+    console.log("getal3 " + getal3);
+    getal3 = 5;
+    console.log("getal3 " + getal3);
+
+    let datatype = false;
+    console.log("datatype " + typeof datatype);
+
+    let nr9 = 9;
+    console.log("value " + nr9 + " datatype: " + typeof nr9);
+    let BigInt = 9007199254740993n;
+    console.log(typeof BigInt);
+
+    let sym = Symbol("❖");
+    console.log(typeof Sym);
+
+    let six = 6;
+    let eight = 8;
+    console.log(six+ eight);
+    console.log(eight - six);
+    console.log(eight * six);
+    console.log(eight / six);
+    console.log(3 + 5 * 10 / 2);
+    // let number = 3;
+    // number--;
+    // console.log(number);
+
+    // let number = 3;
+    // const sum = number++ + 2;
+    // console.log(sum);
+
+    let number = 3;
+    const sum = ++number + 2;
+    console.log(number);
+
+    // let number = 3;
+    // number += 4;
+    // console.log(number);
+
+    // let number = 3;
+    // console.log(4 + number);
+
+    // let number = 3;
+    // number += 4;
+    // number -= 2;
+    // number /= 5;
+    // number *= 4;
+    // console.log(number);
+
+  </script>
+</body>
+
+</html>

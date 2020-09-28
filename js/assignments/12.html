@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="your-project-dir/font-css/LineIcons.css" rel="stylesheet">
+  <!-- or --> 
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <title>Javascript - 12</title>
+</head>
+
+<body>
+  <h1>Javascript</h1>
+  <h2>String</h2>
+  <pre class="qn">
+    Opdracht 12:
+      1. Maak twee variables aan met twee verschillende Strings. Geef de variables een
+      logische naam waaraan je kunt afleiden wat het inhoudt.
+      2. Eerste variable heeft de waarde “Voornaam”.
+      3. Tweede variable heeft de waarde “Achternaam”.
+      4. Print vervolgens de variables met console.log(<eerste variable naam> + <tweede
+      variable naam>);
+    Wat merk je op t.o.v het uitprinten van numbers?
+  </pre>
+
+  <p class="ans">
+    De strings worden in 1 geheel geretourneerd als 1 string.
+  </p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 13:
+      1. Maak een String variable aan met de waarde “3”.
+      2. Maak een Number variable aan met de waarde 3.
+      3. Maak een variable aan die heet combinedText en voeg de eerste en de tweede
+      variable samen en ken de samengevoegde waarde toe aan de variable
+      combinedText.
+      4. Print vervolgens de combinedText in jou console.
+      Wat merk je op?
+  </pre>
+
+  <p class="ans">
+    Door de <i>String</i> toe te voegen met <i>Number</i> datatype wordt de uitkomst een string.
+  </p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 14:
+      1. Een String kun je ook aanduiden met single quote (‘). Wanneer zou je een String met
+      single quote gebruiken?
+      2. Maak een voorbeeld code waarbij je een single quote zou gebruiken.
+  </pre>
+  <p class="ans">
+    Beiden string literals zijn identiek aan elkaar.
+    Het gaat er eigenlijk om welke backslash character je wilt escapen in je code, <strong>\'</strong> of
+    <strong>\"</strong>.
+    Als je \' wilt escapen dan gebruik je de single quote.
+  </p>
+
+  <pre class="code">
+    <span>JS</span>
+    "double quotes ( \" ) should escape a double quote"
+    'single quotes ( \' ) should escape a single quote'
+
+    const wittyAI = 'I am \'not\' sentient.'
+    const wittyReply = 'No, you\'re definitely not "sentient."'
+    console.log(wittyAI,wittyReply)
+
+    const _wittyAI = "I think therefore I 'am' -- sentient."
+    const _wittyReply = "No, you only \"think\", so you aren't."
+    console.log(_wittyAI,_wittyReply)
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 15
+    1. Copy de volgende code in jouw VSCode:
+      ​let​ ​text​ = ​"text"​;
+      ​text​ += ​"another text"​;
+      ​console​.​log​(​text​);
+    2. Wat wordt er geprint ?
+    3. Hoe zou je het anders kunnen schrijven en dezelfde uitkomst hebben ?
+  </pre>
+
+  <p class="ans">
+    De string literal is <strong>textanother text</strong> geworden. <strong>text + "another text"</strong>
+  </p>
+
+  <h1>Build in methods</h1>
+  <pre class="qn">
+    Opdracht 16:
+    Voor deze opdracht is het handig om in te lezen over methods van String. Aan de linkerkant
+    staat een menubalk. Onder de categorie methods staan een lijst met functies die je met een
+    String kan aanroepen.
+    Maak een eigen voorbeeld van de volgende functies en licht toe wat de functie doet in het
+    blok:
+    1. charAt()
+    2. concat()
+    3. slice()
+    4. split()
+    5. substr()
+  </pre>
+
+  
+  <h3>charAt()</h3>
+  <pre class="code">
+    <span>JS</span>
+    const sentence = 'The quick brown fox jumps over the lazy dog.';
+
+    const index = 4;
+
+    console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+    // expected output: "The character at index 4 is q"
+  </pre>
+  <p class="ans">
+    De charAt () - <i>method</i> van het String-object <i>returns</i> een nieuwe string die bestaat uit de enkele UTF-16-code-eenheid die zich op de opgegeven offset in de string bevindt.
+  </p>
+
+  <h3>concat()</h3>
+  <pre class="code">
+    <span>JS</span>
+    const str1 = 'Hello';
+    const str2 = 'World';
+
+    console.log(str1.concat(' ', str2));
+    // expected output: "Hello World"
+
+    console.log(str2.concat(', ', str1));
+    // expected output: "World, Hello"
+  </pre>
+  <p class="ans">
+    The concat() method concatenates the string arguments to the calling string and returns a new string.
+  </p>
+
+  <p class="note">
+    <strong>Note:</strong> testing testing
+  </p>
+
+  <script>
+    let bram = "Voornaam";
+    let engel = "Achternaam";
+    console.log(bram + engel);
+
+    let three = "3";
+    let number = 3;
+    const combinedText = three + number;
+    console.log(typeof combinedText);
+
+    let text = "text";
+    text += "another text";
+    console.log(text)
+
+    const sentence = 'The quick brown fox jumps over the lazy dog.';
+    const index = 4;
+    console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+
+  </script>
+</body>
+
+</html>

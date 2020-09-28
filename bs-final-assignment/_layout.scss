@@ -1,0 +1,17 @@
+@import "./base";
+
+@font-face {
+  font-family: GothicJoker;
+  src: url(./assets/gothic-joker-font/GothicJoker-gxxGP.ttf);
+}
+
+.container-fluid {
+  background: url(./assets/catwoman-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.gotham {
+  font-family: GothicJoker;
+  font-size: 1.5rem;
+  color: $pink;
+}

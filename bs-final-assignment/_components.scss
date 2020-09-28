@@ -1,0 +1,21 @@
+@import "./base";
+
+%ml-38 {
+  margin-left: 38%;
+}
+
+.navbar-brand {
+  position: absolute;
+  right: 0;
+  img {
+    height: 2rem;
+  }
+}
+
+.ml-38 {
+  @extend %ml-38;
+}
+
+.bg-pink {
+  background: $pink;
+}

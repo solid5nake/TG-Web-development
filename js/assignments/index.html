@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../dark.css">
+  <title>Javascript - Index</title>
+</head>
+
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="./index.html" class="active">Home</a>
+    <a href="./intro/1-11.html">Introduction I</a>
+    <a href="./intro/12-16.html">Introduction II</a>
+    <a href="./conditions/1-15.html">Conditions</a>
+  </div>
+  <main>
+    <h1 class="title">Javascript</h1>
+    <h1>Index</h1>
+    <table class="big-font">
+      <tr>
+        <td><a href="./intro/1-11.html">Introduction I</a></td>
+      </tr>
+      <tr>
+        <td><a href="./intro/12-16.html">Introduction II</a></td>
+      </tr>
+      <tr>
+        <td><a href="./conditions/1-15.html">Conditions</a></td>
+      </tr>
+    </table>
+    <hr>
+    <h1>Inleiding</h1>
+    <h2>wat kan je met Javascript?</h2>
+    <p class="ans">
+      Javascript is niet meer weg te denken. Moderne websites hebben vaak te maken met data
+      die in een website verwerkt moet worden. De data staan op een server. Jouw website legt
+      communicatie met de server om de data op te halen. De communicatie wordt gedaan met
+      javascript. Denk aan productinformatie, voorraad van bepaalde artikelen, de prijzen van de
+      producten. Men gebruikt javascript om data op te halen van de server, te valideren en te
+      manipuleren. Bijvoorbeeld, Als je de voorraad van een product ophaalt en de voorraad is op,
+      dan wil je graag op de website tonen dat het uitverkocht is. Met javascript kun je valideren
+      dat het voorraad op is en vervolgens kan aangeven dat er een label “uitverkocht” op de
+      pagina moet staan.
+      Met javascript zou je ook de content van de html wijzigen of de style van je css aanpassen.
+    </p>
+    <h2>
+      Hoe werkt het ?
+    </h2>
+    <p class="ans">
+      Javascript kennen is nodig om bepaalde logica uit te voeren. Een programmeertaal zoals
+      javascript is een human readable taal waarmee jij als ontwikkelaar de code kan uitschrijven.
+      Net als bij Nederlands heb je met een javascript regels die je moet hanteren. Door het goed
+      toepassen van deze regels zult de computer dit begrijpen en de acties uitvoeren die jij hebt
+      geprogrammeerd. Ook zijn er standaard regels die toegepast voor een betere leesbaarheid
+      van de code.
+    </p>
+    <p class="note">
+      Een voorbeeld van javascript regels:
+    </p>
+    <pre class="code js">
+      class​ ​Car​ {
+        ​constructor​(​height​, ​width​) {
+          ​this​.​height​ = ​height​;
+          ​this​.​width​ = ​width​;
+        }
+      }
+      const​ ​car​ = ​new​ ​Car​(​20​, ​20​);
+      console​.​log​(​car​.​height​);
+      console​.​log​(​car​.​width​);
+    </pre>
+    <p class="ans">
+      Hierboven zie je een stukje code waar de regels goed toegepast zijn. Javascript is een
+      case-sensitive programmeertaal. In dit voorbeeld is Car (met hoofdletter) en car niet
+      hetzelfde. De computer zal het anders interpreteren. Verder zie je dat er indentations worden
+      gebruikt. Dat zijn spaties die je gebruikt om jouw code te structureren. Ook zie je dat aan het
+      einde van de regel een bracket of een semi colon gebruikt worden. Doe je dit niet dan
+      overschrijd je de regels en breekt jouw code.
+    </p>
+    <hr>
+    <h2>Javascript in ontwikkeling</h2>
+    <p class="ans">
+      Javascript wordt ook wel ECMAScript genoemd. In de IT gaat technologie razendsnel.
+      Websites die enkele jaren geleden zijn gemaakt zijn al verouderd. Je loopt dan achter qua
+
+      technologie en als je dit niet bijstuurt kan dat gevaar opleveren voor bedrijven waar IT de
+      core business is. Dat geldt ook met programmeertalen zoals Javascript. Javascript van 10
+      jaar geleden ziet er anders uit dan tegenwoordig. De taal is in ontwikkeling en zal continue
+      worden verbeterd. Hierdoor ontstaat dat bepaalde functionaliteit op verschillende manieren
+      de code uitgeschreven kan worden. Dit maakt het voor ontwikkelaars niet makkelijk, want
+      hierdoor ontstaat er discussies welke code beter is.
+    </p>
+    <pre class="code js">
+      var​ ​numbers​ = [​1​, ​2​, ​3​, ​4​, ​5​];
+      // example1
+      for​(​var​ ​number​ ​of​ ​numbers​) {
+      ​console​.​log​(​number​);
+      }
+      // example2
+      numbers​.​map​(​n​ ​=>​ {
+      ​console​.​log​(​n​);
+    </pre>
+    <p class="ans">
+      Hierboven zie je example1 en example2 waarbij de getallen van de lijst worden uitgeprint.
+      Qua functionaliteit doen beide voorbeelden exact hetzelfde. Example1 is typisch een
+      voorbeeld dat vroeger heel vaak wordt geschreven. Nadat de taal verbeterd was is Example2
+      nu heel populair om te schrijven waardoor Example1 eigenlijk niet meer wordt gebruikt. Hoe
+      bepaal je nu welke code je kan gebruiken? Dat is afhankelijk of de browser het support. Elke
+      browser heeft een bepaalde versie. En elke versie van de browser ondersteunt bepaalde
+      ECMAscript versie. Het kan zijn dat je een oudere versie van de browser gebruikt waarbij de
+      browser de code van “example2” niet begrijpt. Hierdoor ben je genoodzaakt je browser te
+      updaten, zodat de browser de “nieuwere” code begrijpt of de code omschrijven naar het
+      voorbeeld zoals “example1”. Tegenwoordig ondersteunen meeste browsers de nieuwste
+      ECMAScript versie. Ondanks dat is het wel iets om over na te denken, omdat je de zekerheid
+      niet hebt dat browsers al jouw code ondersteunt. Om zeker van te zijn dat je code werkt zul
+      je op verschillende browsers en versies testen of het werkt.
+      Javascript die in je browser uitgevoerd wordt noemen we ook wel client-side rendering.
+      Client-side rendering houdt in dat het op de computer waar jij achter zit wordt uitgevoerd.
+      Server-side rendering houdt in dat de code die je hebt geschreven op een andere computer
+      wordt uitgevoerd. Een server is niks anders dan een computer die vaak fysiek niet in jouw
+      huis of kantoor staat, maar bij een datawarehouse.
+    </p>
+    <h2>Leerdoelen</h2>
+    <ul>
+      <li>Javascript syntax</li>
+      <li>Browser console</li>
+      <li>Debugging</li>
+    </ul>
+    <p class="ans">
+      De syntaxis van javascript is essentieel om te beheersen. Dit vormt de basis van jouw
+      programmeerkennis. Door dit goed te beheersen zul je andere programmeertalen
+      makkelijker kunnen oppakken. Er zijn namelijk onderdelen die in andere programmeertalen
+      ook in voorkomen. Deze onderdelen zullen wij stapsgewijs gaan behandelen. Hiervoor
+      hebben wij opdrachten voor die jullie kunnen maken.
+      Naast het leren van Javascript is het ook belangrijk om aan te leren hoe jij je code kan
+      debuggen. Code zul je niet in een keer goed kunnen schrijven. Fouten maken kan je niet
+      voorkomen. Van fouten kun je leren en verbeteren. Met debuggen kun je stap voor stap jouw
+      code uitvoeren en zien wat er gebeurd. Daar zullen wij ook tijd aan besteden.
+      Aan het einde van dit onderdeel ken je de basis van Javascript en kun je op je eigen manier
+      jouw code schrijven en de fouten opsporen.
+    </p>
+  </main>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+</body>
+
+</html>

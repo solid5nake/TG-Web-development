@@ -7,6 +7,10 @@
   padding-left: 5.5rem;
 }
 
+.big-font a{
+  font-size: 2.5rem;
+}
+
 strong,
 i {
   padding-left: 0;
@@ -57,7 +61,7 @@ table {
   margin: 2rem 0 5rem 0;
   padding: 2em 2em;
   width: fit-content;
-  border-left: 2px solid ;
+  border-left: 2px solid #2fb6c3;
 }
 
 table::before {
@@ -71,12 +75,37 @@ table::before {
   height: 2.3rem;
 }
 
+li,
 td {
   padding: 1rem;
 }
 
+ul {
+  margin: 2rem 0 5rem 0;
+  padding: 2em 2em;
+  border-left: 2px solid #2fb6c3;
+  color: #ededed;
+  position: relative;
+  width: fit-content;
+}
+
 li {
+  font-weight: lighter;
   margin: 3px;
+  color: #2fb6c3;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+ul::before {
+  position: absolute;
+  top: 0;
+  left: -4.2rem;
+  content: "";
+  background: url(./assets/book-pink.svg) no-repeat;
+  background-size: cover;
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
 pre.qn {
@@ -94,10 +123,11 @@ pre.qn {
 pre.code {
   position: relative;
   margin: 50px 0 50px 0;
-  padding: 1rem 1rem 1.5rem 0;
+  margin-left: 2.75rem;
+  padding: 2.5rem 3rem 1rem 0;
   width: fit-content;
-  border-left: 2px solid mediumturquoise;
   color: mediumspringgreen;
+  border: 0.250rem solid #1f3751;
   background: #1f3751;
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
@@ -152,10 +182,8 @@ pre.syntax {
 
 .js::before {
   position: absolute;
-  top: 1rem;
-  left: 1.5rem;
   top: calc(50% - 1.75rem);
-  left: -4.2rem;
+  left: -7rem;
   content: "";
   background: url(./assets/js-format.svg) no-repeat;
   background-size: cover;
@@ -165,10 +193,8 @@ pre.syntax {
 
 .css::before {
   position: absolute;
-  top: 1rem;
-  left: 1.5rem;
   top: calc(50% - 1.75rem);
-  left: -4.2rem;
+  left: -7rem;
   content: "";
   background: url(./assets/css.svg) no-repeat;
   background-size: cover;
@@ -178,10 +204,8 @@ pre.syntax {
 
 .html::before {
   position: absolute;
-  top: 1rem;
-  left: 1.5rem;
   top: calc(50% - 1.75rem);
-  left: -4.2rem;
+  left: -7rem;
   content: "";
   background: url(./assets/html.svg) no-repeat;
   background-size: cover;
@@ -190,29 +214,41 @@ pre.syntax {
 }
 
 .html::after {
+  padding-left: 3rem;
+  margin-left: -3.5rem;
   content: "HTML5";
   position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.3rem;
+  height: 100%;
+  border-left: 2px solid mediumturquoise;
   color: deeppink;
 }
 
 .css::after {
+  padding-left: 3rem;
+  margin-left: -3.5rem;
   position: absolute;
   content: "CSS";
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.3rem;
+  height: 100%;
+  border-left: 2px solid mediumturquoise;
   color: deeppink;
 }
 
 .js::after {
   content: "JS";
   position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.5rem;
+  padding-left: 3rem;
+  margin-left: -3.5rem;
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.3rem;
+  height: 100%;
+  border-left: 2px solid mediumturquoise;
   color: deeppink;
 }
 
@@ -353,4 +389,43 @@ footer a:hover {
   font-weight: lighter;
   font-family: 'Courier New', Courier, monospace;
   color: mediumspringgreen;
+}
+
+.breadcrumbs {
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.breadcrumbs a{
+  color: #a93e89;
+  display: inline-block;
+  list-style: none;
+  transition: 1.5s ease;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  transition: 1s ease;
+}
+
+.breadcrumbs a:hover:not(.active) {
+  color: #dfd7d7;
+  border: 2px solid #dfd7d7;
+  padding: 0.5rem;
+  transition: 1s ease;
+}
+
+.breadcrumbs a.active {
+  color: #202020;
+  border: 2px solid #dfd7d7;
+  background: #dfd7d7;
+  padding: 0.5rem;
+}
+
+.breadcrumbs a.active:hover {
+  color: #dfd7d7;
+  border: 2px solid #dfd7d7;
+  background: #202020;
+  padding: 0.5rem;
+  transition: 1s ease;
 }

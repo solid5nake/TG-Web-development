@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Conditions</title>
+  <style>
+    input,
+    button {
+      background-color: white;
+      block-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    span#label {
+      color: violet;
+    }
+  </style>
+</head>
+
+<body class=pl-5>
+  <header>
+    <h1 class="title">Javascript</h1>
+    <h2>Opdrachten 1 t/m 15</h2>
+    <h1>Conditions</h1>
+    <hr>
+  </header>
+  <main id="main">
+    <pre class="qn">
+      Opdracht 1:
+      Copy de volgende code in jouw body element:
+
+      ​&#60;​input​ ​type​=​"number"​ ​name​=​"number"​ ​id​=​"number"​&#62;
+      ​&#60;​button​ ​id​=​"btn"​ ​onclick​=​"​checkNumber​()"​>​Button​&#60;/​button​&#62;
+      ​&#60;​div​&#62;
+      ​&#60;span​ ​id​=​"label"​>&#60;/​span​&#62;
+      ​&#60;/​div​&#62;
+      ​&#60;​script​&#62;
+      ​function​ ​checkNumber​() {
+      // hier kun je coderen
+
+      }
+      ​&#60;/​script​&#62;
+
+      Hierboven zie je een input field, een button en een label.
+      ● Het input field kun je een getal mee invoeren.
+      ● De button roept de checkNumber functie aan.
+      ● De label wordt gebruikt om een tekst te tonen aan de hand van een logica die jij gaat
+      programmeren.
+      Programmeer de volgende logica in de checkNumber functie.
+      ● Als het ingevoerde getal is gelijk aan 3, dan toon je op het label: “Het ingevoerde
+      getal is gelijk aan 3”.
+    </pre>
+    <hr>
+    <div class="browser">
+      <input type="number" name="number" id="number">
+      <button id="btn" onclick="checkNumber()">Button</button>
+      <div>
+        <span id="label"></span>
+      </div>
+    </div>
+    <h2>Code</h2>
+    <pre class="code js">
+        function checkNumber() {
+          let input = document.getElementById('number').value;
+          let text = document.getElementById('label');
+          if (input = 3) {
+            text.innerText = "Het ingevoerde getal is gelijk aan 3";
+          }
+        }
+    </pre>
+    <pre class="code html">
+      &#60;input type="number" name="number" id="number"&#62;
+      &#60;button id="btn" onclick="checkNumber()"&#62;Button&#60;/button&#62;
+      &#60;div&#62;
+        &#60;span id="label">&#60;/span&#62;
+      &#60;/div&#62;
+    </pre>
+    <p class="ans">
+      <strong>innerText</strong> is een property van de <strong>HTMLElement</strong> interface.
+      Voor deze opdracht is gebruik gemaakt van een <i>innerText</i> om span met #label text content te geven.
+    </p>
+    <p class="note">
+      getElementById('string') is een <strong>Document</strong><i>object method</i>, <strong>returns</strong> een
+      element met de <i>id</i> die
+      overeenkomt met de specifieke opgegeven string als <i>parameter</i>.
+    </p>
+    <hr>
+
+    <pre class="qn">
+      Opdracht 2:
+        Deze opdracht is een uitbreiding van opdracht 1.
+        Programmeer de volgende logica in de checkNumber functie:
+          ● Als het ingevoerde getal is groter dan 4, dan toon je op het label: “Het ingevoerde getal is groter dan 4”.
+    </pre>
+    <h2>Code</h2>
+    <pre class="code js">
+      function checkNumber() {
+        let input = document.getElementById('number').value;
+        let text = document.getElementById('label');
+        if (input == 3) {
+          text.innerText = "Het ingevoerde getal is gelijk aan 3";
+        }
+        else
+          if (input == 4) {
+            text.innerText = "Het ingevoerde getal is gelijk aan 4";
+          }
+      }
+    </pre>
+    <p class="ans">
+      <strong>else if</strong> statement is hierbij gebruikt om een tweede conitie mee te geven.
+    </p>
+    <p class="note">
+      <strong>==</strong> Abstract equality operator, je kunt de == operator gebruiken om de identiteit van twee operanden te vergelijken, ook al zijn ze niet van hetzelfde type.
+    </p>
+    <hr>
+
+    <pre class="qn">
+      Opdracht 3:
+      Deze opdracht is een uitbreiding van opdracht 1.
+      Programmeer de volgende logica in de checkNumber functie:
+      ● Als het ingevoerde getal is gelijk aan en is groter dan 11, dan toon je op het label: “Het ingevoerde getal is gelijk aan 11 of groter dan 11.”.
+    </pre>
+    <h2>Code</h2>
+    <pre class="code js">
+      else
+      if (input >= 11) {
+        text.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11.";
+      }
+    </pre>
+    <pre class="syntax">x >= y</pre>
+    <p class="note">
+      De <strong>greater than or equal</strong> <i>operator</i> (<strong>>=</strong>) retourneerd <strong>true</strong> als de linker operand
+      groter is dan of gelijk is aan de rechter operand, and anderzijds geeft het <strong>false</strong> terug.
+    </p>
+    <hr>
+
+
+
+  </main>
+  <section>
+  </section>
+  <footer>
+    <a href="#main"></a>
+  </footer>
+  <script>
+    function checkNumber() {
+      let input = document.getElementById('number').value;
+      let text = document.getElementById('label');
+      if (input == 3) {
+        text.innerText = "Het ingevoerde getal is gelijk aan 3";
+      }
+      else
+        if (input == 4) {
+          text.innerText = "Het ingevoerde getal is gelijk aan 4";
+        }
+      else
+        if (input >= 11) {
+          text.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11.";
+        }
+    }
+  </script>
+</body>
+
+</html>

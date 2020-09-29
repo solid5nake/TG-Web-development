@@ -2,14 +2,34 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #202020;
 }
+.pl-5 {
+  padding-left: 5.5rem;
+}
 
-h1 {
-  color: #ffffff
+strong, 
+i {
+  padding-left: 0;
+  margin: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  padding-left: 2.5rem;
+}
+
+h1{
+  color: #ffffff;
 }
 
 h2,
 h3 {
   color: #dfd7d7;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 500;
 }
 
 hr {
@@ -18,29 +38,51 @@ hr {
 }
 
 p {
-  margin: 50px 0 50px 0;
-  padding: 40px;
+  margin: 3.125rem 0 3.125rem 0;
+  padding: 2.5rem;
   width: fit-content;
 }
 
-ul {
-  margin: 50px 0 50px 0;
+table a {
+  text-decoration: none;
+  color: #2fb6c3;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  transition: 2s ease;
+}
+
+table {
+  position: relative;
+  margin: 2rem 0 5rem 0;
   padding: 2em 2em;
   width: fit-content;
-  background: #F8F8FF;
-  border-left: 5px solid teal;
+  border-left: 2px solid #2fb6c3;
+}
+
+table::before {
+  position: absolute;
+  top: 0;
+  left: -4.2rem;
+  content: "";
+  background: url(./assets/index.svg) no-repeat;
+  background-size: cover;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+td {
+  padding: 1rem;
 }
 
 li {
   margin: 3px;
 }
 
-td {
-  padding: 20px;
-}
 
 pre.qn {
+  margin-bottom: 5rem;
   padding: 2rem;
+  padding-left: 0.5rem;
   width: fit-content;
   color: #a93e89;
   background: #202020;
@@ -50,7 +92,9 @@ pre.qn {
 }
 
 pre.code {
+  position: relative;
   margin: 50px 0 50px 0;
+  padding: 3rem 3rem 1.5rem 0;
   width: fit-content;
   border-left: 2px solid mediumturquoise;
   color: mediumspringgreen;
@@ -58,7 +102,32 @@ pre.code {
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
   font-size: 18px;
+}
+
+.js {
   position: relative;
+}
+
+.js::before {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  top: calc(50% - 1.75rem);
+  left: -4.2rem;
+  content: "";
+  background: url(./assets/js-format.svg) no-repeat;
+  background-size: cover;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.js::after {
+  position: absolute;
+  content: "JS";
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: deeppink;
 }
 
 .qn {
@@ -71,12 +140,12 @@ pre.code {
 .qn::before {
   position: absolute;
   top: 0;
-  left: 0.8rem;
+  left: -4.2rem;
   content: "";
   background: url(./assets/information.svg) no-repeat;
   background-size: cover;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.3rem;
+  height: 2.3rem;
 }
 
 .ans {
@@ -91,8 +160,8 @@ pre.code {
   width: 2.3rem;
   height: 2.3rem;
   position: absolute;
-  top: -0.5rem;
-  left: 0.5rem;
+  top: calc(50% - 1.6rem);
+  left: -4.2rem;
   content: "";
   background: url(./assets/ai.svg) no-repeat;
   background-size: cover;
@@ -100,7 +169,8 @@ pre.code {
 
 .note {
   position: relative;
-  padding: 35px;
+  padding: 1.5rem;
+  padding-left: 5rem;
   border-left: 2px solid #2fb6c3;
   font-size: 1rem;
   font-weight: lighter;
@@ -111,34 +181,18 @@ pre.code {
   width: 2.3rem;
   height: 2.3rem;
   position: absolute;
-  top: -0.5rem;
-  left: 0.5rem;
+  top: calc(50% - 1.6rem);
+  left: -4.2rem;
   content: "";
-  background: url(./assets/light-bulb.svg) no-repeat;
+  background: url(./assets/light-bulb-gold.svg) no-repeat;
   background-size: cover;
 }
 
-/* .code {
-  position: relative;
-  margin: 50px 0;
-  padding: 15px 70px 10px 0;
-  width: fit-content;
-  border: initial;
-  border-left: 2px solid mediumseagreen;
-  background: #001933;
-  color: mediumspringgreen;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: lighter;
-  font-size: 18px;
-} */
-
-.code>span {
+.note::after {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  background: #1f3751;
-  font-size: 2rem;
-  color: deeppink;
+  left: 1.5rem;
+  content: "Note:";
+  font-weight: bold;
 }
 
 .info {
@@ -163,4 +217,36 @@ pre.code {
   right: 2%;
   color: #2F4F4F;
   font-size: medium;
+}
+
+footer {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  position: relative;
+  color: #a93e89;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 2.5rem;
+  transition: 2s ease;
+}
+
+footer a::before{
+  content: "△";
+  text-decoration: none;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 2.5rem;
+}
+
+table a:hover,
+footer a:hover {
+  color: #ffffff;
+  transition: 2s ease;
 }

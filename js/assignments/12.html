@@ -4,139 +4,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="your-project-dir/font-css/LineIcons.css" rel="stylesheet">
-  <!-- or --> 
-  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../../dark.css">
   <title>Javascript - 12</title>
 </head>
 
-<body>
-  <h1>Javascript</h1>
-  <h2>String</h2>
-  <pre class="qn">
-    Opdracht 12:
-      1. Maak twee variables aan met twee verschillende Strings. Geef de variables een
-      logische naam waaraan je kunt afleiden wat het inhoudt.
-      2. Eerste variable heeft de waarde “Voornaam”.
-      3. Tweede variable heeft de waarde “Achternaam”.
-      4. Print vervolgens de variables met console.log(<eerste variable naam> + <tweede
-      variable naam>);
-    Wat merk je op t.o.v het uitprinten van numbers?
-  </pre>
-
-  <p class="ans">
-    De strings worden in 1 geheel geretourneerd als 1 string.
-  </p>
-  <hr>
-
-  <pre class="qn">
-    Opdracht 13:
-      1. Maak een String variable aan met de waarde “3”.
-      2. Maak een Number variable aan met de waarde 3.
-      3. Maak een variable aan die heet combinedText en voeg de eerste en de tweede
-      variable samen en ken de samengevoegde waarde toe aan de variable
-      combinedText.
-      4. Print vervolgens de combinedText in jou console.
-      Wat merk je op?
-  </pre>
-
-  <p class="ans">
-    Door de <i>String</i> toe te voegen met <i>Number</i> datatype wordt de uitkomst een string.
-  </p>
-  <hr>
-
-  <pre class="qn">
-    Opdracht 14:
-      1. Een String kun je ook aanduiden met single quote (‘). Wanneer zou je een String met
-      single quote gebruiken?
-      2. Maak een voorbeeld code waarbij je een single quote zou gebruiken.
-  </pre>
-  <p class="ans">
-    Beiden string literals zijn identiek aan elkaar.
-    Het gaat er eigenlijk om welke backslash character je wilt escapen in je code, <strong>\'</strong> of
-    <strong>\"</strong>.
-    Als je \' wilt escapen dan gebruik je de single quote.
-  </p>
-
-  <pre class="code">
-    <span>JS</span>
-    "double quotes ( \" ) should escape a double quote"
-    'single quotes ( \' ) should escape a single quote'
-
-    const wittyAI = 'I am \'not\' sentient.'
-    const wittyReply = 'No, you\'re definitely not "sentient."'
-    console.log(wittyAI,wittyReply)
-
-    const _wittyAI = "I think therefore I 'am' -- sentient."
-    const _wittyReply = "No, you only \"think\", so you aren't."
-    console.log(_wittyAI,_wittyReply)
-  </pre>
-  <hr>
-
-  <pre class="qn">
-    Opdracht 15
-    1. Copy de volgende code in jouw VSCode:
-      ​let​ ​text​ = ​"text"​;
-      ​text​ += ​"another text"​;
-      ​console​.​log​(​text​);
-    2. Wat wordt er geprint ?
-    3. Hoe zou je het anders kunnen schrijven en dezelfde uitkomst hebben ?
-  </pre>
-
-  <p class="ans">
-    De string literal is <strong>textanother text</strong> geworden. <strong>text + "another text"</strong>
-  </p>
-
-  <h1>Build in methods</h1>
-  <pre class="qn">
-    Opdracht 16:
-    Voor deze opdracht is het handig om in te lezen over methods van String. Aan de linkerkant
-    staat een menubalk. Onder de categorie methods staan een lijst met functies die je met een
-    String kan aanroepen.
-    Maak een eigen voorbeeld van de volgende functies en licht toe wat de functie doet in het
-    blok:
-    1. charAt()
-    2. concat()
-    3. slice()
-    4. split()
-    5. substr()
-  </pre>
-
+<body class="pl-5">
+  <main id="main">
+    <h1 class="title">Javascript</h1>
+    <h2>Opdrachten 12 t/m 16</h2>
+    <hr>
+    <h1>String</h1>
+    <pre class="qn">
+      Opdracht 12:
+        1. Maak twee variables aan met twee verschillende Strings. Geef de variables een
+        logische naam waaraan je kunt afleiden wat het inhoudt.
+        2. Eerste variable heeft de waarde “Voornaam”.
+        3. Tweede variable heeft de waarde “Achternaam”.
+        4. Print vervolgens de variables met console.log(&#60; eerste variable naam &#62; + &#60; tweede
+        variable naam &#62;);
+      Wat merk je op t.o.v het uitprinten van numbers?
+    </pre>
+    <p class="note">Javascript heeft een heleboel <strong>Standard built-in objects</strong>, String is is er 1 van. Een
+      object is herkenbaar doordat het met een hoofdletter begint.</p>
+    <p class="ans">
+      De strings worden in 1 geheel geretourneerd als 1 string.
+    </p>
+    <hr>
   
-  <h3>charAt()</h3>
-  <pre class="code">
-    <span>JS</span>
-    const sentence = 'The quick brown fox jumps over the lazy dog.';
+    <pre class="qn">
+      Opdracht 13:
+        1. Maak een String variable aan met de waarde “3”.
+        2. Maak een Number variable aan met de waarde 3.
+        3. Maak een variable aan die heet combinedText en voeg de eerste en de tweede
+        variable samen en ken de samengevoegde waarde toe aan de variable
+        combinedText.
+        4. Print vervolgens de combinedText in jou console.
+        Wat merk je op?
+    </pre>
+    <p class="ans">
+      Door de <i>String</i> toe te voegen met <i>Number</i> datatype wordt de uitkomst een string.
+    </p>
+    <hr>
+  
+    <pre class="qn">
+      Opdracht 14:
+        1. Een String kun je ook aanduiden met single quote (‘). Wanneer zou je een String met
+        single quote gebruiken?
+        2. Maak een voorbeeld code waarbij je een single quote zou gebruiken.
+    </pre>
+    <p class="ans">
+      Beiden string literals zijn identiek aan elkaar.
+      Het gaat er eigenlijk om welke backslash character je wilt escapen in je code, <strong>\'</strong> of
+      <strong>\"</strong>.
+      Als je \' wilt escapen dan gebruik je de single quote.
+    </p>
+    <pre class="code js">
+      "double quotes ( \" ) should escape a double quote"
+      'single quotes ( \' ) should escape a single quote'
+  
+      const wittyAI = 'I am \'not\' sentient.'
+      const wittyReply = 'No, you\'re definitely not "sentient."'
+      console.log(wittyAI,wittyReply)
+  
+      const _wittyAI = "I think therefore I 'am' -- sentient."
+      const _wittyReply = "No, you only \"think\", so you aren't."
+      console.log(_wittyAI,_wittyReply)
+    </pre>
+    <hr>
+  
+    <pre class="qn">
+      Opdracht 15
+      1. Copy de volgende code in jouw VSCode:
+        ​let​ ​text​ = ​"text"​;
+        ​text​ += ​"another text"​;
+        ​console​.​log​(​text​);
+      2. Wat wordt er geprint ?
+      3. Hoe zou je het anders kunnen schrijven en dezelfde uitkomst hebben ?
+    </pre>
+    <p class="ans">
+      De string literal is <strong>textanother text</strong> geworden. <strong>text + "another text"</strong>
+    </p>
+    <hr>
+  </main>
+  <section>
+    <h1>Build in methods</h1>
+    <pre class="qn">
+      Opdracht 16:
+      Voor deze opdracht is het handig om in te lezen over methods van String. Aan de linkerkant
+      staat een menubalk. Onder de categorie methods staan een lijst met functies die je met een
+      String kan aanroepen.
+      Maak een eigen voorbeeld van de volgende functies en licht toe wat de functie doet in het
+      blok:
+      1. charAt()
+      2. concat()
+      3. slice()
+      4. split()
+      5. substr()
+    </pre>
+  
+    <h2>Index</h2>
+    <table>
+      <tr>
+        <td><a href="#charAt">charAt()</a></td>
+        <td><a href="#concat">concat()</a></td>
+        <td><a href="#slice">slice()</a></td>
+      </tr>
+      <tr>
+        <td><a href="#split">split()</a></td>
+        <td><a href="#substr">substr()</a></td>
+      </tr>
+    </table>
+    <hr>
+  
+    <h2 id="charAt">charAt()</h2>
+    <pre class="code js">
+      const sentence = 'The quick brown fox jumps over the lazy dog.';
+  
+      const index = 4;
+  
+      console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+      // expected output: "The character at index 4 is q"
+    </pre>
+    <p class="ans">
+      De <strong>charAt()</strong><i> method</i> van het String-object <i>returns</i> een nieuwe string die bestaat uit de
+      enkele UTF-16-code-eenheid die zich op de opgegeven offset in de string bevindt.
+    </p>
+    <hr>
+  
+    <h2 id="concat">concat()</h2>
+    <pre class="code js">
+      const str1 = 'Hello';
+      const str2 = 'World';
+  
+      console.log(str1.concat(' ', str2));
+      // expected output: "Hello World"
+  
+      console.log(str2.concat(', ', str1));
+      // expected output: "World, Hello"
+    </pre>
+    <p class="ans">
+      <strong>concat()</strong> method concatenates the string arguments to the calling string and returns a new string.
+    </p>
+    <p class="note">
+      <i>concatenates</i> betekend aaneenschakelen of samenvoegen.
+    </p>
+    <hr>
+  
+    <h2 id="slice">slice()</h2>
+    <pre class="code js">
+      const str = 'The quick brown fox jumps over the lazy dog.';
+  
+      console.log(str.slice(31));
+      // expected output: "the lazy dog."
+  
+      console.log(str.slice(4, 19));
+      // expected output: "quick brown fox"
+  
+      console.log(str.slice(-4));
+      // expected output: "dog."
+  
+      console.log(str.slice(-9, -5));
+      // expected output: "lazy"
+    </pre>
+    <p class="ans">
+      <strong>slice()</strong> methode extraheert een sectie van een string en <i>returns</i> deze als een nieuwe string,
+      zonder de orginele string te wijzigen.
+    </p>
+    <hr>
+  
+    <h2 id="split">split()</h2>
+    <pre class="code js">
+      const str = 'The quick brown fox jumps over the lazy dog.';
+  
+      const words = str.split(' ');
+      console.log(words[0, 5]);
+      // expected output: "fox"
+  
+      const chars = str.split('');
+      console.log(chars[8]);
+      // expected output: "k"
+  
+      const strClone = str.split();
+      console.log(strClone);
+      // expected output: Array ["The quick brown fox jumps over the lazy dog."]
+    </pre>
+    <p class="ans">
+      The split() method divides a String into an ordered list of substrings, puts these substrings into an array, and
+      returns the array. The division is done by searching for a pattern; where the pattern is provided as the first
+      parameter in the method's call.
+    </p>
+    <hr>
+  
+    <h2 id="substr">substr()</h2>
+    <pre class="code js">
+      const strSubstr = 'Mozilla';
+  
+      console.log(strSubstr.substr(1, 2));
+      // expected output: "oz"
+  
+      console.log(strSubstr.substr(2));
+      // expected output: "zilla"
+    </pre>
+    <p class="ans">
+      The substr() method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
+    </p>
+    <hr>
+  </section>
 
-    const index = 4;
-
-    console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
-    // expected output: "The character at index 4 is q"
-  </pre>
-  <p class="ans">
-    De charAt () - <i>method</i> van het String-object <i>returns</i> een nieuwe string die bestaat uit de enkele UTF-16-code-eenheid die zich op de opgegeven offset in de string bevindt.
-  </p>
-
-  <h3>concat()</h3>
-  <pre class="code">
-    <span>JS</span>
-    const str1 = 'Hello';
-    const str2 = 'World';
-
-    console.log(str1.concat(' ', str2));
-    // expected output: "Hello World"
-
-    console.log(str2.concat(', ', str1));
-    // expected output: "World, Hello"
-  </pre>
-  <p class="ans">
-    The concat() method concatenates the string arguments to the calling string and returns a new string.
-  </p>
-
-  <p class="note">
-    <strong>Note:</strong> testing testing
-  </p>
+  <footer>
+    <a href="#main"></a>
+  </footer>
 
   <script>
     let bram = "Voornaam";
@@ -155,6 +232,42 @@
     const sentence = 'The quick brown fox jumps over the lazy dog.';
     const index = 4;
     console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+
+    const str = 'The quick brown fox jumps over the lazy dog.';
+
+    console.log(str.slice(31));
+    // expected output: "the lazy dog."
+
+    console.log(str.slice(4, 19));
+    // expected output: "quick brown fox"
+
+    console.log(str.slice(-4));
+    // expected output: "dog."
+
+    console.log(str.slice(-9, -5));
+    // expected output: "lazy"
+
+    const strSplit = 'The quick brown fox jumps over the lazy dog.';
+
+    const words = strSplit.split(' ');
+    console.log(words[0, 5]);
+    // expected output: "fox"
+
+    const chars = strSplit.split('');
+    console.log(chars[8]);
+    // expected output: "k"
+
+    const strCopy = strSplit.split();
+    console.log(strCopy);
+    // expected output: Array ["The quick brown fox jumps over the lazy dog."]
+
+    const strSubstr = 'Mozilla';
+
+    console.log(strSubstr.substr(1, 2));
+    // expected output: "oz"
+
+    console.log(strSubstr.substr(2));
+    // expected output: "zilla"
 
   </script>
 </body>

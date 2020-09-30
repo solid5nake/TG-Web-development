@@ -93,6 +93,7 @@ ul {
 
 li {
   font-weight: lighter;
+  font-size: 1.3rem;
   margin: 3px;
   color: #2fb6c3;
   list-style-type: none;
@@ -143,7 +144,6 @@ pre.syntax {
   padding: 0.9rem 3rem 0.9rem 3rem;
   margin-left: 2rem;
   width: fit-content;
-  text-align: center;
   background: mediumspringgreen;
   border: 0.250rem solid #2d2c33;
   font-family: 'Courier New', Courier, monospace;

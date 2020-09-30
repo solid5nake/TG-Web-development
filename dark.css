@@ -9,6 +9,7 @@
 
 .big-font a{
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 strong,
@@ -94,7 +95,6 @@ li {
   margin: 3px;
   color: #2fb6c3;
   list-style-type: none;
-  text-transform: uppercase;
 }
 
 ul::before {

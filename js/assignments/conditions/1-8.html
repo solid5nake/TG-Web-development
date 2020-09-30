@@ -25,7 +25,7 @@
     <a href="../index.html">Home</a>
     <a href="../intro/1-11.html">Introduction I</a>
     <a href="../intro/12-16.html">Introduction II</a>
-    <a href="./1-15.html" class="active">Conditions</a>
+    <a href="./1-8.html" class="active">Conditions I</a>
   </div>
   <header>
     <h1 class="title">Javascript</h1>
@@ -149,8 +149,99 @@
       Programmeer de volgende logica in de checkNumber functie:
       ● Als het ingevoerde getal is kleiner dan 3, dan toon je op het label: “Het ingevoerde getal is kleiner dan 3”.
     </pre>
+    <h2>Code</h2>
+    <pre class="code js">
+      else
+      if (input &#62; 3) {
+        text.innerText = "Het ingevoerde getal is kleiner dan 3";
+      }
+    </pre>
+    <p class="ans">
+      Hierbij is weer een <strong>else if</strong> statement toegevoegd met dit keer de <i>smaller than operator</i> in gebruik.
+    </p>
+    <p class="note">
+      De kleiner dan operator (<strong>&#60;</strong>) retourt <strong>true</strong> als the linker operand kleiner is dan de rechter operand,
+      en anderzijds keert <strong>false</strong> terug.
+    </p>
+    <pre class="syntax">x &#62; y</pre>
+    <hr>
 
+    <pre class="qn">
+      Opdracht 5:
+      We hebben nu verschillende comparison operators gehad. Wat is het verschil tussen &#62; en &#62;= ?
+    </pre>
+    <p class="ans">
+      De <strong>&#62;=</strong> operand retourt <strong>true</strong> als de linker operand kleiner of gelijk is aan de rechter operand en anders geeft het <strong>false</strong> aan.
+      In tegenstelling tot de <strong>&#62;</strong> operand die geeft <strong>false</strong> vals terug als de linker  kleiner gelijk is aa  de rechter operand.
+    </p>
+    <p class="note">
+      <strong>NaN</strong> is een global property dat <i>value</i> <i>Not a Number</i> representeerd.
+    </p>
+    <hr>
 
+    <pre class="qn">
+      Opdracht 6:
+      We hebben nog een comparison operator niet gehad, namelijk ! comparison. Wat doet een !
+      comparison ? Maak een voorbeeld van een ! comparison
+    </pre>
+    <p class="ans">
+      <strong>(!)</strong> oftwel de <strong>logical NOT (!)</strong> operator neemt <i>truth</i> als <i>falsy</i>
+      aan en vice versa. Het wordt altijd gebruikt in combinatie met een <strong>boolean</strong> (logical) values.
+      Wanneer het wordt gebruikt met non-Boolean values, geeft het false terug als zijn enkele operand kan worden geconverteerd naar true; anders geeft true terug.
+    </p>
+    <p class="note">
+      Returns false if its single operand can be converted to true; otherwise, returns true.
+
+      If a value can be converted to true, the value is so-called truthy. If a value can be converted to false, the value is so-called falsy.
+    </p>
+    <h3>Voorbeelden van expressions dat geconverteerd kan worden naar false</h3>
+    <ul>
+      <li>null;</li>
+      <li>NaN;</li>
+      <li>0;</li>
+      <li>empty string (" " of '' of ``);</li>
+      <li>undefined</li>
+    </ul>
+    <h3>Code</h3>
+    <pre class="code js">
+      n1 = !true               // !t returns false
+      n2 = !false              // !f returns true
+      n3 = !''                 // !f returns true
+      n4 = !'Cat'
+      console.log(n1)
+      false
+      console.log(n2)
+      true
+      console.log(n3)
+      true
+      console.log(n4)
+      false
+    </pre>
+
+    <pre class="qn">
+      Opdracht 7:
+      Wanneer je een getal hebt ingevoerd en bij de label verschijnt er een tekst, dan blijft de tekst
+      voor altijd staan tenzij je de tekst van de label expliciet weghaalt. Schrijf de code van
+      opdracht 1 t/m 4 zo dat als de conditie niet waar is dat de tekst van de label verwijdert
+      wordt.
+    </pre>
+    <p class="ans">De code is afgesloten met een <strong>else</strong> statement, wanneer alle condities niet truthy zijn zal het 
+    een lege string dmv. innerText een lege string gerendered worden.</p> 
+    <hr>
+
+    <pre class="qn">
+      Opdracht 8:
+      Wat is een strict equality comparison ?
+    </pre>
+    <p class="ans">
+      <strong>strict equality(===)</strong> controleert of de twee operanden gelijk zijn, en retourneert een Boolean als resultaat.
+      In tegenstelling tot de <strong>equality operator</strong> beschouwt de strict equality operator operanden van verschillende  typen
+      altijd als verschillend.
+    </p>
+    <p class="note">
+      De grootste verschil tuusen <strong>===</strong> en <strong>==</strong> is dat wanneer de operanden van verschillende types zijn,
+      de <strong>==</strong> een poging zal doen om hen om te zetten voordat er een vergelijking plaats vind.
+    </p>
 
   </main>
   <section>
@@ -173,7 +264,23 @@
         if (input >= 11) {
           text.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11.";
         }
+      else
+        if (input < 3) {
+          text.innerText = "Het ingevoerde getal is kleiner dan 3";
+        }
+      else {
+        text.innerText = '';
+      }
     }
+
+    n1 = !true               // !t returns false
+    n2 = !false              // !f returns true
+    n3 = !''                 // !f returns true
+    n4 = !'Cat'
+    console.log(n1)
+    console.log(n2)
+    console.log(n3)
+    console.log(n4)
   </script>
 </body>
 

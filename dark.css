@@ -127,7 +127,7 @@ pre.code {
   padding: 2.5rem 3rem 1rem 0;
   width: fit-content;
   color: mediumspringgreen;
-  border: 0.250rem solid #1f3751;
+  border: 0.250rem solid #292831;
   background: #1f3751;
   font-family: 'Courier New', Courier, monospace;
   font-weight: lighter;
@@ -220,7 +220,7 @@ pre.syntax {
   position: absolute;
   top: 0;
   left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   height: 100%;
   border-left: 2px solid mediumturquoise;
   color: deeppink;
@@ -233,7 +233,7 @@ pre.syntax {
   content: "CSS";
   top: 0;
   left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   height: 100%;
   border-left: 2px solid mediumturquoise;
   color: deeppink;
@@ -246,7 +246,7 @@ pre.syntax {
   margin-left: -3.5rem;
   top: 0;
   left: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   height: 100%;
   border-left: 2px solid mediumturquoise;
   color: deeppink;

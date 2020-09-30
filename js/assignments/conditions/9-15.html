@@ -4,12 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../../dark.css
-  ">
+  <link rel="stylesheet" href="../../../dark.css">
+  <style>
+    input,
+    button {
+      background-color: white;
+      block-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    span#label {
+      color: violet;
+    }
+  </style>
   <title>Javascript - conditions II</title>
 </head>
 
-<body>
+<body class="pl-5">
   <div class="breadcrumbs" id="up">
     <a href="../index.html">Home</a>
     <a href="../intro/1-11.html">Introduction I</a>
@@ -38,12 +49,50 @@
       </div>
     </div>
   </main>
+    <pre class="qn">
+      Programmeer de volgende logica in de checkNumber functie:
+      ● Als het ingevoerde getal is groter dan 5 en is kleiner dan 10, dan toon je op het label:
+      “Het ingevoerde getal is tussen 5 en 10”.
+    </pre>
+    <h3>Code</h3>
+    <pre class="code js">
+      function checkNumber() {
+        let input = document.getElementById("number").value;
+        let text = document.getElementById("label");
+        if (input &#62; 5 && input &#60; 10) {
+          text.innerText = "Het ingevoerde getal is tussen 5 en 10";
+        }
+        else {
+          text.innerText = "";
+        }
+      }
+    </pre>
+    <p class="ans">
+      Om deze vergelijking te kunnen maken binnen de <strong>if</strong> <i>statement</i> heb je een logical operator nodig.
+      Voor de opdracht is gebruik gemaakt van de <strong>logical AND (&&)</strong> <i>operator</i>.
+    </p>
+    <pre class="syntax">expressie1 && expressie2</pre>
+    <p class="note">
+      <strong>logical AND (&&)</strong> <i>operator</i> (<i>logical conjunction</i>) voor een set operanden is <i>true</i>
+      alleen wanneer alle operanden <i>truthy</i> zijn. Het wordt typisch gebruikt met <strong>Boolean</strong> logische values.
+      Wanneer dat zo is geeft het een Boolean terug. 
+      De operator && retourneert in feite de waarde van een van de opgegeven operanden, dus als deze operator wordt gebruikt met niet-Booleaanse waarden, retourneert deze een niet-Booleaanse waarde.
+    </p>
+    <hr>
+
   <footer>
     <a href="#up"></a>
   </footer>
   <script>
     function checkNumber() {
-
+      let input = document.getElementById("number").value;
+      let text = document.getElementById("label");
+      if (input > 5 && input <10) {
+        text.innerText = "Het ingevoerde getal is tussen 5 en 10";
+      }
+      else {
+        text.innerText = "";
+      }
     }
   </script>
 </body>

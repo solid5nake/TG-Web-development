@@ -110,13 +110,8 @@ function translateMonth() {
   }
 }
 
-
-// On pageload, op het moment dat de js file wordt geinclude wordt de code 1 keer geevalueerd en de const gedeclareerd.
-// Math is een Standard built-in objects.
-// String.prototype.trim()
-// const words & guessingword is in de global scope
-
 const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+
 const guessingWord = words[Math.round(Math.random() * 8)];
 let attempts = 0;
 
@@ -124,20 +119,16 @@ function guess(btn) {
   let word = btn.children[1].innerHTML.trim();
   let label15 = document.getElementById("label15");
   let count15 = document.getElementById("count15");
-
+  console.log(guessingWord);
   if (attempts == 3) {
     label15.innerHTML = `Game Over. The correct word is ${guessingWord}`;
   }
   else if (word != guessingWord) {
     attempts++;
+    console.log(attempts);
     count15.innerHTML = attempts;
   }
   else {
     label15.innerHTML = `You have guessed the correct word! ${guessingWord}`;
   }
 }
-
-
-// ●	Het bijhouden van het aantal pogingen voor het raden van het woord. 
-// ●	Na 3 keer raden is het game over en moet het volgende tekst op het scherm weergegeven worden: “Game Over. The correct word is <het woord dat geraden moest worden>”. De p.label kun je hiervoor gebruiken om de tekst op het scherm weer te geven. 
-// ●	Als het woord goed geraden is dan toon je het volgende tekst op het scherm: “”You have guessed the correct word! <het woord dat geraden moest worden>. 

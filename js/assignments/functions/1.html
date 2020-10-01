@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../dark.css">
   <title>Functions</title>
 </head>
+
 <body class="pl-5">
   <header>
     <div class="breadcrumbs" id="up">
@@ -25,11 +27,18 @@
       Functions zijn coding blocks die uitgevoerd worden. Het idee achter functies zijn het uitvoeren van specifieke taken. Er zijn aantal regels die je moet kennen om de kracht uit functies uit te halen. Door goed gebruik te maken van functies is je code veel leesbaarder.  
     </pre>
     <h2>Wat is belangrijk om mee te nemen bij het schrijven van een function ?</h2>
-    <p class="ans">
-      1.	Naam: Elke function die je schrijft heeft een naam. Deze naam geeft aan welke actie er uitgevoerd wordt. Door een goede naam aan te geven hoef je niet in code te verdiepen om te begrijpen wat het doet. Code wat werkt wil je het liefst zo weinig tijd aan besteden. Code begrijpen kan namelijk tijdrovend zijn, omdat je bij elke line of code erover gaat nadenken wat het doet. Code wordt geschreven met een bepaalde doel. Jij als ontwikkelaar wilt eigenlijk de doel van de code achterhalen. Als de code complex is kan het uren duren voordat je de code begrijpt. Door goede namen te geven begrijp je de code veel sneller. 
-      2.	Parameters: Je kunt values meegeven aan de function. De functie kan vervolgens de value gebruiken om bepaalde logica uit te voeren.  
-      3.	Return: Een function kun je aanroepen. Degene die het aanroept kan ook een waarde terugkrijgen van de function. De waarde is vaak de resultaat van de taak die de function heeft uitgevoerd. 
-    </p>
+    <pre class="ans">
+      1. Naam: Elke function die je schrijft heeft een naam. Deze naam geeft aan welke actie er uitgevoerd wordt. Door
+      een goede naam aan te geven hoef je niet in code te verdiepen om te begrijpen wat het doet. Code wat werkt wil je
+      het liefst zo weinig tijd aan besteden. Code begrijpen kan namelijk tijdrovend zijn, omdat je bij elke line of
+      code erover gaat nadenken wat het doet. Code wordt geschreven met een bepaalde doel. Jij als ontwikkelaar wilt
+      eigenlijk de doel van de code achterhalen. Als de code complex is kan het uren duren voordat je de code begrijpt.
+      Door goede namen te geven begrijp je de code veel sneller.
+      2. Parameters: Je kunt values meegeven aan de function. De functie kan vervolgens de value gebruiken om bepaalde
+      logica uit te voeren.
+      3. Return: Een function kun je aanroepen. Degene die het aanroept kan ook een waarde terugkrijgen van de function.
+      De waarde is vaak de resultaat van de taak die de function heeft uitgevoerd.
+    </pre>
     <h3>Leerdoelen</h3>
     <ul>
       <li>Function names</li>
@@ -47,10 +56,10 @@
       Prerequisites 
       Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand. 
     </pre>
-  
+
     <div class="browser">
-      <p id="answer"></p> 
-      <button onclick="answer()">click</button> 
+      <p id="answer"></p>
+      <button onclick="answer()">click</button>
     </div>
   </main>
 
@@ -67,8 +76,9 @@
       console.log("hello world");
     }
   </pre>
-  <p class="note"><strong>console.log()</strong> 
-    De <strong>console.log()</strong> <i>method</i> stuurt een bericht naar de webconsole. Het bericht kan een <i>single string</i> zijn (met optionele vervangingswaarden), of het kan een of meer JavaScript-objecten zijn.
+  <p class="note"><strong>console.log()</strong>
+    De <strong>console.log()</strong> <i>method</i> stuurt een bericht naar de webconsole. Het bericht kan een <i>single
+      string</i> zijn (met optionele vervangingswaarden), of het kan een of meer JavaScript-objecten zijn.
     Het wordt gebruikt als <i>debugging tool</i>.
   </p>
   <hr>
@@ -99,7 +109,8 @@
       console.log(Number);
     }
   </pre>
-  <p class="note">Except for null and undefined, all primitive values have object equivalents that wrap around the primitive values:</p>
+  <p class="note">Except for null and undefined, all primitive values have object equivalents that wrap around the
+    primitive values:</p>
   <ul>
     <li>
       <strong>String</strong> voor de string primitive
@@ -117,6 +128,103 @@
       <strong>Symbol</strong> voor de symbol primitive
     </li>
   </ul>
+  <pre class="ans">
+    Opdracht 4: 
+    Schrijf een functie die twee getallen met elkaar vermenigvuldigt en geef de waarde van de vermenigvuldiging terug. Geef een goede functie naam ervoor. 
+  </pre>
+  <pre class="ans">
+    De <strong>function</strong> geeft het resulaat terug met de <strong>return</strong> function en heeft twee <i>parameters</i>.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function multiPlier(x,y) {
+      return (x*y);
+    }
+  </pre>
+  <p class="note">
+    De <strong>return</strong> function beëindigt de uitvoering van de <i>function</i> en specificeert een waarde die
+    naar de <i>function caller</i> moet worden geretourneerd.
+  </p>
+  <pre class="syntax">return [[expression]]; </pre>
+  <p class="ans">
+    De <i>expression</i> waarvan de waarde moet worden geretourneerd. Indien weggelaten, wordt in plaats daarvan
+    <i>undefined</i> geretourneerd.</p>
+  <hr>
+  <pre class="qn">
+    Opdracht 5: 
+    Schrijf een functie waarbij je een naam kan meegeven aan de functie. De functie moet vervolgens controleren of de naam een bekende is.  
+    
+    De namen die bekend zijn: 
+    ●	John 
+    ●	Olly 
+    ●	Mo 
+    ●	Hendrik 
+    ●	Tony 
+    
+    Als het een bekende is, dan toon je het volgende tekst op het scherm: “Dit is een bekende van ons: &#60; naam die je aan de functie hebt meegegeven&#62;”.  
+    Als het niet een bekende is, dan toon je het volgende tekst op het scherm “Onbekend in ons systeem!”  
+    
+    We gaan de applicatie uitbreiden! Je hebt een functie geschreven waarbij je zelf een naam meegeeft aan de functie. Nu willen we dat de naam random gekozen wordt. We gaan gebruik maken van Math.random() en Math.round() functie. Lees je goed in wat beide functies doet. 
+    
+    Schrijf nu een functie die een random naam teruggeeft. Math.random() geeft een getal terug. 
+    Zorg ervoor dat getal en naam samenhang hebben. Bijvoorbeeld getal 1 geeft aan dat het “John” is. Hieronder zie je de getallen en de namen die samenhang met elkaar hebben. 
+    ●	1 = John 
+    ●	2 = Oly
+    ●	3 = Mo 
+    ●	4 = Hendrik 
+    ●	5 = Tony 
+    ●	6 = Irus 
+    ●	7 = Jan 
+    ●	8 = Peter 
+    
+    Maak een functie die een random naam teruggeeft. Deze naam geef je vervolgens door aan de functie die je voorheen hebt geschreven om te controleren of de naam een bekende is van ons. 
+  </pre>
+  <pre class="ans">
+    In plaats van een <i>if</i> statement is de switch statement gebruikt voor de <i>function searchName</i>. 
+    Voor de <strong>randomName function</strong> zijn de namen opgeslagen  in een <strong>array</strong> in een <strong>const</strong> genaamd <i>names</i>.
+    Om een willekeurige naam terug te geven van deze array is voor de willekeurig zoeken op indexering gebruik gemaakt van <strong>Math.random</strong> om een <i>at random</i> <i>float</i> te retourneren.
+    <strong>Math.round</strong> wordt gebruikt om de <i>float</i> af te ronden naar een heel getal.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function searchName(name) {
+      switch (name) {
+        case 'John':
+        case 'Olly':
+        case 'Mo':
+        case 'Hendrik':
+        case 'Tony':
+          return `Dit is een bekende van ons: ${name}`;
+        default:
+          return "Onbekend in ons systeem!";
+      }
+    }
+
+    function randomeName() {
+      const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+      return names[Math.round(Math.random()*8)];
+    }
+  </pre>
+  <p class="note"><strong>string interpolation</strong> in javascript wordt gebruikk gemaakt van `` <i>backticks</i> en
+    vervolgens interpoleer je met <strong>${"<i>expression</i>"}</strong></p>
+  <pre class="syntax">
+    `string text`
+
+    `string text line 1`
+    `string text line 2`
+
+    `string text ${expression} string text`
+
+    tag`string text ${expression} string text`
+  </pre>
+
+  <hr>
+  <pre class="qn">
+    Opdracht 6: Arrow functions 
+    De functies die kunnen ook met arrow functions geschreven worden. Herschrijf opdracht 5 zodat arrow functions gebruikt wordt. 
+  </pre>
+  
+
   <footer>
     <a href="#up"></a>
   </footer>
@@ -131,9 +239,74 @@
       console.log(text)
     }
 
-    function printNumber(Number) {
-      console.log(Number);
+    function printNumber(number) {
+      console.log(number);
     }
+
+    function multiPlier(x, y) {
+      return (x * y);
+    }
+
+    let storedName = (name) => {
+      switch (name) {
+        case 'John':
+        case 'Olly':
+        case 'Mo':
+        case 'Hendrik':
+        case 'Tony':
+          return `Dit is een bekende van ons: ${name}`;
+        default:
+          return "Onbekend in ons systeem!";
+      }
+    }
+
+    function knownName(name) {
+      switch (name) {
+        case 'John':
+        case 'Olly':
+        case 'Mo':
+        case 'Hendrik':
+        case 'Tony':
+          return `Dit is een bekende van ons: ${name}`;
+        default:
+          return "Onbekend in ons systeem!";
+      }
+    }
+
+    function includeName(name) {
+      const names = ["John", "Olly", "Mo", "Hendrik", "Tony"];
+      let includedName = names.includes(name);
+      if (includedName) {
+        return `Dit is een bekende van ons: ${name}`;
+      }
+      else {
+        return `Onbekend in ons systeem! ${name}`;
+      }
+    }
+
+    const includeNameES6 = (name) => {
+      const names = ["John", "Olly", "Mo", "Hendrik", "Tony"];
+      let includedName = names.includes(name);
+      if (includedName) {
+        return `Dit is een bekende van ons: ${name}`;
+      }
+      else {
+        return `Onbekend in ons systeem! ${name}`;
+      }
+    }
+
+    const randomName = () => {
+      const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+      return names[Math.round(Math.random() * names.length)];
+    }
+
+    function assignmentFive() {
+      return includeName(randomName());
+    }
+
+    const assignmentFiveES6 = () => includeNameES6(randomName());
+
   </script>
 </body>
+
 </html>

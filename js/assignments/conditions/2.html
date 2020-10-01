@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
       text-transform: lowercase;
       font-weight: bold;
     }
-
     span#label,
     #translatedMonth,
     #translatedMonth14 {
@@ -21,13 +19,11 @@
       font-family: 'Courier New', Courier, monospace;
       color: mediumspringgreen;
     }
-
     #translatedMonth,
     #translatedMonth14 {
       width: fit-content;
       height: 3rem;
     }
-
     .words button {
       position: relative;
       border: 1px solid black;
@@ -38,16 +34,13 @@
       transition: background-color .3s ease-in-out;
       z-index: 1;
     }
-
     .words button:focus {
       outline: none;
       background-color: grey;
     }
-
     button span {
       background-color: white;
     }
-
     .words .fg {
       position: absolute;
       content: '';
@@ -64,23 +57,22 @@
       transition: width .3s ease-out;
       overflow: hidden;
     }
-
     .words button:hover .fg {
       width: 0;
       z-index: 1;
     }
-
     .words button:focus .fg {
       width: 0;
     }
-
     .answer {
       font-size: 2em;
       font-weight: 900;
     }
-
     .green {
       color: mediumspringgreen;
+    }
+    #label15 {
+      color: mediumvioletred;
     }
   </style>
   <title>Javascript - conditions II</title>
@@ -428,7 +420,7 @@
         </button>
         <button onclick="guess(this)">
           <div class="fg">Show</div>
-          <span>Scrum </span>
+          <span>Scrum</span>
         </button>
         <button onclick="guess(this)">
           <div class="fg">Show </div>
@@ -457,10 +449,62 @@
       </div>
     </section>
     <div>
-      <span class="green">The number of wrong guessing: <span id="count">0</span></span>
-      <p id="label"></p>
+      <span class="green">The number of wrong guessing: <span id="count15">0</span></span>
+      <p id="label15"></p>
     </div>
   </div>
+  <pre class="qn">
+    Analyseer de code en probeer te begrijpen wat er staat. 
+    Deze applicatie moet het volgende kunnen doen:
+
+      ●	Het bijhouden van het aantal pogingen voor het raden van het woord. 
+      ●	Na 3 keer raden is het game over en moet het volgende tekst op het scherm weergegeven worden: “Game Over. The correct word is <het woord dat geraden moest worden>”. De p.label kun je hiervoor gebruiken om de tekst op het scherm weer te geven. 
+      ●	Als het woord goed geraden is dan toon je het volgende tekst op het scherm: “”You have guessed the correct word! <het woord dat geraden moest worden>. 
+  </pre>
+  <pre class="ans">
+    <strong>On pageload</strong> dat is het moment dat de JavaScript file wordt <i>included</i> wordt de code 1 keer geevalueerd en
+    de const gedeclareerd. De <strong>const</strong> <i>words</i> en <i>guessingword</i> zijn in de global scope. Math is een <strong>standard built-in object</strong>.
+    De <strong>Math.random()</strong> functie retourneerd een <i>floating point</i>, een <i>pseudo-random number</i> in de reeks van 0 en kleiner dan 1 (inclusief 0, maar geen 1).
+  </pre>
+  <p class="note">
+    Math.random () biedt geen cryptografisch veilige willekeurige getallen. Gebruik ze niet voor iets dat met beveiliging te maken heeft. Gebruik in plaats daarvan de Web Crypto API, en meer bepaald de methode window.crypto.getRandomValues ​​().
+  </p>
+  <h3>Math.random()</h3>
+  <pre class="syntax">Math.random()</pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+    const guessingWord = words[Math.round(Math.random() * 8)];
+    let attempts = 0;
+
+    function guess(btn) {
+      let word = btn.children[1].innerHTML.trim();
+      let label15 = document.getElementById("label15");
+      let count15 = document.getElementById("count15");
+
+      if (attempts == 3) {
+        label15.innerHTML = `Game Over. The correct word is ${guessingWord}`;
+      }
+      else if (word != guessingWord) {
+        attempts++;
+        count15.innerHTML = attempts;
+      }
+      else {
+        label15.innerHTML = `You have guessed the correct word! ${guessingWord}`;
+      }
+    }
+  </pre>
+  <p class="note">
+    <strong>String.prototype.trim()</strong> is gebruikt omdat de <strong>innerHTML</strong> een <i>whitespace</i> toevoegd aan zijn returned value. 
+    <i>innerHTML</i> ten opzichte van <i>innerText</i> behoud de originele formating.
+  </p>
+  <p class="ans">
+    <strong>String.prototype.trim()</strong> verwijderd whitespace aan beiden kanten van een string.
+    Alle soorten <i>whitespace</i> characters (space, tab, no-break space ) en alle <i>line terminator characters</i> (LF, CR, etc.)worden verwijderd.
+  </p>
+  <h3>String.prototype.trim()</h3>
+  <pre class="syntax">str.trim()</pre>
+  <p class="note"><strong>str</strong> staat voor <strong>string</strong></p>
   <footer>
     <a href="#up"></a>
   </footer>

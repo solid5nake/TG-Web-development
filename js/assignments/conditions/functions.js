@@ -4,23 +4,19 @@ function checkNumber() {
   console.log(input)
   if (input > 5 && input < 10) {
     text.innerText = "Het ingevoerde getal is tussen 5 en 10";
+  } else
+  if (input >= 11 && input <= 20) {
+    text.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20.";
+  } else
+  if (input == 21 || input == 23) {
+    text.innerText = "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.";
+  } else
+  if (input > 30 && input < 35 || input > 40 && input < 45) {
+    text.innerText = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45.";
+    console.log(text.innerText);
+  } else {
+    text.innerText = "";
   }
-  else
-    if (input >= 11 && input <= 20) {
-      text.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20.";
-    }
-    else
-      if (input == 21 || input == 23) {
-        text.innerText = "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.";
-      }
-      else
-        if (input > 30 && input < 35 || input > 40 && input < 45) {
-          text.innerText = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45.";
-          console.log(text.innerText);
-        }
-        else {
-          text.innerText = "";
-        }
 }
 
 function translateMonth14() {
@@ -76,52 +72,72 @@ function translateMonth() {
   let translatedMonth = document.getElementById("translatedMonth");
   if (integer == 1) {
     translatedMonth.innerHTML = "januari";
-  }
-  else
-    if (integer == 2) {
-      translatedMonth.innerHTML = "februari";
-    }
-  else
-    if (integer == 3) {
-      translatedMonth.innerHTML = "maart";
-    }
-  else
-    if (integer == 4) {
-      translatedMonth.innerHTML = "april";
-    }
-  else
-    if (integer == 5) {
-      translatedMonth.innerHTML = "mei";
-    }
-  else
-    if (integer == 6) {
-      translatedMonth.innerHTML = "juni";
-    }
-  else
-    if (integer == 7) {
-      translatedMonth.innerHTML = "juli";
-    }
-  else
-    if (integer == 8) {
-      translatedMonth.innerHTML = "augustus";
-    }
-  else
-    if (integer == 9) {
-      translatedMonth.innerHTML = "september";
-    }
-  else
-    if (integer == 10) {
-      translatedMonth.innerHTML = "oktober";
-    }
-  else
-    if (integer == 11) {
-      translatedMonth.innerHTML = "november";
-    }
-  else
-    if (integer == 12) {
-      translatedMonth.innerHTML = "december";
-    }
-  else {
+  } else
+  if (integer == 2) {
+    translatedMonth.innerHTML = "februari";
+  } else
+  if (integer == 3) {
+    translatedMonth.innerHTML = "maart";
+  } else
+  if (integer == 4) {
+    translatedMonth.innerHTML = "april";
+  } else
+  if (integer == 5) {
+    translatedMonth.innerHTML = "mei";
+  } else
+  if (integer == 6) {
+    translatedMonth.innerHTML = "juni";
+  } else
+  if (integer == 7) {
+    translatedMonth.innerHTML = "juli";
+  } else
+  if (integer == 8) {
+    translatedMonth.innerHTML = "augustus";
+  } else
+  if (integer == 9) {
+    translatedMonth.innerHTML = "september";
+  } else
+  if (integer == 10) {
+    translatedMonth.innerHTML = "oktober";
+  } else
+  if (integer == 11) {
+    translatedMonth.innerHTML = "november";
+  } else
+  if (integer == 12) {
+    translatedMonth.innerHTML = "december";
+  } else {
     translatedMonth.innerHTML = "Voer een cijfer in van 1 tot 12 of die gelijk is aan 1 of 12."
   }
 }
+
+
+// On pageload, op het moment dat de js file wordt geinclude wordt de code 1 keer geevalueerd en de const gedeclareerd.
+// Math is een Standard built-in objects.
+// String.prototype.trim()
+// const words & guessingword is in de global scope
+
+const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+const guessingWord = words[Math.round(Math.random() * 8)];
+let attempts = 0;
+
+function guess(btn) {
+  let word = btn.children[1].innerHTML.trim();
+  let label15 = document.getElementById("label15");
+  let count15 = document.getElementById("count15");
+
+  if (attempts == 3) {
+    label15.innerHTML = `Game Over. The correct word is ${guessingWord}`;
+  }
+  else if (word != guessingWord) {
+    attempts++;
+    count15.innerHTML = attempts;
+  }
+  else {
+    label15.innerHTML = `You have guessed the correct word! ${guessingWord}`;
+  }
+}
+
+
+// ●	Het bijhouden van het aantal pogingen voor het raden van het woord. 
+// ●	Na 3 keer raden is het game over en moet het volgende tekst op het scherm weergegeven worden: “Game Over. The correct word is <het woord dat geraden moest worden>”. De p.label kun je hiervoor gebruiken om de tekst op het scherm weer te geven. 
+// ●	Als het woord goed geraden is dan toon je het volgende tekst op het scherm: “”You have guessed the correct word! <het woord dat geraden moest worden>. 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Functions</title>
+</head>
+<body class="pl-5">
+  <header>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Home</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="./1.html" class="active">Functions</a>
+    </div>
+  </header>
+  <main>
+    <h1 class="title">Javascript</h1>
+    <h2>Opdrachten 1 t/m 8</h2>
+    <h1>Functions</h1>
+    <pre class="ans">
+      Functions zijn coding blocks die uitgevoerd worden. Het idee achter functies zijn het uitvoeren van specifieke taken. Er zijn aantal regels die je moet kennen om de kracht uit functies uit te halen. Door goed gebruik te maken van functies is je code veel leesbaarder.  
+    </pre>
+    <h2>Wat is belangrijk om mee te nemen bij het schrijven van een function ?</h2>
+    <p class="ans">
+      1.	Naam: Elke function die je schrijft heeft een naam. Deze naam geeft aan welke actie er uitgevoerd wordt. Door een goede naam aan te geven hoef je niet in code te verdiepen om te begrijpen wat het doet. Code wat werkt wil je het liefst zo weinig tijd aan besteden. Code begrijpen kan namelijk tijdrovend zijn, omdat je bij elke line of code erover gaat nadenken wat het doet. Code wordt geschreven met een bepaalde doel. Jij als ontwikkelaar wilt eigenlijk de doel van de code achterhalen. Als de code complex is kan het uren duren voordat je de code begrijpt. Door goede namen te geven begrijp je de code veel sneller. 
+      2.	Parameters: Je kunt values meegeven aan de function. De functie kan vervolgens de value gebruiken om bepaalde logica uit te voeren.  
+      3.	Return: Een function kun je aanroepen. Degene die het aanroept kan ook een waarde terugkrijgen van de function. De waarde is vaak de resultaat van de taak die de function heeft uitgevoerd. 
+    </p>
+    <h3>Leerdoelen</h3>
+    <ul>
+      <li>Function names</li>
+      <li>Parameters</li>
+      <li>Arrow functions</li>
+      <li>Returns</li>
+    </ul>
+    <hr>
+    <pre class="qn">
+      Opdrachten 
+      Voor de opdrachten kunnen deelnemers VisualStudio code gebruiken om de opdrachten uit te voeren. 
+      
+      Deze opdrachten zijn bedoeld om hands on ervaring op te bouwen. 
+      
+      Prerequisites 
+      Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand. 
+    </pre>
+  
+    <div class="browser">
+      <p id="answer"></p> 
+      <button onclick="answer()">click</button> 
+    </div>
+  </main>
+
+  <pre class="qn">
+    Opdracht 1: 
+    Schrijf een functie die de tekst “hello world” in de console uitprint. Geef een goede functie naam ervoor.  
+  </pre>
+  <pre class="ans">
+      Een javascript function wordt altijd geschreven in lowerCamelCase vorm, geef de functions altijd logische namen.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function greetWorld() {
+      console.log("hello world");
+    }
+  </pre>
+  <p class="note"><strong>console.log()</strong> 
+    De <strong>console.log()</strong> <i>method</i> stuurt een bericht naar de webconsole. Het bericht kan een <i>single string</i> zijn (met optionele vervangingswaarden), of het kan een of meer JavaScript-objecten zijn.
+    Het wordt gebruikt als <i>debugging tool</i>.
+  </p>
+  <hr>
+  <pre class="qn">
+    Opdracht 2: 
+    Schrijf een functie waarbij je een tekst mee kan geven aan de functie. Print vervolgens de tekst uit in de console. 
+  </pre>
+  <pre class="ans">
+      Onderstaand een voorbeeld van de code.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    text = "That which does not kill us makes us stronger.";
+
+    function printText() {
+      console.log(text)
+    }
+  </pre>
+  <hr>
+  <pre class="qn">
+    Opdracht 3: 
+    Schrijf een functie waarbij je een getal mee kan geven aan de functie. Print vervolgens het getal uit in de console. 
+  </pre>
+  <pre class="ans">Onderstaand de code, <strong>Number</strong> is een <i>primitive wrapper object</i></pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function printNumber(Number) {
+      console.log(Number);
+    }
+  </pre>
+  <p class="note">Except for null and undefined, all primitive values have object equivalents that wrap around the primitive values:</p>
+  <ul>
+    <li>
+      <strong>String</strong> voor de string primitive
+    </li>
+    <li>
+      <strong>Number</strong> voor de number primitive
+    </li>
+    <li>
+      <strong>BigInt</strong> voor de BigInt primitive
+    </li>
+    <li>
+      <strong>Boolean</strong> voor de boolean primitive
+    </li>
+    <li>
+      <strong>Symbol</strong> voor de symbol primitive
+    </li>
+  </ul>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script>
+    function greetWorld() {
+      console.log("hello world");
+    }
+
+    text = "That which does not kill us makes us stronger.";
+
+    function printText(text) {
+      console.log(text)
+    }
+
+    function printNumber(Number) {
+      console.log(Number);
+    }
+  </script>
+</body>
+</html>

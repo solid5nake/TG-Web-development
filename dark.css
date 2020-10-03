@@ -1,10 +1,17 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: #202020;
+}
+
+body {
+  background: #202020;;
 }
 
 .pl-5 {
   padding-left: 5.5rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .big-font a{
@@ -20,7 +27,8 @@ i {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   padding-left: 2.5rem;
 }
 
@@ -44,11 +52,11 @@ hr {
   border: 1px solid #2d2c33;
 }
 
-p {
+/* p {
   margin: 3.125rem 0 3.125rem 0;
   padding: 2.5rem;
   width: fit-content;
-}
+} */
 
 table a {
   text-decoration: none;
@@ -58,7 +66,7 @@ table a {
   transition: 2s ease;
 }
 
-table {
+table.index {
   position: relative;
   margin: 2rem 0 5rem 0;
   padding: 2em 2em;
@@ -66,7 +74,7 @@ table {
   border-left: 2px solid #2fb6c3;
 }
 
-table::before {
+table.index::before {
   position: absolute;
   top: 0;
   left: -4.2rem;
@@ -91,12 +99,15 @@ ul {
   width: fit-content;
 }
 
-li {
-  font-weight: lighter;
-  font-size: 1.1rem;
-  margin: 3px;
+li a {
+  text-decoration: none;
   color: #2fb6c3;
-  list-style-type: none;
+  transition: 1s ease;
+}
+
+li a:hover {
+  color: #dfd7d7;
+  transition: 1s ease;
 }
 
 ul::before {
@@ -110,10 +121,29 @@ ul::before {
   height: 2.3rem;
 }
 
+li {
+  font-weight: lighter;
+  font-size: 1.1rem;
+  margin: 3px;
+  color: #2fb6c3;
+  list-style-type: none;
+}
+
+pre.qn a {
+  color: #2fb6c3;
+  text-decoration: none;
+  transition: 1s ease;
+}
+
+pre.qn a:hover {
+  color: #dfd7d7;
+  transition: 1s ease;
+}
+
 pre.qn {
   margin-bottom: 5rem;
   padding: 2rem;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   width: fit-content;
   color: #a93e89;
   background: #202020;
@@ -124,7 +154,7 @@ pre.qn {
 
 pre.code {
   position: relative;
-  margin: 50px 0 50px 0;
+  margin: 3rem 0 3rem 0;
   margin-left: 2.75rem;
   padding: 2.5rem 3rem 1rem 0;
   width: fit-content;
@@ -141,7 +171,7 @@ pre.good,
 pre.syntax {
   position: relative;
   margin: 6rem 0 5rem 0;
-  padding: 0.9rem 3rem 0.9rem 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   margin-left: 2rem;
   width: fit-content;
   background: mediumspringgreen;
@@ -327,13 +357,25 @@ pre.wrong {
   height: 2.3rem;
 }
 
+.ans a {
+  text-decoration: none;
+  color: #a93e89;
+  transition: 1s ease;
+}
+
+.ans a:hover {
+  color: #dfd7d7;
+  transition: 1s ease;
+}
+
 .ans {
+  padding-left: 1rem;
+  margin-bottom: 5rem;
   position: relative;
   background: #202020;
   color: #ededed;
   border-left: 2px solid mediumspringgreen;
   font-weight: 200;
-  margin-bottom: 5rem;
 }
 
 .ans::before {
@@ -351,6 +393,7 @@ pre.wrong {
   position: relative;
   padding: 1.5rem;
   padding-left: 5rem;
+  margin-bottom: 3rem;
   border-left: 2px solid #2fb6c3;
   font-size: 1rem;
   font-weight: lighter;
@@ -422,8 +465,8 @@ footer a:hover {
   position: relative;
   border-left: 2px solid mediumturquoise;
   padding: 5rem;
-  padding-left: 7rem;
   width: 50%;
+  margin-top: 3rem;
   margin-bottom: 5rem;
 }
 

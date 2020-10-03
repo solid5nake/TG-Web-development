@@ -4,90 +4,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Transitions - Opdracht 4</title>
+
+  <style>
+    .transitions-container {
+      position: relative;
+      height: 500px;
+      width: 1000px;
+      border: 3px solid black;
+      background: hsl(344, 100%, 54%);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 39px;
+    }
+
+    .transitions-container>div {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: calc((50% - 0.75em) - 6px);
+      left: calc((50% - 1.25em) - 6px);
+      width: 1.5em;
+      block-size: 1.5em;
+      border: 3px solid black;
+    }
+
+    .transitions-container:hover .box-1,
+    .transitions-container:hover .box-2 {
+      top: 0;
+      transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
+    }
+
+    .transitions-container:hover .box-1 {
+      left: calc((100% - 1.5em) - 6px);
+    }
+
+    .transitions-container:hover .box-2,
+    .transitions-container:hover .box-3 {
+      left: 0;
+    }
+
+    .transitions-container:hover .box-3 {
+      top: calc((100% - 1.5em) - 6px);
+      transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
+    }
+
+    .box-1,
+    .box-2 {
+      transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
+    }
+
+    .box-3 {
+      transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
+    }
+  </style>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">main</a>
-    </nav>
-    <style>
-      .transitions-container {
-        position: relative;
-        height: 500px;
-        width: 1000px;
-        border: 3px solid black;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 39px;
-      }
-
-      .transitions-container>div {
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        top: calc((50% - 0.75em) - 6px);
-        left: calc((50% - 1.25em) - 6px);
-        width: 1.5em;
-        block-size: 1.5em;
-        border: 3px solid black;
-      }
-
-      .transitions-container:hover .box-1,
-      .transitions-container:hover .box-2 {
-        top: 0;
-        transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
-      }
-
-      .transitions-container:hover .box-1 {
-        left: calc((100% - 1.5em) - 6px);
-      }
-
-      .transitions-container:hover .box-2,
-      .transitions-container:hover .box-3 {
-        left: 0;
-      }
-
-      .transitions-container:hover .box-3 {
-        top: calc((100% - 1.5em) - 6px);
-        transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
-      }
-
-      .box-1,
-      .box-2 {
-        transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
-      }
-
-      .box-3 {
-        transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
-      }
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Home</a>
+    <a href="./1.html">Transition 1</a>
+    <a href="./2.html">Transition 2</a>
+    <a href="./3.html">Transition 3</a>
+    <a href="./4.html" class="active">Transition 4</a>
+    <a href="./5.html">Transition 5</a>
+    <a href="./6.html">Transition 6</a>
+    <a href="./7.html">Transition 7</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Transitions</h1>
   <h2>Opdracht 4</h2>
-  <p class="qn">
+  <pre class="qn">
     Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. Zoek uit op welke properties
     de transitions zitten en maak het ongeveer hetzelfde na.
-  </p>
-  <img src="../images/transitions-assignment-4.png">
+  </pre>
   <hr>
-  <div class="transitions-container">
-    <div class="box-1">1</div>
-    <div class="box-2">2</div>
-    <div class="box-3">3</div>
+  <div class="browser">
+    <div class="transitions-container">
+      <div class="box-1">1</div>
+      <div class="box-2">2</div>
+      <div class="box-3">3</div>
+    </div>
   </div>
-  <p class="ans">
+  <pre class="ans">
     Voor elke element en property heb je een andere transitions, sommige hebben zelfs een
     <strong>transition-delay</strong>.
-  </p>
+  </pre>
+  <h3>Code</h3>
+  <pre class="code css">
+    .transitions-container {
+      position: relative;
+      height: 500px;
+      width: 1000px;
+      border: 3px solid black;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 39px;
+    }
+
+    .transitions-container>div {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: calc((50% - 0.75em) - 6px);
+      left: calc((50% - 1.25em) - 6px);
+      width: 1.5em;
+      block-size: 1.5em;
+      border: 3px solid black;
+    }
+
+    .transitions-container:hover .box-1,
+    .transitions-container:hover .box-2 {
+      top: 0;
+      transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
+    }
+
+    .transitions-container:hover .box-1 {
+      left: calc((100% - 1.5em) - 6px);
+    }
+
+    .transitions-container:hover .box-2,
+    .transitions-container:hover .box-3 {
+      left: 0;
+    }
+
+    .transitions-container:hover .box-3 {
+      top: calc((100% - 1.5em) - 6px);
+      transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
+    }
+
+    .box-1,
+    .box-2 {
+      transition: top 1s cubic-bezier(.17, .67, .62, .15), left 650ms cubic-bezier(.17, .67, .21, .94) 350ms;
+    }
+
+    .box-3 {
+      transition: left 0.5s linear 200ms, top 0.5s linear 0.7s;
+    }
+  </pre>
   <p class="note">
     <strong>transition: transition-property, transistion-duration, transition-timing-function, transition-delay</strong>
   </p>
-  <hr>
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

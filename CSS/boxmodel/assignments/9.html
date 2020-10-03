@@ -4,212 +4,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Boxmodel - Opdracht 9</title>
+  <style>
+    ul li a{
+      font-size: 1.5rem;
+    }
+
+    div.box {
+      background: hsl(165, 56%, 69%);
+    }
+
+    .container {
+      background: unset;
+      margin-top: 1.5rem;
+      padding: 25px 0;
+    }
+
+    .margin-bottom {
+      margin-bottom: 50px
+    }
+
+    .margin-left {
+      margin-left: 50px;
+    }
+
+    .margin-right {
+      margin-right: 50px;
+    }
+
+    .margin-top {
+      margin-top: 50px;
+    }
+
+    .padding-bottom {
+      padding-bottom: 50px
+    }
+
+    .padding-left {
+      padding-left: 50px;
+    }
+
+    .padding-right {
+      padding-right: 50px;
+    }
+
+    .padding-top {
+      padding-top: 50px;
+    }
+
+    .border {
+      border: 5px solid black;
+    }
+
+    .border-bottom {
+      border-bottom: 5px solid black;
+    }
+
+    .border-left {
+      border-left: 5px solid black;
+    }
+
+    .border-right {
+      border-right: 5px solid black;
+    }
+
+    .border-top {
+      border-top: 5px solid black;
+    }
+
+    .border-color {
+      border: 5px solid;
+      border-color: hsl(296, 39%, 31%);
+    }
+
+    .border-radius {
+      border: 5px solid black;
+      border-radius: 15px;
+    }
+
+    .border-width {
+      border-style: solid;
+      border-width: thick;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
-      div {
-        background: whitesmoke;
-      }
-
-      .container {
-        background: unset;
-        padding: 25px 0;
-      }
-
-      .margin-bottom {
-        margin-bottom: 50px
-      }
-
-      .margin-left {
-        margin-left: 50px;
-      }
-
-      .margin-right {
-        margin-right: 50px;
-      }
-
-      .margin-top {
-        margin-top: 50px;
-      }
-
-      .padding-bottom {
-        padding-bottom: 50px
-      }
-
-      .padding-left {
-        padding-left: 50px;
-      }
-
-      .padding-right {
-        padding-right: 50px;
-      }
-
-      .padding-top {
-        padding-top: 50px;
-      }
-
-      .border {
-        border: 5px solid black;
-      }
-
-      .border-bottom {
-        border-bottom: 5px solid black;
-      }
-
-      .border-left {
-        border-left: 5px solid black;
-      }
-
-      .border-right {
-        border-right: 5px solid black;
-      }
-
-      .border-top {
-        border-top: 5px solid black;
-      }
-
-      .border-color {
-        border: 5px solid;
-        border-color: green;
-      }
-
-      .border-radius {
-        border: 5px solid black;
-        border-radius: 15px;
-      }
-
-      .border-width {
-        border-style: solid;
-        border-width: thick;
-      }
-
-    </style>
-  </header>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../index.html">CSS</a>
+      <a href="../index.html">Boxmodel</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2.html">Opdracht 2</a>
+      <a href="./3.html">Opdracht 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+      <a href="./8.html">Opdracht 8</a>
+      <a href="./9.html" class="active">Opdracht 9</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Boxmodel</h1>
   <h1>Opdracht 9</h1>
-  <article>
-    <p>
-      Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin,
-      padding en border properties.
-    </p>
-  </article>
-  <ul>
+  <pre class="qn">
+    Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin,
+    padding en border properties.
+  </pre>
+  <ul class="bigger-font">
     <li>
-      <a href="#margin">Margin</a>
+      <a href="#margin">margin</a>
     </li>
     <li>
-      <a href="#padding">Padding</a>
+      <a href="#padding">padding</a>
     </li>
     <li>
-      <a href="#border">Border</a>
+      <a href="#border">border</a>
     </li>
   </ul>
 
+  <h2 id="margin">margin properties</h2>
   <div class="container">
-    <h3 id="margin">margin properties</h3>
     <h4>default box</h4>
-    <div>
+    <div class="box">
       <strong>box</strong>
     </div>
     <hr>
     <h4>margin-bottom</h4>
-    <div class="margin-bottom">
+    <div class="box margin-bottom">
       <strong>box</strong>
     </div>
     <hr>
     <h4>margin-left</h4>
-    <div class="margin-left">
+    <div class="box margin-left">
       <strong>box</strong>
     </div>
     <hr>
     <h4>margin-right</h4>
-    <div class="margin-right">
+    <div class="box margin-right">
       <strong>box</strong>
     </div>
     <hr>
     <h4>margin-top</h4>
-    <div class="margin-top">
+    <div class="box margin-top">
       <strong>box</strong>
     </div>
     <hr>
   </div>
 
+  <h2 id="padding">padding properties</h2>
   <div class="container">
-    <h3 id="padding">padding properties</h3>
     <h4>default box</h4>
-    <div>
+    <div class="box">
       <strong>box</strong>
     </div>
     <hr>
     <h4>padding-bottom</h4>
-    <div class="padding-bottom">
+    <div class="box padding-bottom">
       <strong>box</strong>
     </div>
     <hr>
     <h4>padding-left</h4>
-    <div class="padding-left">
+    <div class="box padding-left">
       <strong>box</strong>
     </div>
     <hr>
     <h4>padding-right</h4>
-    <div class="padding-right">
+    <div class="box padding-right">
       <strong>box</strong>
     </div>
     <hr>
     <h4>padding-top</h4>
-    <div class="padding-top">
+    <div class="box padding-top">
       <strong>box</strong>
     </div>
     <hr>
   </div>
 
+  <h2 id="border">border properties</h2>
   <div class="container">
-    <h3 id="border">border properties</h3>
     <h4>default box</h4>
-    <div>
+    <div class="box">
       <strong>box</strong>
     </div>
     <hr>
 
     <h4>border</h4>
-    <div class="border">
+    <div class="box border">
       <strong>box</strong>
     </div>
     <h4>border-bottom</h4>
-    <div class="border-bottom">
+    <div class="box border-bottom">
       <strong>box</strong>
     </div>
     <hr>
 
     <h4>border-left</h4>
-    <div class="border-left">
+    <div class="box border-left">
       <strong>box</strong>
     </div>
     <hr>
 
     <h4>border-right</h4>
-    <div class="border-right">
+    <div class="box border-right">
       <strong>box</strong>
     </div>
     <hr>
 
     <h4>border-top</h4>
-    <div class="border-top">
+    <div class="box border-top">
       <strong>box</strong>
     </div>
     <hr>
 
     <h4>border-color</h4>
-    <div class="border-color">
+    <div class="box border-color">
       <strong>box</strong>
     </div>
-    <p>border color heeft 4 varianten, de richting geeft aan waar de border wordt toegepast</p>
+    <p class="note">border color heeft 4 varianten, de richting geeft aan waar de border wordt toegepast</p>
     <ul>
       <li>border-bottom-color</li>
       <li>border-left-color</li>
@@ -219,37 +233,25 @@
     <hr>
 
     <h4>border-radius</h4>
-    <div class="border-radius">
+    <div class="box border-radius">
       <strong>box</strong>
     </div>
     <hr>
-    
+
     <h4>border-width</h4>
-    <div class="border-width">
+    <div class="box border-width">
       <strong>box</strong>
     </div>
 
-  <article>
     <p class="ans">
       <strong>Initial value</strong> voor iedere margin, padding en border property is per default value
       <strong>0</strong><br>
       Je hebt ook nog de <strong>border-block</strong> en <strong>border-inline</strong> properties
     </p>
-  </article>
 
 
   <footer>
-    <ul>
-      <li>
-        <a href="#margin">Margin</a>
-      </li>
-      <li>
-        <a href="#padding">Padding</a>
-      </li>
-      <li>
-        <a href="#border">Border</a>
-      </li>
-    </ul>
+    <a href="#up"></a>
   </footer>
 </body>
 

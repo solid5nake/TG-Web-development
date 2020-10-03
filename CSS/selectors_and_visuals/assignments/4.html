@@ -2,62 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Selectors & Visuals - Opdracht 4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../dark.css">
+	<title>Selectors & Visuals - Opdracht 2</title>
+	<style>
+		.example h2 {
+			color: green;
+		}
+
+		.example p {
+			color: blue;
+		}
+
+		.example div {
+			color: green;
+		}
+
+		.browser {
+			margin-top: 2rem;
+		}
+	</style>
 </head>
 
-<body>
-    <header>
-        <nav><a href="../index.html">Main</a></nav>
-    </header>
-    
-    <h1>Opdracht 4</h1>
-    <!--
-        Maak een aparte html bestand en voeg de volgende code toe
+<body class="pl-5">
+	<nav>
+		<div class="breadcrumbs" id="up">
+			<a href="../Index.html">CSS</a>
+			<a href="../index.html">Selectors & Visuals</a>
+			<a href="./1.html">Opdracht 1</a>
+			<a href="./2.html">Opdracht 2</a>
+			<a href="./3.html">Opdracht 3</a>
+			<a href="./4.html" class="active">Opdracht 4</a>
+			<a href="./5.html">Opdracht 5</a>
+			<a href="./6.html">Opdracht 6</a>
+			<a href="./7.html">Opdracht 7</a>
+			<a href="./8.html">Opdracht 8</a>
+		</div>
+	</nav>
+	<h1 class="title">CSS</h1>
+	<h2>Selectors and Visuals</h2>
 
-        <div>
-            <h2>Title</h2>
-            <p>paragraph tekst</p>
-            tekst zonder tag
-        </div>
+	<h1>Opdracht 4</h1>
+	<pre class="qn">
+		Maak een aparte html bestand en voeg de volgende code toe
 
-        Maak het onderstaande na door gebruik te maken van selectors. De kleurendie hiervoor gebruikt zijn is green en darkblue.
-    -->
+		&#60;div&#62;
+				&#60;h2&#62;Title&#60;/h2&#62;
+				&#60;p&#62;paragraph tekst&#60;/p&#62;
+				tekst zonder tag
+		&#60;/div&#62;
 
-    <style>
-        h2 {
-            color: green;
-        }
+		Maak het onderstaande na door gebruik te maken van selectors. De kleurendie hiervoor gebruikt zijn is green en darkblue.
+    </pre>
+	<div class="browser">
+		<div class="example">
+			<div>
+				<h2>Title</h2>
+				<p>paragraph tekst</p>
+				tekst zonder tag
+			</div>
+		</div>
+	</div>
+	<pre class="note">Hiervoor zijn alleen <strong>type</strong> <i>selectors</i> gebruikt.</pre>
+	<h3>Code</h3>
+	<pre class="code css">
+		.example h2 {
+				color: green;
+		}
 
-        p {
-            color: blue;
-        }
+		.example p {
+				color: blue;
+		}
 
-        div {
-            color: green;
-        }
-    </style>
-
-    <i>Onderstaand een voorbeeld waarbij gebruik gemaakt is van type selectors</i>
-
-    <div>
-        <h2>Title</h2>
-        <p>paragraph tekst</p>
-        tekst zonder tag
-    </div>
-    <br>
-
-    <i>
-        De bijbehorende code;
-    </i>
-    <br>
-    <img src="../images/type-selectors-example.png" alt="">
-
-
-
-
+		.example div {
+				color: green;
+		}
+  </pre>
+	<footer>
+		<a href="#up"></a>
+	</footer>
 </body>
 
 </html>

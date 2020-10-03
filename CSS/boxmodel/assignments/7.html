@@ -4,47 +4,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
-  <title>Boxmodel - Opdracht </title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Boxmodel - Opdracht 7</title>
     <style>
-      div {
+      div.example {
         width: 100px;
         height: 100px;
         margin: 5px;
         padding: 5px;
         border-width: 5px;
         border: 3px solid black;
-        background: whitesmoke;
+        background: hsl(346, 84%, 61%);
+        color: hsl(0, 0%, 100%);
       }
     </style>
-  </header>
-  <h1>Opdracht 7</h1>
-  <p class="qn">
+</head>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../index.html">CSS</a>
+      <a href="../index.html">Boxmodel</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2.html">Opdracht 2</a>
+      <a href="./3.html">Opdracht 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html" class="active">Opdracht 7</a>
+      <a href="./8.html">Opdracht 8</a>
+      <a href="./9.html">Opdracht 9</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Boxmodel</h1>
+  <h2>Opdracht 7</h2>
+  <pre class="qn">
     Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-
     width: 5px. Zie hieronder:
-  </p>
-  <ol>
-    <li>Hoe breed is de box?</li>
-    <li>Hoe hoog is de box?</li>
-    <li>Wat merk je op met width en height?</li>
-  </ol>
 
-  <div>
-    <p>dit is de content</p>
+    Hoe breed is de box?
+    Hoe hoog is de box?
+    Wat merk je op met width en height?
+  </pre>
+  <ol>
+  </ol>
+  <div class="browser">
+    <div class="example">
+      <p>dit is de content</p>
+    </div>
   </div>
-  <ol>
-    <li>116px</li>
-    <li>116px</li>
-    <li>Ze lopen evenredig</li>
-  </ol>
-
+  <pre class="ans"><strong>height:</strong> 116, <strong>width:</strong> 116, ze lopen evenredig.</pre>
+  <footer>
+    <a href="#up"></a>
+  </footer>
 </body>
 
 </html>

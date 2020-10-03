@@ -4,67 +4,83 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../../style.css">
-	<title>Selectors & Visuals - Opdracht 8</title>
+	<link rel="stylesheet" href="../../../dark.css">
+	<title>Selectors & Visuals - Opdracht 2</title>
+	<style>
+		.example {
+			padding: 3rem;
+			background: lightblue;
+			height: 10rem;
+			width: 50%;
+		}
+	</style>
 </head>
 
-<body>
-	<header>
-		<nav><a href="../index.html">Main</a></nav>
-	</header>
+<body class="pl-5">
+	<div class="breadcrumbs" id="up">
+		<a href="../Index.html">CSS</a>
+		<a href="../index.html">Selectors & Visuals</a>
+		<a href="./1.html">Opdracht 1</a>
+		<a href="./2.html">Opdracht 2</a>
+		<a href="./3.html">Opdracht 3</a>
+		<a href="./4.html">Opdracht 4</a>
+		<a href="./5.html">Opdracht 5</a>
+		<a href="./6.html">Opdracht 6</a>
+		<a href="./7.html">Opdracht 7</a>
+		<a href="./8.html" class="active">Opdracht 8</a>
+	</div>
+	<h1 class="title">CSS</h1>
+	<h2>Selectors and Visuals</h2>
 
 	<h1>Opdracht 8</h1>
-	<!--
-        Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden
-        om je antwoord uit te leggen.
-    -->
-	<article>
-		<h3>Cascade</h3>
-		<p>
-			CSS is de afkorting voor <strong>Cascading Style Sheets</strong>, maar wat houd cascading in? <br>
-			Op de meest simpele niveau wordt de CSS rules toegepast op volgorde; wanneer twee regels dezelfde specificaties
-			hebben <br>
-			Geldt de specificatie van de laatste regel.
-		</p>
-		<p>
-			In de onderstaande voorbeeld, hebben we twee css rules die toegepast kunnen worden op een <strong>h1</strong><br>
-			De header wordt uiteindelijk blauw. De regels hebben een identieke selector en hebben ook <br>
-			dezelfde specifactie, de laatst genoemde wint van de twee.
-		</p>
-	</article>
+	<pre class="qn">
+		Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden
+		om je antwoord uit te leggen.
+	</pre>
 
-	<div class="code">
-		<span>CSS</span>
+	<h2>Cascade</h2>
+	<pre class="ans">
+		CSS is de afkorting voor <strong>Cascading Style Sheets</strong>, maar wat houd cascading in?
+		Op de meest simpele niveau wordt de CSS rules toegepast op volgorde; wanneer twee regels dezelfde specificaties
+		hebben. Geldt de specificatie van de laatste regel.
+
+		In de onderstaande voorbeeld, hebben we twee css rules die toegepast kunnen worden op een <strong>h1</strong>
+		De header wordt uiteindelijk blauw. De regels hebben een identieke selector en hebben ook
+		dezelfde specifactie, de laatst genoemde wint van de twee.
+	</pre>
+	<h2>Inheritence</h2>
+	<pre class="ans">
+		Inheritance gebeurd wanneer er geen <i>value</i> is gespecificeerd op een property van een element.
+		CSS properties kunnen gecategoriseerd worden in twee types:
+	</pre>
+	<pre class="note">CSS properties kunnen gecategoriseerd worden in twee types:</pre>
+	<ul>
+		<li>
+			<strong>inherited properties</strong>, by default wordt de waarde overgenomen van de parent
+		</li>
+		<li>
+			<strong>non-inherited properties</strong>, by default wordt de initieele waarde ingesteld
+		</li>
+	</ul>
+	<div class="browser">
+		<div class="example">
+			<h1 style="color: red; color:blue;">This is my heading.</h1>
+		</div>
+	</div>
+
+	<h3>Code</h3>
+	<pre class="code html">
+		&#60;h1&#62;This is my heading.&#60;&#47;h1&#62;
+	</pre>
+	<pre class="note">voorbeeld van <strong>cascading</strong></pre>
+	<pre class="code css">
 		h1 &#123;color: red;&#125;<br>
 		h1 &#123;color: blue;&#125;
-	</div>
+	</pre>
 
-	<div class="code" style="">
-		<span>HTML</span>
-		&#60;h1&#62;This is my heading.&#60;&#47;h1&#62;
-	</div>
+	<footer>
+		<a href="#up"></a>
+	</footer>
+</body>
 
-	<div class="browser">
-		<span>BROWSER</span>
-		<h1 style="color: red; color:blue;">This is my heading.</h1>
-	</div>
-
-	<article>
-		<h3>Inheritence</h3>
-		<p>
-			In CSS, <strong>inheritance</strong> gebeurd wanneer er geen <i>value</i> is gespecificeerd op een <br>
-			property van een element.
-
-		</p>
-
-		CSS properties kunnen gecategoriseerd worden in twee types:
-		<ul>
-			<li>
-				<strong>inherited properties</strong>, by default wordt de waarde overgenomen van de parent
-			</li>
-			<li>
-				<strong>non-inherited properties</strong>, by default wordt de initieele waarde ingesteld
-			</li>
-		</ul>
-	</article>
 </html>

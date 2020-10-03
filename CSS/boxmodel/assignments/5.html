@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Boxmodel - Opdracht 5</title>
+  <style>
+    .example {
+      text-align: center;
+      border: 0.3rem solid black;
+      width: fit-content;
+      background: moccasin;
+      padding: 0.5rem;
+    }
+    .example h3 {
+      border: 0.3rem solid black;
+      background: #FFF;
+      color: black;
+    }
+  </style>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../index.html">CSS</a>
+      <a href="../index.html">Boxmodel</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2.html">Opdracht 2</a>
+      <a href="./3.html">Opdracht 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html" class="active">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+      <a href="./8.html">Opdracht 8</a>
+      <a href="./9.html">Opdracht 9</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Boxmodel</h1>
+  <h2>Opdracht 5</h2>
+  <pre class="qn">
+    Als je ruimte wilt maken tussen de border en content, welke css property gebruik je dan?
+    Maak een voorbeeld in je antwoord.
+  </pre>
+  <hr>
+  <div class="browser">
+    <div class="example">
+      <h3>box</h3>
+    </div>
+  </div>
+  <pre class="ans">
+    Hiervoor wordt de property <i>padding</i> gebruikt, de <i>div</i> element heeft de property <i>padding</i> meegekregen
+    met een waarde van 10px, de background illustreert heel mooi de ruimte die is gecreeerd met padding.
+</pre>
+  <h3>Code</h3>
+  <pre class="code html">
+      &#60;div class="example"&#62;
+        &#60;h3&#62;box&#60;/h3&#62;
+      &#60;/div&#62;
+    </pre>
+  <pre class="code css">
       .example {
-        border: 3px solid black;
+        text-align: center;
+        border: 0.3rem solid black;
         width: fit-content;
         background: moccasin;
-        padding: 10px;
+        padding: 0.5rem;
       }
-
-      h3 {
-        border: 3px solid black;
+  
+      .example h3 {
+        border: 0.3rem solid black;
         background: #FFF;
+        color: black;
       }
-    </style>
-  </header>
-
-  <h1>Opdracht 5</h1>
-  <p class="qn">
-    Als je ruimte wilt mken tussen de border en content, wleke css property gebruik je dan?
-    Maak een voorbeeld in je antwoord.
-  </p>
-
-  <div class="code">
-    <span>CSS</span>
-    div class="example"&#123;<br>
-    &nbsp; border: 1px solid black;<br>
-    &nbsp; background: moccasin;<br>
-    &nbsp; padding:10px;<br>
-    &#125;
-  </div>
-  <div class="example">
-    <h3>box</h3>
-  </div>
-  <p>
-    Hiervoor wordt de property <i>padding</i> gebruikt, de <i>div</i> element heeft de property <i>padding</i>
-    meegekregen <br>
-    met een waarde van 10px, de background illustreert heel mooi de ruimte die is gecreeerd met padding
-  </p>
+    </pre>
+  <footer>
+    <a href="#up"></a>
+  </footer>
 </body>
-
 </html>

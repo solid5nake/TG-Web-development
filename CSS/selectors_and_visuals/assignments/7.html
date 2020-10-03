@@ -2,39 +2,65 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Selectors & Visuals - Opdracht 7</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../../dark.css">
+	<title>Selectors & Visuals - Opdracht 2</title>
+	<style>
+		li a {
+			color: lightblue;
+			transition: 1s ease;
+		}
+		li a:hover{
+			color: whitesmoke;
+			transition: 1s ease;
+		}
+	</style>
 </head>
 
-<body>
-    <header>
-        <nav><a href="../index.html">Main</a></nav>
-    </header>
+<body class="pl-5">
+	<nav>
+		<div class="breadcrumbs" id="up">
+			<a href="../Index.html">CSS</a>
+			<a href="../index.html">Selectors & Visuals</a>
+			<a href="./1.html">Opdracht 1</a>
+			<a href="./2.html">Opdracht 2</a>
+			<a href="./3.html">Opdracht 3</a>
+			<a href="./4.html">Opdracht 4</a>
+			<a href="./5.html">Opdracht 5</a>
+			<a href="./6.html">Opdracht 6</a>
+			<a href="./7.html" class="active">Opdracht 7</a>
+			<a href="./8.html">Opdracht 8</a>
+		</div>
+	</nav>
+	<h1 class="title">CSS</h1>
+	<h2>Selectors and Visuals</h2>
 
-    <h1>Opdracht 7</h1>
+	<h1>Opdracht 7</h1>
+	<pre class="qn">
+        Maak nu een html bestand aan met voorbeelden van alle soorten selectors erin. Maak een link in je antwoord die naar dat html bestand verwijst. 
+    </pre>
+	<pre class="ans">
+		CSS selectors worden gebruikt om HTML elementen te selecteren die je wilt stylen.
+		We kunnen de CSS selectors in vijf categorien verdelen.
+	</pre>
 
-    <article>
-        <p>
-            CSS selectors worden gebruikt om HTML elementen te selecteren die je wilt stylen
-    
-            We kunnen de CSS selectors in vijf categorien verdelen:
-    
-        </p>
-        <ul>
-            <li>Simple selectors (selecteerd elementen op basis van naam, id, class)</li>
-            <li><a href="Asgmt-6.html">Combinator selectors</a> (selecteerd elementen op basis van een specifieke
-                relatie onderling)</li>
-            <li><a href="../selectors/PseudoClassSelector.html">Pseudo-class selectors</a> (selecteerd elementen op
-                basis van een bepaalde <i>state</i>)</li>
-            <li><a href="../selectors/PseudoElementSelector.html">Pseudo-elements selectors</a> (selecteerd en styled
-                een deel van een element)</li>
-            <li><a href="../selectors/AttributeSelector.html">Attribute selectors</a> (selecteerd elementen op basis van
-                een attribute of de waarde van een attribute)</li>
-        </ul>
-    </article>
-
+	<h2>CSS selector categorien</h2>
+	<ul>
+		<li>Simple selectors (selecteerd elementen op basis van naam, id, class)</li>
+		<li><a href="Asgmt-6.html">Combinator selectors</a> (selecteerd elementen op basis van een specifieke
+			relatie onderling)</li>
+		<li><a href="../selectors/PseudoClassSelector.html">Pseudo-class selectors</a> (selecteerd elementen op
+			basis van een bepaalde <i>state</i>)</li>
+		<li><a href="../selectors/PseudoElementSelector.html">Pseudo-elements selectors</a> (selecteerd en styled
+			een deel van een element)</li>
+		<li><a href="../selectors/AttributeSelector.html">Attribute selectors</a> (selecteerd elementen op basis van
+			een attribute of de waarde van een attribute)</li>
+	</ul>
+	<pre class="note">de links verwijzen ieder naar hun eigen pagina.</pre>
+	<footer>
+		<a href="#up"></a>
+	</footer>
 </body>
 
 </html>

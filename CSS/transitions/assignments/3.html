@@ -4,101 +4,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Transitions - Opdracht 3</title>
+  <style>
+    .browser {
+      width: 90%;
+    }
+
+    .transition-timing-container {
+      position: relative;
+      height: calc(((5em + 10px) * 5) + 5px);
+      border: 3px solid black;
+      background-color: hsl(174, 100%, 33%);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.6em;
+    }
+
+    .transition-timing-container>div {
+      display: flex;
+      position: absolute;
+      margin: 5px;
+      border: 3px solid black;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      width: 5em;
+      block-size: 5em;
+      transition-duration: 2s;
+    }
+
+    .transition-timing-container:hover>div {
+      background: crimson;
+      left: calc(100% - 5em - 16px);
+      transition-duration: 2s;
+    }
+
+    .box-1 {
+      top: 0;
+      transition-timing-function: ease;
+    }
+
+    .box-2 {
+      top: calc(5em + 10px);
+      transition-timing-function: cubic-bezier(.34, .45, 1, -0.21);
+    }
+
+    .box-3 {
+      top: calc((5em + 10px) * 2);
+      transition-timing-function: linear;
+    }
+
+    .box-4 {
+      top: calc((5em + 10px) * 3);
+      transition-timing-function: ease-out;
+    }
+
+    .box-5 {
+      top: calc((5em + 10px) * 4);
+      transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+
+    .transition-timing-container:hover .box-1 {
+      border-radius: 50%;
+    }
+
+    .transition-timing-container:hover .box-2 {
+      border-radius: 30px;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">main</a>
-    </nav>
-    <style>
-      .transition-timing-container {
-        position: relative;
-        height: calc(((5em + 10px) * 5) + 5px);
-        border: 3px solid black;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 1.6em;
-      }
-
-      .transition-timing-container>div {
-        display: flex;
-        position: absolute;
-        margin: 5px;
-        border: 3px solid black;
-        left: 0;
-        justify-content: center;
-        align-items: center;
-        width: 5em;
-        block-size: 5em;
-        transition-duration: 2s;
-      }
-
-      .transition-timing-container:hover>div {
-        background: crimson;
-        left: calc(100% - 5em - 16px);
-        transition-duration: 2s;
-      }
-
-      .box-1 {
-        top: 0;
-        transition-timing-function: ease;
-      }
-
-      .box-2 {
-        top: calc(5em + 10px);
-        transition-timing-function: cubic-bezier(.34, .45, 1, -0.21);
-      }
-
-      .box-3 {
-        top: calc((5em + 10px) * 2);
-        transition-timing-function: linear;
-      }
-
-      .box-4 {
-        top: calc((5em + 10px) * 3);
-        transition-timing-function: ease-out;
-      }
-
-      .box-5 {
-        top: calc((5em + 10px) * 4);
-        transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-      }
-
-      .transition-timing-container:hover .box-1 {
-        border-radius: 50%;
-      }
-
-      .transition-timing-container:hover .box-2 {
-        border-radius: 30px;
-      }
-
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Home</a>
+    <a href="./1.html">Transition 1</a>
+    <a href="./2.html">Transition 2</a>
+    <a href="./3.html" class="active">Transition 3</a>
+    <a href="./4.html">Transition 4</a>
+    <a href="./5.html">Transition 5</a>
+    <a href="./6.html">Transition 6</a>
+    <a href="./7.html">Transition 7</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Transitions</h1>
   <h2>Opdracht 3</h2>
-  <p class="qn">
+  <pre class="qn">
     Transitions kent verschillende transition-timing. Zie hieronder een voorbeeld. Maak het na.
-  </p>
-  <img src="../images/transitions-assignment-3.png">
+  </pre>
   <hr>
   <p class="ans">
-    Onderstaand zijn een  aantal verschillende transition-timing-functions toegepast op de <strong>children</strong> van de parent. <br>
-    <strong>.transition-timing-container:hover</strong> is gedefinieerd om alle 5 transitions te activeren bij de children.
+    Onderstaand zijn een aantal verschillende transition-timing-functions toegepast op de <strong>children</strong> van
+    de parent. <br>
+    <strong>.transition-timing-container:hover</strong> is gedefinieerd om alle 5 transitions te activeren bij de
+    children.
   </p>
-  <h3>transition-timing</h3>
-  <div class="transition-timing-container">
-    <div class="box-1">1</div>
-    <div class="box-2">2</div>
-    <div class="box-3">3</div>
-    <div class="box-4">4</div>
-    <div class="box-5">5</div>
+  <pre class="note">transition-timing</pre>
+  <div class="browser">
+    <div class="transition-timing-container">
+      <div class="box-1">1</div>
+      <div class="box-2">2</div>
+      <div class="box-3">3</div>
+      <div class="box-4">4</div>
+      <div class="box-5">5</div>
+    </div>
   </div>
-  <hr>
-
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

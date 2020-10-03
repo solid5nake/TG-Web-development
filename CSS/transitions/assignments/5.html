@@ -1,100 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
+  <style>
+    .joker-card-container {
+      position: relative;
+      width: 600px;
+      height: 500px;
+      border: 5px solid black;
+      background: rgba(29, 221, 51);
+    }
+
+    .joker-card-container>div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      border: 5px solid black;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .joker {
+      background: url(../images/joker-card.svg), rgb(190, 128, 255);
+      background-size: 50%;
+      transition: 5s transform ease 2s;
+    }
+
+    .crimson {
+      transition: 1s background-color linear;
+    }
+
+    .haha-left {
+      transform: translateX(0) rotate(0deg) translateY(46px);
+    }
+
+    .joker-haha {
+      background-image: url(../images/joker-haha.jpg);
+      background-size: cover;
+    }
+
+    .joker:hover {
+      transform: translateX(230px) rotate(20deg) translateY(200px);
+      transition: 3s transform ease 200ms;
+    }
+
+    .crimson>img {
+      pointer-events: none;
+      height: 39rem;
+      opacity: 0;
+      transition: 2s opacity ease-in;
+    }
+
+    .crimson:hover {
+      background-color: rgba(220, 20, 60, 0.4);
+      transition: 1s background-color linear;
+    }
+
+    .crimson:hover .haha-left,
+    .crimson:hover .haha-right {
+      opacity: 1;
+      transition: 2s opacity linear;
+    }
+  </style>
   <title>Transitions - Opdracht 5</title>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">main</a>
-    </nav>
-    <style>
-      .joker-card-container {
-        position: relative;
-        width: 600px;
-        height: 500px;
-        border: 5px solid black;
-        background: rgba(29,221,51);
-      }
-      .joker-card-container > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 200px;
-        border: 5px solid black;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
 
-      .joker {
-        background: url(../images/joker-card.svg), rgb(190,128,255);
-        background-size: 50%;
-        transition: 5s transform ease 2s;
-      }
-
-      .crimson {
-        transition: 1s background-color linear;
-      }
-
-      .haha-left {
-        transform: translateX(-430px) rotate(40deg) translateY(46px);
-      }
-
-      .haha-right {
-        transform: translateX(300px) rotate(-17deg) translateY(-300px);
-      }
-
-      .joker-haha {
-        background-image: url(../images/joker-haha.jpg);
-        background-size: cover;
-      }
-
-      .joker:hover {
-        transform: translateX(230px) rotate(20deg) translateY(200px);
-        transition: 3s transform ease 200ms;
-      }
-
-      .crimson > img {
-        pointer-events: none;
-        opacity: 0;
-        transition: 2s opacity ease-in;
-      }
-
-      .crimson:hover {
-        background-color: rgba(220, 20, 60, 0.4);
-        transition: 1s background-color linear;
-      }
-      .crimson:hover .haha-left, 
-      .crimson:hover .haha-right {
-        opacity: 1;
-        transition: 2s opacity linear;
-      }
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Home</a>
+    <a href="./1.html">Transition 1</a>
+    <a href="./2.html">Transition 2</a>
+    <a href="./3.html">Transition 3</a>
+    <a href="./4.html">Transition 4</a>
+    <a href="./5.html" class="active">Transition 5</a>
+    <a href="./6.html">Transition 6</a>
+    <a href="./7.html">Transition 7</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Transitions</h1>
   <h2>Opdracht 5</h2>
-  <p class="qn">
-    Hieronder zie je wederom een voorbeeld van een transition. Je kunt op verschillende properties transitions aangeven. Zoek uit op welke properties de transitions zitten en maak het na. Je eigen creativiteit gebruiken is uiteraard toegestaan.
-  </p>
+  <pre class="qn">
+    Hieronder zie je wederom een voorbeeld van een transition. Je kunt op verschillende properties transitions aangeven.
+    Zoek uit op welke properties de transitions zitten en maak het na. Je eigen creativiteit gebruiken is uiteraard
+    toegestaan.
+  </pre>
   <hr>
-  <p class="note"><strong>Note:</strong> Ga met je muis over de joker kaart.</p>
-  <div class="joker-card-container">
-    <div class="joker-haha">
-    </div>
-    <div class="crimson">
-      <img src="../images/hahahahaha.svg" class="haha-left">
-      <img src="../images/hahahahaha.svg" class="haha-right">
-    </div>
-    <div class="joker">
+  <pre class="note">Ga met je muis over de joker kaart.</pre>
+  <div class="browser">
+    <div class="joker-card-container">
+      <div class="joker-haha">
+      </div>
+      <div class="crimson">
+        <img src="../images/hahahahaha.svg" class="haha-left">
+      </div>
+      <div class="joker">
+      </div>
     </div>
   </div>
-  <hr>
+  <pre class="ans">
+    De parent container heeft 3 children, waarvan alleen twee daarvan een transition hebben meegekregen. 
+    On <strong>:hover</strong> state wordt de transition geactiveerd.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code css">
+    .joker {
+      background: url(../images/joker-card.svg), rgb(190, 128, 255);
+      background-size: 50%;
+      transition: 5s transform ease 2s;
+    }
+
+    .crimson {
+      transition: 1s background-color linear;
+    }
+
+    .haha-left {
+      transform: translateX(0) rotate(0deg) translateY(46px);
+    }
+
+    .joker-haha {
+      background-image: url(../images/joker-haha.jpg);
+      background-size: cover;
+    }
+
+    .joker:hover {
+      transform: translateX(230px) rotate(20deg) translateY(200px);
+      transition: 3s transform ease 200ms;
+    }
+
+    .crimson>img {
+      pointer-events: none;
+      height: 39rem;
+      opacity: 0;
+      transition: 2s opacity ease-in;
+    }
+
+    .crimson:hover {
+      background-color: rgba(220, 20, 60, 0.4);
+      transition: 1s background-color linear;
+    }
+
+    .crimson:hover .haha-left,
+    .crimson:hover .haha-right {
+      opacity: 1;
+      transition: 2s opacity linear;
+    }
+  </pre>
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
+
 </html>

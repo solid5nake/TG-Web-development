@@ -102,7 +102,9 @@
     Opdracht 3: 
     Schrijf een functie waarbij je een getal mee kan geven aan de functie. Print vervolgens het getal uit in de console. 
   </pre>
-  <pre class="ans">Onderstaand de code, <strong>Number</strong> is een <i>primitive wrapper object</i></pre>
+  <pre class="ans">
+      Onderstaand de code, <strong>Number</strong> is een <i>primitive wrapper object</i>
+  </pre>
   <h3>Code</h3>
   <pre class="code js">
     function printNumber(Number) {
@@ -146,9 +148,9 @@
     naar de <i>function caller</i> moet worden geretourneerd.
   </p>
   <pre class="syntax">return [[expression]]; </pre>
-  <p class="ans">
+  <pre class="ans">
     De <i>expression</i> waarvan de waarde moet worden geretourneerd. Indien weggelaten, wordt in plaats daarvan
-    <i>undefined</i> geretourneerd.</p>
+    <i>undefined</i> geretourneerd.</pre>
   <hr>
   <pre class="qn">
     Opdracht 5: 
@@ -187,7 +189,7 @@
   </pre>
   <h3>Code</h3>
   <pre class="code js">
-    function searchName(name) {
+    function knownName(name) {
       switch (name) {
         case 'John':
         case 'Olly':
@@ -199,10 +201,9 @@
           return "Onbekend in ons systeem!";
       }
     }
-
-    function randomeName() {
+    function randomName() {
       const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
-      return names[Math.round(Math.random()*8)];
+      return names[Math.round(Math.random() * names.length)];
     }
   </pre>
   <p class="note"><strong>string interpolation</strong> in javascript wordt gebruikk gemaakt van `` <i>backticks</i> en
@@ -223,7 +224,204 @@
     Opdracht 6: Arrow functions 
     De functies die kunnen ook met arrow functions geschreven worden. Herschrijf opdracht 5 zodat arrow functions gebruikt wordt. 
   </pre>
-  
+  <pre class="ans">
+    Er zijn een paar arrow functions uitgeschreven met een paar verschillende expressies; <strong>switch</strong><i>statement</i>, <strong>if..else</strong><i>statements</i>, <strong>Array.includes()</strong>.
+    Ze zijn geschreven in zowel de ES5 notatie <strong>function</strong> als de nieuwere ES6 notatie <strong>arrow function</strong>.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    let storedName = (name) => {
+      switch (name) {
+        case 'John':
+        case 'Olly':
+        case 'Mo':
+        case 'Hendrik':
+        case 'Tony':
+          return `Dit is een bekende van ons: ${name}`;
+        default:
+          return "Onbekend in ons systeem!";
+      }
+    }
+
+    function knownName(name) {
+      switch (name) {
+        case 'John':
+        case 'Olly':
+        case 'Mo':
+        case 'Hendrik':
+        case 'Tony':
+          return `Dit is een bekende van ons: ${name}`;
+        default:
+          return "Onbekend in ons systeem!";
+      }
+    }
+
+    function includeName(name) {
+      const names = ["John", "Olly", "Mo", "Hendrik", "Tony"];
+      let includedName = names.includes(name);
+      if (includedName) {
+        return `Dit is een bekende van ons: ${name}`;
+      }
+      else {
+        return `Onbekend in ons systeem! ${name}`;
+      }
+    }
+
+    const includeNameES6 = (name) => {
+      const names = ["John", "Olly", "Mo", "Hendrik", "Tony"];
+      let includedName = names.includes(name);
+      if (includedName) {
+        return `Dit is een bekende van ons: ${name}`;
+      }
+      else {
+        return `Onbekend in ons systeem! ${name}`;
+      }
+    }
+
+    function randomName() {
+      const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+      return names[Math.round(Math.random() * names.length)];
+    }
+
+    const randomNameES6 = () => {
+      const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+      return names[Math.round(Math.random() * names.length)];
+    }
+
+    function assignmentFive() {
+      return includeName(randomName());
+    }
+
+    const assignmentFiveES6 = () => includeNameES6(randomNameES6());
+  </pre>
+  <p class="note">
+    <strong>return</strong> <i>statement</i> eindigt de <i>function</i> uitvoering en geeft een een <i>value</i> terug
+    aan de <i>function caller</i>. Javascript doet geen automatische <i>returns</i> wat wel het geval is bij Ruby.
+  </p>
+  <pre class="syntax">return [[expression]]; </pre>
+  <h3>.includes()</h3>
+  <pre class="ans">
+    <strong>includes()</strong> <i>method</i> bepaalt of een array een bepaalde <i>value</i> tussen de items bevat, <i>returns</i> <strong>true</strong> en <strong>false</strong> waarbij het van toepassing is.
+  </pre>
+  <pre class="syntax"></pre>
+  <h3>arrow function expression</h3>
+  <pre class="ans">
+    Een <strong>arrow function expression</strong> is een compacte alternatief van een traditionele <strong>function expression</strong>, maar het is gelimiteerder en can niet gebruikt worden in alle situaties.
+  </pre>
+  <h3>De verschillen & limitaties</h3>
+  <ul>
+    <li>
+      Heeft geen eigen <i>bindings</i> met <strong>this</strong> of <strong>super</strong>, en mag niet als methode worden gebruikt.</li>
+    <li>
+      Heeft geen argumenten of <strong>new.target</strong> <i>keywords</i>
+    </li>
+    <li>
+      Niet geschikt voor <strong>call</strong>, <strong>apply</strong> en <strong>bind</strong> methoden, die doorgaans afhankelijk zijn van het vaststellen van een scope.
+    </li>
+    <li>
+      Kan niet gebruikt worden als <strong>constructor</strong>.
+    </li>
+    <li>
+      <strong>yield</strong> kan niet gebruikt worden binnen de <i>body</i>
+    </li>
+  </ul>
+  <h3>Basic syntax</h3>
+  <p class="note">1 param. Met een eenvoudige uitdrukking is terugkeer niet nodig:</p>
+  <pre class="syntax">
+    param => expression
+  </pre>
+  <p class="note">Multiple params require parentheses. With simple expression return is not needed:</p>
+  <pre class="syntax">(param1, paramN) => expression</pre>
+  <p class="note">Multiline statements require <i>body brackets</i> and <i>return</i>:</p>
+  <pre class="syntax">
+    param => {
+      let a = 1;
+      return a + param1;
+    }
+  </pre>
+  <p class="note">Meerder parameters vereisen <i>parantheses</i> <strong>()</strong>. <i>Multiline statements</i> versien <i>body brackets en de <strong>return</strong> statement</i></p>
+  <hr>
+  <h3>Advanced syntax</h3>
+  <p class="note">To return an object literal expression requires parentheses around expression:</p>
+  <pre class="syntax">params => ({foo: "a"}) // returning the object {foo: "a"}</pre>
+  <p class="note">Rest parameters are supported:</p>
+  <pre class="syntax">(a, b, ...r) => expression</pre>
+  <p class="note">Default parameters are supported:</p>
+  <pre class="syntax">(a=400, b=20, c) => expression</pre>
+  <p class="note">Destructuring within params supported:</p>
+  <pre class="syntax">
+    ([a, b] = [10, 20]) => a + b;  // result is 30
+    ({ a, b } = { a: 10, b: 20 }) => a + b; // result is 30
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 7: 
+    Hoe geef je 2 of meer parameters mee aan een functie? Geef een voorbeeld. 
+    Wat zijn rest parameters? Geef een voorbeeld. 
+    Wat is het verschil tussen rest parameters en expliciete parameters die je aangeeft bij een functie? 
+  </pre>
+  <pre class="ans">
+    Op de onderstaande manier is een simpele voorbeeld van een arrow function met twee params.
+  </pre>
+  <pre class="code js">
+    const f = (x, y) => x * y;
+  </pre>
+  <p class="note">Er zijn geen <i>brackets</i> en geen <i>return</i> statement</p>
+  <pre class="ans"><strong>rest parameters</strong> syntax geeft de mogelijkheid om oneindige aantallen van argumenten mee te geven in de vorm van een array</pre>
+  <pre class="code js">
+    function sum(...theArgs) {
+      return theArgs.reduce((previous, current) => {
+        return previous + current;
+      });
+    }
+  </pre>
+  <pre class="ans">
+    Er zijn drie belangrijke verschillen tussen restparameters en het arguments-object (<i>expliciete parameters</i>):
+  </pre>
+  <ul>
+    <li>
+      <i>rest parameters</i> zijn alleen degene die geen aparte naam hebben gekregen (d.w.z. formeel gedefinieerd in <i>function</i> ), terwijl het <i>arguments-object</i> alle argumenten bevat die aan de functie zijn doorgegeven;
+    </li>
+    <li>
+      de <i>expliciete params</i> (arguments-object) is geen array, <i>rest parameters</i> zijn  wel <i>array objects</i>
+      dat houdt in dat array methods zoals <strong>sort</strong>, <strong>map</strong>, <strong>forEach</strong> of <strong>pop</strong> wel direct toepasbaar zijn.
+    </li>
+    <li>
+      de <i>arguments</i> object heeft zijn eigen specifieke aanvullende functionaliteit, zoals de <strong>callee</strong> <i>property</i>
+    </li>
+  </ul>
+  <h3>Rest parameters</h3>
+  <pre class="syntax">
+    function f(a, b, ...theArgs) {
+      // ...
+    }
+  </pre>
+  <p class="note">
+    De laatste parameter van een functie kan worden voorafgegaan door <strong>...</strong> waardoor alle resterende (door de gebruiker geleverde) argumenten in een "standaard" JavaScript-array worden geplaatst. Alleen de laatste parameter kan een "restparameter" zijn.
+  </p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 8: Student grades! 
+    Maak een nieuwe HTML bestand aan.  
+    
+    Wij gaan een applicatie maken om de cijfers van de studenten bij te houden. De leraar wilt op een pagina de cijfers kunnen invullen en controleren of de studenten over kunnen gaan naar de volgende klas. Met deze applicatie zorg je ervoor dat de leraar niet handmatig hoeft te berekenen wat de gemiddelde cijfers zijn per student. Hiermee heeft de leraar een compleet overzicht van de studenten. Dat scheelt tijd voor de leraar! 
+  </pre>
+
+  <div class="browser">
+    <div class="flex-wrap">
+      <h1>Wiskunde</h1>
+      <table class="beta">
+        <th>Naam</th>
+        <th>Cijfer</th>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
   <footer>
     <a href="#up"></a>
@@ -233,7 +431,7 @@
       console.log("hello world");
     }
 
-    text = "That which does not kill us makes us stronger.";
+    let text = "That which does not kill us makes us stronger.";
 
     function printText(text) {
       console.log(text)
@@ -295,7 +493,12 @@
       }
     }
 
-    const randomName = () => {
+    function randomName() {
+      const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
+      return names[Math.round(Math.random() * names.length)];
+    }
+
+    const randomNameES6 = () => {
       const names = ["John", "Oly", "Mo", "Hendrik", "Tony", "Irus", "Jan", "Peter"];
       return names[Math.round(Math.random() * names.length)];
     }
@@ -304,7 +507,15 @@
       return includeName(randomName());
     }
 
-    const assignmentFiveES6 = () => includeNameES6(randomName());
+    const assignmentFiveES6 = () => includeNameES6(randomNameES6());
+
+    const f = (x, y) => x * y;
+
+    function sum(...theArgs) {
+    return theArgs.reduce((previous, current) => {
+      return previous + current;
+    });
+  }
 
   </script>
 </body>

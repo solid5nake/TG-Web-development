@@ -461,6 +461,31 @@ footer a:hover {
   transition: 2s ease;
 }
 
+.cam {
+  position: relative;
+  border-left: 2px solid #2fb6c3;
+  border-left: 2px solid #ff1475;
+  padding: 5rem;
+  width: 50%;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.cam img {
+  border: 0.25rem solid hsl(240, 5%, 11%);
+}
+
+.cam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4.2rem;
+  height: 2.3rem;
+  width: 2.3rem;
+  background: url(./assets/camera-blue.svg) no-repeat;
+  background-size: cover;
+}
+
 .browser {
   position: relative;
   border-left: 2px solid mediumturquoise;

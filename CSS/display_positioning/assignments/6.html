@@ -4,44 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Display & Positioning - Opdracht 6</title>
+  <style>
+    .outer {
+      position: relative;
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+    }
+    .inner {
+      background-color: springgreen;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
-      .outer {
-        position: relative;
-        background-color: orange;
-        width: 100px;
-        height: 100px;
-      }
-      .inner {
-        background-color: springgreen;
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 25px;
-        left: 25px;
-      }
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Display & Positioning</a>
+    <a href="./1.html">Opdracht 1</a>
+    <a href="./2.html">Opdracht 2</a>
+    <a href="./3.html">Opdracht 3</a>
+    <a href="./4.html">Opdracht 4</a>
+    <a href="./5.html">Opdracht 5</a>
+    <a href="./6.html" class="active">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 6</h2>
-  <p class="qn">
+  <pre class="qn">
     Maak het onderstaande na door gebruik te maken van relative position. De outer div block is
     100px breed en 100px hoog. De inner div block is 50px breed en 50px hoog.
-  </p>
-  <div class="outer">
-    <div class="inner"></div>
+  </pre>
+  <div class="cam">
+    <div class="outer">
+      <div class="inner"></div>
+    </div>
   </div>
 
-  <pre>
-    <span>CSS</span>
+  <pre class="code css">
     .outer {
       position: relative;
       background-color: orange;
@@ -59,24 +68,26 @@
   </pre>
 
   <div class="browser">
-    <span>BROWSER</span>
     <div class="outer">
       <div class="inner"></div>
     </div>
   </div>
 
-  <pre>
+  <pre class="code html">
     <span>HTML</span>
     &#60; class="outer"&#62;
       &#60; class="inner"&#62;
     &#60;/div&#62;
   </pre>
 
-  <p class="ans">
+  <pre class="ans">
     Hierbij heeft de outer div block position relative en de inner div block position absolute. <br>
     De inner div block zal zich relatief positioneren van zijn containing block.
-  </p>
-</body>
+  </pre>
 
+  <footer>
+    <a href="#up"></a>
+  </footer>
+</body>
 
 </html>

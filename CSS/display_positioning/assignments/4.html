@@ -4,15 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Display & Positioning - Opdracht 4</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
     <style>
       h1~.example {
         position: absolute;
@@ -20,32 +13,48 @@
         top: 100px;
       }
     </style>
-  </header>
+</head>
+
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Display & Positioning</a>
+    <a href="./1.html">Opdracht 1</a>
+    <a href="./2.html">Opdracht 2</a>
+    <a href="./3.html">Opdracht 3</a>
+    <a href="./4.html" class="active">Opdracht 4</a>
+    <a href="./5.html">Opdracht 5</a>
+    <a href="./6.html">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 4</h2>
-  <p class="qn">
+  <pre class="qn">
     Zorg er nu voor dat het &lt;h1&gt; element uit opdracht 2 50px links en 100px van de top wordt
     geplaatst relatief t.o.v. de HTML pagina.
-  </p>
+  </pre>
   <h1 class="example">Dit is een titel</h1>
   <p>Dit is een paragraaf.</p>
   <p>Dit is een paragraaf.</p>
   <p>Dit is nog een paragraaf.</p>
 
-  <p class="ans">
+  <pre class="ans">
     We gebruiken dit keer hiervoor de <strong>absolute</strong> positioning property, hierbij interperteer <i>de HTML pagina</i><br>
     van de bovenstaande vraag als de <strong>viewport</strong>.<br>
-  </p>
+  </pre>
 
-  <pre>
-    <span>CSS</span>
+  <pre class="code css">
     h1~.example {
       position: absolute;
       left: 50px;
       top: 100px;
     }
   </pre>
-
+  <footer>
+    <a href="#up"></a>
+  </footer>
 </body>
 
 </html>

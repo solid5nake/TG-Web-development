@@ -4,52 +4,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Display & Positioning - Opdracht 5</title>
+  <style>
+    .browser {
+      position: relative;
+    }
+    
+    img {
+      width: 300px;
+    }
+    
+    .example {
+      position: absolute;
+      width: 300px;
+      z-index: -1;
+      top: 84px;
+      left: 66px;
+    }
+    
+    .browser h1 {
+      padding-left: 0;
+      color: black;
+    }
+
+    .ans {
+      margin-top: 80px;
+    }
+  </style>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
-      img {
-        width: 300px;
-      }
-
-      .example {
-        position: absolute;
-        width: 300px;
-        z-index: -1;
-        top: 478px;
-        left: 3px;
-      }
-
-      .ans {
-        margin-top: 80px;
-      }
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Display & Positioning</a>
+    <a href="./1.html">Opdracht 1</a>
+    <a href="./2.html">Opdracht 2</a>
+    <a href="./3.html">Opdracht 3</a>
+    <a href="./4.html">Opdracht 4</a>
+    <a href="./5.html" class="active">Opdracht 5</a>
+    <a href="./6.html">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 5</h2>
-  <img src="../images/DisplayPositioningAssignment5.png" alt="Image Colors">
-  <p class="qn">
+  <div class="cam">
+    <img src="../images/DisplayPositioningAssignment5.png" alt="Image Colors">
+  </div>
+  <pre class="qn">
     Positioneer het &lt;img&gt; element achter de tekst. Zie voorbeeld
     hierboven en gebruik onderstaande HTML code. Je mag zelf
     een eigen image gebruiken.
-  </p>
+  </pre>
 
-  <h1>Dit is een titel</h1>
-  <p>Dit is een paragraaf.</p>
-  <p>Dit is nog een paragaaf.</p>
-  <img src="../images/image-color.jpg" alt="" class="example">
+  <div class="browser">
+    <h1>Dit is een titel</h1>
+    <p>Dit is een paragraaf.</p>
+    <p>Dit is nog een paragaaf.</p>
+    <img src="../images/image-color.jpg" alt="" class="example">
+  </div>
 
-  <p class="ans">
+  <pre class="ans">
     Door het <strong>absolute</strong> te positioneren is het relatief gepositioneerd van zijn <strong>ancestor</strong>. <br>
     In deze voorbeeld is het relatief gepositioneerd van zijn initiele <strong>containing block</strong> de <strong>body</strong>
-  </p>
+  </pre>
 
+  <footer>
+    <a href="#up"></a>
+  </footer>
 </body>
 
 </html>

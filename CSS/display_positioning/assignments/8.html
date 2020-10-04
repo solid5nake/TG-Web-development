@@ -4,17 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Display & Positioning - Opdracht 8</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">Main</a>
-    </nav>
     <style>
-
       .card {
         position: relative;
         font-family: initial;
@@ -63,28 +55,47 @@
         height: 90px;
       }
     </style>
-  </header>
-  <h1>Display & Positioning</h1>
-  <h2>Opdracht 8</h2>
-  <p class="qn">
-    Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
-  </p>
-  <img src="../images/Alpines.png" alt="Alpines" class="ex">
+</head>
 
-  <p class="ans">
+<body>
+  <body class="pl-5">
+    <div class="breadcrumbs" id="up">
+      <a href="../../Index.html">CSS</a>
+      <a href="../index.html">Display & Positioning</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2.html">Opdracht 2</a>
+      <a href="./3.html">Opdracht 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+      <a href="./8.html" class="active">Opdracht 8</a>
+    </div>
+    <h1 class="title">CSS</h1>
+    <h1>Display & Positioning</h1>
+  <h2>Opdracht 8</h2>
+  <pre class="qn">
+    Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
+  </pre>
+  <div class="cam">
+    <img src="../images/Alpines.png" alt="Alpines" class="example">
+  </div>
+
+  <pre class="ans">
     Er is 1 container div gebruikt (.box), deze heeft de position property relative <br>
     De twee nested div zijn absolute gepositioneerd ten opzichte van de container met ieder een gedefinieerde top en
     left
-  </p>
-  <div class="card">
-    <div class="txt">Bbbrrrrr...</div>
-    <div class="txt-sm">Super koud hier zeg!</div>
-    <div class="box"></div>
+  </pre>
+  <div class="browser">
+    <div class="card">
+      <div class="txt">Bbbrrrrr...</div>
+      <div class="txt-sm">Super koud hier zeg!</div>
+      <div class="box"></div>
+    </div>
   </div>
-  <hr>
 
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

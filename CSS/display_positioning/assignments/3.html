@@ -4,48 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Display & Positioning - Opdracht 3</title>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
     <style>
       h1~.example {
         position: relative;
         right: 20px;
         top: 30px;
       }
+      .browser {
+        color: mediumspringgreen;
+      }
     </style>
-  </header>
+</head>
+
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Display & Positioning</a>
+    <a href="./1.html">Opdracht 1</a>
+    <a href="./2.html">Opdracht 2</a>
+    <a href="./3.html" class="active">Opdracht 3</a>
+    <a href="./4.html">Opdracht 4</a>
+    <a href="./5.html">Opdracht 5</a>
+    <a href="./6.html">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Display & Positioning</h1>
   <h2>Opdracht 3</h2>
-  <p class="qn">
+  <pre class="qn">
     Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links en 30px naar
     onder wordt geplaatst, relatief t.o.v. diens normale positie.
-  </p>
+  </pre>
 
-  <h1 class="example">Dit is een titel</h1>
-  <p>Dit is een paragraaf.</p>
-  <p>Dit is een paragraaf.</p>
-  <p>Dit is nog een paragraaf.</p>
+  <div class="browser">
+    <h1 class="example">Dit is een titel</h1>
+    <p>Dit is een paragraaf.</p>
+    <p>Dit is een paragraaf.</p>
+    <p>Dit is nog een paragraaf.</p>
+  </div>
 
-  <p class="ans">
-    &#60;h1&#62; element krijgt een <strong>position:relative</strong> waarmee je het relatief positioneerd <br>
+  <pre class="ans">
+    &#60;h1&#62; element krijgt een <strong>position:relative</strong> waarmee je het relatief positioneerd
     daarbij hoor je het in spiegelbeeld (<strong>top</strong> en  <strong>right</strong>) te schrijven om het linksonder te positioneren.
-  </p>
-  <pre>
-    <span>CSS</span>
+  </pre>
+  <pre class="code css">
     h1 ~ .example {
       position: relative;
       right: 20px;
       top: 30px;
     }
   </pre>
-
+  <footer>
+    <a href="#up"></a>
+  </footer>
 </body>
 
 </html>

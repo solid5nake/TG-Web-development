@@ -3,14 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Pseudo elements - Opdracht 5</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
     <style>
       img {
         width: auto;
@@ -36,31 +30,66 @@
         z-index: -1;
       }
     </style>
-  </header>
-  <h1 id="pseudo-elements">Pseudo elements</h1>
+</head>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../Index.html">CSS</a>
+      <a href="../index.html">Pseudo elements</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2-3.html">Opdrachten 2 & 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html" class="active">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Pseudo elements</h1>
   <h2>Opdracht 5</h2>
-  <p class="qn">
+  <pre class="qn">
     Hieronder vind je nog eens een voorbeeld van het gebruik van een pseudo-element ::before. Kun jij dit namaken? <br>
     Zoek een afbeelding op internet.
-  </p>
-  <div></div>
-  <img src="../images/bulldog.png" alt="bulldog">
+  </pre>
+  <div class="cam">
+    <img src="../images/bulldog.png" alt="bulldog">
+  </div>
   <p class="ans">
     <strong>p::before</strong> pseudo-element, de content property blijft leeg "" en een background property is toegepast zodat er volledige controle is.
   </p>
-  <p class="text">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempore modi aperiam nihil consectetur odio maxime aut eaque cupiditate, obcaecati quaerat rem non, nostrum accusantium debitis voluptatum ipsum quidem adipisci?<br>
-    Facilis ut numquam repudiandae voluptatibus tempora consectetur dolorum voluptate magnam. Delectus nam rerum sint possimus nobis veniam itaque non perspiciatis, quia, quos, modi velit omnis molestiae! Sapiente natus molestias officiis?<br>
-    Dicta maxime voluptas dolores magnam autem libero aut laboriosam officia, vitae rem facere repellat fugiat. Praesentium inventore nostrum possimus reiciendis eveniet harum. Saepe, mollitia ea? Architecto voluptatibus dolorem ad quo.<br>
-    Rerum blanditiis suscipit nostrum adipisci nulla, laudantium consectetur, velit, hic laborum pariatur architecto eligendi odit deserunt? At assumenda cum officia esse, totam adipisci possimus soluta et veritatis maiores, error molestiae.<br>
-    Cupiditate rerum vero quo, repellat quaerat aliquid eligendi perferendis totam enim ullam quos veritatis assumenda praesentium laborum non iure deserunt repudiandae et perspiciatis minima aliquam eveniet dicta exercitationem! Delectus, voluptatum.<br>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet beatae harum in sapiente nemo amet molestias, ab illo quas alias modi! Ad molestias adipisci commodi qui corporis. Magni, placeat atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
-  </p>
-  <hr>
-
+  <div class="browser">
+    <p class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis tempore modi aperiam nihil consectetur odio maxime aut eaque cupiditate, obcaecati quaerat rem non, nostrum accusantium debitis voluptatum ipsum quidem adipisci?<br>
+      Facilis ut numquam repudiandae voluptatibus tempora consectetur dolorum voluptate magnam. Delectus nam rerum sint possimus nobis veniam itaque non perspiciatis, quia, quos, modi velit omnis molestiae! Sapiente natus molestias officiis?<br>
+      Dicta maxime voluptas dolores magnam autem libero aut laboriosam officia, vitae rem facere repellat fugiat. Praesentium inventore nostrum possimus reiciendis eveniet harum. Saepe, mollitia ea? Architecto voluptatibus dolorem ad quo.<br>
+      Rerum blanditiis suscipit nostrum adipisci nulla, laudantium consectetur, velit, hic laborum pariatur architecto eligendi odit deserunt? At assumenda cum officia esse, totam adipisci possimus soluta et veritatis maiores, error molestiae.<br>
+      Cupiditate rerum vero quo, repellat quaerat aliquid eligendi perferendis totam enim ullam quos veritatis assumenda praesentium laborum non iure deserunt repudiandae et perspiciatis minima aliquam eveniet dicta exercitationem! Delectus, voluptatum.<br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet beatae harum in sapiente nemo amet molestias, ab illo quas alias modi! Ad molestias adipisci commodi qui corporis. Magni, placeat atque. Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+    </p>
+  </div>
+  <h3>Code</h3>
+  <pre class="code css">
+    .text {
+      padding: 20px;
+      width: 700px;
+      height: 350px;
+      contain: content;
+      border: 1px solid black;
+    }
+    .text::before {
+      position: absolute;
+      padding: 20px;
+      width: 700px;
+      height: 350px;
+      content: "";
+      background: url(../images/american-bulldog.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+    }
+  </pre>
   <footer>
-    <hr>
-    <a href="#pseudo-elements">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 </html>

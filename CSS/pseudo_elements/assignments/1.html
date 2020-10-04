@@ -4,30 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Pseudo elements - Opdracht 1</title>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">Main</a>
-    </nav>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Pseudo elements</a>
+		<a href="./1.html" class="active">Opdracht 1</a>
+		<a href="./2-3.html">Opdrachten 2 & 3</a>
+		<a href="./4.html">Opdracht 4</a>
+		<a href="./5.html">Opdracht 5</a>
+		<a href="./6.html">Opdracht 6</a>
+		<a href="./7.html">Opdracht 7</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Pseudo elements</h1>
   <h2>Opdracht 1</h2>
-  <p class="qn">
-    Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen <br>
+  <pre class="qn">
+    Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)? Beschrijf met je eigen 
     woorden wat deze pseudo-elementen inhouden.
-  </p>
-  <p class="ans">
-    Een CSS <strong>pseudo-element</strong> is een toegevoegde <i>keyword</i> aan een <strong>selector</strong>. <br>
-    Het laat toe om een specifiek gedeelte te stylen van het geselecteerde element(en). <br>
+  </pre>
+  <pre class="ans">
+    Een CSS <strong>pseudo-element</strong> is een toegevoegde <i>keyword</i> aan een <strong>selector</strong>. 
+    Het laat toe om een specifiek gedeelte te stylen van het geselecteerde element(en). 
     Alleen 1 pseudo-element kan gebruikt worden in een selector. Het moet achter de simple selectors aanwezig zijn binnen een declaratie.
-  </p>
-  <h2>Syntax</h2>
-  <pre class="info">
-    <span>CSS</span>
+  </pre>
+  <pre class="syntax">
     selector::pseudo-element {
       property: value;
     }
@@ -35,7 +38,7 @@
   <hr>
 
   <h2>Index van standaard pseudo-elements</h2>
-  <table>
+  <table class="index">
     <tr>
       <td>
         <a href="#::first-line">::first-line</a>
@@ -60,8 +63,7 @@
   <p class="ans">
     De ::first-line is een CSS pseudo-element dat gebruikt kan worden om de font van de eerste regel van een paragraaf <i>first line</i> te veranderen.
   </p>
-  <pre class="code">
-    <span>CSS</span>
+  <pre class="code css">
     /* Geldt alleen voor de eerste regel van elke &#60;p&#62; */
 
     p::first-line {
@@ -69,8 +71,8 @@
       text-transform: uppercase;
     }
   </pre>
-  <i>*Geldt alleen voor de eerste regel van elke &#60;p&#62;</i>
-  <br>
+  <pre class="ans">*Geldt alleen voor de eerste regel van elke &#60;p&#62;</pre class="ans">
+  
   <p class="note">
     <strong>Note</strong>: Als regel worden dubbele colons <strong>::</strong> gebruikt om onderscheidt te
     maken van <i>pseudo-classes</i></p>
@@ -78,41 +80,39 @@
 
   <h3 id="::after">::after</h3>
   <p class="ans">
-    <strong>::after</strong> creeert een pseudo-element dat de <i>last child</i> is van een <i>selected element</i><br>
+    <strong>::after</strong> creeert een pseudo-element dat de <i>last child</i> is van een <i>selected element</i>
     Het wordt meestal gebruikt om cosmetische content toe te voegen aan een element met een <strong>content</strong>
-    property. <br>
+    property. 
     Per default is het inline.
   </p>
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="code css">
     / * Voeg een pijl toe achter elke link * /
 
     a::after {
       content: "➞";
     }
   </pre>
-  <i>*Voeg een "➞" toe achter elke link</i>
+  <p class="note">*Voeg een "➞" toe achter elke link</p>
   <hr>
 
   <h3 id="::before">::before</h3>
   <p class="ans">
     <strong>::before</strong> creeert een pseudo-element dat dat de <i>last child</i> is van een <i>selected
-      element</i><br>
+      element</i>
     Het wordt meestal gebruikt om cosmetische content toe te voegen aan een element met een <strong>content</strong>
-    property. <br>
+    property. 
     Per default is het inline.
   </p>
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="code css">
     / * Voeg een hart toe achter elke link * /
     a::before {
       content: "♥";
     }
   </pre>
-  <i>*Voeg een "♥" toe achter elke link</i>
+  <p class="note">*Voeg een "♥" toe achter elke link</p>
   <p class="note">
     <strong>Note</strong>: pseudo-elementen gegenereerd met <strong>::before</strong> en <strong>::after</strong> worden
-    <i>contained door de elements formatting box</i><br>
+    <i>contained door de elements formatting box</i>
     om die reden wordt het niet toegepast door <i>replaced elements</i> zoals &#60;img&#62; en &#60;br&#62; elementen.
   </p>
   <hr>
@@ -121,43 +121,40 @@
   <p class="ans">
     De <strong>::backdrop</strong> pseudo-element is een box ter grootte van de viewport die onmiddellijk wordt
     weergegeven onder elk element dat in <i>fullscreen mode</i> wordt weergegeven, tegelijketijd zit het boven alle
-    andre elementen. <br>
+    andre elementen. 
     Dit omvat beide elementen die in volledig scherm zijn geplaatst met behulp van de <strong>Fullscreen API</strong> en
-    &#60;dialog&#62; elementen. <br>
-    <br>
+    &#60;dialog&#62; elementen. 
+    
     Wanneer meerdere elementen in de modus voor volledig scherm zijn geplaatst, wordt de achtergrond onmiddellijk onder het voorste element getekend, en bovenop de oudere elementen op volledig scherm.
   </p>
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="code css">
     dialog::backdrop {
       background: rgba(255,0,0,.25);
     }
   </pre>
-  <i>*Backdrop wordt alleen weergegeven als het dialoogvenster wordt geopend met dialog.showModal ()</i>
+  <p class="note">*Backdrop wordt alleen weergegeven als het dialoogvenster wordt geopend met dialog.showModal ()</p>
   <hr>
 
   <h3 id="::cue">::cue</h3>
-  <p class="ans">
+  <pre class="ans">
     Het :: cue CSS pseudo-element komt overeen met WebVTT-cues binnen een geselecteerd element. Dit kan worden gebruikt
-    om bijschriften en andere aanwijzingen in media te stylen met VTT-tracks. <br>
+    om bijschriften en andere aanwijzingen in media te stylen met VTT-tracks. 
     Het primaire doel van WebVTT-bestanden is om tekstoverlays toe te voegen aan een &#60;video&#62;.
-  </p>
+  </pre>
   <p class="note">
     <strong>Note:</strong> <strong>Web Video Text Tracks Format</strong> is een formaat voor het weergeven van getimede
     teksttracks (zoals ondertitels of bijschriften) met behulp van het <strong>&#60;track&#62;</strong> element.
   </p>
-  <pre class="info">
+  <pre class="code css">
     <span>CSS</span>
     ::cue {
       color: yellow;
       font-weight: bold;
     }
   </pre>
-  <hr>
 
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
-
 </html>

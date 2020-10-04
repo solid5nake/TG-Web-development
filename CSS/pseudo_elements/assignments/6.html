@@ -4,118 +4,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Pseudo elements - Opdracht 6</title>
+  <style>
+    .container {
+      display: flex;
+      background: #ff1453;
+      border: 0.25rem solid #293242;
+    }
+
+    .example {
+      position: relative;
+      border-radius: 50%;
+      margin: 70px;
+      width: 185px;
+      height: 185px;
+      background: black;
+      color: #ff1453;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 185px;
+      font-size: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .example::before {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      left: -35px;
+      line-height: 60px;
+      content: "●";
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+
+    .example::after {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      right: -35px;
+      content: "●";
+      line-height: 100px;
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+
+    .sphere {
+      position: relative;
+      border-radius: 50%;
+      margin: 70px;
+      width: 185px;
+      height: 185px;
+      background: black;
+      color: #ff1453;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 185px;
+      font-size: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .sphere::before {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      left: -35px;
+      line-height: 60px;
+      content: "✪";
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+
+    .sphere::after {
+      position: absolute;
+      border-radius: 50%;
+      top: 50px;
+      right: -35px;
+      content: "❖";
+      line-height: 100px;
+      background: black;
+      width: 80px;
+      height: 80px;
+      font-size: 15px;
+    }
+  </style>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
-      .container {
-        display: flex;
-      }
-
-      .example {
-        position: relative;
-        border-radius: 50%;
-        margin: 70px;
-        width: 185px;
-        height: 185px;
-        background: black;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 185px;
-        font-size: 50px;
-        font-family: 'Times New Roman', Times, serif;
-      }
-
-      .example::before {
-        position: absolute;
-        border-radius: 50%;
-        top: 50px;
-        left: -35px;
-        line-height: 60px;
-        content: "●";
-        background: black;
-        width: 80px;
-        height: 80px;
-        font-size: 15px;
-      }
-
-      .example::after {
-        position: absolute;
-        border-radius: 50%;
-        top: 50px;
-        right: -35px;
-        content: "●";
-        line-height: 100px;
-        background: black;
-        width: 80px;
-        height: 80px;
-        font-size: 15px;
-      }
-
-      .sphere {
-        position: relative;
-        border-radius: 50%;
-        margin: 70px;
-        width: 185px;
-        height: 185px;
-        background: black;
-        color: white;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 185px;
-        font-size: 50px;
-        font-family: 'Times New Roman', Times, serif;
-      }
-
-      .sphere::before {
-        position: absolute;
-        border-radius: 50%;
-        top: 50px;
-        left: -35px;
-        line-height: 60px;
-        content: "✪";
-        background: black;
-        width: 80px;
-        height: 80px;
-        font-size: 15px;
-      }
-
-      .sphere::after {
-        position: absolute;
-        border-radius: 50%;
-        top: 50px;
-        right: -35px;
-        content: "❖";
-        line-height: 100px;
-        background: black;
-        width: 80px;
-        height: 80px;
-        font-size: 15px;
-      }
-    </style>
-  </header>
-  <h1 id="pseudo-elements">Pseudo elementen</h1>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../Index.html">CSS</a>
+      <a href="../index.html">Pseudo elements</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2-3.html">Opdrachten 2 & 3</a>
+      <a href="./4.html">Opdracht 4</a>
+      <a href="./5.html">Opdracht 5</a>
+      <a href="./6.html" class="active">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Pseudo elements</h1>
   <h2>Opdracht 6</h2>
-  <p class="qn">
+  <pre class="qn">
     Hieronder vind je wederom een voorbeeld van het gebruik van een pseudo-element. Kun jij dit namaken?
-  </p>
-  <div class="container">
-    <div class="example">1</div>
-    <div class="example">2</div>
-    <div class="example">3</div>
+  </pre>
+  <div class="cam">
+    <div class="container">
+      <div class="example">1</div>
+      <div class="example">2</div>
+      <div class="example">3</div>
+    </div>
   </div>
   <hr>
 
   <h3>Code</h3>
-  <pre class="code">
-    <span>HTML</span>
+  <pre class="code html">
     &#60;div class="container"&#62;
       &#60;div class="sphere"&#62;1&#60;/div&#62;
       &#60;div class="sphere"&#62;2&#60;/div&#62;
@@ -123,8 +133,7 @@
     &#60;/div&#62;
   </pre>
 
-  <pre class="code">
-    <span>CSS</span>
+  <pre class="code css">
     .sphere::before {
       position: absolute;
       border-radius: 50%;
@@ -153,10 +162,12 @@
   </pre>
 
   <h3>Resultaat</h3>
-  <div class="container">
-    <div class="sphere">1</div>
-    <div class="sphere">2</div>
-    <div class="sphere">3</div>
+  <div class="browser">
+    <div class="container">
+      <div class="sphere">1</div>
+      <div class="sphere">2</div>
+      <div class="sphere">3</div>
+    </div>
   </div>
 
   <p class="ans">
@@ -171,16 +182,15 @@
   <hr>
 
   <h3>line-height</h3>
-  <p class="qn">
+  <pre class="ans">
     De CSS-eigenschap line-height stelt de hoogte van een line box in. Het wordt vaak gebruikt om de afstand tussen
     regels tekst in te stellen. Op bloklevel-elementen specificeert het de minimale hoogte van line boxes binnen het
     element. Op non-replaced inline-elementen specificeert het de hoogte die wordt gebruikt om de hoogte van het line
     box te berekenen.
-  </p>
-  <hr>
+  </pre>
   
   <footer>
-    <a href="#pseudo-elements">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

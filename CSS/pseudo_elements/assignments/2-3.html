@@ -4,33 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Pseudo elements - Opdrachten 2 - 3</title>
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-  </header>
-  <h1 id="pseudo-elements">Pseudo elements</h1>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../../Index.html">CSS</a>
+    <a href="../index.html">Pseudo elements</a>
+		<a href="./1.html">Opdracht 1</a>
+		<a href="./2-3.html" class="active">Opdrachten 2 & 3</a>
+		<a href="./4.html">Opdracht 4</a>
+		<a href="./5.html">Opdracht 5</a>
+		<a href="./6.html">Opdracht 6</a>
+		<a href="./7.html">Opdracht 7</a>
+  </div>
+  <h1 class="title">CSS</h1>
+  <h1>Pseudo elements</h1>
   <h2>Opdracht 2</h2>
-  <p class="qn">
-    Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 <br>
+  <pre class="qn">
+    Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 
     kunnen benoemen. Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?
-  </p>
+  </pre>
   <h2>Opdracht 3</h2>
-  <p class="qn">
-    Er zijn aldus 14 verschillende pseudo elementen. Je hebt ze in de voorgaande opdracht <br>
-    reeds opgezocht en uitgezocht wat ze doen. Kun je van al deze pseudo-elementen een <br>
+  <pre class="qn">
+    Er zijn aldus 14 verschillende pseudo elementen. Je hebt ze in de voorgaande opdracht 
+    reeds opgezocht en uitgezocht wat ze doen. Kun je van al deze pseudo-elementen een 
     voorbeeld maken?
-  </p>
-  <br>
-  <br>
+  </pre>
+  
+  
   <hr>
   <h2>Index van standaard pseudo-elements</h2>
-  <table>
+  <table class="index">
     <tr>
       <td>
         <a href="#::first-letter">::first-letter</a>
@@ -83,9 +89,9 @@
   <h3 id="::grammer-error">::grammer-error</h3>
   <p class="ans">
     Een CSS-pseudo-element representeerd een tekst segment dat een <strong>user agent</strong> ziet als een grammatische
-    fout. <br>
+    fout. 
     Slechts een kleine subset van CSS-eigenschappen kan worden gebruikt in een regel met :: grammar-error in zijn
-    selector: <br>
+    selector: 
   </p>
   <ul>
     <li>color</li>
@@ -98,13 +104,11 @@
     <li>text-shadow</li>
   </ul>
 
-  <pre class="code">
-    <span>HTML</span>
+  <pre class="code html">
     &#60;p&#62;My friends is coming to the party tonight.&#60;/p&#62;
   </pre>
 
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="syntax">
     ::grammar-error  {
       text-decoration: underline red;
       color: red;
@@ -114,13 +118,12 @@
 
   <h3 id="::marker">::marker</h3>
   <p class="ans">
-    De <strong>::marker</strong> CSS pseudo-element selecteerd de marker box van een list item dat<br>
+    De <strong>::marker</strong> CSS pseudo-element selecteerd de marker box van een list item dat
     <i>bullets</i> <i>nummers</i> of bevat. Het werkt op elke element of pseudo-element dat gesteld is op
-    <strong>display:list-item</strong><br>
+    <strong>display:list-item</strong>
     zoals de &#60;li&#62; en &#60;summary&#62; elementen.
   </p>
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="syntax">
     ::marker {
       color: blue;
       font-size: 1.2em;
@@ -145,18 +148,15 @@
   </p>
   <p class="note">
     Een <i>shadow tree</i> is een boom van <strong>DOM-nodes</strong> waarvan de boenste node een <i>shadow root</i> is;
-    <br>
+    
     dat wil zeggen, het bovenste node binnen een shadow-DOM. Een shadowtree is een verborgen set standaard
     DOM-knooppunten die is gekoppeld aan een standaard DOM-node dat als host dient.
   </p>
-  <h3>Syntax</h3>
-  <pre class="info">
-    <span>CSS</span>
+  <pre class="syntax">
     ::part( &#60;ident&#62;+ )
   </pre>
 
-  <pre class="code">
-    <span>HTML</span>
+  <pre class="code html">
     &#60;template id="tabbed-custom-element"&#62;
       &#60;style type="text/css"&#62;
       *, ::before, ::after {
@@ -173,8 +173,7 @@
       &#60;/template&#62;
   </pre>
 
-  <pre class="code">
-    <span>CSS</span>
+  <pre class="code css">
     tabbed-custom-element::part(tab) {
       color: #0c0dcc;
       border-bottom: transparent solid 2px;
@@ -202,8 +201,7 @@
     }
   </pre>
 
-  <pre class="info">
-    <span>JAVASCRIPT</span>
+  <pre class="code js">
     let template = document.querySelector("#tabbed-custom-element");
     globalThis.customElements.define(template.id, class extends HTMLElement {
       constructor() {
@@ -222,7 +220,7 @@
     element.
   </p>
 
-  <pre class="info">
+  <pre class="syntax">
     <span>CSS</span>
     ::placeholder {
       color: blue;
@@ -230,10 +228,10 @@
     }
    </pre>
 
-  <p class="ans">
+  <pre class="ans">
     Ze zijn handig om te gebruiken bij een user input, placeholders in formfields is niet aan te raden.
-  </p>
-  <pre class="info">
+  </pre>
+  <pre class="syntax">
     <span>HTML</span>
     &#60;label for="user-email"&#62;Your email address&#60;/label&#62;
     &#60;span id="user-email-hint" class="input-hint"&#62;Example: jane@sample.com&#60;/span&#62;
@@ -242,20 +240,20 @@
   <hr>
 
   <h3 id="::selection">::selection</h3>
-  <p class="ans">
+  <pre class="ans">
     past stijlen toe op het deel van een document dat door de gebruiker is gemarkeerd (zoals klikken en slepen met de
     muis over tekst).
-  </p>
-  <pre class="info">
+  </pre>
+  <pre class="syntax">
     <span>CSS</span>
     ::selection {
       background-color: green;
     }
   </pre>
   <h3>Toegestaande properties</h3>
-  <p>
+  <pre class="ans">
     Alleen bepaalde CSS-eigenschappen kunnen worden gebruikt met :: selection:
-  </p>
+  </pre>
   <ul>
     <li>color</li>
     <li>background-color</li>
@@ -269,14 +267,14 @@
   <hr>
 
   <h3 id="::slotted()">::slotted()</h3>
-  <p class="ans">
+  <pre class="ans">
     Het <strong>::slotted()</strong> CSS pseudo-element vertegenwoordigd elke element dat in een slot is geplaatst
-    binnen in en HTML template. <br>
-    <br>
-    Dit werkt alleen bij gebruik in CSS geplaatst in een schaduw-DOM.
-  </p>
+    binnen in en HTML template. 
 
-  <pre class="info">
+    Dit werkt alleen bij gebruik in CSS geplaatst in een schaduw-DOM.
+  </pre>
+
+  <pre class="syntax">
     <span>CSS</span>
     /* Selects any element placed inside a slot */
     ::slotted(*) {
@@ -288,25 +286,27 @@
       font-weight: bold;
     }
   </pre>
-  <i>*Selecteert elk element dat in een sleuf is geplaatst</i>
-  <i>*Selecteert een &#60;span&#62; geplaatst in een slot</i>
+  <p class="note">
+    <i>*Selecteert elk element dat in een sleuf is geplaatst</i>
+    <i>*Selecteert een &#60;span&#62; geplaatst in een slot</i>
+  </p>
   <hr>
 
   <h3 id="::spelling-error">::spelling-error</h3>
-  <p class="ans">
+  <pre class="ans">
     Het :: spelling-error CSS pseudo-element vertegenwoordigt een tekstsegment dat door de user agent is gemarkeerd als
     onjuist gespeld.
-  </p>
-  <pre class="info">
+  </pre>
+  <pre class="syntax">
     <span>CSS</span>
     ::spelling-error  {
       text-decoration: wavy red;
     }
   </pre>
   <h4>Toegestaande properties</h4>
-  <p>
+  <pre class="ans">
     Alleen bepaalde CSS-eigenschappen kunnen worden gebruikt met :: selection:
-  </p>
+  </pre>
   <ul>
     <li>color</li>
     <li>background-color</li>
@@ -320,10 +320,10 @@
   <hr>
 
   <h3 id="::cue-region">::cue-region</h3>
-  <p class="ans">
+  <pre class="ans">
     Het <strong>::cue-region</strong> CSS pseudo-element komt overeen met WebVTT-cues binnen een geselecteerd element.
     Dit kan worden gebruikt om bijschriften en andere aanwijzingen in media te stylen met VTT-tracks.
-  </p>
+  </pre>
   <pre class="code">
     <span>CSS</span>
     ::cue-region {
@@ -331,20 +331,17 @@
       font-weight: bold;
     }
   </pre>
-  <h3>Syntax</h3>
-  <pre class="info">
+  <pre class="syntax">
     ::cue-region | ::cue-region( <selector> )
   </pre>
-  <p class="ans">
-    De eigenschappen worden toegepast op de hele set cues alsof ze een enkele eenheid zijn. <br>
+  <pre class="ans">
+    De eigenschappen worden toegepast op de hele set cues alsof ze een enkele eenheid zijn. 
     De enige uitzondering is dat de achtergrond en de <strong>shorthand properties </strong> ervan op elke cue
     afzonderlijk van toepassing zijn, om te voorkomen dat er boxen worden gemaakt en onverwacht grote delen van de media
     worden verduisterd.
-  </p>
-  <hr>
-
+  </pre>
   <footer>
-    <a href="#pseudo-elements">&#9650; boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

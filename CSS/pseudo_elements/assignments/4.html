@@ -3,70 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Pseudo elements - Opdracht 4</title>
+  <style>
+    button {
+      position: relative;
+      margin: 0;
+      border: initial;
+      width: 910px;
+      height: 60px;
+      background: rgb(85, 175, 170);
+      font-size: 30px;
+      color: white;
+    }
+
+    button::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 50px;
+      content:"" ;
+      border-top: 10px solid rgb(237, 109, 82);
+      border-left: 10px solid rgb(237, 109, 82);
+    }
+
+    button::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 60px;
+      height: 50px;
+      content: "";
+      border-bottom: 10px solid rgb(237, 109, 82);
+      border-right: 10px solid rgb(237, 109, 82);
+    }
+
+    footer {
+      margin-top: 5rem;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="../index.html">Main</a>
-    </nav>
-    <style>
-      button {
-        position: relative;
-        margin: 0;
-        border: initial;
-        width: 910px;
-        height: 60px;
-        background: rgb(85, 175, 170);
-        font-size: 30px;
-        color: white;
-      }
-
-      button::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 60px;
-        height: 50px;
-        content:"" ;
-        border-top: 10px solid rgb(237, 109, 82);
-        border-left: 10px solid rgb(237, 109, 82);
-      }
-
-      button::after {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 60px;
-        height: 50px;
-        content: "";
-        border-bottom: 10px solid rgb(237, 109, 82);
-        border-right: 10px solid rgb(237, 109, 82);
-      }
-
-    </style>
-  </header>
-  <h1 id="pseudo-elements">Pseudo elements</h1>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../../Index.html">CSS</a>
+      <a href="../index.html">Pseudo elements</a>
+      <a href="./1.html">Opdracht 1</a>
+      <a href="./2-3.html">Opdrachten 2 & 3</a>
+      <a href="./4.html" class="active">Opdracht 4</a>
+      <a href="./5.html">Opdracht 5</a>
+      <a href="./6.html">Opdracht 6</a>
+      <a href="./7.html">Opdracht 7</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Pseudo elements</h1>
   <h2>Opdracht 4</h2>
-  <p class="qn">
+  <pre class="qn">
     Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit
     namaken?
-  </p>
-  <div></div>
-  <button>Button</button>
-  <div></div>
+  </pre>
+  <div class="cam">
+    <div></div>
+    <button>Button</button>
+    <div></div>
+  </div>
   <hr>
 
-  <p class="ans">
+  <pre class="ans">
     Het button element heeft de pseudo-elementen ::before (voor de button) en ::after (achter de button) meegekregen <br>
-  </p>
+  </pre>
 
   <p class="note">
     <strong>Note:</strong> de <i>::before en ::after</i> pseudo-elementen hebben de <i>content</i> property nodig om zichtbaar te worden.
   </p>
-  <pre class="code">
-    <span>CSS</span>
+  <h3>Code</h3>
+  <pre class="code css">
     button {
       position: relative;
       border: initial;
@@ -105,11 +118,13 @@
     }
   </pre>
   <h3>Resultaat</h3>
-  <button>Button</button>
-  <hr>
+
+  <div class="browser">
+    <button>Button</button>
+  </div>
 
   <footer>
-    <a href="#pseudo-elements">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 </body>

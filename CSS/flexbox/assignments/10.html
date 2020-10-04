@@ -3,138 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Flexbox - Opdracht 10</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      overflow: hidden;
+      padding: 20px;
+      background: rgb(235, 235, 235);
+      height: 700px;
+    }
+
+    .container > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 50px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      margin: 10px;
+      padding: 20px;
+      width: 200px;
+      font-size: 2em;
+    }
+
+    label.flex {
+      pointer-events: none;
+    }
+
+    .flex .btn {
+      background: darkslategray;
+      color: lightslategray;
+    }
+
+    .block .btn {
+      background: hotpink;
+      color: darkslategray;
+      cursor: pointer;
+    }
+
+    #toggle-flexbox {
+      display: none;
+    }
+
+    #toggle-flexbox:checked + .container {
+      display: block;
+    }
+
+    #toggle-flexbox:checked + .container + label.flex {
+      pointer-events: initial;
+      cursor: pointer;
+    }
+
+    #toggle-flexbox:checked + .container + label.flex > .btn {
+      color: hotpink;
+    }
+
+    #toggle-flexbox:checked + .container + label.flex + label.block {
+      pointer-events: none;
+    }
+
+    #toggle-flexbox:checked + .container + label.flex + label.block > .btn {
+      background: lightslategray;
+    }
+
+
+    .block-1 {
+      width: 5em;
+      height: 5em;
+      background: rgb(115, 222, 117);
+    }
+    .block-2 {
+      width: 5em;
+      height: 8em;
+      background: rgb(230, 202, 72);
+    }
+    .block-3 {
+      width: 5em;
+      height: 6em;
+      background: rgb(198, 23, 67);
+    }
+    .block-4 {
+      width: 5em;
+      height: 10em;
+      background: rgb(87, 156, 209);
+    }
+
+  </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">Main</a>
-    </nav>
-    <style>
-      .container {
-        display: flex;
-        justify-content: space-evenly;
-        overflow: hidden;
-        padding: 20px;
-        background: rgb(235, 235, 235);
-        height: 700px;
-      }
-
-      .container > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 50px;
-      }
-
-      .btn {
-        display: inline-block;
-        text-align: center;
-        margin: 10px;
-        padding: 20px;
-        width: 200px;
-        font-size: 2em;
-      }
-
-      label.flex {
-        pointer-events: none;
-      }
-
-      .flex .btn {
-        background: darkslategray;
-        color: lightslategray;
-      }
-
-      .block .btn {
-        background: hotpink;
-        color: darkslategray;
-        cursor: pointer;
-      }
-
-      #toggle-flexbox {
-        display: none;
-      }
-
-      #toggle-flexbox:checked + .container {
-        display: block;
-      }
-
-      #toggle-flexbox:checked + .container + label.flex {
-        pointer-events: initial;
-        cursor: pointer;
-      }
-
-      #toggle-flexbox:checked + .container + label.flex > .btn {
-        color: hotpink;
-      }
-
-      #toggle-flexbox:checked + .container + label.flex + label.block {
-        pointer-events: none;
-      }
-
-      #toggle-flexbox:checked + .container + label.flex + label.block > .btn {
-        background: lightslategray;
-      }
-
-
-      .block-1 {
-        width: 5em;
-        height: 5em;
-        background: rgb(115, 222, 117);
-      }
-      .block-2 {
-        width: 5em;
-        height: 8em;
-        background: rgb(230, 202, 72);
-      }
-      .block-3 {
-        width: 5em;
-        height: 6em;
-        background: rgb(198, 23, 67);
-      }
-      .block-4 {
-        width: 5em;
-        height: 10em;
-        background: rgb(87, 156, 209);
-      }
-
-    </style>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../Index.html">CSS</a>
+    <a href="./index.html">Flexbox</a>
+    <a href="./1-3.html">Opdracht 1-3</a>
+    <a href="./4.html">Opdracht 4</a>
+    <a href="./5.html">Opdracht 5</a>
+    <a href="./6.html">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+    <a href="./9.html">Opdracht 9</a>
+    <a href="./10.html" class="active">Opdracht 10</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Flexbox</h1>
   <h2>Opdracht 10</h2>
-  <p class="qn">
+  <pre class="qn">
     Verzin zelf een opdracht met flexbox. Irriteer je medecursist ermee door je medecursist te vragen om het na te maken.
-  </p>
+  </pre>
   <hr>
 
-  <p class="qn">
+  <pre class="qn">
     Maak het onderstaande na en gebruik hierbij alle skills die we tot nu toe hebben geleerd, gebruik alleen HTML en CSS en geen Javascript of jQuery.
-  </p>
+  </pre>
   <p class="note">
     <strong>Note:</strong> Think out of the box, denk aan <strong>pointer</strong> pseudo-classes, flexbox, <strong>state</strong>.   
   </p>
 
-  <input type="checkbox" id="toggle-flexbox">
-  <div class="container">
-    <div class="block-1">1</div>
-    <div class="block-2">2</div>
-    <div class="block-3">3</div>
-    <div class="block-4">4</div>
+  <div class="browser">
+    <input type="checkbox" id="toggle-flexbox">
+    <div class="container">
+      <div class="block-1">1</div>
+      <div class="block-2">2</div>
+      <div class="block-3">3</div>
+      <div class="block-4">4</div>
+    </div>
+  
+    <label class="flex" for="toggle-flexbox">
+      <div class="btn">flex</div>
+    </label>
+  
+    <label class="block" for="toggle-flexbox">
+      <div class="btn">block</div>
+    </label>
   </div>
-
-  <label class="flex" for="toggle-flexbox">
-    <div class="btn">flex</div>
-  </label>
-
-  <label class="block" for="toggle-flexbox">
-    <div class="btn">block</div>
-  </label>
-  <hr>
   
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 </html>

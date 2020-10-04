@@ -4,122 +4,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../../dark.css">
   <title>Flexbox - Opdracht 5</title>
+  <style>
+    .box {
+      display: flex;
+      border: 5px solid hotpink;
+      background: rgb(251, 182, 251);
+      margin: 5px;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 50px;
+      font-weight: lighter;
+      font-size: 25px;
+    }
+
+    .stretch,
+    .center,
+    .start,
+    .flex-end,
+    .self-start,
+    .space-between,
+    .baseline,
+    .last-baseline {
+      border: 0.3rem solid #1b1b1d;
+    }
+
+    .stretch {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: stretch;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .center {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: center;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .start {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: start;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .flex-end {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: flex-end;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .self-start {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: self-start;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .space-between {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: space-between;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .baseline {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: baseline;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+
+    .last-baseline {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      align-items: last baseline;
+      margin: 50px 0 50px 0;
+      padding: 20px;
+      background: rgb(2, 33, 41);
+    }
+  </style>
 </head>
-
-<body>
-  <header>
-    <nav>
-      <a href="../index.html" id="main">Main</a>
-      <style>
-        .box {
-          display: flex;
-          border: 5px solid hotpink;
-          background: rgb(251, 182, 251);
-          margin: 5px;
-          justify-content: center;
-          align-items: center;
-          flex-basis: 50px;
-          font-weight: lighter;
-          font-size: 25px;
-        }
-
-        .stretch {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: stretch;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .center {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: center;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .start {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: start;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .flex-end {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: flex-end;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .self-start {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: self-start;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .space-between {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: space-between;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .baseline {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: baseline;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-        .last-baseline {
-          display: flex;
-          width: 300px;
-          height: 300px;
-          align-items: last baseline;
-          margin: 50px 0 50px 0;
-          padding: 20px;
-          background: rgb(2, 33, 41);
-        }
-
-      </style>
-    </nav>
-  </header>
+<body class="pl-5">
+  <div class="breadcrumbs" id="up">
+    <a href="../Index.html">CSS</a>
+    <a href="./index.html">Flexbox</a>
+    <a href="./1-3.html">Opdracht 1-3</a>
+    <a href="./4.html">Opdracht 4</a>
+    <a href="./5.html" class="active">Opdracht 5</a>
+    <a href="./6.html">Opdracht 6</a>
+    <a href="./7.html">Opdracht 7</a>
+    <a href="./8.html">Opdracht 8</a>
+    <a href="./9.html">Opdracht 9</a>
+    <a href="./10.html">Opdracht 10</a>
+  </div>
+  <h1 class="title">CSS</h1>
   <h1>Flexbox</h1>
   <h2>Opdracht 5</h2>
-  <p class="qn">
+  <pre class="qn">
     De property ‘align-items’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door gebruik
     te maken van de align-items property.
-  </p>
+  </pre>
   <hr>
 
-  <p class="ans">
+  <pre class="ans">
     Onderstaand zijn enkele voorbeelden van align-items values, er zijn meerdere om op te noemen.
     <i>normal</i>, <i>flex-start</i>, <i>end</i>, <i>self-start</i> etc.
-  </p>
+  </pre>
 
   <h3>Index align-items values</h3>
   <ul>
@@ -210,10 +227,9 @@
     <div class="box">5</div>
     <div class="box">6</div>
   </div>
-  <hr>
-  
+
   <footer>
-    <a href="#main">▲ boven</a>
+    <a href="#up"></a>
   </footer>
 </body>
 

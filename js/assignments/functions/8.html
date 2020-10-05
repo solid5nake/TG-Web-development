@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Functions Opdracht 8</title>
+  <style>
+    table {
+      width: 30rem;
+    }
+    tr {
+      background: mintcream;
+    }
+    td {
+      padding: 1rem;
+
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .darkgreen {
+      background-color: darkgreen;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .browser h1 {
+      padding-left: 0;
+    }
+  </style>
+</head>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="./1.html">Functions 1 - 7</a>
+      <a href="./8.html" class="active">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+    </div>
+  </nav>
+  <h1 class="title">CSS</h1>
+  <h1>Functions</h1>
+  <h2>Opdracht 8</h2>
+  <pre class="qn">
+    Maak een nieuwe HTML bestand aan.  
+ 
+    Wij gaan een applicatie maken om de cijfers van de studenten bij te houden. De leraar wilt op een pagina de cijfers kunnen invullen en controleren of de studenten over kunnen gaan naar de volgende klas. Met deze applicatie zorg je ervoor dat de leraar niet handmatig hoeft te berekenen wat de gemiddelde cijfers zijn per student. Hiermee heeft de leraar een compleet overzicht van de studenten. Dat scheelt tijd voor de leraar! 
+    
+    Wat moet de applicatie kunnen? 
+    ●	Voor de vakken wiskunde, natuurkunde, nederlands en engels een tabel met studenten waarbij de cijfers bijgehouden worden. 
+    ●	Als de cijfer lager dan 5.5 is, dan is het veld rood. 
+    ●	Als de cijfer hoger of gelijk aan 5.5 is, dan is het veld groen. 
+    ●	Als de cijfer hoger of gelijk aan 7.5 is, dan is het veld donker groen. 
+    ●	Als je op de cijfer clickt kan de cijfer aangepast worden. Zodra de cijfer aangepast is, dan wordt er opnieuw gekeken welke kleur de veld heeft (rood, groen of donker groen) 
+    ●	Naast de vakken heb je nog een tabel waarmee je de gemiddelde cijfer berekend van de vakken per student. De tabel houdt bij wat de gemiddelde cijfer is van de talen (nederlands en engels) en de gemiddelde cijfer van de bètavakken (wiskunde en natuurkunde). 
+    ●	Als de gemiddelde van de talen en de gemiddelde van de bètavakken gemiddeld boven de 6.5 ligt, dan gaat de student over naar volgende klas. 
+    
+    Zie hieronder de resultaat wat het moet worden: 
+
+  </pre>
+  <div class="browser">
+      <h1>Wiskunde</h1>
+      <table id="math">
+        <tr>
+          <th>Naam</th>
+          <th>Cijfer</th>
+        </tr>
+      </table>
+      <h1>Natuurkunde</h1>
+      <table id="physics">
+        <tr>
+          <th>Naam</th>
+          <th>Cijfer</th>
+        </tr>
+      </table>
+      <h1>Nederlands</h1>
+      <table id="dutch">
+        <tr>
+          <th>Naam</th>
+          <th>Cijfer</th>
+        </tr>
+      </table>
+      <h1>Engels</h1>
+      <table id="english">
+        <tr>
+          <th>Naam</th>
+          <th>Cijfer</th>
+        </tr>
+      </table>
+      <h1>Resultaat gemiddeld</h1>
+      <table id="average">
+        <tr>
+          <th>Naam</th>
+          <th>Talen</th>
+          <th>Beta vakken</th>
+          <th>Volgende klas? > 6.5</th>
+        </tr>
+      </table>
+      <button onclick="studentGrades()">Cijfers ophalen</button>
+  </div>
+
+  Object.entries
+  for..loop
+  nested objects
+  ternary statement
+
+  Single point of definition
+
+
+  <script src="./functions.js"></script>
+</body>
+</html>

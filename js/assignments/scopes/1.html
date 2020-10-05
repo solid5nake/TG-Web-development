@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Scopes</title>
+</head>
+
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="./1.html" class="active">Scopes</a>
+      <a href="../arrays/1.html">Arrays</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Scopes</h1>
+  <h2>Opdrachten 1 t/m 4</h2>
+  <hr>
+  <h2>Wat is een scope?</h2>
+  <p class="ans">
+    Scopes geeft de context aan waar de variables gedeclareerd worden. Dit geeft de toegankelijkheid van de variables
+    aan. Afhankelijk van de scope kan je dus toegang krijgen tot de waarde van de variable.
+  </p>
+  <h3>Leerdoelen</h3>
+  <ul class="big-font">
+    <li>Global scope</li>
+    <li>Block scope</li>
+  </ul>
+  <hr>
+  <pre class="qn">
+    Opdracht 1: 
+        
+    Wat wordt er in de console gelogt? Wat voor scoping heb je hier te maken? 
+  </pre>
+  <pre class="note">Kijkend naar de volgende code:</pre>
+  <pre class="code js">
+    function printCar() { 
+
+      const carBrand = "Volvo"; 
+
+    } 
+    console.log(carBrand); 
+  </pre>
+  <pre class="ans">
+    Er treed een foutmelding op, <strong>Uncaught ReferenceError: carBrand is not defined</strong>.
+    Dit is een voorbeeld van een <strong>block scope</strong>.
+  </pre>
+  <hr>
+  <pre class="qn">
+    Opdracht 2:
+
+    Kijkend naar de volgende code: 
+  </pre>
+  <pre class="code js">
+    let carName; 
+
+    function printCar() { 
+
+        carBrand = "Volvo"; 
+
+    } 
+
+    console.log(carBrand); 
+  </pre>
+  <pre class="qn">
+    Wat wordt er in de console gelogt?
+  </pre>
+  <pre class="ans">
+    Er treed weer dezelfde error op zoals bij de voorgaande opdracht, er is nog steeds sprake van een voorbeeld <i>block scope</i>.
+  </pre>
+  <hr>
+  <pre class="qn">
+    Opdracht 3: 
+
+    Kijkend naar de volgende code:
+
+       function printCar() { 
+
+           carBrand = "Volvo"; 
+
+       } 
+ 
+       printCar(); 
+
+       console.log(carBrand); 
+
+ 
+    Wat wordt er in de console gelogt?  
+
+  </pre>
+  <pre class="ans"><strong>Volvo</strong> wordt uitgeprint en <i>undefined</i></pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 4: 
+
+    Kijkend naar de volgende code: 
+  </pre>
+  <pre class="code js">
+    function printCar() { 
+
+      carBrand = "Volvo"; 
+
+
+      return function(type) { 
+
+          console.log(carBrand + " " + type); 
+
+      } 
+    } 
+
+    const car = printCar(); 
+  </pre>
+  <p class="note"><strong>car("v40");</strong> wordt ingevoerd in de console.</p>
+  <pre class="ans">
+    <strong>Volvo v40</strong> wordt uitgeprint, er wordt een argument meegegeven <i>"v40"</i> aan de printCar() van buiten af.
+  </pre>
+  <hr>
+  <h2>Closures</h2>
+  <pre class="ans">
+    Een <strong>closure</strong> is de combinatie van een <i>function</i> die is gebundeld (<i>enclosed</i> ) met verwijzingen naar de 
+    <i>surrounding state</i> (<strong>the lexical environment</strong> ).
+    In andere woorden geeft een <i>closure</i> toegang tot een outer function vanuit een inner function.
+    In Javascript worden closures gemaakt elke keer dat een functie wordt gemaakt, tijdens het maken van een <i>function</i>.
+  </pre>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script>
+
+    function printCar() {
+      carBrand = "Volvo";
+      return function (type) {
+        console.log(carBrand + " " + type);
+      }
+    }
+
+    const car = printCar();
+  
+  </script>
+</body>
+
+</html>

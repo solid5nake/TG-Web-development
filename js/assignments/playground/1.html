@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Kim's challenge - Array</title>
+</head>
+
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="./1.html">Introduction I</a>
+      <a href="./2.html" class="active">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+      <a href="./playground/1.html">Playground</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Playground</h1>
+  <hr>
+  <h2>Kim Sing's Array challenge</h2>
+  <pre class="qn">
+    Voor de geïnteresseerden onder ons, de opgave van Kim gaat als volgt;
+    [1,5,9,7,6]  [8,4,2,10,11]
+    Maak een functie aan die deze twee arrays meekrijgt als attributen.
+    De output van deze function is één gesorteerde array.
+    Je mag geen enkele array functies gebruiken, bijv het gebruik van  de array method .sort () is verboden.
+    Enkel de array methode .length mag gebruikt worden.
+  </pre>
+
+  <pre class="ans">
+    Er is gebruik gemaakt van de insertion sort algorithm. De insertion sortering maakt gebruik van een subarray.
+    Met de algoritme wordt gecontroleerd of een getal naar links opgeschoven kan worden.
+    Als het niet verder naar link moet dan gaat het over naar de volgende getal.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    const numbers1 = [1, 5, 9, 7, 6];
+    const numbers2 = [8, 4, 2, 10, 11];
+
+    const combineArrays = (arr1, arr2) => {
+      let array = [];
+
+      for (let i = 0; i < arr1.length; i++) {
+        array[array.length] = arr1[i];
+      }
+      for (let i = 0; i < arr2.length; i++) {
+        array[array.length] = arr2[i];
+      }
+      for (let i = 1; i < array.length; i++) {
+        let current = array[i];
+        let j = i - 1;
+        while ((j > -1) && (current < array[j])) {
+          array[j + 1] = array[j];
+          j--;
+        }
+        array[j + 1] = current;
+      }
+      return array;
+    }
+  </pre>
+  <p class="note">Er zijn meerdere, sorterings algoritme's, zoals <i>bubble sort</i>, <i>gnome sort</i>, <i>merge sort</i> etcetera.</p>
+  <script>
+    const numbers1 = [1, 5, 9, 7, 6];
+    const numbers2 = [8, 4, 2, 10, 11];
+
+    const combineArrays = (arr1, arr2) => {
+      let array = [];
+
+      for (let i = 0; i < arr1.length; i++) {
+        array[array.length] = arr1[i];
+      }
+      for (let i = 0; i < arr2.length; i++) {
+        array[array.length] = arr2[i];
+      }
+      for (let i = 1; i < array.length; i++) {
+        let current = array[i];
+        let j = i - 1;
+        while ((j > -1) && (current < array[j])) {
+          array[j + 1] = array[j];
+          j--;
+        }
+        array[j + 1] = current;
+      }
+      return array;
+    }
+  </script>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+</body>
+
+</html>

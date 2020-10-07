@@ -12,14 +12,15 @@
   <nav>
     <div class="breadcrumbs" id="up">
       <a href="../index.html">Javascript</a>
-      <a href="./1.html">Introduction I</a>
-      <a href="./2.html" class="active">Introduction II</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
       <a href="../conditions/1.html">Conditions I</a>
       <a href="../conditions/2.html">Conditions II</a>
       <a href="../functions/1.html">Functions 1 - 7</a>
       <a href="../functions/8.html">Functions 8</a>
       <a href="../scopes/1.html">Scopes</a>
-      <a href="./playground/1.html">Playground</a>
+      <a href="../arrays/1.html">Arrays</a>
+      <a href="./1.html" class="active">Playground</a>
     </div>
   </nav>
   <h1 class="title">Javascript</h1>
@@ -67,16 +68,56 @@
     }
   </pre>
   <p class="note">Er zijn meerdere, sorterings algoritme's, zoals <i>bubble sort</i>, <i>gnome sort</i>, <i>merge sort</i> etcetera.</p>
+
+  <pre class="qn">
+    Maak de vorige opdracht opnieuw, maar dan met de <strong>bubble sort algoritme</strong>.
+  </pre>
+  <pre class="ans">
+    De bubble sort sorteerd van links naar rechts, telkens eindigt het grootste getal aan de rechterkant van de array (vandaar zijn benaming 'bubble')
+    Het is niet de meest efficiente algoritme, omdat het heel veel iteraties nodig heeft om te sorteren.
+    Voor kline data is het nog te gebruiken, echter bij grote data niet.
+  </pre>
+  <pre class="code js">
+    const numbers1 = [1, 5, 9, 7, 6];
+    const numbers2 = [8, 4, 2, 10, 11];
+
+    const swapNumber = (array) => {
+      for (let li = 0; li < array.length; li++) {
+        let ri = li + 1;
+        let swap = array[ri];
+        if (array[li] > array[ri]) {
+          array[ri] = array[li];
+          array[li] = swap;
+        }
+      }
+    }
+
+    const numbers = [10, 5, 9, 7, 6];
+    const bubbleSort = (arr1, arr2) => {
+      let array = [];
+      for (let i = 0; i < arr1.length; i++) {
+        array[array.length] = arr1[i];
+      }
+      for (let i = 0; i < arr2.length; i++) {
+        array[array.length] = arr2[i];
+      }
+      for (let r = 0; r < array.length; r++) {
+        swapNumber(array);
+      }
+      return array;
+    }
+  </pre>
+  <pre class="note">er is een for in een for loop gebruikt. De outer for loop geldt zolang i niet groter is dan array.length. De swapNumber verwisselt de getallen met elkaar.</pre>
   <script>
     const numbers1 = [1, 5, 9, 7, 6];
     const numbers2 = [8, 4, 2, 10, 11];
 
     const combineArrays = (arr1, arr2) => {
       let array = [];
-
       for (let i = 0; i < arr1.length; i++) {
         array[array.length] = arr1[i];
       }
+      console.log(array);
       for (let i = 0; i < arr2.length; i++) {
         array[array.length] = arr2[i];
       }
@@ -91,6 +132,33 @@
       }
       return array;
     }
+
+    const swapNumber = (array) => {
+      for (let li = 0; li < array.length; li++) {
+        let ri = li + 1;
+        let swap = array[ri];
+        if (array[li] > array[ri]) {
+          array[ri] = array[li];
+          array[li] = swap;
+        }
+      }
+    }
+
+    const numbers = [10, 5, 9, 7, 6];
+    const bubbleSort = (arr1, arr2) => {
+      let array = [];
+      for (let i = 0; i < arr1.length; i++) {
+        array[array.length] = arr1[i];
+      }
+      for (let i = 0; i < arr2.length; i++) {
+        array[array.length] = arr2[i];
+      }
+      for (let r = 0; r < array.length; r++) {
+        swapNumber(array);
+      }
+      return array;
+    }
+
   </script>
   <footer>
     <a href="#up"></a>

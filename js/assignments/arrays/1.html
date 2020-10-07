@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Scopes</title>
+</head>
+
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+      <a href="./1.html" class="active">Arrays</a>
+      <a href="../playground/1.html">Playground</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Arrays</h1>
+  <h2>Opdrachten 1 t/m 9</h2>
+  <hr>
+  <pre class="ans">
+    Voorheen hebben jullie gehad hoe Strings, Booleans, numbers etc werken en hoe je een waarde toekent aan de variable met een bepaalde data type. Arrays is ook een data type. Arrays is een collectie met elementen. Het houdt een lijst met waardes bij.
+    De waardes van de array kunnen van verschillende data types zijn. Hieronder zie je stapsgewijs hoe je een array kan aanmaken, hoe je de array kan vullen en hoe je een value kan benaderen. Om de waarde uit de array te lezen gebruiken we index. De index geeft de positie van de array aan. De telling van een array begint bij 0.
+    Anders dan wat wij gewend zijn om de telling bij 1 te beginnen. Neem je tijd om te bestuderen hoe arrays werkt. 
+  </pre>
+
+  <pre class="syntax">
+    &#60;script&#62; 
+
+ 
+      // 1. Aan maken van een array. met [] geef je aan dat je een lege lijst wilt maken. 
+      let products = []; 
+
+
+      // 2. Toevoegen van producten in de array 
+
+      products = ["Schoenen", "Sjaal", "Handschoenen", "Muts"]; 
+
+      // 3. Een waarde benaderen in de array. 
+
+      console.log(products[0]); 
+
+
+    &#60;/script&#62; 
+
+  </pre>
+  <p class="note">We hebben nu een array gemaakt met String als values. Je zou ook andere data types in kunnen opslaan..
+  </p>
+  <pre class="code js">
+    &#60;script&#62; 
+
+ 
+      // 1. Aan maken van een array. met [] geef je aan dat je een lege lijst wilt maken. 
+      let randomNumbers = []; 
+
+
+      // 2. Toevoegen van producten in de array 
+
+      randomNumbers = [1, 4, 5, 8, 9]; 
+
+
+      // 3. Een waarde benaderen in de array. 
+
+      console.log(randomNumbers[4]); 
+
+
+  &#60;/script&#62; 
+
+  </pre>
+  <h3>Leerdoelen</h3>
+  <ul>
+    <td>Aanmaken van arrays</td>
+    <td>Arrays functies gebruiken</td>
+    <td>De waardes van een array uitlezen</td>
+    <td>De indexes</td>
+  </ul>
+  <p class="note">“Opdracht 1 t/m 9 horen bij elkaar. Maak deze opdrachten ook in 1 js bestand.” </p>
+  <hr>
+  <pre class="qn">
+    Opdracht 1:
+
+    Maak een array met 10 getallen die willekeurig in een array staan. Print de array uit in jouw console. 
+  </pre>
+  <pre class="ans">de volgende array is aangemaakt</pre>
+  <pre class="code js">
+    &#60;script&#62;
+      const array = [ 9, 7, 5, 3, 6, 1, 2, 8, 4, 10]
+
+      console.log(array);
+    &#60;/script&#62;
+  </pre>
+  <p class="note">print uit als <i>(10) [9, 7, 5, 3, 6, 1, 2, 8, 4, 10]</i></p>
+  <hr>
+  <pre class="qn">
+    Opdracht 2: 
+
+    Maak een array met 5 verschillende fruitsoorten. Print de array uit in jouw console. 
+  </pre>
+  <pre class="ans">Array genaamd <i>fruits</i> met vijf verschillende fruitsoorten.</pre>
+  <pre class="code js">
+    const fruits = ["apple", "pear", "orange", "banana", "mango"];
+
+    console.log(fruits);
+  </pre>
+  <pre class="note">print uit als <i>(5) ["appel", "peer", "aarbei", "banaan", "mango"]</i></pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 3: 
+    
+    Op welke index staat “Appel”. Gebruik de index waarde om “Appel” in jouw console uit te printen. 
+  </pre>
+  <pre class="code js">
+    const fruits = ["appel", "peer", "aarbei", "banaan", "mango"];
+    console.log(fruits[0]);
+  </pre>
+  <pre
+    class="ans">Om de string <i>"appel"</i> uit te printen in de console is heb je de juiste index nodig binnen de array</pre>
+  <p class="note">console.log(fruits[0]); print uit als <i>appel</i> in de console</p>
+  <hr>
+  <pre class="qn">
+    Opdracht 4: 
+
+    Op welke index staat “Aardbei”. Gebruik de index waarde om “Aardbei” in jouw console uit te printen. 
+  </pre>
+  <pre class="code js">
+    const fruits = ["appel", "peer", "aarbei", "banaan", "mango"];
+    console.log(fruits[2]);
+  </pre>
+  <p class="note"><i>console.log(fruits[2])</i> print uit als <i>aarbei</i> in de console</p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 5: 
+    
+    We gaan het iets complexer maken met het bepalen van de fruit. Er zijn nu 2 arrays gedefinieerd, namelijk een array met getallen en een array met fruitsoorten.
+    De eerste array bepaalt welke fruitsoort er geprint moet worden. Gebruik de Math.random() methode om te bepalen 
+    welke waarde uit de eerste array wordt gehaald. Vervolgens kun je de waarde gebruiken als index en de fruitsoort printen in jouw console. 
+    Helaas, de getallen 5 t/m 10 uit de eerste array zullen een undefined teruggeven als je dat als index bij de fruit array zal gebruiken.
+    Hiervoor kun je de modulo (%) gebruiken. Zoek uit hoe modulo werkt en pas dat toe aan de waarde van de eerste array.
+    Als resultaat zal er altijd een fruitsoort uitgeprint worden.
+  </pre>
+  <pre class="ans"></pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
+    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+    
+    let randomNumber = (Math.round(Math.random() * array.length)) + 1;
+    fruitsIndex = array.length % randomNumber;
+
+    console.log(fruits[fruitsIndex]);
+  </pre>
+  <pre class="ans">
+    <strong>Math.random()</strong> creeert een <i>float</i>, dit wordt afgerond naar een heel getal met <strong>Math.round</strong> vervolgens vermenigvuldigd met <strong>array.length</strong> de lengte van de array.
+    Omdat de de twee arrays (<i>array</i> & <i>fruits</i>) niet even groot zijn, zal bij de <i>fruits</i> array index groter dan 4 telkens een "undefined" waarde teruggeven.
+    Om dit te voorkomen gebruiken we de modulo ( <strong>%</strong> ), ook wel de <strong>remainder</strong> operator genoemd. 
+    Modulo geeft de <i>remainder</i> uitkomst terug van het delen van de linker en de rechter operand.
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 6: 
+
+    Je hebt nu geleerd hoe je arrays kunt aanmaken en de waarde kunt benaderen.
+    Arrays hebben ook functies die je kunt gebruiken. Zoek uit wat push(), pop(), shift(), slice(), splice(), sort().
+    Maak gebruik van de fruits array en maak voor elke functie een voorbeeld en geef in commentaar wat het doet.
+  </pre>
+  <hr>
+  <pre class="ans">Dit zijn een enkel aantal <i>array functions</i>, elke link verwijst naar een array function.</pre>
+  <h2>Array functions</h2>
+  <table class="index">
+    <tr>
+      <td><a href="#push">push()</a></td>
+      <td><a href="#pop">pop()</a></td>
+      <td><a href="#shift">shift()</a></td>
+    </tr>
+    <tr>
+      <td><a href="#slice">slice()</a></td>
+      <td><a href="#splice">splice()</a></td>
+      <td><a href="#sort">sort()</a></td>
+    </tr>
+  </table>
+  <p class="note">Er zijn meerdere array functions, zoals <strong>Array.prototype.map()</strong> ,
+    -<strong>.join</strong> and so on</p>
+  <hr>
+  <h2 id="sort">push()</h2>
+  <pre class="ans">
+    <strong>push()</strong> voegt één of meerder elementen toe aan het einde van een array en <i>returns</i> de nieuwe lengte van de array(<i>number</i> datatype ).
+  </pre>
+  <pre class="syntax">
+    arr.push([element1[, ...[, elementN]]])
+  </pre>
+  <h2>Code</h2>
+  <pre class="code js">
+    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+
+    fruits.push("banaan");
+  </pre>
+  <p class="note"><strong>fruits.push("banaan")</strong> uitvoeren in de console geeft het getal <strong>6</strong>
+    terug, de orginele lengte was 5 en na het pushen van <i>"banaan"</i> is de lengte 6.</p>
+  <hr>
+  <h2 id="pop">pop()</h2>
+  <pre class="ans">
+    <strong>pop()</strong> method verwijderd de <strong>laatste</strong> element van een array en retourneerd het verwijderde element.
+    Deze methode veranderd de lengte van de array.
+  </pre>
+  <pre class="syntax">
+    arrName.pop()
+  </pre>
+  <h2>Code</h2>
+  <pre class="code js">
+    // "banaan" wordt toegevoegd aan het einde van de string, en '6' wordt geretourneerd.
+    console.log(fruits.push("banaan"));
+
+    // "banaan" wordt weer verwijderd van de fruits array.
+    console.log(fruits.pop());
+  </pre>
+  <p class="note"><strong>"banaan"</strong> die eerder was toegevoegd wordt verwijderd van de array en <i>lengte</i>
+    wordt 1 getal lager</p>
+  <hr>
+
+  <h2 id="shift">shift()</h2>
+  <pre class="ans">
+    <strong>shift()</strong> method verwijderd de <strong>eerste</strong> element van een array en retourneerd het verwijderde element
+  </pre>
+  <pre class="syntax">
+    arr.shift()
+  </pre>
+  <h2>Code</h2>
+  <pre class="code js">
+    // "appel" wordt verwijderd van de fruits array en geretourneerd.
+    console.log(fruits.shift());
+  </pre>
+  <p class="note"><strong>"appel"</strong> wordt geretourneerd in de console</p>
+  <hr>
+  <h2 id="slice">slice()</h2>
+  <pre class="ans">
+    <strong>slice()</strong> method geeft een oppervlakkige kopie van een deel van een array terug naar een nieuw array-object dat van begin tot eind is geselecteerd (einde niet inbegrepen), waarbij begin en einde de index van items in die array vertegenwoordigen. De originele array wordt niet gewijzigd.
+  </pre>
+  <pre class="syntax">arr.slice([start[, end]])</pre>
+  <h3>parameters</h3>
+  <h4>start (optioneel)</h4>
+  <pre class="ans">
+    Zero-based index om de extractie te starten.
+    Er kan een negatieve index worden gebruikt, die een afwijking aangeeft vanaf het einde van de reeks. slice (-2)extraheert de laatste twee elementen in de reeks.
+    Als start niet is gedefinieerd, begint slice vanaf de index 0.
+    Als start groter is dan het indexbereik van de reeks, wordt een lege array geretourneerd.
+  </pre>
+  <h4>end (optioneel)</h4>
+  <pre class="ans">
+    Zero-based index waarvoor de extractie moet worden beëindigd. slice() extraheert tot en met einde, het einde wordt niet geincludeerd. Plak (1,4) extraheert bijvoorbeeld het tweede element tot en met het vierde element (elementen met de index 1, 2 en 3).
+    Er kan een negatieve index worden gebruikt, die een afwijking aangeeft vanaf het einde van de reeks. slice (2, -1) extraheert het derde element via het op een na laatste element in de reeks.
+    Als einde wordt weggelaten, plak extracten door het einde van de reeks (arr.lengte).
+    Als het einde groter is dan de lengte van de reeks, snijdt u extracten door tot het einde van de reeks (arr.lengte).
+  </pre>
+  <hr>
+  
+  <h2 id="splice">splice()</h2>
+  <pre class="ans">
+    <strong>slice()</strong> verandert de inhoud van een array door bestaande elementen te verwijderen of te vervangen en / of nieuwe elementen toe te voegen <i>in place</i>
+  </pre>
+  <pre class="syntax">let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]])</pre>
+  <pre class="code js">
+    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+    console.log(fruits.splice(0, 0, 'kiwi'));
+    console.log(fruits);
+    console.log(fruits.splice(0, 3, 'rambutan'));
+    console.log(fruits);
+
+    (5) ["kiwi", "peer", "aarbei", "mandarijn", "mango"]
+    (3) ["kiwi", "peer", "aarbei"]
+    (3) ["rambutan", "mandarijn", "mango"]
+  </pre>
+  <p class="note">de start index geeft aan waar de vervsangende element komt, het 2e getal geeft aan het aantal elementen dat verwijderd moet worden van start.
+  </p>
+  <hr>
+
+  <h2 id="sort">sort()</h2>
+  <pre class="ans">
+    <strong>sort()</strong> method sorteerd de elementen van een array <i>in place</i> en retourneerd de gesorteerde array.
+    De standaard sorteervolgorde is oplopend, gebouwd op het omzetten van de elementen in strings, en vervolgens hun sequenties van UTF-16 code-eenhedenwaarden vergelijken.
+  </pre>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script>
+    const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
+    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+
+    let random = Math.round(Math.random() * (array.length - 1));
+    let index = array[random] - 1;
+    index = (index <= 4) ? index : (9 % index);
+    // console.log(array.length);
+    // console.log(fruitsIndex);
+    // console.log(fruits);
+    // console.log(fruits[0]);
+    // console.log(fruits[2]);
+
+    // "banaan" wordt toegevoegd aan het einde van de string, en '6' wordt geretourneerd.
+    // console.log(fruits.push("banaan"));
+
+    // "banaan" wordt weer verwijderd van de fruits array.
+    // console.log(fruits.pop());
+
+    // "appel" wordt verwijderd van de fruits array en geretourneerd.
+    console.log(fruits.shift());
+
+    // "[peer", "aardbei"] een oppervlakkige deel wordt gekopieerd en geretourneerd in een nieuwe array van de fruits array. 
+    console.log(fruits.slice(0, 2));
+
+    console.log(fruits.splice(0, 0, 'kiwi'));
+    console.log(fruits);
+    console.log(fruits.splice(0, 3, 'rambutan'));
+    console.log(fruits);
+  </script>
+</body>
+
+</html>

@@ -32,7 +32,6 @@
     De waardes van de array kunnen van verschillende data types zijn. Hieronder zie je stapsgewijs hoe je een array kan aanmaken, hoe je de array kan vullen en hoe je een value kan benaderen. Om de waarde uit de array te lezen gebruiken we index. De index geeft de positie van de array aan. De telling van een array begint bij 0.
     Anders dan wat wij gewend zijn om de telling bij 1 te beginnen. Neem je tijd om te bestuderen hoe arrays werkt. 
   </pre>
-
   <pre class="syntax">
     &#60;script&#62; 
 
@@ -113,7 +112,6 @@
   </pre>
   <pre class="note">print uit als <i>(5) ["appel", "peer", "aarbei", "banaan", "mango"]</i></pre>
   <hr>
-
   <pre class="qn">
     Opdracht 3: 
     
@@ -138,7 +136,6 @@
   </pre>
   <p class="note"><i>console.log(fruits[2])</i> print uit als <i>aarbei</i> in de console</p>
   <hr>
-
   <pre class="qn">
     Opdracht 5: 
     
@@ -167,7 +164,6 @@
     Modulo geeft de <i>remainder</i> uitkomst terug van het delen van de linker en de rechter operand.
   </pre>
   <hr>
-
   <pre class="qn">
     Opdracht 6: 
 
@@ -228,7 +224,6 @@
   <p class="note"><strong>"banaan"</strong> die eerder was toegevoegd wordt verwijderd van de array en <i>lengte</i>
     wordt 1 getal lager</p>
   <hr>
-
   <h2 id="shift">shift()</h2>
   <pre class="ans">
     <strong>shift()</strong> method verwijderd de <strong>eerste</strong> element van een array en retourneerd het verwijderde element
@@ -264,7 +259,6 @@
     Als het einde groter is dan de lengte van de reeks, snijdt u extracten door tot het einde van de reeks (arr.lengte).
   </pre>
   <hr>
-  
   <h2 id="splice">splice()</h2>
   <pre class="ans">
     <strong>slice()</strong> verandert de inhoud van een array door bestaande elementen te verwijderen of te vervangen en / of nieuwe elementen toe te voegen <i>in place</i>
@@ -281,47 +275,27 @@
     (3) ["kiwi", "peer", "aarbei"]
     (3) ["rambutan", "mandarijn", "mango"]
   </pre>
-  <p class="note">de start index geeft aan waar de vervsangende element komt, het 2e getal geeft aan het aantal elementen dat verwijderd moet worden van start.
+  <p class="note">de start index geeft aan waar de vervangende element komt, het 2e getal geeft aan het aantal elementen dat verwijderd moet worden van start.
   </p>
   <hr>
-
   <h2 id="sort">sort()</h2>
   <pre class="ans">
     <strong>sort()</strong> method sorteerd de elementen van een array <i>in place</i> en retourneerd de gesorteerde array.
-    De standaard sorteervolgorde is oplopend, gebouwd op het omzetten van de elementen in strings, en vervolgens hun sequenties van UTF-16 code-eenhedenwaarden vergelijken.
+    De standaard sorteervolgorde is oplopend, gebaseerd op het omzetten van de elementen in strings en het vergelijken van hun UTF-16 code unit values.
   </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+
+    console.log(fruits.sort());
+    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+    5) ["aarbei", "appel", "mandarijn", "mango", "peer"]
+  </pre>
+  <p class="note">de array wordt op alfabetische volgorde gesorteerd, echter kan sort() het ook numeriek sorteren.</p>
   <footer>
     <a href="#up"></a>
   </footer>
-  <script>
-    const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
-    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
-
-    let random = Math.round(Math.random() * (array.length - 1));
-    let index = array[random] - 1;
-    index = (index <= 4) ? index : (9 % index);
-    // console.log(array.length);
-    // console.log(fruitsIndex);
-    // console.log(fruits);
-    // console.log(fruits[0]);
-    // console.log(fruits[2]);
-
-    // "banaan" wordt toegevoegd aan het einde van de string, en '6' wordt geretourneerd.
-    // console.log(fruits.push("banaan"));
-
-    // "banaan" wordt weer verwijderd van de fruits array.
-    // console.log(fruits.pop());
-
-    // "appel" wordt verwijderd van de fruits array en geretourneerd.
-    console.log(fruits.shift());
-
-    // "[peer", "aardbei"] een oppervlakkige deel wordt gekopieerd en geretourneerd in een nieuwe array van de fruits array. 
-    console.log(fruits.slice(0, 2));
-
-    console.log(fruits.splice(0, 0, 'kiwi'));
-    console.log(fruits);
-    console.log(fruits.splice(0, 3, 'rambutan'));
-    console.log(fruits);
+  <script src="./functions.js">
+    
   </script>
 </body>
 

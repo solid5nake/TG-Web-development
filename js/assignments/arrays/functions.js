@@ -1,5 +1,5 @@
 const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
-    const fruits = ["appel", "peer", "aarbei", "mandarijn", "mango"];
+    const fruits = ["appel", "peer", "aardbei", "mandarijn", "mango"];
 
     let random = Math.round(Math.random() * (array.length - 1));
     let index = array[random] - 1;
@@ -28,4 +28,19 @@ const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
     // console.log(fruits);
 
     // de array wordt op alfabetische volgorde gesorteerd, echter kan sort het ook numeriek sorteren.
-    console.log(fruits.sort());
+    // console.log(fruits.sort());
+
+    // het retourneerd het getal 5 dit keer, omdat de array vijf elementen bevat. als de andere console.logs niet zijn gecommenteerd komt er een ander getal uit.
+    // console.log(fruits.length);
+
+    // de parameters houden het volgende in (index, aantal dat verwijderd dient te worden vanaf de aangegeven index, het element ter plaatsing ), "peer" wordt geretourneerd in de console
+    // console.log(fruits.splice(1, 1, "sinaasappel"));
+
+    // De onderstaande functie switched twee array items die naast elkaar zijn, de eerste item wordt gevonden aan de hand van zijn index en wordt bewaard in een variable, vervolgens wordt met de splice() dezelfde index
+    // herbruikt als start punt, vanaf die startpunt wordt er 1 item verwijderd, bij de volgende regel wordt met de splice() method de variable op index + 1 geplaatst.
+    function switchFruit(arr, i) {
+      const fruit = arr[i];
+      fruits.splice(i, 1);
+      fruits.splice((i + 1), 0, fruit);
+      return arr;
+    }

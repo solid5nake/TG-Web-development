@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Loops & iterators</title>
+</head>
+
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+      <a href="../arrays/1.html">Arrays</a>
+      <a href="./loops_iterators/1.html" class="active">Loops & iterators</a>
+      <a href="../playground/1.html">Playground</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Loops & iterators</h1>
+  <h2>Opdrachten 1 t/m 9</h2>
+  <hr>
+  <pre class="ans">
+    Loops worden gebruikt om op stapsgewijs door de array heen te lopen. Lees hier meer over loops: <a href="https://javascript.info/while-fo	r">while and for</a>
+  </pre>
+  <h2>Leerdoelen:</h2>
+  <ul>
+    <li>for loops</li>
+    <li>for in loops</li>
+    <li>for of loops</li>
+    <li>while loops</li>
+    <li>do while loops</li>
+  </ul>
+  <h3>Prerequisites</h3>
+  <pre class="ans">
+    Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand. 
+  </pre>
+  <pre class="code js">
+    &#60;/head &#62; 
+    &#60;body&#62; 
+      &#60;div id="answer&#62;&#60;/div&#62; 
+      &#60;script&#62; 
+          const sports = ["voetbal", "basketbal", "volleybal", "hockey", "honkbal", "zwemmen", "kortbal"] 
+      &#60;/script &#62; 
+    &#60;/body &#62; 
+    &#60;/html &#62; 
+  </pre>
+  <hr>
+  <pre class="qn">
+    Opdracht 1: 
+
+    Maak gebruik van een loop en itereer de sports array heen. Print het 1 voor 1 uit in jouw console. 
+  </pre>
+  <pre class="ans">
+    Er wordt geitereerd met gebruik van een for loop.
+  </pre>
+  <pre class="code js">
+    const sports = ["voetbal", "basketbal", "volleybal", "hockey", "honkbal", "zwemmen", "korfbal"] 
+
+    const printSport  = (arr) => {
+      for (let i = 0; i &#60; arr.length; i++) {
+        console.log(i);
+        console.log(arr[i]);
+      }
+    }
+
+    console.log(printSport(sports));
+    0
+    voetbal
+    1
+    basketbal
+    2
+    volleybal
+    3
+    hockey
+    4
+    honkbal
+    5
+    zwemmen
+    6
+    korfbal
+  </pre>
+  <h3>for loop</h3>
+  <pre class="syntax">
+    for (begin; condition; step) {
+      // ... loop body ...
+    }
+  </pre>
+  <pre class="note">In het code van het antwoord zijn de <i>arguments</i> van de <i>for loop</i> <strong>begin</strong> <i>i = 0</i> , <strong>condition</strong> <i>i &#60; arr.length</i>, <strong>body</strong> <i>console.log(arr[i])</i>, <strong>step</strong> <i>i++</i> </pre> 
+  <hr>
+
+  <pre class="qn">
+    Opdracht 2: 
+
+    Maak een for-loop die alleen even getallen van 0 t/m 20 in je console uitprint. 
+  </pre>
+  <pre class="ans">if statement houdt in dat de body alleen wordt uitgevoerd wanneer bij het delen van i door 2 de restwaarde 0 is.</pre>
+  <h3>code</h3>
+  <pre class="code js">
+    const printEvenNumber = (limit) => {
+      for (let i = 0; i &#60; (limit + 1); i++) {
+        if (i % 2 === 0) {
+          console.log(i);
+        }
+      }
+    }
+  </pre>
+  <p class="note">De <i>let</i><strong>limit</strong> variable is het getal voor het limiet dat kan worden ingesteld.</p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 3:
+
+    Maak gebruik van een loop en itereer door de sports array heen. Itereer de loop met even getallen en print de waarde in jouw console uit. 
+  </pre>
+  <pre class="ans">
+    Onderstaande code print alleen de items uit de array met een index nummer een <i>even number</i> is.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function printSport3(arr) {
+    for (let i = 0; i &#60; arr.length; i++) {
+      if (i % 2 === 0) {
+        console.log(arr[i]);
+      }
+    }
+  }
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 4: 
+
+    Maak opdracht 1, maar maak nu gebruik van een while loop. 
+  </pre>
+  <pre class="ans">
+    Onderstaande code is geschreven met de <strong>while</strong> <i>loop</i>, zolang de gestelde condition true is zal het blijven itereren totdat het false is.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function printSport4(arr) {
+      let i = 0;
+      while (i &#60; arr.length) {
+        console.log(arr[i]);
+        i++;
+      }
+    }
+  </pre>
+  <p class="note">de <strong>condition</strong> is false wanneer <strong>i</strong> groter is dan de <strong>lengte van de array</strong>.</p>
+  <h3>while loop</h3>
+  <pre class="syntax">
+    while (condition) {
+      // code
+      // so-called "loop body"
+    }
+  </pre>
+  <p class="note"><strong>while</strong> oftewel zolang de <i>condition</i> <i>truthy</i> is, wordt de <i>code</i> in de loop body uitgevoerd</p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 5: 
+
+    Maak opdracht 1, maar maak nu gebruik van een for...in loop. 
+  </pre>
+  <pre class="ans">
+    Het itereert over <i>enumerable</i>, <i>non symbolic</i> properties van arrays of objects. Omdat het itereert over een array in plaats van een object. Is "let sport" een getal, de index van de arrayitem de <i>key</i>.
+    Vandaar dat in de console.log sport als index wordt meegegeven.
+    Zie meer informatie over de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in">for...in loop</a>
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function printSport5(sports) {
+      for (let sport in sports) {
+        console.log( sports[sport]);
+      }
+    }
+  </pre>
+  <p class="note">Het wordt eigenlijk sterk afgeraden om een <strong>for...in</strong> loop te gebruiken bij arrays.</p>
+  <h3>for...in loop</h3>
+  <pre class="syntax">
+    for (variable in object)
+      statement
+  </pre>
+  <pre class="ans">
+    itereert over alle <i>enumerable properties</i> van een object die zijn versleuteld door tekenreeksen (negeert degene die zijn versleuteld door symbolen), inclusief overgeërfde opsombare eigenschappen.
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 6: 
+    
+    Maak opdracht 1, maar maak nu gebruik van een for...of loop. 
+  </pre>
+  <pre class="ans">
+    <strong>for..of</strong> loop itereert over <i>iterable</i> object, in dit geval een array, het itereert op variable <i>sport</i> over iterable object <i>sports.</i>
+  </pre>
+  <h3>Iterable objects</h3>
+  <ul>
+    <li>String</li>
+    <li>Array</li>
+    <li>arguments</li>
+    <li>Nodelist</li>
+    <li>TypedArray</li>
+    <li>Map</li>
+    <li>Set</li>
+    <li>User-defined iterables</li>
+  </ul>
+  <h3>Code</h3>
+  <pre class="code js">
+    function printSport6(sports) {
+      for (const sport of sports) {
+        console.log(sport);
+      }
+    }
+  </pre>
+  <pre class="syntax">
+    for (variable of iterable) {
+      statement
+    }
+  </pre>
+  <h4>variable</h4>
+  <p class="ans">Bij elke iteratie wordt een waarde van een andere eigenschap toegewezen aan een variabele. variabele kan worden gedeclareerd met const, let of var.</p>
+  <h4>iterable</h4>
+  <p class="ans">Object waarvan de itereerbare eigenschappen worden herhaald.</p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 7: 
+
+    ●	Maak een while loop die 3x itereert 
+    ●	Binnen de while loop maak je een for-loop die 10x itereert 
+    ●	Bij de eerste while iteratie wil ik dat de getallen 1,2,3,4,5,6,7,8,9,10 in je console uitgeprint wordt 
+    ●	Bij de tweede while iteratie wil ik dat de getallen 2,4,6,8,10,12,14,16,18,20 in je console uitgeprint wordt 
+    ●	Bij de derde while iteratie wil ik dat de getallen 3,6,9,12,15,18,21,24,27,30 in je console uitgeprint wordt 
+  </pre>
+  <pre class="ans">
+    In de function <i>printNumbers()</i> itereert de while loop 3 keer (r === 0,r === 1, r === 2) , de <strong>if</strong> statements zijn geinitialiseerd om extra <i>conditions</i> mee te geven aan de <i>while</i> en  <i>for...loops</i>.
+    De <strong>for..loop</strong> iteraties printen per iteratie een getal uit, bij de 2e (r === 1) en 3e (r === 2) ronde zijn extra conditions mee gegeven, waarbij <i>%</i> de modulo oftewel de restwaarde van belang zijn. 
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    const printNumbers = () => {
+      let r = 0;
+      while (r != 3) {
+        if (r === 0) {
+          for (i = 1; i &#60; 11; i++) {
+            console.log(i);
+          }
+        }
+        if (r === 1) {
+          for (j = 0; j &#60; 21; j++) {
+            if (j % 2 == 0) {
+              console.log(j);
+            }
+          }
+        }
+        if (r === 2) {
+          for (k = 0; k &#60; 31; k++) {
+            if (k % 3 == 0) {
+              console.log(k);
+            } 
+          }
+        }
+        r++
+      }
+    }
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 8: 
+    
+    Maak een for loop die van 0 t/m 50 itereert. Een hele bekende oefening is de fibonacci reeks. Lees je in hoe fibonacci reeks werkt: <a href="https://www.fibonicci.com/nl/rij-van-fibonacci/.">rij van fibonacci</a>. 
+    Neem zelf eerst de tijd om dit uit te coderen, want op internet staat letterlijk het antwoord. Het gaat hier om het aanleren van bepaalde denkwijze om dit op te lossen. Maak hiervoor een stappenplan en werkt dit uit in code. 
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 9: 
+    
+    Stel je hebt het volgende array met random getallen: 
+    
+    ●	[2,7,5,10,4,9,3,1,8,6]
+
+    Bubble sort is een hele bekende sorterings algoritme. Hiermee kun je de array met random getallen sorteren van klein naar groot. Je mag bij deze oefening geen gebruik maken van de sort() functie. Lees je in hoe Bubble sort werkt: <a href="https://en.wikipedia.org/wiki/Bubble_sort ">wikipedia</a> en codeer de sorterings algoritme uit.  
+  </pre>
+
+  <pre class="ans">
+    <strong>bubble sort</strong> sorteert van links naar rechts, na iedere ronde eindigt het grootste getal aan de linker kant van de array (vandaar zijn benaming 'bubble')
+    Het is niet de meest efficiente algoritme, omdat het heel veel iteraties nodig heeft om te sorteren.
+    Voor kleine data is het nog te gebruiken, echter bij grote data niet. Het sorterings mechanisme is erg langzaam.
+  </pre>
+  <pre class="code js">
+    const numbers = [2,7,5,10,4,9,3,1,8,6];
+    
+    const swapNumber = (array) => {
+      for (let li = 0; li &#60; array.length; li++) {
+        let ri = li + 1;
+        let swap = array[ri];
+        if (array[li] > array[ri]) {
+          array[ri] = array[li];
+          array[li] = swap;
+        }
+      }
+    }
+    const bubbleSort = (inputArr) => {
+      let array = [];
+      for (let i = 0; i &#60; inputArr.length; i++) {
+        array[array.length] = inputArr[i];
+      }
+      for (let r = 0; r &#60; array.length; r++) {
+        swapNumber(array);
+      }
+      return array;
+    }
+  </pre>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script src="./functions.js">
+  </script>
+</body>
+
+</html>

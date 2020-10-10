@@ -153,7 +153,7 @@ pre.qn {
   color: #c949a3;
   background: #202020;
   font-weight: 100;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   position: relative;
 }
 
@@ -364,7 +364,7 @@ pre.wrong {
 
 .ans a {
   text-decoration: none;
-  color: #a93e89;
+  color: #2fb6c3;
   transition: 1s ease;
 }
 

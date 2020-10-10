@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Objects</title>
+</head>
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+      <a href="../arrays/1.html">Arrays</a>
+      <a href="../loops_iterators/1.html">Loops & iterators</a>
+      <a href="./1.html" class="active">Objects</a>
+      <a href="../playground/1.html">Playground</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Objects</h1>
+  <h2>Opdrachten 1 t/m 8</h2>
+  <hr>
+  <pre class="ans">
+    Objects zijn essentiële building blocks om data te groeperen. Bijvoorbeeld, je hebt te maken met klanten. 
+    Bij ieder klant houd je de naam, achternaam, leeftijd en hobby bij. Een manier van object aanmaken om de klantgegevens bij te houden is: 
+  </pre>
+  <pre class="code js">
+    const Customer = function(name, surname, age, hobby) { 
+      this.name = name; 
+      this.surname = surname; 
+      this.age = age; 
+      this.hobby = hobby; 
+    } 
+
+    const customer1 = new Customer("Kim Sing", "Cheng", "1337", "Gaming") ; 
+    const customer2 = new Customer("Floris", "Dam", "1337", "Schaken") ; 
+    const customer3 = new Customer("Tess", "Monis", "1337", "Winkelen"); 
+  </pre>
+  <pre class="ans">
+    Objecten in javascript kun je op meerdere manieren aanmaken, namelijk: 
+  </pre>
+  <ul>
+    <li>Object Constructor</li>
+    <li>Literal Constructor</li>
+    <li>Function Based</li>
+    <li>Prototype Based</li>
+    <li>Function and Prototype Based</li>
+    <li>Singleton Based</li>
+  </ul>
+
+<pre class="ans">
+  Lees je meer in op:
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object ">Object()</a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#:~:text=An%20object%20initializer%20is%20an,data%20types%20or%20other%20objects.">Object intialiser</a>
+
+  Voorbeelden van de verschillende manieren hoe je objecten creëert:
+  <a href="https://stackoverflow.com/questions/6843951/which-way-is-best-for-creating-an-object-in-javascript-is-var-necessary-befor#:~:text=There%20is%20no%20best%20way,is%20called%20the%20constructor%20function.">stackoverflow</a>
+
+  Er is helaas geen “beste” manier om objecten te maken. Ieder manier van object aanmaken heeft zijn pros en cons. Wij leggen de focus op Object constructor en Literal constructors. 
+ 
+  Prerequisite 
+  Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand. 
+
+ 
+
+</pre>
+<pre class="code html">
+  &#60;!DOCTYPE html&#62; 
+  &#60;html lang="en"&#62; 
+  &#60;head&#62; 
+    &#60;meta charset="UTF-8"&#62; 
+    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62; 
+    &#60;title&#62;Document&#60;/title&#62; 
+  &#60;/head&#62; 
+  &#60;body&#62; 
+    &#60;div id="clubs" class="clubs"&#62;&#60;/div&#62;
+    &#60;script&#62; 
+      &#47;&#47; start assignments 
+    &#60;/script&#62; 
+  &#60;/body&#62; 
+  &#60;/html&#62;
+</pre>
+<hr>
+
+<pre class="qn">
+  Opdracht 1: 
+
+  Maak een Object die club informatie bijhoudt:
+  
+    ●	Naam van de club 
+    ●	Type sport 
+    ●	Aantal leden 
+</pre>
+
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script>
+  </script>
+</body>
+</html>

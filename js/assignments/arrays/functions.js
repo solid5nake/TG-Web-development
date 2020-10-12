@@ -44,3 +44,4 @@ const array = [9, 7, 5, 3, 6, 1, 2, 8, 4, 10];
       fruits.splice((i + 1), 0, fruit);
       return arr;
     }
+    

@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../../dark.css">
   <title>Javascript - Objects</title>
+  <style>
+    ul#soccer {
+      border: none;
+    }
+    
+    ul#soccer::before {
+      position: absolute;
+      top: 0;
+      left: -4.2rem;
+      content: "";
+      background: url(./assets/soccer.svg) no-repeat;
+      background-size: cover;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+
+    button {
+      background: mediumspringgreen;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      box-sizing: border-box;
+      height: 3rem;
+      width: 5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: black;
+      transition: 1s ease;
+    }
+
+    button:hover {
+      background: #353434;
+      color: rgb(77, 202, 154);
+      transition: 1s ease;
+    }
+  </style>
 </head>
+
 <body class="pl-5">
   <nav>
     <div class="breadcrumbs" id="up">
@@ -55,54 +92,305 @@
     <li>Singleton Based</li>
   </ul>
 
-<pre class="ans">
-  Lees je meer in op:
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object ">Object()</a>
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#:~:text=An%20object%20initializer%20is%20an,data%20types%20or%20other%20objects.">Object intialiser</a>
-
-  Voorbeelden van de verschillende manieren hoe je objecten creëert:
-  <a href="https://stackoverflow.com/questions/6843951/which-way-is-best-for-creating-an-object-in-javascript-is-var-necessary-befor#:~:text=There%20is%20no%20best%20way,is%20called%20the%20constructor%20function.">stackoverflow</a>
-
+  <pre class="ans">
+  Lees je meer in op: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object ">Object()</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#:~:text=An%20object%20initializer%20is%20an,data%20types%20or%20other%20objects.">Object intialiser</a>
+  Voorbeelden van de verschillende manieren hoe je objecten creëert: <a href="https://stackoverflow.com/questions/6843951/which-way-is-best-for-creating-an-object-in-javascript-is-var-necessary-befor#:~:text=There%20is%20no%20best%20way,is%20called%20the%20constructor%20function.">stackoverflow</a>
   Er is helaas geen “beste” manier om objecten te maken. Ieder manier van object aanmaken heeft zijn pros en cons. Wij leggen de focus op Object constructor en Literal constructors. 
  
   Prerequisite 
-  Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand. 
-
- 
-
+  Maak een nieuwe html bestand aan in VSCode. Copy de volgende code in jouw html bestand.
 </pre>
-<pre class="code html">
-  &#60;!DOCTYPE html&#62; 
-  &#60;html lang="en"&#62; 
-  &#60;head&#62; 
-    &#60;meta charset="UTF-8"&#62; 
-    &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62; 
-    &#60;title&#62;Document&#60;/title&#62; 
-  &#60;/head&#62; 
-  &#60;body&#62; 
-    &#60;div id="clubs" class="clubs"&#62;&#60;/div&#62;
-    &#60;script&#62; 
-      &#47;&#47; start assignments 
-    &#60;/script&#62; 
-  &#60;/body&#62; 
-  &#60;/html&#62;
-</pre>
-<hr>
+  <pre class="code html">
+    &#60;!DOCTYPE html&#62; 
+    &#60;html lang="en"&#62; 
+    &#60;head&#62; 
+      &#60;meta charset="UTF-8"&#62; 
+      &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62; 
+      &#60;title&#62;Document&#60;/title&#62; 
+    &#60;/head&#62; 
+    &#60;body&#62; 
+      &#60;div id="clubs" class="clubs"&#62;&#60;/div&#62;
+      &#60;script&#62; 
+        &#47;&#47; start assignments 
+      &#60;/script&#62; 
+    &#60;/body&#62; 
+    &#60;/html&#62;
+  </pre>
+  <hr>
 
-<pre class="qn">
+  <pre class="qn">
   Opdracht 1: 
 
   Maak een Object die club informatie bijhoudt:
-  
+
     ●	Naam van de club 
     ●	Type sport 
     ●	Aantal leden 
-</pre>
+  </pre>
+  <pre class="ans">
+    Een voorbeeld van een <i>function constructor</i> <strong>function constructor</strong> Het constructorpatroon (een functie die is gekoppeld aan de nieuwe operator om deze aan te roepen) biedt de mogelijkheid om prototypische overerving te gebruiken, terwijl de andere manieren dat niet doen. Dus als je een prototypische overerving wilt, dan is een constructorfunctie een prima manier om te gaan.
+    De contructor creëert instances van het object.
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    function clubInformation(club, type, members) {
+      this.clubName = club;
+      this.typeSport = type;
+      this.countMembers = members;
+    }
+    
+    const myClub = new.clubInformation("dws", "voetbal", "95");
+  </pre>
+  <p class="note"><strong>myClub</strong> initialiseerd een nieuwe instance van het object <i>clubInformation</i>.</p>
+  <h3>Prototypical Inheritance</h3>
+  <pre class="ans">
+    Een <i>prototype</i> is een werkend objectinstantie. Objecten erven rechtstreeks van andere objecten.
+    Instanties kunnen worden samengesteld uit veel verschillende bronobjecten, waardoor selectieve overerving en een platte [[Prototype]] delegatiehiërarchie mogelijk zijn. Met andere woorden, klasse-taxonomieën zijn geen automatisch neveneffect van prototypische OO: een kritisch onderscheid.
+    Instanties worden doorgaans geïnstantieerd via <i>factory functions</i>, <i>litteral objects</i> of ʻObject.create () `.
+  </pre>
+  <p class="note"><strong>factory function</strong> is elke functie die geen klasse of constructor is die een (vermoedelijk nieuw) object retourneert. In JavaScript kan elke functie een object retourneren. Als dit gebeurt zonder het <strong>new</strong> <i>keyword</i>, is het een factory function.</p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 2:
+
+    Maak een Object van contactgegevens en voeg dat ook toe aan de club object:
+
+    ●	Contactgegevens
+      ○	Adres 
+      ○	Telefoonnr 
+      ○	Contactpersoon 
+  </pre>
+  <pre class="ans">Hieronder zie je dat een object binnenin ook een object kan hebben als waarde bij een bepaalde key</pre>
+  <pre class="code js">
+    function ClubInfo(club, type, members, contactInfo) {
+      this.clubName = club;
+      this.typeSport = type;
+      this.countMembers = members;
+      this.contactInfo = contactInfo;
+    }
+    
+    function ContactInfo(address, phone, contact) {
+      address = address;
+      phoneNumber = phone;
+      contact = contact;
+    }
+    
+    
+    const marco = new ContactInfo("Osdorpplein 5", "020-6991234", "Marco van Basten")
+    const myClub = new ClubInfo("dws", "voetbal", "95", "marco");
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 3:
+
+    Het is heel gebruikelijk dat dezelfde objecten in een lijst staan. Maak een lijst aan en voeg 4 Club objecten toe aan de lijst. Itereer over de lijst heen en print de verschillende clubnamen uit op jouw pagina. 
+  </pre>
+  <div class="browser">
+    <div class="clubs">
+      <ul id="soccer"></ul>
+      <button onclick="printClubs(clubs)">Click</button>
+    </div>
+  </div>
+  <pre class="ans"></pre>
+  <pre class="code js">
+    const clubs = [
+      {club: "Ajax"},
+      {club: "PSV"},
+      {club: "Feyenoord"},
+      {club: "Vitesse"}
+    ]
+
+    const printClubs = (clubList) => {
+
+      for (i = 0; i &#60; clubList.length; i++) {
+        let val = clubList[i];
+        console.log(val.club);
+        document.getElementById("soccer").innerHTML += `&#60;li&#62;${val.club}&#60;/li&#62;`;
+      }
+    } 
+  </pre>
+  <p class="note"><strong>addition assignment operator (+=)</strong> is nodig om bij iedere iteratie een <strong><li></strong> element toe te voegen voor elke club object </p>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 4:
+
+    Gegeven deze code: 
+  </pre>
+  <pre class="code js">
+    function Person(name, age) { 
+      this.name = name; 
+      this.age = age; 
+    } 
+
+    const persons = [ 
+      new Person("Jan", 24), 
+      new Person("Klaas", 15), 
+      new Person("Yanis", 42), 
+      new Person("Rupel", 55), 
+      new Person("Hendrik", 32), 
+      new Person("Mono", 28), 
+      new Person("West", 23)
+    ] 
+
+  </pre>
+  <pre class="qn">
+    Sorteer persons op leeftijd van klein naar groot.
+  </pre>
+  <pre class="ans">
+    <strong>sort()</strong>, een array method wordt hierbij toegepast, in deze voorbeeld wordt ook een <i>compare function</i> gebruikt. Om te sorteren wordt een sortering algortime gebruikt.
+    In deze voorbeeld wordt <strong>b</strong> afgetrokken van <strong>a</strong> en op hun <i>key</i> <strong>age</strong> <strong>a.age-b.age</strong>.
+    Door de criteria op deze manier in te vullen wordt de array <i>in place</i> oplopende gesorteerd.
+  </pre>
+  <pre class="code js">
+    function Person(name, age) { 
+      this.name = name; 
+      this.age = age; 
+    } 
+    
+    const persons = [ 
+      new Person("Jan", 24), 
+      new Person("Klaas", 15), 
+      new Person("Yanis", 42), 
+      new Person("Rupel", 55), 
+      new Person("Hendrik", 32), 
+      new Person("Mono", 28), 
+      new Person("West", 23)
+    ]
+    
+     persons.sort((a,b) =>  a.age-b.age);
+     console.log(persons);
+  </pre>
+  <pre class="syntax">arr.sort([compareFunction])</pre>
+  <pre class="note">Zie volgende <a href="https://reactgo.com/sort-arrayofobjects/">link</a> voor meer uitleg over <i>sort()</i> methods sorterings mechanisme</pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 5: 
+    
+    Maak nu een Person object door gebruik te maken van Object initializers. Wat zou eventueel de voor en nadelen t.o.v Object constructors? 
+  </pre>
+  <pre class="ans">
+    Bij een <i>Constructor</i> is een extra <i>function call</i> oftewel een functie aanroep en een paar extra eigenschappen die moeten worden ingesteld (zoals het prototype).
+    Ik denk dat object intializer sneller zal zijn dan het gebruik van constructor, omdat constructor een functieaanroep heeft en het ook zijn eigen instantie moet onderhouden. Als een kanttekening: gebruik constructor als je meerdere exemplaren van vergelijkbare objecten wilt maken, of ga voor objectinitialisatie als slechts één object vereist is. 
+
+    Het belangrijkste verschil hier is wat je ermee kunt doen. Met de constructorfunctie-notatie maakt u een object dat kan worden geïnstantieerd. Een <i>object initializer</i> is een door komma's gescheiden lijst van nul of meer <i>pairs</i> van <i>properties</i> en bijbehorende waarden van een object, tussen accolades ({})
+  </pre>
+  <h3>Code</h3>
+  <pre class="code js">
+    const person = {name: "Erika", age: 26};
+
+    console.log(person);
+
+    {name: "Erika", age: 26}
+  </pre>
+  <pre class="note">Een nieuwe <strong>Object</strong> wordt geinitialiseerd. Dit is de <strong>Object Literal</strong> notatie (<i>initializer</i> notation), objecten kunnen ook geinitialiseerd worden dmv <strong>new Object()</strong>, <strong>Object.create()</strong></pre>.
+  <h2>Object Initializer</h2>
+  <pre class="ans">
+    Een object initializer is een door komma's gescheiden lijst van nul of meerdere paren van eigenschapsnamen en geassocieerde waardes van een object, ingesloten tussen accolades <strong>{ }</strong>.
+  </pre>
+  <h3>Object literal (initializer)</h3>
+  <pre class="syntax">
+    let o = {}
+    let o = {a: 'foo', b: 42, c: {}}
+
+    let a = 'foo', b = 42, c = {}
+    let o = {a: a, b: b, c: c}
+
+    let o = {
+      property: function (parameters) {},
+      get property() {},
+      set property(value) {}
+    };
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 6:
+
+    De nieuwe manier van objecten creëren kan je ook gebruik maken van classes. Lees je in over classes:  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#:~:text=Classes%20are%20a%20template%20for,shared%20with%20ES5%20classalike%20semantics.">MDN classes</a>
+    Zet opdracht 4 om in classes i.p.v object constructors. 
+  </pre>
+  <pre class="ans">
+    Deze keer is de code van opdracht omgezet van een function constructor naar een <i>Class</i>.
+  </pre>
+  <pre class="code js">
+    class Person6 {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+    
+    const persons6 = [ 
+      new Person6 ("Jan", 24), 
+      new Person6 ("Klaas", 15), 
+      new Person6 ("Yanis", 42), 
+      new Person6 ("Rupel", 55), 
+      new Person6 ("Hendrik", 32), 
+      new Person6 ("Mono", 28), 
+      new Person6 ("West", 23)
+    ]
+  </pre>
+  <h3>Classes</h3>
+  <pre class="ans">
+    In het moderne JavaScript is er een geavanceerdere "klasse" -constructie, die geweldige nieuwe functies introduceert die handig zijn voor objectgeoriënteerd programmeren. 
+    Classes zijn <i>templates</i> voor het creëeren van objecten het is een speciale soort function.
+    
+    1 .Een function gecreëerd door <strong>class</strong> is gelabeld met een speciaal interne eigenschap <strong>[[FunctionKind]]:"classConstructor"</strong><div class="">
+    In tegenstelling tot een normale function wordt een class aangeroepen met <strong>new</strong>
+
+    2. Class methods zijn <i>non-enumerable</i>. Een class definitie sets <strong>enumarble</strong> flag tot <i>false</i> voor alle methods in de "prototype"<div class="">
+    
+    3. Classes gebruiken altijd <strong>use strict</strong>. Alle code in de class construct is automatisch in strict mode.
+  </pre>
+  <h4>hoisting</h4>
+  <pre class="ans">
+    Een belangrijke verschil tussen class declarations en function declarations is dat bij functions <i>hoisting</i> wel wordt ondersteund en niet bij classes.
+    Bij classes moet je eerst declareren en toegnag tot krijgen, want anders krijg je een <i>reference error</i>
+  </pre>
+  <pre class="code js">
+    const p = new Rectangle(); // ReferenceError
+
+    class Rectangle {}
+  </pre>
+  <h4>Class expression</h4>
+  <pre class="ans">
+    Een class expression is een andere manier om een class te definieren. Class expressions kunnen een naam of geen naam hebben.
+    De naam die aan een benoemde class expression wordt gegeven, is lokaal voor de body van de class.
+    (het kan echter worden opgehaald via de <i>property</i> <strong>name</strong> van de class (niet die van een <i>instance</i> )).
+  </pre>
+  <pre class="code js">
+    // unnamed
+    let Rectangle = class {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
+      }
+    };
+    console.log(Rectangle.name);
+    // output: "Rectangle"
+
+    // named
+    let Rectangle = class Rectangle2 {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
+      }
+    };
+    console.log(Rectangle.name);
+    // output: "Rectangle2"
+  </pre>
+  <p class="note">Klasse-uitdrukkingen zijn onderhevig aan dezelfde <i>hoisting</i> beperkingen als bij Class declarations.</p>
+
 
   <footer>
     <a href="#up"></a>
   </footer>
-  <script>
+  <script src="./functions.js">
   </script>
 </body>
+
 </html>

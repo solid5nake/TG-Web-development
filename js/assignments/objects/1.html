@@ -384,8 +384,156 @@
     // output: "Rectangle2"
   </pre>
   <p class="note">Klasse-uitdrukkingen zijn onderhevig aan dezelfde <i>hoisting</i> beperkingen als bij Class declarations.</p>
+  <hr>
 
+  <pre class="qn">
+    Opdracht 7:
 
+    Met al de voorgaande onderdelen ben je nu in staat om een simpele spel te maken, Bijvoorbeeld rock, paper scissor. Durf je het aan om dit te bouwen? 
+  </pre>
+  <hr>
+
+  <pre class="qn">
+    Opdracht 8: 
+    
+    JSON is een hele bekende concept binnen developers. Zoek naar een aantal artikelen over JSON. Belangrijk concept om te kennen. 
+  </pre>
+  <hr>
+  <h2>JSON</h2>
+  <pre class="ans">
+    <strong>JavaScript Object Notation</strong>, is een <i>text-based</i> data formaat en sluit aan op de JavaScript object syntax.
+     Ook al lijkt het op de javascript <i>object literal</i> syntax, kan het onafhankelijk gebruikt worden van JavaScript, veel programmeer omgevingen zijn voorzien van de mogelijkheid om JSON te lezen (<i>parse</i>) en JSON te genereren.
+
+     <strong>JSON</strong> bestaat als een string, wat bruikbaar is wanneer je data wilt uitzenden over een netwerk. Als je toegang wilt tot de gegevens (<i>data</i>) moet JSON worden geconverteerd naar een native JavaScript-object.
+     Dit is geen probleem, want JavaScript biedt global JSON object methods aan om tussen beiden te converteren.
+  </pre>
+  <h3>Leerdoel</h3>
+  <ul>
+    <li>
+      Leren werken met gegevens die zijn opgeslagen in JSON formaat.
+    </li>
+    <li>
+      Het aanmaken van eigen JSON-objecten.
+    </li>
+  </ul>
+  <p class="note"><strong>deserialization</strong>converteren van een string naar een native object, <strong>serialization</strong> het converteren van een native object naar een string, zodat het via een netwerk kan worden verzonden.</p>
+  <pre class="syntax">
+    {
+      "squadName": "Super hero squad",
+      "homeTown": "Metro City",
+      "formed": 2016,
+      "secretBase": "Super tower",
+      "active": true,
+      "members": [
+        {
+          "name": "Molecule Man",
+          "age": 29,
+          "secretIdentity": "Dan Jukes",
+          "powers": [
+            "Radiation resistance",
+            "Turning tiny",
+            "Radiation blast"
+          ]
+        },
+        {
+          "name": "Madame Uppercut",
+          "age": 39,
+          "secretIdentity": "Jane Wilson",
+          "powers": [
+            "Million tonne punch",
+            "Damage resistance",
+            "Superhuman reflexes"
+          ]
+        },
+        {
+          "name": "Eternal Flame",
+          "age": 1000000,
+          "secretIdentity": "Unknown",
+          "powers": [
+            "Immortality",
+            "Heat Immunity",
+            "Inferno",
+            "Teleportation",
+            "Interdimensional travel"
+          ]
+        }
+      ]
+    }
+  </pre>
+  <h3>Parsed JSON & access data</h3>
+  <pre class="ans">
+    Wanneer de bovenstaande JSON wordt ingeladen in een JS programma, <i>parsed</i> in een variable genaamd <strong class="blk">superheroes</strong>.
+    Kunnen we toegang krijgen tot de gegevens (<i>data</i>) erin met de <i>dot</i> / <i>bracket</i> notation.
+  </pre>
+  <pre class="syntax">
+    superHeroes.homeTown
+    superHeroes['active']
+  </pre>
+  <p class="note"><i>data</i> ophalen uit de JSON object dmv. <strong>dot (.)</strong> of <strong>bracket ([ ])</strong> <i>notation</i></p>
+
+  <h3>Chain</h3>
+  <pre class="ans">
+    Om toegang te krijgen tot gegevens verderop in de hiërarchie, hoeft men alleen maar de vereiste <i>property names</i> en <i>array indexes</i> aan elkaar te koppelen. Om bijvoorbeeld toegang te krijgen tot de derde superkracht van de tweede held in de ledenlijst, doe je dit:
+  </pre>
+  <pre class="syntax">superHeroes['members'][1]['powers'][2]</pre>
+  <pre class="ans">
+    1. Eerst hebben we de variabele naam - <strong class="blk">superheroes</strong>.
+    2. Daarbinnen willen we toegang krijgen tot <i>members</i> property, dus gebruiken we <strong>["members"]</strong>.
+    3. <strong class="blk">members</strong> bevat een array die wordt gevuld door objecten. We willen toegang krijgen tot het tweede object in de array, dus gebruiken we <strong>[1]</strong>.
+    4. Binnen dit object willen we toegang krijgen tot de eigenschap <strong class="blk">powers</strong>, dus gebruiken we <strong>["powers"]</strong>.
+    5. Binnen de eigenschap powers is een array met de superkrachten van de geselecteerde held. We willen de derde, dus gebruiken we <strong>[2]</strong>.
+  </pre>
+  <hr>
+  <h3>Array as JSON</h3>
+  <pre class="ans">
+    Eerder is vermeldt dat JSON-text er in feite uitziet als een JavaScript-object, en dit is in de meeste gevallen juist. Een <i>array</i> is ook geldige JSON is, bijvoorbeeld:
+  </pre>
+  <pre class="syntax">
+    [
+      {
+        "name": "Molecule Man",
+        "age": 29,
+        "secretIdentity": "Dan Jukes",
+        "powers": [
+          "Radiation resistance",
+          "Turning tiny",
+          "Radiation blast"
+        ]
+      },
+      {
+        "name": "Madame Uppercut",
+        "age": 39,
+        "secretIdentity": "Jane Wilson",
+        "powers": [
+          "Million tonne punch",
+          "Damage resistance",
+          "Superhuman reflexes"
+        ]
+      }
+    ]
+  </pre>
+  <pre class="ans">
+    Het bovenstaande voorbeeld is een volkomen geldige JSON. Om toegang te krijgen tot de array-items (in de <i>parsed version</i> ) doe je door te beginnen met een array-index, bijvoorbeeld <strong class="blk">[0] ["powers"] [0]</strong>.
+  </pre>
+  <h3>Extra notities</h3>
+  <ul>
+    <li>
+      JSON is puur een <i>dataformat</i> - het bevat alleen <i>properties</i>, geen <i>methods</i>.
+    </li>
+    <li>
+      JSON vereist dat dubbele aanhalingstekens <strong>""</strong> worden gebruikt rond <i>strings</i> en <i>property names</i>. Enkele aanhalingstekens <strong>'</strong> zijn niet geldig.
+    </li>
+    <li>
+      Zelfs een enkele misplaatste komma of dubbele punt kan ervoor zorgen dat een JSON-bestand fout gaat en niet werkt.
+      Je moet voorzichtig zijn met het valideren van alle gegevens die je probeert te gebruiken (hoewel door de computer gegenereerde JSON minder snel fouten bevat, zolang het generatorprogramma correct werkt). Je kunt JSON valideren met een applicatie zoals JSONLint.
+    </li>
+    <li>
+      JSON kan feitelijk de vorm aannemen van elk gegevenstype dat geldig is voor opname in JSON, niet alleen arrays of objecten. Een enkele tekenreeks of getal zou bijvoorbeeld een geldig JSON-object zijn.
+    </li>
+    <li>
+      In tegenstelling tot JavaScript-code waarin objecteigenschappen niet mogen worden geciteerd, mogen in JSON alleen <i>strings</i> tussen aanhalingstekens als eigenschappen worden gebruikt.
+    </li>
+  </ul>
   <footer>
     <a href="#up"></a>
   </footer>

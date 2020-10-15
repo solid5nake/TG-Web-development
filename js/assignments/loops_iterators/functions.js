@@ -69,14 +69,14 @@ const printNumbers = () => {
       }
     }
     if (r === 1) {
-      for (j = 0; j < 21; j++) {
+      for (j = 2; j < 21; j++) {
         if (j % 2 == 0) {
           console.log(j);
         }
       }
     }
     if (r === 2) {
-      for (k = 0; k < 31; k++) {
+      for (k = 3; k < 31; k++) {
         if (k % 3 == 0) {
           console.log(k);
         } 
@@ -88,14 +88,21 @@ const printNumbers = () => {
 
 // Opdracht 8
 function fibonacci() {
-  for ( r = 0; r < 10; r++) {
-    let j;
-    if (r === 0) {
-      i = 1;
-      j = r + i;
+  let sum = [];
+  for ( r = 0; r < 50; r++) {
+    let fibo = sum[sum.length - 1];
+    if (r < 2 ) {
+      sum.push(r);
+      console.log(fibo);
     }
-    if (r > 0) {
-      console.log(j);
+    else if (r === 1) {
+      sum.push(sum[0] + sum[1]);
+      console.log(fibo);
+    }
+    else {
+      sum.push(sum[1] + sum[2]);
+      sum.shift();
+      console.log(fibo);
     }
   }
 }

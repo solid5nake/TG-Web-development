@@ -23,7 +23,7 @@
     }
 
     button {
-      background: mediumspringgreen;
+      background: rgb(0, 250, 154);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       box-sizing: border-box;
       height: 3rem;
@@ -35,10 +35,114 @@
       transition: 1s ease;
     }
 
+    div.browser {
+      width: 35%;
+    }
+
+    h1.rps,
+    .scoreboard p {
+      margin-bottom: 3rem;
+      text-align: center;
+      font-family: monospace;
+      font-weight: 200;
+      color: mediumspringgreen;
+    }
+
     button:hover {
       background: #353434;
       color: rgb(77, 202, 154);
       transition: 1s ease;
+    }
+
+    .btn-container,
+    .scoreboard,
+    .gameboard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .scoreboard {
+      justify-content: center;
+      font-size: 9rem;
+      font-weight: 100;
+    }
+
+    .scoreboard p {
+      margin-top: 0;
+      position: relative;
+      text-align: center;
+    }
+
+    .player::before {
+      content: "Player";
+    }
+    
+    .computer::before {
+      content: "Computer";
+    }
+
+    .player::before,
+    .computer::before {
+      font-size: 1.5rem;
+      position: absolute;
+      top: 10rem;
+    }
+
+    .gameboard {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      height: 25rem;
+      width: 100%;
+      border: 0.125rem solid mediumspringgreen;
+      border-radius: 1rem;
+    }
+
+    button#rock,
+    button#paper,
+    button#scissor {
+      cursor: pointer;
+      position: relative;
+      height: 5rem;
+      width: 5rem;
+      background-color: #1d1c1c;
+      border: 0.125rem solid mediumspringgreen;
+      border-radius: 50%;
+    }
+
+    button#rock:hover,
+    button#paper:hover,
+    button#scissor:hover {
+      box-shadow: 1px 1px 2px black, 0 0 25px mediumseagreen, 0 0 5px mediumspringgreen;
+    }
+
+    button#rock::before,
+    button#paper::before,
+    button#scissor::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5rem;
+      width: 5rem;
+      content: "";
+    }
+    
+    button#rock::before{
+      background: url(./assets/left-rock.png) no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
+
+    button#paper::before{
+      background: url(./assets/left-paper.png) no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
+
+    button#scissor::before{
+      background: url(./assets/left-scissor.png) no-repeat;
+      background-size: 65%;
+      background-position: center;
     }
   </style>
 </head>
@@ -260,7 +364,7 @@
       new Person("West", 23)
     ]
     
-     persons.sort((a,b) =>  a.age-b.age);
+     persons.sort((a,b) =>  a.age - b.age);
      console.log(persons);
   </pre>
   <pre class="syntax">arr.sort([compareFunction])</pre>
@@ -392,6 +496,24 @@
     Met al de voorgaande onderdelen ben je nu in staat om een simpele spel te maken, Bijvoorbeeld rock, paper scissor. Durf je het aan om dit te bouwen? 
   </pre>
   <hr>
+  <div class="browser">
+    <h1 class="rps">Rock, Paper, Scissor</h1>
+    <div class="scoreboard">
+      <p class="player">0</p>
+      <p>-</p>
+      <p class="computer">0</p>
+    </div>
+    <div class="gameboard">
+      <div></div>
+      <div></div>
+    </div>
+    <p class="announce"></p>
+    <div class="btn-container">
+      <button id="rock"></button>
+      <button id="paper"></button>
+      <button id="scissor"></button>
+    </div>
+  </div>
 
   <pre class="qn">
     Opdracht 8: 

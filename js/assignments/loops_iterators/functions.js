@@ -1,3 +1,5 @@
+'use strict';
+
 const sports = ["voetbal", "basketbal", "volleybal", "hockey", "honkbal", "zwemmen", "korfbal"] 
 
 // Opdracht 1
@@ -87,22 +89,50 @@ const printNumbers = () => {
 }
 
 // Opdracht 8
-function fibonacci() {
+
+// refactored, relatief/dynamische indexes, set default value argument, logical OR
+function fibonacci(sequence) {
+  sequence || (sequence = 50);
+
   let sum = [];
-  for ( r = 0; r < 50; r++) {
-    let fibo = sum[sum.length - 1];
-    if (r < 2 ) {
+
+  const createFibonacci = () => {
+    sum.push(sum[sum.length - 1] + sum[sum.length - 2])
+  }
+
+  const printFibonacci = () => {
+    console.log(sum[sum.length - 1]);
+  }
+
+  for (r = 0; r < sequence; r++) {
+    if (sum.length < 2) {
       sum.push(r);
-      console.log(fibo);
-    }
-    else if (r === 1) {
-      sum.push(sum[0] + sum[1]);
-      console.log(fibo);
+      printFibonacci();
     }
     else {
-      sum.push(sum[1] + sum[2]);
+      createFibonacci();
+      printFibonacci();
       sum.shift();
-      console.log(fibo);
+    }
+  }
+}
+
+// original
+function fibonacciOriginal() {
+  let sum = [];
+  for (r = 0; r < 50; r++) {
+    if (r < 2) {
+      sum.push(r);
+      console.log(r);
+    }
+    if (r === 1) {
+      sum.push(sum[0] + sum[1]);
+      console.log(sum[2]);
+    }
+    if (r > 2) {
+      sum.push(sum[1] + sum[2]);
+      console.log(sum[2]);
+      sum.shift();
     }
   }
 }

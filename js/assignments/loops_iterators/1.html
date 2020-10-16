@@ -282,6 +282,64 @@
     Maak een for loop die van 0 t/m 50 itereert. Een hele bekende oefening is de fibonacci reeks. Lees je in hoe fibonacci reeks werkt: <a href="https://www.fibonicci.com/nl/rij-van-fibonacci/.">rij van fibonacci</a>. 
     Neem zelf eerst de tijd om dit uit te coderen, want op internet staat letterlijk het antwoord. Het gaat hier om het aanleren van bepaalde denkwijze om dit op te lossen. Maak hiervoor een stappenplan en werkt dit uit in code. 
   </pre>
+  <pre class="ans">
+    Hieronder zijn twee voorbeelden van een fibonacci function, er is een orginele versie en een <i>refactored version</i>.
+    In de orginele functie komen veel herhalingen en hardcoded indexes voor, daarom is er bij de refactored versie gekozen voor custom methods to keep it <strong>DRY</strong>.
+    Bij de refactored version zijn relatief/ dynamische indexes toegepast door gebruik te maken van <i>Array.prototype.length() method</i>. Door <strong class="blk">[ sum.length - 1 ]</strong> in te voeren kies je voor de laatste index en met <strong class="blk">[sum.length - 2]</strong> kies je voor de één na laatste index</i>.
+    Op deze manier schrijf je dynamische code in plaats van statische code.
+  </pre>
+  <pre class="note">Een <i>default value argument</i> is <strong>set</strong>, <strong class="blk">sequence || (sequence = 50);</strong>, hier is tevens gebruik gemaakt van de <strong>logical OR</strong> operator, de linker operand is <i>truthy</i> en de rechter operand <i>falsy</i>. Het is truthy als de sequence van input is voorzien van de gebruiker, anders zal de ingestelde default waarde gelden. </pre> 
+  <h3>Code</h3>
+  <pre class="code js">
+    // refactored
+
+    function fibonacci(sequence) {
+      sequence || (sequence = 50);
+    
+      let sum = [];
+    
+      const createFibonacci = () => {
+        sum.push(sum[sum.length - 1] + sum[sum.length - 2])
+      }
+    
+      const printFibonacci = () => {
+        console.log(sum[sum.length - 1]);
+      }
+    
+      for (r = 0; r < sequence; r++) {
+        if (sum.length < 2) {
+          sum.push(r);
+          printFibonacci();
+        }
+        else {
+          createFibonacci();
+          printFibonacci();
+          sum.shift();
+        }
+      }
+    }
+    
+    // origineel
+
+    function fibonacciOriginal() {
+      let sum = [];
+      for (r = 0; r < 50; r++) {
+        if (r < 2) {
+          sum.push(r);
+          console.log(r);
+        }
+        if (r === 1) {
+          sum.push(sum[0] + sum[1]);
+          console.log(sum[2]);
+        }
+        if (r > 2) {
+          sum.push(sum[1] + sum[2]);
+          console.log(sum[2]);
+          sum.shift();
+        }
+      }
+    }
+  </pre>
   <hr>
 
   <pre class="qn">

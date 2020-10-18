@@ -24,13 +24,13 @@
 
     button {
       background: rgb(0, 250, 154);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: monospace;
       box-sizing: border-box;
       height: 3rem;
       width: 5rem;
       font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
+      font-weight: 200;
+      text-transform: capitalize;
       color: black;
       transition: 1s ease;
     }
@@ -39,13 +39,19 @@
       width: 35%;
     }
 
+    
     h1.rps,
-    .scoreboard p {
+    .scoreboard p,
+    .gameboard p{
       margin-bottom: 3rem;
       text-align: center;
       font-family: monospace;
       font-weight: 200;
       color: mediumspringgreen;
+    }
+
+    .gameboard p {
+      font-size: 1.5rem;
     }
 
     button:hover {
@@ -54,9 +60,13 @@
       transition: 1s ease;
     }
 
+    .handscontainer {
+      display: flex;
+      justify-content: space-around;
+    }
+
     .btn-container,
-    .scoreboard,
-    .gameboard {
+    .scoreboard {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -74,22 +84,23 @@
       text-align: center;
     }
 
-    .player::before {
+    #player::before {
       content: "Player";
     }
     
-    .computer::before {
+    #computer::before {
       content: "Computer";
     }
 
-    .player::before,
-    .computer::before {
+    #player::before,
+    #computer::before {
       font-size: 1.5rem;
       position: absolute;
       top: 10rem;
     }
 
     .gameboard {
+      padding-top: 3rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
       height: 25rem;
@@ -98,27 +109,80 @@
       border-radius: 1rem;
     }
 
+    #handplayer.r,
+    #handplayer.p,
+    #handplayer.s,
+    #handcomputer.r,
+    #handcomputer.p,
+    #handcomputer.s {
+      height: 11rem;
+      width: 11rem;
+    }
+
+    #handplayer.r {
+      background: url(./assets/left-rock.png);
+    }
+
+    #handplayer.p {
+      background: url(./assets/left-paper.png);
+    }
+
+    #handplayer.s {
+      background: url(./assets/left-scissor.png);
+    }
+
+    #handcomputer.r {
+      background: url(./assets/right-rock.png);
+    }
+
+    #handcomputer.p {
+      background: url(./assets/right-paper.png);
+    }
+
+    #handcomputer.s {
+      background: url(./assets/right-scissor.png);
+    }
+
+    #handplayer.r,
+    #handplayer.p,
+    #handplayer.s,
+    #handcomputer.r,
+    #handcomputer.p,
+    #handcomputer.s {
+      background-size: cover;
+    }
+
+    button#random,
     button#rock,
     button#paper,
-    button#scissor {
+    button#scissor,
+    button#start,
+    button#reset {
       cursor: pointer;
       position: relative;
       height: 5rem;
       width: 5rem;
       background-color: #1d1c1c;
       border: 0.125rem solid mediumspringgreen;
+      font-size: 1.5rem;
+      color: mediumspringgreen;
       border-radius: 50%;
     }
 
+    button#random:hover,
     button#rock:hover,
     button#paper:hover,
-    button#scissor:hover {
+    button#scissor:hover,
+    button#start:hover,
+    button#reset:hover {
       box-shadow: 1px 1px 2px black, 0 0 25px mediumseagreen, 0 0 5px mediumspringgreen;
     }
 
+    button#random::before,
     button#rock::before,
     button#paper::before,
-    button#scissor::before{
+    button#scissor::before,
+    button#reset::before {
       position: absolute;
       top: 0;
       left: 0;
@@ -127,6 +191,12 @@
       content: "";
     }
     
+    button#random::before{
+      background: url(./assets/dice.svg) no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
+
     button#rock::before{
       background: url(./assets/left-rock.png) no-repeat;
       background-size: 65%;
@@ -142,6 +212,12 @@
     button#scissor::before{
       background: url(./assets/left-scissor.png) no-repeat;
       background-size: 65%;
+      background-position: center;
+    }
+
+    button#reset::before{
+      background: url(./assets/settings.svg) no-repeat;
+      background-size: 50%;
       background-position: center;
     }
   </style>
@@ -161,6 +237,7 @@
       <a href="../arrays/1.html">Arrays</a>
       <a href="../loops_iterators/1.html">Loops & iterators</a>
       <a href="./1.html" class="active">Objects</a>
+      <a href="../final_assignment/calculator.html">Final Assignment</a>
       <a href="../playground/1.html">Playground</a>
     </div>
   </nav>
@@ -499,19 +576,24 @@
   <div class="browser">
     <h1 class="rps">Rock, Paper, Scissor</h1>
     <div class="scoreboard">
-      <p class="player">0</p>
+      <p id="player">0</p>
       <p>-</p>
-      <p class="computer">0</p>
+      <p id="computer">0</p>
     </div>
     <div class="gameboard">
-      <div></div>
-      <div></div>
+      <p id="announce"></p>
+      <div class="handscontainer">
+        <div id="handplayer"></div>
+        <div id="handcomputer"></div>
+      </div>
     </div>
-    <p class="announce"></p>
     <div class="btn-container">
-      <button id="rock"></button>
-      <button id="paper"></button>
-      <button id="scissor"></button>
+      <button onclick="RPS.start()" id="start">start</button>
+      <button onclick="RPS.random()" id="random"></button>
+      <button onclick="RPS.rock()" id="rock"></button>
+      <button onclick="RPS.paper()" id="paper"></button>
+      <button onclick="RPS.scissor()" id="scissor"></button>
+      <button onclick="RPS.reset()" id="reset"></button>
     </div>
   </div>
 

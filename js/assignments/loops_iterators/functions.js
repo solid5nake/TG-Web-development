@@ -104,7 +104,7 @@ function fibonacci(sequence) {
     console.log(sum[sum.length - 1]);
   }
 
-  for (r = 0; r < sequence; r++) {
+  for (let r = 0; r < sequence; r++) {
     if (sum.length < 2) {
       sum.push(r);
       printFibonacci();
@@ -120,7 +120,7 @@ function fibonacci(sequence) {
 // original
 function fibonacciOriginal() {
   let sum = [];
-  for (r = 0; r < 50; r++) {
+  for (let r = 0; r < 50; r++) {
     if (r < 2) {
       sum.push(r);
       console.log(r);

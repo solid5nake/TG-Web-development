@@ -11,7 +11,6 @@ function ContactInfo(address, phone, contact) {
   contact = contact;
 }
 
-
 // Opdracht 3
 
 const clubs = [{

@@ -162,7 +162,7 @@ pre.qn {
   width: fit-content;
   color: #a93e89;
   background: #202020;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.2rem;
   position: relative;
 }
@@ -499,6 +499,17 @@ footer a:hover {
   width: 2.3rem;
   background: url(./assets/camera-blue.svg) no-repeat;
   background-size: cover;
+}
+
+.cam::after {
+  content: "example_";
+  top: 0;
+  position: absolute;
+  left: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-family: 'Courier New', Courier, monospace;
+  color: mediumturquoise;
 }
 
 .browser {

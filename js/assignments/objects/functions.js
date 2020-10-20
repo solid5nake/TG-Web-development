@@ -181,7 +181,6 @@ class RockPaperScissor {
   reset() {
     this.scorePlayer = 0;
     this.scoreComputer = 0;
-
   }
 }
 

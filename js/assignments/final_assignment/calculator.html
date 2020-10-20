@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../dark.css">
+  <title>Javascript - Loops & iterators</title>
+  <style>
+    .cam img {
+      background: white;
+      padding: 3rem;
+      border: 0.5rem solid hsl(182, 88%, 6%);
+    }
+
+    #calc-display {
+      height: 5rem;
+      border: 0.25rem solid;
+      background: mediumspringgreen;
+      font-size: 3.9rem;
+      text-align: end;
+      color: black;
+    }
+
+    .calc-controls {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .calc-controls button {
+      flex: 1 0 25%;
+      height: 5rem;
+      background: hsl(240, 5%, 11%);
+      color: mediumspringgreen;
+      font-size: 1.8rem;
+    }
+
+    button#zero {
+      flex: 1 0 50%;
+    }
+  </style>
+</head>
+
+<body class="pl-5">
+  <nav>
+    <div class="breadcrumbs" id="up">
+      <a href="../index.html">Javascript</a>
+      <a href="../intro/1.html">Introduction I</a>
+      <a href="../intro/2.html">Introduction II</a>
+      <a href="../conditions/1.html">Conditions I</a>
+      <a href="../conditions/2.html">Conditions II</a>
+      <a href="../functions/1.html">Functions 1 - 7</a>
+      <a href="../functions/8.html">Functions 8</a>
+      <a href="../scopes/1.html">Scopes</a>
+      <a href="../arrays/1.html">Arrays</a>
+      <a href="../loops_iterators/1.html">Loops & iterators</a>
+      <a href="../objects/1.html">Objects</a>
+      <a href="./calculator.html" class="active">Final Assignment</a>
+      <a href="../playground/1.html">Playground</a>
+    </div>
+  </nav>
+  <h1 class="title">Javascript</h1>
+  <h1>Eindopdracht</h1>
+  <hr>
+  <h2>Rekenmachine</h2>
+  <pre class="qn">
+    Voor  de  eindopdracht  ga  je  een  rekenmachine m aken.  Hieronder  zie  je  een  voorbeeld  van  een  rekenmachine.
+  </pre>
+  <div class="cam">
+    <div class="background">
+      <img src="./assets/calculator.png" alt="calculator">
+    </div>
+  </div>
+  <pre class="qn">
+    De rekenmachine heeft de volgende functionaliteiten:
+
+    ●	  De basis berekeningen zoals, optellen, aftrekken, vermenigvuldigen en delen.
+    ●	  Wanneer een getal is ingevoerd dan verandert de tekst van AC naar C.
+    ●	  Wanneer een rekenkundig symbol (/, X, -, +, =) is geklikt, dan wordt de achtergrondkleur van dat symbool wit en wordt de tekst kleur oranje.
+    ●	  Als het antwoord een decimaal getal bevat, dan rond je het antwoord altijd af op 2 decimaal getal.
+    ●	  Je hoeft niet altijd een volledige berekening in te voeren. Bv, 5+ geeft als antwoord 10, 6/ geeft als antwoord 1 of 9X geeft als antwoord 81.
+    ●	  De +/- symbool maakt het getal negatief of positief.
+    ●	  De % symbool is een modulo.
+    ●	  De AC of C symbol reset jouw rekenmachine.
+    
+    Maak geen gebruik van internet om exact op te zoeken hoe een rekenmachine is gebouwd. Daarmee leer je namelijk niet de kern van algoritmisch denken. Natuurlijk is het gebruik van internet wel mogelijk om bepaalde code op te zoeken. Bv, hoe conditions werken, hoe functions werken etc.  
+    
+    Begin eerst met een stappenplan (pseudo code), voordat je daadwerkelijk het uit programmeert. Deze stappenplan is een vereiste. Nadat je hebt uitgewerkt is het wellicht goed om even bij andere groepsgenoten te buurten. Hiermee kan je vergelijken of je goed op weg bent of dat je vast komt te lopen. Hoe gedetailleerder je stappenplan is, hoe makkelijker het wordt om dat uit te werken.   
+  </pre>
+  <hr>
+  <pre class="ans">
+    De rekenmachine is net als bij opdracht 7 van het Javascript onderdeel 'Objects' het <i>Rock Paper Scissor</i> spel gecodeerd op basis van een MVC Model, een afkorting voor Model-View-Controller.
+    De <strong>Model-View-Controller</strong> is een ontwerppatroon ("design pattern") dat het ontwerp van complexe toepassingen opdeelt in drie eenheden met verschillende verantwoordelijkheden: datamodel (model), datapresentatie (view) en applicatielogica (controller).
+    Het scheiden van deze verantwoordelijkheden bevordert de leesbaarheid en herbruikbaarheid van code.
+  </pre>
+  <p class="note">Het maakt ook dat bijvoorbeeld veranderingen in de gebruikersinterface niet direct invloed hebben op
+    het datamodel en vice versa</p>
+  <div class="browser">
+    <div class="calc-container">
+      <div id="calc-display">
+      </div>
+      <div class="calc-controls">
+        <button onclick="CAL.allClear()" id="all-clear">AC</button>
+        <button onclick="CAL.plusMinus()" id="plus-minus">±</button>
+        <button onclick="CAL.modulo()" id="modulo">%</button>
+        <button onclick="CAL.division()" id="division">÷</button>
+        <button onclick="CAL.seven()" id="seven">7</button>
+        <button onclick="CAL.eight()" id="eight">8</button>
+        <button onclick="CAL.nine()" id="nine">9</button>
+        <button onclick="CAL.multiplication()" id="multiplication">×</button>
+        <button onclick="CAL.four()" id="four">4</button>
+        <button onclick="CAL.five()" id="five">5</button>
+        <button onclick="CAL.six()" id="six">6</button>
+        <button onclick="CAL.substraction()" id="substraction">−</button>
+        <button onclick="CAL.one()" id="one">1</button>
+        <button onclick="CAL.two()" id="two">2</button>
+        <button onclick="CAL.three()" id="three">3</button>
+        <button onclick="CAL.addition()" id="addition">+</button>
+        <button onclick="CAL.zero()" id="zero">0</button>
+        <button onclick="CAL.dot()" id="dot">.</button>
+        <button onclick="CAL.equals()" id="equals">=</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="#up"></a>
+  </footer>
+  <script>
+    class Calculator {
+      constructor() {
+        this.input = [];
+        this.memory = [];
+      }
+
+      get display() {
+        const regex = /(\+|-|\/|\*|%)$/;
+        const match = this.sum.replace(regex, '').match(/[-\d\.]+$/);
+        return match ? match[0] : this.sum;
+      }
+
+      get sum() {
+        return this.input.join("");
+      }
+
+      get sumReverse() {
+        return this.sum.split("").reverse().join("");
+      }
+
+      get lastOperatorPrecedence() {
+        const operator = Calculator.matchOperator(this.sumReverse);
+
+        if (operator) {
+          return Calculator.operatorPrecedence(operator);
+        }
+      }
+
+      static operatorPrecedence(operator) {
+        switch (operator) {
+          case "+":
+          case "-":
+            return 1;
+          case "*":
+          case "/":
+          case "%":
+            return 2;
+        }
+      }
+
+      static matchOperator(string) {
+        const match = string.match(/(\+|-|\/|\*|%)/);
+        if (match) {
+          return match[0];
+        }
+      }
+
+      pushInput(userInput) {
+        if (userInput === "±") {
+          this.input = this.sum.replace(/[-\d\.]+$/, function (match) {
+            return parseFloat(match) * -1;
+          }).split('');
+        }
+        else {
+          const operator = Calculator.matchOperator(userInput);
+          if (operator) {
+            if (Calculator.matchOperator(this.sum.match(/.$/)[0])) {
+              this.input.pop();
+            }
+            const inputPrecedence = Calculator.operatorPrecedence(operator);
+            const lastPrecedence = this.lastOperatorPrecedence;
+            if (lastPrecedence && inputPrecedence <= lastPrecedence) {
+              this.evaluate();
+            }
+          }
+          this.input.push(userInput);
+        }
+      }
+
+      memorize(userInput) {
+        console.log(this.memory);
+        return this.memory.push(userInput.join(""));
+      }
+
+      evaluate() {
+        const result = eval(this.sum);
+        this.input = [result];
+        return result;
+      }
+
+      allClear() {
+        this.memory = [];
+        this.input = [];
+      }
+    }
+
+    const CAL = {
+      el: {
+        display: document.getElementById("calc-display"),
+        ac: document.getElementById("all-clear")
+      },
+      instance: new Calculator(),
+      mem: () => {
+        const input = CAL.instance.input;
+        const memory = CAL.instance.memory;
+        CAL.instance.memorize(input);
+      },
+      refresh: () => {
+        CAL.el.display.innerHTML = CAL.instance.display;
+        CAL.el.ac.innerHTML = "C";
+      },
+      one: () => {
+        CAL.instance.pushInput("1");
+        CAL.refresh();
+      },
+      two: () => {
+        CAL.instance.pushInput("2");
+        CAL.refresh();
+      },
+      three: () => {
+        CAL.instance.pushInput("3");
+        CAL.refresh();
+      },
+      four: () => {
+        CAL.instance.pushInput("4");
+        CAL.refresh();
+      },
+      five: () => {
+        CAL.instance.pushInput("5");
+        CAL.refresh();
+      },
+      six: () => {
+        CAL.instance.pushInput("6");
+        CAL.refresh();
+      },
+      seven: () => {
+        CAL.instance.pushInput("7");
+        CAL.refresh();
+      },
+      eight: () => {
+        CAL.instance.pushInput("8");
+        CAL.refresh();
+      },
+      nine: () => {
+        CAL.instance.pushInput("9");
+        CAL.refresh();
+      },
+      zero: () => {
+        CAL.instance.pushInput("0");
+        CAL.refresh();
+      },
+      allClear: () => {
+        CAL.instance.allClear();
+        CAL.refresh();
+        if (CAL.el.ac.innerHTML == "C") {
+          CAL.el.ac.innerHTML = "AC";
+        }
+      },
+      plusMinus: () => {
+        CAL.instance.pushInput("±");
+        CAL.refresh();
+      },
+      modulo: () => {
+        CAL.instance.pushInput("%");
+        CAL.refresh();
+      },
+      division: () => {
+        CAL.instance.pushInput("/");
+        CAL.refresh();
+      },
+      multiplication: () => {
+        CAL.instance.pushInput("*");
+        CAL.refresh();
+      },
+      substraction: () => {
+        CAL.instance.pushInput("-");
+        CAL.refresh();
+      },
+      addition: () => {
+        CAL.instance.pushInput("+");
+        CAL.refresh();
+      },
+      equals: () => {
+        const mem = (CAL.instance.evaluate(CAL.instance.input));
+        CAL.el.display.innerHTML = mem;
+      },
+      dot: () => {
+        CAL.instance.pushInput(".");
+        CAL.refresh();
+      }
+    }
+  </script>
+</body>
+
+</body>
+
+</html>

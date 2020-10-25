@@ -51,3 +51,5 @@ const CAL = (() => {
     }
   };
 })();
+
+export default CAL;

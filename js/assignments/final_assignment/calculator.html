@@ -125,6 +125,9 @@
   <footer>
     <a href="#up"></a>
   </footer>
-  <script src="./js/cal.mjs"></script>
+  <script type="module"> // import CAL and make it available for onclick events, this is done this way because we aren't using Node.js
+    import CAL from "./js/cal.js";
+    window.CAL = CAL;
+  </script>
 </body>
 </html>
